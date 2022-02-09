@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def save_links_from_site(soup, urls_path='links.txt'):
+def save_links_from_site(soup, urls_path='index.txt'):
     links = []
     curr_l = None
     for link in tqdm(soup.findAll('a')):
@@ -22,25 +22,25 @@ def save_links_from_site(soup, urls_path='links.txt'):
             file.write(link)
 
 
-def get_urls(urls_path='links.txt'):
+def get_urls(urls_path='index.txt'):
     urls = []
     with open(urls_path, 'r') as file:
         for line in file:
-            urls.append(line)
+            urls.append(line.split()[1])
     return urls
 
 
 def main():
-    link = 'https://scholar.google.com/scholar?hl=ru&as_sdt=0%2C5&q=self+supervised+learning&oq=self+supervised+lea'
-    page = urlopen(link)
-    soup = BeautifulSoup(page, 'html.parser')
-    save_links_from_site(soup)
+    # link = 'https://scholar.google.com/scholar?hl=ru&as_sdt=0%2C5&q=self+supervised+learning&oq=self+supervised+lea'
+    # page = urlopen(link)
+    # soup = BeautifulSoup(page, 'html.parser')
+    # save_links_from_site(soup)
 
-    # urls = get_urls()
-    # for i, url in enumerate(urls):
-    #     r = requests.get(url)
-    #     with open(f'pages/page_{i}', 'w') as file:
-    #         file.write(r.text)
+    urls = get_urls()
+    for i, url in enumerate(urls):
+        r = requests.get(url)
+        with open(f'pages/page_{i}', 'w') as file:
+            file.write(r.text)
 
 
 if __name__ == '__main__':
