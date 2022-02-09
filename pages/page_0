@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CVPR 2020 Open Access Repository</title>
+<link rel="stylesheet" type="text/css" href="../../static/conf.css">
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<meta name="citation_title" content="Self-Supervised Learning of Pretext-Invariant Representations">
+<meta name="citation_author" content="Misra, Ishan">
+<meta name="citation_author" content="Maaten, Laurens van der">
+<meta name="citation_publication_date" content="2020">
+<meta name="citation_conference_title" content="Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition">
+<meta name="citation_firstpage" content="6707">
+<meta name="citation_lastpage" content="6717">
+<meta name="citation_pdf_url" content="http://openaccess.thecvf.com/content_CVPR_2020/papers/Misra_Self-Supervised_Learning_of_Pretext-Invariant_Representations_CVPR_2020_paper.pdf">
+</head>
+<body>
+<div id="header">
+<div id="header_left">
+<a href="http://cvpr2020.thecvf.com"><img src="../../img/cvpr2020_logo.png" width="175" border="0" alt="CVPR 2020"></a>
+<a href="http://www.cv-foundation.org/"><img src="../../img/cropped-cvf-s.jpg" width="175" height="112" border="0" alt="CVF"></a>
+</div>
+<div id="header_right">
+<div id="header_title">
+<a href="http://cvpr2020.thecvf.com">CVPR 2020</a> <a href="/" class="a_monochrome">open access</a>
+</div>
+<div id="help" >
+These CVPR 2020 papers are the Open Access versions, provided by the <a href="http://www.cv-foundation.org/">Computer Vision Foundation.</a><br> Except for the watermark, they are identical to the accepted versions; the final published version of the proceedings is available on IEEE Xplore.</div>
+<div id="disclaimer" >
+This material is presented to ensure timely dissemination of scholarly and technical work.
+Copyright and all rights therein are retained by authors or by other copyright holders.
+All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright.<br><br>
+<form action="../../CVPR2020_search.py" method="post">
+<input type="text" name="query">
+<input type="submit" value="Search">
+</form>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+<div id="content">
+<dl>
+<dd>
+<div id="papertitle">
+Self-Supervised Learning of Pretext-Invariant Representations</div>
+<div id="authors">
+<br><b><i>Ishan Misra,  Laurens van der Maaten</i></b>; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020, pp. 6707-6717
+</div><font size="5">
+<br><b>Abstract</b>
+</font>
+<br><br><div id="abstract" >
+The goal of self-supervised learning from images is to construct image representations that are semantically meaningful via pretext tasks that do not require semantic annotations. Many pretext tasks lead to representations that are covariant with image transformations. We argue that, instead, semantic representations ought to be invariant under such transformations. Specifically, we develop Pretext-Invariant Representation Learning (PIRL, pronounced as `pearl') that learns invariant representations based on pretext tasks. We use PIRL with a commonly used pretext task that involves solving jigsaw puzzles. We find that PIRL substantially improves the semantic quality of the learned image representations. Our approach sets a new state-of-the-art in self-supervised learning from images on several popular benchmarks for self-supervised learning. Despite being unsupervised, PIRL outperforms supervised pre-training in learning image representations for object detection. Altogether, our results demonstrate the potential of self-supervised representations with good invariance properties.</div>
+<font size="5">
+<br><b>Related Material</b>
+</font>
+<br><br>
+[<a href="../../content_CVPR_2020/papers/Misra_Self-Supervised_Learning_of_Pretext-Invariant_Representations_CVPR_2020_paper.pdf">pdf</a>]
+[<a href="http://arxiv.org/abs/1912.01991">arXiv</a>]
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+<div class="bibref">
+@InProceedings{Misra_2020_CVPR,<br>
+author = {Misra, Ishan and Maaten, Laurens van der},<br>
+title = {Self-Supervised Learning of Pretext-Invariant Representations},<br>
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
+month = {June},<br>
+year = {2020}<br>
+}
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</body>
+</html>
