@@ -7,19 +7,20 @@ import requests
 def save_links_from_site(soup, urls_path='index.txt'):
 	links = []
 	curr_l = None
-	for link in tqdm(soup.findAll('a')):
+	for h3 in tqdm(soup.findAll('h3')):
 		try:
-			curr_l = link.get('href')
+			if h3['class'][0] != 'gs_rt':
+				continue
+			curr_l = h3.find('a').get('href')
 			if not (curr_l is None) and (len(curr_l) > 1) and ('/' in curr_l):
 				curr = curr_l.split('/')
-				if link.find("span")['class'][0] == 'gs_ctg2':
-					links.append(curr_l)
+				links.append(curr_l)
 		except:
 			print('exception' + 'in' + curr_l)
 
 	with open(urls_path, 'a') as file:
-		for link in set(links):
-			file.write(link + '\n')
+		for h3 in set(links):
+			file.write(h3 + '\n')
 
 
 def get_urls(urls_path='index.txt'):
@@ -50,11 +51,11 @@ def main():
 		soup = BeautifulSoup(page, 'html.parser')
 		save_links_from_site(soup)
 
-	urls = get_urls()
-	for i, url in enumerate(urls):
-		r = requests.get(url)
-		with open(f'pages/page_{i}', 'w') as file:
-			file.write(r.text)
+	# urls = get_urls()
+	# for i, url in enumerate(urls):
+	# 	r = requests.get(url)
+	# 	with open(f'pages/page_{i}', 'w') as file:
+	# 		file.write(r.text)
 
 
 if __name__ == '__main__':
