@@ -1,0 +1,1263 @@
+<!DOCTYPE HTML>
+<html lang="en-gb" class="no-js">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+    <meta name="citation_publisher" content="Springer, Cham"/>
+    <meta name="citation_title" content="Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion"/>
+    <meta name="citation_doi" content="10.1007/978-3-030-58529-7_34"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_abstract_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-58529-7_34"/>
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-58529-7_34"/>
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007%2F978-3-030-58529-7_34.pdf"/>
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/978-3-030-58529-7_34&amp;api_key="/>
+    <meta name="citation_firstpage" content="572"/>
+    <meta name="citation_lastpage" content="588"/>
+    <meta name="citation_author" content="Shu, Chang"/>
+    <meta name="citation_author_institution" content="Meituan Dianping Group"/>
+    <meta name="citation_author" content="Yu, Kun"/>
+    <meta name="citation_author_institution" content="DeepMotion"/>
+    <meta name="citation_author" content="Duan, Zhixiang"/>
+    <meta name="citation_author_institution" content="DeepMotion"/>
+    <meta name="citation_author" content="Yang, Kuiyuan"/>
+    <meta name="citation_author_institution" content="DeepMotion"/>
+    <meta name="citation_author_email" content="kuiyuanyang@deepmotion.ai"/>
+    <meta name="dc.identifier" content="10.1007/978-3-030-58529-7_34"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="Photometric loss is widely used for self-supervised depth and egomotion estimation. However, the loss landscapes induced by photometric differences are often problematic for optimization, caused by..."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Feature-Metric Loss for Self-supervised Learning of Depth and Egomotio"/>
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/book/978-3-030-58529-7.jpg"/>
+    <meta name="twitter:image:alt" content="Content cover image"/>
+    <meta name="twitter:site" content="SpringerLink"/>
+    <meta name="twitter:description" content="Photometric loss is widely used for self-supervised depth and egomotion estimation. However, the loss landscapes induced by photometric differences are often problematic for optimization, caused by..."/>
+    <meta name="citation_inbook_title" content="Computer Vision – ECCV 2020"/>
+    <meta name="citation_publication_date" content="2020/08/23"/>
+    <meta name="citation_conference_series_id" content="springer/eccv"/>
+    <meta name="citation_conference_title" content="European Conference on Computer Vision"/>
+    <meta name="citation_conference_sequence_num" content="16"/>
+    <meta name="citation_conference_abbrev" content="ECCV"/>
+    <meta property="og:title" content="Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion"/>
+    <meta property="og:type" content="Paper"/>
+    <meta property="og:url" content="https://link.springer.com/chapter/10.1007/978-3-030-58529-7_34"/>
+    <meta property="og:image" content="https://static-content.springer.com/cover/book/978-3-030-58529-7.jpg"/>
+    <meta property="og:site_name" content="SpringerLink"/>
+    <meta property="og:description" content="Photometric loss is widely used for self-supervised depth and egomotion estimation. However, the loss landscapes induced by photometric differences are often problematic for optimization, caused by..."/>
+
+        <title>Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion | SpringerLink</title>
+        <link rel="canonical" href="https://link.springer.com/chapter/10.1007/978-3-030-58529-7_34"/>
+        <link rel="shortcut icon" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 48x48" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+<link rel="icon" sizes="16x16" type="image/png" href="/springerlink-static/1895273086/images/favicon/favicon-16x16.png">
+<link rel="icon" sizes="32x32" type="image/png" href="/springerlink-static/1895273086/images/favicon/favicon-32x32.png">
+<link rel="icon" sizes="48x48" type="image/png" href="/springerlink-static/1895273086/images/favicon/favicon-48x48.png">
+<link rel="apple-touch-icon" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/springerlink-static/1895273086/images/favicon/ic_launcher_hdpi.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/springerlink-static/1895273086/images/favicon/app-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/springerlink-static/1895273086/images/favicon/app-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@2x.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/springerlink-static/1895273086/images/favicon/app-icon-ipad@2x.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//google-analytics.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.googletagservices.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//static-content.springer.com">
+        <link rel="stylesheet" href="/springerlink-static/1895273086/css/basic.css" media="screen">
+<link rel="stylesheet" href="/springerlink-static/1895273086/css/styles.css" class="js-ctm" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+<link rel="stylesheet" href="/springerlink-static/1895273086/css/print.css" media="print">
+
+
+        <script>
+    (function () {
+        if ( typeof window.CustomEvent === "function" ) return;
+        window.CustomEvent = function ( event, params ) {
+            params = params || { bubbles: false, cancelable: false, detail: null };
+            var evt = document.createEvent( 'CustomEvent' );
+            evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+            return evt;
+        }
+    })();
+</script>
+
+<script>
+    (function() {
+        if (!!document.documentElement.dataset) return;
+
+        Object.defineProperty(Element.prototype, 'dataset', {
+            get: function() {
+                var element = this;
+                var attributes = this.attributes;
+                var map = {};
+
+                for (var i = 0; i < attributes.length; i++) {
+                    var attribute = attributes[i];
+
+                    if (attribute && attribute.name && (/^data-\w[\w-]*$/).test(attribute.name)) {
+                        var name = attribute.name;
+                        var value = attribute.value;
+
+                        var propName = name.substr(5).replace(/-./g, function (prop) {
+                            return prop.charAt(1).toUpperCase();
+                        });
+
+                        Object.defineProperty(map, propName, {
+                            enumerable: true,
+                            get: function() {
+                                return this.value;
+                            }.bind({value: value || ''}),
+                            set: function setter(name, value) {
+                                if (typeof value !== 'undefined') {
+                                    this.setAttribute(name, value);
+                                } else {
+                                    this.removeAttribute(name);
+                                }
+                            }.bind(element, name)
+                        });
+                    }
+                }
+
+                return map;
+            }
+        });
+    })();
+</script>
+
+
+
+    <script type="text/javascript">
+        window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+        var dataLayer = [{
+                'GA Key':"UA-26408784-1",
+                'Features':["leaderboardadverts","eventtracker"],
+                'Event Category':"Conference Paper",
+                'Open Access':"N",
+                'Labs':"Y",
+                'DOI':"10.1007/978-3-030-58529-7_34",
+                'productId':"9783030585297",
+                'hasAccess':"N",
+                'Full HTML':"N",
+                'Has Body':"Y",
+                'Static Hash':"1895273086",
+                'Has Preview':"N",
+                'user':{"license":{"businessPartnerID":[],"businessPartnerIDString":""}},
+                'content':{"serial":{"eissn":"1611-3349","pissn":"0302-9743"},"book":{"seriesTitle":"Lecture Notes in Computer Science","eisbn":"978-3-030-58529-7","pisbn":"978-3-030-58528-0","bookProductType":"Proceedings","seriesId":"558","title":"Computer Vision – ECCV 2020","doi":"10.1007/978-3-030-58529-7"},"attributes":{"deliveryPlatform":"bunsen"},"chapter":{"doi":"10.1007/978-3-030-58529-7_34"},"category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Image Processing and Computer Vision"},"secondarySubjectCodes":{"1":"I22021"}},"sucode":"SUCO11645"},"type":"ConferencePaper"},
+                'Access Type':"noaccess",
+                'Page':"chapter",
+                'Bpids':"",
+                'Bpnames':"",
+                'SubjectCodes':"SCI, SCI22021",
+                'session':{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},
+                'eventTrackerBaseUrl':"https://event-tracker.springernature.com",
+                'Country':"RU",
+                'ConferenceSeriesId':"eccv",
+                'VG Wort Identifier':"pw-vgzm.415900-10.1007-978-3-030-58529-7",
+
+                    'doi': "10.1007-978-3-030-58529-7_34",
+                    'pmc': ["I","I22021"],
+                    'BPID': ["1"],
+                    'ksg': Krux.segments,
+                    'kuid': Krux.uid,
+
+        }];
+    </script>
+    <script>
+        window.dataLayer.push({
+            content: {
+                attributes: {
+                    deliveryPlatform: "bunsen"
+                }
+            }
+        });
+    </script>
+    <script>
+        window.dataLayer.push({
+            ga4MeasurementId: 'G-B3E4QL2TPR',
+            ga360TrackingId: 'UA-26408784-1',
+            twitterId: 'o47a7',
+            ga4ServerUrl: 'https://collect.springer.com'
+        });
+    </script>
+
+<script type="text/javascript" src="/springerlink-static/1895273086/js/jquery-3.3.1.min.js"></script>
+
+<script data-test="gtm-head">
+    window.initGTM = function() {
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://collect.springer.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MRVXSHQ');
+    }
+</script>
+
+
+<script>
+    (function(w,d,t) {
+        function cc() {
+            var h = w.location.hostname;
+            var e = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+
+            if (h.indexOf('springer.com') > -1) {
+                e.src = 'https://push-content.springernature.io/pcf_sb_5_1617714720898560639/production_live/consent-bundle-17-8.js';
+                e.setAttribute('onload', "initGTM(window,document,'script','dataLayer','GTM-MRVXSHQ')");
+            } else {
+                e.src = '/static/js/lib/cookie-consent.min.js';
+                e.setAttribute('data-consent', h);
+            }
+            s.insertAdjacentElement('afterend', e);
+        }
+
+        cc();
+    })(window,document,'script');
+</script>
+
+    </head>
+    <body>
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MRVXSHQ"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="skip-to">
+    <a class="skip-to__link pseudo-focus" href="#main-content">Skip to main content</a>
+</div>
+        <div class="page-wrapper">
+            <noscript>
+    <div class="nojs-banner u-interface">
+        <p>This service is more advanced with JavaScript available</p>
+    </div>
+</noscript>
+                        <div id="leaderboard" class="leaderboard u-hide" data-google-ad="leaderboard" data-gpt-hide-ad>
+            <div class="leaderboard__wrapper">
+                <p class="leaderboard__label">Advertisement</p>
+                <button class="leaderboard__hide" title="Hide this advertisement" data-gpt-hide-ad-button data-track="click" data-track-action="Hide advertisement" data-track-label="">Hide</button>
+                <div id="doubleclick-leaderboard-ad" class="leaderboard__ad u-pt-24" data-gpt></div>
+            </div>
+        </div>
+
+
+                <header id="header" class="header">
+        <div class="header__content">
+            <div class="header__menu-container">
+                    <a id="logo" class="site-logo" href="/" title="Go to homepage">
+            <picture>
+    <source type="image/svg+xml" srcset="/springerlink-static/1895273086/images/svg/springerlink.svg">
+    <img class="site-logo__springer" src="/springerlink-static/1895273086/images/png/springerlink.png" alt="SpringerLink" width="148" height="30" data-test="springer-logo">
+</picture>
+
+    </a>
+
+
+                    <nav id="search-container" class="u-inline-block">
+                        <div class="search">
+                            <div class="search__content">
+                                <form class="u-form-single-input u-system" action="/search" method="get" role="search">
+    <label for="search-springerlink">Search SpringerLink</label>
+    <div class="u-relative">
+        <input id="search-springerlink" name="query" type="text" autocomplete="off" value="">
+        <input class="u-hide-text" type="submit" value="Submit" title="Submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" class="u-vertical-align-absolute" focusable="false" aria-hidden="true" role="presentation">
+            <path d="M12.82 11.972a.607.607 0 01.007.856.611.611 0 01-.856-.006L9.45 10.3A5.798 5.797 0 010 5.798 5.798 5.797 0 1110.3 9.45zm-7.022-1.205A4.97 4.97 0 105.797.83a4.97 4.97 0 000 9.939z" fill-rule="evenodd"/>
+        </svg>
+    </div>
+</form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="nav-container">
+    <div class="global-nav__wrapper">
+        <div class="search-button">
+            <a class="search-button__label" href="#search-container">
+                <span class="search-button__title">Search</span>
+                <svg class="u-vertical-align-absolute" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 22 22" focusable="false" aria-hidden="true" role="presentation">
+                   <path d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z" fill-rule="evenodd" fill="#666"/>
+                </svg>
+            </a>
+        </div>
+
+            <div id="ecommerce-header-cart-icon-link" class="c-header__item ecommerce-cart" style="display: inline-block; margin-right: 10px;">
+  <form action="https://order.springer.com/public/precheckout" method="post">
+    <button class="c-header__link" type="submit" style="
+        appearance: none;
+        border: none;
+        background: none;
+        color: inherit;
+    "><svg aria-hidden="true" focusable="false" height="18" viewBox="0 0 18 18" width="18"
+        style="vertical-align: text-bottom;" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m5 14c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm10 0c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm-10 1c-.55228475 0-1 .4477153-1 1s.44771525 1 1 1 1-.4477153 1-1-.44771525-1-1-1zm10 0c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1 1-.4477153 1-1-.4477153-1-1-1zm-12.82032249-15c.47691417 0 .88746157.33678127.98070211.80449199l.23823144 1.19501025 13.36277974.00045554c.5522847.00001882.9999659.44774934.9999659 1.00004222 0 .07084994-.0075361.14150708-.022474.2107727l-1.2908094 5.98534344c-.1007861.46742419-.5432548.80388386-1.0571651.80388386h-10.24805106c-.59173366 0-1.07142857.4477153-1.07142857 1 0 .5128358.41361449.9355072.94647737.9932723l.1249512.0067277h10.35933776c.2749512 0 .4979349.2228539.4979349.4978051 0 .2749417-.2227336.4978951-.4976753.4980063l-10.35959736.0041886c-1.18346732 0-2.14285714-.8954305-2.14285714-2 0-.6625717.34520317-1.24989198.87690425-1.61383592l-1.63768102-8.19004794c-.01312273-.06561364-.01950005-.131011-.0196107-.19547395l-1.71961253-.00064219c-.27614237 0-.5-.22385762-.5-.5 0-.27614237.22385763-.5.5-.5zm14.53193359 2.99950224h-13.11300004l1.20580469 6.02530174c.11024034-.0163252.22327998-.02480398.33844139-.02480398h10.27064786z"
+          fill="#333" />
+      </svg><span class="u-screenreader-only visually-hidden">Go to cart</span></button>
+  </form>
+</div>
+
+        <ul class="global-nav" data-component="SV.Menu" data-title="Navigation menu" data-text="Menu">
+                <li class="global-nav__logged-out">
+                    <a class="test-login-link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-58529-7_34">
+                        <span class="u-overflow-ellipsis">Log in</span>
+                    </a>
+                </li>
+
+        </ul>
+    </div> 
+</nav> 
+
+            </div>
+
+        </div>
+    </header>
+
+            
+            <main id="main-content" class="main-wrapper main-wrapper--no-gradient" tabindex="-1">
+                <div class="main-container uptodate-recommendations-off">
+                    <aside class="main-sidebar-left">
+                        <div class="main-sidebar-left__content">
+                            <div class="cover-image test-cover" itemscope>
+                                    <a class="test-cover-link" href="/book/10.1007/978-3-030-58529-7">
+        <span class="u-screenreader-only">Computer Vision – ECCV 2020</span>
+        <img class="test-cover-image" src="https://media.springernature.com/w306/springer-static/cover/book/978-3-030-58529-7.jpg" itemprop="image" alt=""/>
+    </a>
+
+
+
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="main-body" data-role="NavigationContainer">
+                        
+
+
+
+                        <article class="main-body__content">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="FulltextWrapper"><div class="ArticleHeader main-context"><div id="enumeration" class="enumeration">    <div>
+        <a data-test="ConfSeriesLink" href="/conference/eccv">
+            <span data-test="ConfSeriesName"> European Conference on Computer Vision</span>
+        </a>
+    </div>
+<p class="test-LocationInConferenceProceeding icon--meta-keyline"><span data-test="ConferenceAcronym">ECCV 2020</span>: <span class="BookTitle"><a href="/book/10.1007/978-3-030-58529-7" data-track="click" data-track-action="Book title" data-track-label="">Computer Vision – ECCV 2020</a></span><span class="page-numbers-info">
+                pp 572-588</span><span class="u-inline-block u-ml-4"> |
+                <a href="#citeas" data-track="click" data-track-action="Cite as link" data-track-label="Enumeration section">Cite as</a></span></p></div><div class="MainTitleSection"><h1 class="ChapterTitle" lang="en">Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion</h1></div><div class="authors u-clearfix" data-component="SpringerLink.Authors"><ul class="u-interface u-inline-list authors__title" data-role="AuthorsNavigation"><li><span>Authors</span></li><li><a href="#authorsandaffiliations" data-track="click" data-track-action="Authors and affiliations tab" data-track-label="">Authors and affiliations</a></li></ul><div class="authors__list" data-role="AuthorsList"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Chang Shu</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Kun Yu</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Zhixiang Duan</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Kuiyuan Yang</span><span class="author-information"><span class="authors__contact"><a href="mailto:kuiyuanyang@deepmotion.ai" title="kuiyuanyang@deepmotion.ai" itemprop="email" data-track="click" data-track-action="Email author" data-track-label=""><img src="/springerlink-static/images/svg/email.svg" height="24" width="24" alt="Email author" /></a></span></span></li></ul></div></div><div class="main-context__container" data-component="SpringerLink.ArticleMetrics"><div class="main-context__column"><span><span class="test-render-category">Conference paper</span></span><div class="article-dates"><span class="article-dates__label">First Online: </span><span class="article-dates__first-online"><time datetime="2020-11-13">13 November 2020</time></span></div></div><div class="main-context__column">    <ul id="book-metrics" class="article-metrics u-sansSerif">
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-chaptercitations-count" href="https://citations.springer.com/item?doi&#x3D;10.1007/978-3-030-58529-7_34" target="_blank" rel="noopener"
+                       title="Visit Springer Citations for full citation details" id="chaptercitations-link">
+                            <span id="chaptercitations-count-number" class="test-metric-count c-button-circle gtm-chaptercitations-count">9</span>
+                       <span class="test-metric-name article-metrics__label gtm-chaptercitations-count">Citations</span>
+                    </a>
+            </li>
+            <li class="article-metrics__item">
+                     <span class="test-metric-count article-metrics__views">1.4k</span>
+                     <span class="test-metric-name article-metrics__label">Downloads</span>
+            </li>
+    </ul>
+</div></div><span id="test-SeriesTitle" class="vol-info">
+                Part of the
+                <a class="gtm-book-series-link" href="/bookseries/558">Lecture Notes in Computer Science</a>
+                book series (LNCS, volume 12364)</span></div><section class="Abstract" id="Abs1" tabindex="-1" lang="en"><h2 class="Heading">Abstract</h2><p id="Par1" class="Para">Photometric loss is widely used for self-supervised depth and egomotion estimation. However, the loss landscapes induced by photometric differences are often problematic for optimization, caused by plateau landscapes for pixels in textureless regions or multiple local minima for less discriminative pixels. In this work, feature-metric loss is proposed and defined on feature representation, where the feature representation is also learned in a self-supervised manner and regularized by both first-order and second-order derivatives to constrain the loss landscapes to form proper convergence basins. Comprehensive experiments and detailed analysis via visualization demonstrate the effectiveness of the proposed feature-metric loss. In particular, our method improves state-of-the-art methods on KITTI from 0.885 to 0.925 measured by <span class="InlineEquation" id="IEq1">\(\delta _1\)</span> for depth estimation, and significantly outperforms previous method for visual odometry.
+</p></section><div class="HeaderArticleNotes"><aside class="ArticleNote ArticleNoteMisc"><p class="SimplePara">This work is done when Chang Shu is an intern at DeepMotion.</p></aside></div><div class="note test-pdf-link" id="cobranding-and-download-availability-text"><div id="chapter_no_access_banner">This is a preview of subscription content, <a id="test-login-banner-link" href="/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-58529-7_34" data-track="click" data-track-action="Preview banner - Log in" data-track-label="">log in</a> to check access.</div></div><div class="article-actions--inline" id="article-actions--inline" data-component="article-actions--inline"></div><section id="Notes" class="Section1 RenderAsSection1"><h2 class="Heading">Notes</h2><div class="content"><section><h3 class="Heading">Acknowledgements</h3><p class="SimplePara">This research is supported by Beijing Science and Technology Project (No. Z181100008918018).</p></section></div></section><section class="Section1 RenderAsSection1" id="Bib1" tabindex="-1"><h2 class="Heading">References</h2><div class="content"><ol class="BibliographyWrapper"><li class="Citation"><div class="CitationNumber">1.</div><div class="CitationContent" id="CR1">Andraghetti, L., et al.: Enhancing self-supervised monocular depth estimation with traditional visual odometry. <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1908.03127"><span class="RefSource">arXiv:1908.03127</span></a></span> (2019)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">2.</div><div class="CitationContent" id="CR2">Bian, J.W., et al.: Unsupervised scale-consistent depth and ego-motion learning from monocular video. In: NeurIPS (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Bian%2C%20J.W.%2C%20et%20al.%3A%20Unsupervised%20scale-consistent%20depth%20and%20ego-motion%20learning%20from%20monocular%20video.%20In%3A%20NeurIPS%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">3.</div><div class="CitationContent" id="CR3">Bian, J.W., Zhan, H., Wang, N., Chin, T.J., Shen, C., Reid, I.: Unsupervised depth learning in challenging indoor video: Weak rectification to rescue. <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2006.02708"><span class="RefSource">arXiv:2006.02708</span></a></span> (2020)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">4.</div><div class="CitationContent" id="CR4">Casser, V., Pirk, S., Mahjourian, R., Angelova, A.: Depth prediction without the sensors: leveraging structure for unsupervised learning from monocular videos. In: AAAI (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Casser%2C%20V.%2C%20Pirk%2C%20S.%2C%20Mahjourian%2C%20R.%2C%20Angelova%2C%20A.%3A%20Depth%20prediction%20without%20the%20sensors%3A%20leveraging%20structure%20for%20unsupervised%20learning%20from%20monocular%20videos.%20In%3A%20AAAI%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">5.</div><div class="CitationContent" id="CR5">Chen, Y., Schmid, C., Sminchisescu, C.: Self-supervised learning with geometric constraints in monocular video: connecting flow, depth, and camera. In: ICCV (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Chen%2C%20Y.%2C%20Schmid%2C%20C.%2C%20Sminchisescu%2C%20C.%3A%20Self-supervised%20learning%20with%20geometric%20constraints%20in%20monocular%20video%3A%20connecting%20flow%2C%20depth%2C%20and%20camera.%20In%3A%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">6.</div><div class="CitationContent" id="CR6">Cheng, X., Zhong, Y., Dai, Y., Ji, P., Li, H.: Noise-aware unsupervised deep lidar-stereo fusion. In: CVPR (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Cheng%2C%20X.%2C%20Zhong%2C%20Y.%2C%20Dai%2C%20Y.%2C%20Ji%2C%20P.%2C%20Li%2C%20H.%3A%20Noise-aware%20unsupervised%20deep%20lidar-stereo%20fusion.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">7.</div><div class="CitationContent" id="CR7">Deshpande, A., Rock, J., Forsyth, D.: Learning large-scale automatic image colorization. In: ICCV (2015)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Deshpande%2C%20A.%2C%20Rock%2C%20J.%2C%20Forsyth%2C%20D.%3A%20Learning%20large-scale%20automatic%20image%20colorization.%20In%3A%20ICCV%20%282015%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">8.</div><div class="CitationContent" id="CR8">DeSouza, G.N., Kak, A.C.: Vision for mobile robot navigation: a survey. TPAMI (2002)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=DeSouza%2C%20G.N.%2C%20Kak%2C%20A.C.%3A%20Vision%20for%20mobile%20robot%20navigation%3A%20a%20survey.%20TPAMI%20%282002%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">9.</div><div class="CitationContent" id="CR9">Doersch, C., Gupta, A., Efros, A.A.: Unsupervised visual representation learning by context prediction. In: ICCV (2015)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Doersch%2C%20C.%2C%20Gupta%2C%20A.%2C%20Efros%2C%20A.A.%3A%20Unsupervised%20visual%20representation%20learning%20by%20context%20prediction.%20In%3A%20ICCV%20%282015%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">10.</div><div class="CitationContent" id="CR10">Donahue, J., Krähenbühl, P., Darrell, T.: Adversarial feature learning. arXiv preprint <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1605.09782"><span class="RefSource">arXiv:1605.09782</span></a></span> (2016)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">11.</div><div class="CitationContent" id="CR11">Eigen, D., Puhrsch, C., Fergus, R.: Depth map prediction from a single image using a multi-scale deep network. In: NeurIPS (2014)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Eigen%2C%20D.%2C%20Puhrsch%2C%20C.%2C%20Fergus%2C%20R.%3A%20Depth%20map%20prediction%20from%20a%20single%20image%20using%20a%20multi-scale%20deep%20network.%20In%3A%20NeurIPS%20%282014%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">12.</div><div class="CitationContent" id="CR12">Engel, J., Koltun, V., Cremers, D.: Direct sparse odometry. TPAMI (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Engel%2C%20J.%2C%20Koltun%2C%20V.%2C%20Cremers%2C%20D.%3A%20Direct%20sparse%20odometry.%20TPAMI%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">13.</div><div class="CitationContent" id="CR13">Fu, H., Gong, M., Wang, C., Batmanghelich, K., Tao, D.: Deep ordinal regression network for monocular depth estimation. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Fu%2C%20H.%2C%20Gong%2C%20M.%2C%20Wang%2C%20C.%2C%20Batmanghelich%2C%20K.%2C%20Tao%2C%20D.%3A%20Deep%20ordinal%20regression%20network%20for%20monocular%20depth%20estimation.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">14.</div><div class="CitationContent" id="CR14">Geiger, A., Lenz, P., Urtasun, R.: Are we ready for autonomous driving? The KITTI vision benchmark suite. In: CVPR (2012)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Geiger%2C%20A.%2C%20Lenz%2C%20P.%2C%20Urtasun%2C%20R.%3A%20Are%20we%20ready%20for%20autonomous%20driving%3F%20The%20KITTI%20vision%20benchmark%20suite.%20In%3A%20CVPR%20%282012%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">15.</div><div class="CitationContent" id="CR15">Godard, C., Mac Aodha, O., Brostow, G.: Digging into self-supervised monocular depth estimation. In: ICCV (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Godard%2C%20C.%2C%20Mac%20Aodha%2C%20O.%2C%20Brostow%2C%20G.%3A%20Digging%20into%20self-supervised%20monocular%20depth%20estimation.%20In%3A%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">16.</div><div class="CitationContent" id="CR16">Godard, C., Mac Aodha, O., Brostow, G.J.: Unsupervised monocular depth estimation with left-right consistency. In: CVPR (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Godard%2C%20C.%2C%20Mac%20Aodha%2C%20O.%2C%20Brostow%2C%20G.J.%3A%20Unsupervised%20monocular%20depth%20estimation%20with%20left-right%20consistency.%20In%3A%20CVPR%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">17.</div><div class="CitationContent" id="CR17">Gordon, A., Li, H., Jonschkowski, R., Angelova, A.: Depth from videos in the wild: unsupervised monocular depth learning from unknown cameras. In: ICCV (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Gordon%2C%20A.%2C%20Li%2C%20H.%2C%20Jonschkowski%2C%20R.%2C%20Angelova%2C%20A.%3A%20Depth%20from%20videos%20in%20the%20wild%3A%20unsupervised%20monocular%20depth%20learning%20from%20unknown%20cameras.%20In%3A%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">18.</div><div class="CitationContent" id="CR18">He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. In: CVPR (2016)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=He%2C%20K.%2C%20Zhang%2C%20X.%2C%20Ren%2C%20S.%2C%20Sun%2C%20J.%3A%20Deep%20residual%20learning%20for%20image%20recognition.%20In%3A%20CVPR%20%282016%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">19.</div><div class="CitationContent" id="CR19">Hirschmuller, H.: Stereo processing by semiglobal matching and mutual information. TPAMI (2007)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Hirschmuller%2C%20H.%3A%20Stereo%20processing%20by%20semiglobal%20matching%20and%20mutual%20information.%20TPAMI%20%282007%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">20.</div><div class="CitationContent" id="CR20">Kingma, D.P., Ba, J.: Adam: a method for stochastic optimization. <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1412.6980"><span class="RefSource">arXiv:1412.6980</span></a></span> (2014)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">21.</div><div class="CitationContent" id="CR21">Larsson, G., Maire, M., Shakhnarovich, G.: Learning representations for automatic colorization. In: Leibe, B., Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016. LNCS, vol. 9908, pp. 577–593. Springer, Cham (2016). <span class="ExternalRef"> <a target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-319-46493-0_35"><span class="RefSource">https://doi.org/10.1007/978-3-319-46493-0_35</span></a></span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-319-46493-0_35"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Learning%20representations%20for%20automatic%20colorization&amp;author=G.%20Larsson&amp;author=M.%20Maire&amp;author=G.%20Shakhnarovich&amp;pages=577-593&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">22.</div><div class="CitationContent" id="CR22">Larsson, G., Maire, M., Shakhnarovich, G.: Colorization as a proxy task for visual understanding. In: CVPR (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Larsson%2C%20G.%2C%20Maire%2C%20M.%2C%20Shakhnarovich%2C%20G.%3A%20Colorization%20as%20a%20proxy%20task%20for%20visual%20understanding.%20In%3A%20CVPR%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">23.</div><div class="CitationContent" id="CR23">Lee, J.H., Han, M.K., Ko, D.W., Suh, I.H.: From big to small: multi-scale local planar guidance for monocular depth estimation. <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1907.10326"><span class="RefSource">arXiv:1907.10326</span></a></span> (2019)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">24.</div><div class="CitationContent" id="CR24">Li, R., Wang, S., Long, Z., Gu, D.: Undeepvo: Monocular visual odometry through unsupervised deep learning. In: ICRA (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Li%2C%20R.%2C%20Wang%2C%20S.%2C%20Long%2C%20Z.%2C%20Gu%2C%20D.%3A%20Undeepvo%3A%20Monocular%20visual%20odometry%20through%20unsupervised%20deep%20learning.%20In%3A%20ICRA%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">25.</div><div class="CitationContent" id="CR25">Li, Y., Ushiku, Y., Harada, T.: Pose graph optimization for unsupervised monocular visual odometry. <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1903.06315"><span class="RefSource">arXiv:1903.06315</span></a></span> (2019)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">26.</div><div class="CitationContent" id="CR26">Luo, C., et al.: Every pixel counts++: joint learning of geometry and motion with 3d holistic understanding. <span class="ExternalRef"><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1810.06125"><span class="RefSource">arXiv:1810.06125</span></a></span> (2018)<span class="Occurrences"></span></div></li><li class="Citation"><div class="CitationNumber">27.</div><div class="CitationContent" id="CR27">Mahjourian, R., Wicke, M., Angelova, A.: Unsupervised learning of depth and ego-motion from monocular video using 3D geometric constraints. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Mahjourian%2C%20R.%2C%20Wicke%2C%20M.%2C%20Angelova%2C%20A.%3A%20Unsupervised%20learning%20of%20depth%20and%20ego-motion%20from%20monocular%20video%20using%203D%20geometric%20constraints.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">28.</div><div class="CitationContent" id="CR28">Masci, J., Meier, U., Cireşan, D., Schmidhuber, J.: Stacked convolutional auto-encoders for hierarchical feature extraction. In: ICANN (2011)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Masci%2C%20J.%2C%20Meier%2C%20U.%2C%20Cire%C5%9Fan%2C%20D.%2C%20Schmidhuber%2C%20J.%3A%20Stacked%20convolutional%20auto-encoders%20for%20hierarchical%20feature%20extraction.%20In%3A%20ICANN%20%282011%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">29.</div><div class="CitationContent" id="CR29">Mayer, N., et al.: A large dataset to train convolutional networks for disparity, optical flow, and scene flow estimation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 4040–4048 (2016)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Mayer%2C%20N.%2C%20et%20al.%3A%20A%20large%20dataset%20to%20train%20convolutional%20networks%20for%20disparity%2C%20optical%20flow%2C%20and%20scene%20flow%20estimation.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition%2C%20pp.%204040%E2%80%934048%20%282016%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">30.</div><div class="CitationContent" id="CR30">Meng, Y., et al.: Signet: semantic instance aided unsupervised 3D geometry perception. In: CVPR (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Meng%2C%20Y.%2C%20et%20al.%3A%20Signet%3A%20semantic%20instance%20aided%20unsupervised%203D%20geometry%20perception.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">31.</div><div class="CitationContent" id="CR31">Menze, M., Geiger, A.: Object scene flow for autonomous vehicles. In: CVPR (2015)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Menze%2C%20M.%2C%20Geiger%2C%20A.%3A%20Object%20scene%20flow%20for%20autonomous%20vehicles.%20In%3A%20CVPR%20%282015%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">32.</div><div class="CitationContent" id="CR32">Mescheder, L., Nowozin, S., Geiger, A.: Adversarial variational Bayes: unifying variational autoencoders and generative adversarial networks. In: ICML (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Mescheder%2C%20L.%2C%20Nowozin%2C%20S.%2C%20Geiger%2C%20A.%3A%20Adversarial%20variational%20Bayes%3A%20unifying%20variational%20autoencoders%20and%20generative%20adversarial%20networks.%20In%3A%20ICML%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">33.</div><div class="CitationContent" id="CR33">Mur-Artal, R., Montiel, J.M.M., Tardos, J.D.: ORB-SLAM: a versatile and accurate monocular slam system. TR (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Mur-Artal%2C%20R.%2C%20Montiel%2C%20J.M.M.%2C%20Tardos%2C%20J.D.%3A%20ORB-SLAM%3A%20a%20versatile%20and%20accurate%20monocular%20slam%20system.%20TR%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">34.</div><div class="CitationContent" id="CR34">Mur-Artal, R., Montiel, J.M.M., Tardos, J.D.: ORB-SLAM: a versatile and accurate monocular slam system. IEEE Trans. Rob. <strong class="EmphasisTypeBold ">31</strong>(5), 1147–1163 (2015)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1109/TRO.2015.2463671"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=ORB-SLAM%3A%20a%20versatile%20and%20accurate%20monocular%20slam%20system&amp;author=R.%20Mur-Artal&amp;author=JMM.%20Montiel&amp;author=JD.%20Tardos&amp;journal=IEEE%20Trans.%20Rob.&amp;volume=31&amp;issue=5&amp;pages=1147-1163&amp;publication_year=2015"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">35.</div><div class="CitationContent" id="CR35">Newcombe, R.A., Lovegrove, S.J., Davison, A.J.: DTAM: dense tracking and mapping in real-time. In: ICCV (2011)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Newcombe%2C%20R.A.%2C%20Lovegrove%2C%20S.J.%2C%20Davison%2C%20A.J.%3A%20DTAM%3A%20dense%20tracking%20and%20mapping%20in%20real-time.%20In%3A%20ICCV%20%282011%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">36.</div><div class="CitationContent" id="CR36">Noroozi, M., Favaro, P.: Unsupervised learning of visual representations by solving jigsaw puzzles. In: Leibe, B., Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016. LNCS, vol. 9910, pp. 69–84. Springer, Cham (2016). <span class="ExternalRef"> <a target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-319-46466-4_5"><span class="RefSource">https://doi.org/10.1007/978-3-319-46466-4_5</span></a></span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-319-46466-4_5"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Unsupervised%20learning%20of%20visual%20representations%20by%20solving%20jigsaw%20puzzles&amp;author=M.%20Noroozi&amp;author=P.%20Favaro&amp;pages=69-84&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">37.</div><div class="CitationContent" id="CR37">Noroozi, M., Pirsiavash, H., Favaro, P.: Representation learning by learning to count. In: ICCV (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Noroozi%2C%20M.%2C%20Pirsiavash%2C%20H.%2C%20Favaro%2C%20P.%3A%20Representation%20learning%20by%20learning%20to%20count.%20In%3A%20ICCV%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">38.</div><div class="CitationContent" id="CR38">Noroozi, M., Vinjimoor, A., Favaro, P., Pirsiavash, H.: Boosting self-supervised learning via knowledge transfer. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Noroozi%2C%20M.%2C%20Vinjimoor%2C%20A.%2C%20Favaro%2C%20P.%2C%20Pirsiavash%2C%20H.%3A%20Boosting%20self-supervised%20learning%20via%20knowledge%20transfer.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">39.</div><div class="CitationContent" id="CR39">Paszke, A., et al.: Automatic differentiation in Pytorch. In: NeurIPS-W (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Paszke%2C%20A.%2C%20et%20al.%3A%20Automatic%20differentiation%20in%20Pytorch.%20In%3A%20NeurIPS-W%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">40.</div><div class="CitationContent" id="CR40">Pillai, S., Ambrus, R., Gaidon, A.: SuperDepth: self-supervised, super-resolved monocular depth estimation. In: ICRA (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Pillai%2C%20S.%2C%20Ambrus%2C%20R.%2C%20Gaidon%2C%20A.%3A%20SuperDepth%3A%20self-supervised%2C%20super-resolved%20monocular%20depth%20estimation.%20In%3A%20ICRA%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">41.</div><div class="CitationContent" id="CR41">Pilzer, A., Lathuilière, S., Sebe, N., Ricci, E.: Refine and distill: exploiting cycle-inconsistency and knowledge distillation for unsupervised monocular depth estimation. In: CVPR (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Pilzer%2C%20A.%2C%20Lathuili%C3%A8re%2C%20S.%2C%20Sebe%2C%20N.%2C%20Ricci%2C%20E.%3A%20Refine%20and%20distill%3A%20exploiting%20cycle-inconsistency%20and%20knowledge%20distillation%20for%20unsupervised%20monocular%20depth%20estimation.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">42.</div><div class="CitationContent" id="CR42">Pire, T., Fischer, T., Castro, G., De Cristóforis, P., Civera, J., Berlles, J.J.: S-PTAM: stereo parallel tracking and mapping. Rob. Auton. Syst. <strong class="EmphasisTypeBold ">93</strong>, 27–42 (2017)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/j.robot.2017.03.019"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=S-PTAM%3A%20stereo%20parallel%20tracking%20and%20mapping&amp;author=T.%20Pire&amp;author=T.%20Fischer&amp;author=G.%20Castro&amp;author=P.%20Crist%C3%B3foris&amp;author=J.%20Civera&amp;author=JJ.%20Berlles&amp;journal=Rob.%20Auton.%20Syst.&amp;volume=93&amp;pages=27-42&amp;publication_year=2017"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">43.</div><div class="CitationContent" id="CR43">Ranjan, A., Jampani, V., Kim, K., Sun, D., Wulff, J., Black, M.J.: Competitive collaboration: joint unsupervised learning of depth, camera motion, optical flow and motion segmentation. In: CVPR (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Ranjan%2C%20A.%2C%20Jampani%2C%20V.%2C%20Kim%2C%20K.%2C%20Sun%2C%20D.%2C%20Wulff%2C%20J.%2C%20Black%2C%20M.J.%3A%20Competitive%20collaboration%3A%20joint%20unsupervised%20learning%20of%20depth%2C%20camera%20motion%2C%20optical%20flow%20and%20motion%20segmentation.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">44.</div><div class="CitationContent" id="CR44">Tosi, F., Aleotti, F., Poggi, M., Mattoccia, S.: Learning monocular depth estimation infusing traditional stereo knowledge. In: CVPR (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Tosi%2C%20F.%2C%20Aleotti%2C%20F.%2C%20Poggi%2C%20M.%2C%20Mattoccia%2C%20S.%3A%20Learning%20monocular%20depth%20estimation%20infusing%20traditional%20stereo%20knowledge.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">45.</div><div class="CitationContent" id="CR45">Vincent, P., Larochelle, H., Bengio, Y., Manzagol, P.A.: Extracting and composing robust features with denoising autoencoders. In: ICML (2008)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Vincent%2C%20P.%2C%20Larochelle%2C%20H.%2C%20Bengio%2C%20Y.%2C%20Manzagol%2C%20P.A.%3A%20Extracting%20and%20composing%20robust%20features%20with%20denoising%20autoencoders.%20In%3A%20ICML%20%282008%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">46.</div><div class="CitationContent" id="CR46">Wang, C., Buenaposada, J.M., Zhu, R., Lucey, S.: Learning depth from monocular videos using direct methods. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Wang%2C%20C.%2C%20Buenaposada%2C%20J.M.%2C%20Zhu%2C%20R.%2C%20Lucey%2C%20S.%3A%20Learning%20depth%20from%20monocular%20videos%20using%20direct%20methods.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">47.</div><div class="CitationContent" id="CR47">Watson, J., Firman, M., Brostow, G.J., Turmukhambetov, D.: Self-supervised monocular depth hints. In: ICCV (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Watson%2C%20J.%2C%20Firman%2C%20M.%2C%20Brostow%2C%20G.J.%2C%20Turmukhambetov%2C%20D.%3A%20Self-supervised%20monocular%20depth%20hints.%20In%3A%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">48.</div><div class="CitationContent" id="CR48">Wong, A., Hong, B.W., Soatto, S.: Bilateral cyclic constraint and adaptive regularization for unsupervised monocular depth prediction. In: CVPR (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Wong%2C%20A.%2C%20Hong%2C%20B.W.%2C%20Soatto%2C%20S.%3A%20Bilateral%20cyclic%20constraint%20and%20adaptive%20regularization%20for%20unsupervised%20monocular%20depth%20prediction.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">49.</div><div class="CitationContent" id="CR49">Yang, Z., Wang, P., Wang, Y., Xu, W., Nevatia, R.: Every pixel counts: unsupervised geometry learning with holistic 3D motion understanding. In: Leal-Taixé, L., Roth, S. (eds.) ECCV 2018. LNCS, vol. 11133, pp. 691–709. Springer, Cham (2019). <span class="ExternalRef"> <a target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-030-11021-5_43"><span class="RefSource">https://doi.org/10.1007/978-3-030-11021-5_43</span></a></span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-030-11021-5_43"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Every%20pixel%20counts%3A%20unsupervised%20geometry%20learning%20with%20holistic%203D%20motion%20understanding&amp;author=Z.%20Yang&amp;author=P.%20Wang&amp;author=Y.%20Wang&amp;author=W.%20Xu&amp;author=R.%20Nevatia&amp;pages=691-709&amp;publication_year=2019"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">50.</div><div class="CitationContent" id="CR50">Yang, Z., Wang, P., Wang, Y., Xu, W., Nevatia, R.: Lego: Learning edge with geometry all at once by watching videos. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Yang%2C%20Z.%2C%20Wang%2C%20P.%2C%20Wang%2C%20Y.%2C%20Xu%2C%20W.%2C%20Nevatia%2C%20R.%3A%20Lego%3A%20Learning%20edge%20with%20geometry%20all%20at%20once%20by%20watching%20videos.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">51.</div><div class="CitationContent" id="CR51">Yang, Z., Wang, P., Xu, W., Zhao, L., Nevatia, R.: Unsupervised learning of geometry with edge-aware depth-normal consistency. In: AAAI (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Yang%2C%20Z.%2C%20Wang%2C%20P.%2C%20Xu%2C%20W.%2C%20Zhao%2C%20L.%2C%20Nevatia%2C%20R.%3A%20Unsupervised%20learning%20of%20geometry%20with%20edge-aware%20depth-normal%20consistency.%20In%3A%20AAAI%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">52.</div><div class="CitationContent" id="CR52">Yin, Z., Shi, J.: GeoNet: unsupervised learning of dense depth, optical flow and camera pose. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Yin%2C%20Z.%2C%20Shi%2C%20J.%3A%20GeoNet%3A%20unsupervised%20learning%20of%20dense%20depth%2C%20optical%20flow%20and%20camera%20pose.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">53.</div><div class="CitationContent" id="CR53">Zhan, H., Garg, R., Weerasekera, C.S., Li, K., Agarwal, H., Reid, I.: Unsupervised learning of monocular depth estimation and visual odometry with deep feature reconstruction. In: CVPR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Zhan%2C%20H.%2C%20Garg%2C%20R.%2C%20Weerasekera%2C%20C.S.%2C%20Li%2C%20K.%2C%20Agarwal%2C%20H.%2C%20Reid%2C%20I.%3A%20Unsupervised%20learning%20of%20monocular%20depth%20estimation%20and%20visual%20odometry%20with%20deep%20feature%20reconstruction.%20In%3A%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">54.</div><div class="CitationContent" id="CR54">Zhang, R., Isola, P., Efros, A.A.: Colorful image colorization. In: Leibe, B., Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016. LNCS, vol. 9907, pp. 649–666. Springer, Cham (2016). <span class="ExternalRef"> <a target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-319-46487-9_40"><span class="RefSource">https://doi.org/10.1007/978-3-319-46487-9_40</span></a></span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-319-46487-9_40"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Colorful%20image%20colorization&amp;author=R.%20Zhang&amp;author=P.%20Isola&amp;author=AA.%20Efros&amp;pages=649-666&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">55.</div><div class="CitationContent" id="CR55">Zhou, J., Wang, Y., Qin, K., Zeng, W.: Unsupervised high-resolution depth learning from videos with dual networks. In: ICCV (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Zhou%2C%20J.%2C%20Wang%2C%20Y.%2C%20Qin%2C%20K.%2C%20Zeng%2C%20W.%3A%20Unsupervised%20high-resolution%20depth%20learning%20from%20videos%20with%20dual%20networks.%20In%3A%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">56.</div><div class="CitationContent" id="CR56">Zhou, T., Brown, M., Snavely, N., Lowe, D.G.: Unsupervised learning of depth and ego-motion from video. In: CVPR (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Zhou%2C%20T.%2C%20Brown%2C%20M.%2C%20Snavely%2C%20N.%2C%20Lowe%2C%20D.G.%3A%20Unsupervised%20learning%20of%20depth%20and%20ego-motion%20from%20video.%20In%3A%20CVPR%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">57.</div><div class="CitationContent" id="CR57">Zou, Y., Luo, Z., Huang, J.-B.: DF-net: unsupervised joint learning of depth and flow using cross-task consistency. In: Ferrari, V., Hebert, M., Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol. 11209, pp. 38–55. Springer, Cham (2018). <span class="ExternalRef"> <a target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-030-01228-1_3"><span class="RefSource">https://doi.org/10.1007/978-3-030-01228-1_3</span></a></span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/978-3-030-01228-1_3"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=DF-net%3A%20unsupervised%20joint%20learning%20of%20depth%20and%20flow%20using%20cross-task%20consistency&amp;author=Y.%20Zou&amp;author=Z.%20Luo&amp;author=J-B.%20Huang&amp;pages=38-55&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span></div></li></ol></div></section><section class="Section1 RenderAsSection1"><h2 class="Heading" id="copyrightInformation">Copyright information</h2><div class="ArticleCopyright content"><div class="ChapterCopyright">© Springer Nature Switzerland AG 2020</div></div></section><section id="authorsandaffiliations" class="Section1 RenderAsSection1"><h2 class="Heading">Authors and Affiliations</h2><div class="content authors-affiliations u-interface"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Chang Shu</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Kun Yu</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-2">2</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Zhixiang Duan</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-2">2</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Kuiyuan Yang</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-2">2</li></ul><span class="author-information"><span class="author-information__contact u-icon-before"><a href="mailto:kuiyuanyang@deepmotion.ai" title="kuiyuanyang@deepmotion.ai" itemprop="email" data-track="click" data-track-action="Email author" data-track-label="">Email author</a></span></span></li></ul><ol class="test-affiliations"><li class="affiliation" data-test="affiliation-1" data-affiliation-highlight="affiliation-1" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">1.</span><span class="affiliation__item"><span itemprop="name" class="affiliation__name">Meituan Dianping Group</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">Beijing</span><span itemprop="addressCountry" class="affiliation__country">China</span></span></span></li><li class="affiliation" data-test="affiliation-2" data-affiliation-highlight="affiliation-2" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">2.</span><span class="affiliation__item"><span itemprop="name" class="affiliation__name">DeepMotion</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">Beijing</span><span itemprop="addressCountry" class="affiliation__country">China</span></span></span></li></ol></div></section></div>
+                        </article>
+                        <aside class="section section--collapsible" id="AboutThisContent">
+    <h2 class="section__heading" id="aboutcontent">About this paper</h2>
+    <div class="section__content bibliographic-information">
+                <div id="crossMark" class="crossmark">
+            <a data-crossmark="10.1007%2F978-3-030-58529-7_34" target="_blank" rel="noopener" href="https://crossmark.crossref.org/dialog/?doi=10.1007%2F978-3-030-58529-7_34" title="Verify currency and authenticity via CrossMark" data-track="click" data-track-action="Crossmark" data-track-label="">
+                <span class="u-screenreader-only">CrossMark</span>
+                <svg class="CrossMark" id="crossmark-icon" width="57" height="81">
+                    <image width="57" height="81" alt="Verify currency and authenticity via CrossMark" src="/springerlink-static/1895273086/images/png/crossmark.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/springerlink-static/1895273086/images/svg/crossmark.svg"></image>
+                </svg>
+            </a>
+        </div>
+
+        <div class="crossmark__adjacent">
+            <dl class="citation-info u-highlight-target u-mb-16" id="citeas" tabindex="-1">
+    <dt class="test-cite-heading">
+        Cite this paper as:
+    </dt>
+    <dd id="citethis-text">Shu C., Yu K., Duan Z., Yang K. (2020) Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion. In: Vedaldi A., Bischof H., Brox T., Frahm JM. (eds) Computer Vision – ECCV 2020. ECCV 2020. Lecture Notes in Computer Science, vol 12364. Springer, Cham. https://doi.org/10.1007/978-3-030-58529-7_34</dd>
+</dl>
+                <ul class="bibliographic-information__list bibliographic-information__list--inline">
+        <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title">First Online</span>
+            <span class="bibliographic-information__value u-overflow-wrap">13 November 2020</span>
+        </li>
+        <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title">DOI</span>
+            <span class="bibliographic-information__value u-overflow-wrap" id="doi-url">https://doi.org/10.1007/978-3-030-58529-7_34</span>
+        </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Publisher Name</span>
+                <span class="bibliographic-information__value" id="publisher-name">Springer, Cham</span>
+            </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Print ISBN</span>
+                <span class="bibliographic-information__value" id="print-isbn">978-3-030-58528-0</span>
+            </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Online ISBN</span>
+                <span class="bibliographic-information__value" id="electronic-isbn">978-3-030-58529-7</span>
+            </li>
+
+                <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title">eBook Packages</span>
+                <span class="bibliographic-information__value" itemprop="genre"><a id="ebook-package" href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;11645&amp;facet-start-year&#x3D;2020&amp;facet-end-year&#x3D;2020">Computer Science</a></span>
+                <span class="bibliographic-information__value" itemprop="genre"><a id="ebook-package" href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;43710&amp;facet-start-year&#x3D;2020&amp;facet-end-year&#x3D;2020">Computer Science (R0)</a></span>
+        </li>
+
+    </ul>
+
+            <ul class="bibliographic-information__list">
+        <li class="bibliographic-information__item">
+            <a id="reprintsandpermissions-link" target="_blank" rel="noopener" href="https://s100.copyright.com/AppDispatchServlet?publisherName&#x3D;SpringerNature&amp;orderBeanReset&#x3D;true&amp;orderSource&#x3D;SpringerLink&amp;copyright&#x3D;Springer+Nature+Switzerland+AG&amp;author&#x3D;Chang+Shu%2C+Kun+Yu%2C+Zhixiang+Duan+et+al&amp;contentID&#x3D;10.1007%2F978-3-030-58529-7_34&amp;endPage&#x3D;588&amp;publicationDate&#x3D;2020&amp;startPage&#x3D;572&amp;publication&#x3D;eBook&amp;title&#x3D;Feature-Metric+Loss+for+Self-supervised+Learning+of+Depth+and+Egomotion&amp;imprint&#x3D;Springer+Nature+Switzerland+AG" title="Visit RightsLink for information about reusing this paper" data-track="click" data-track-action="Reprints and Permissions" data-track-label="">Reprints and Permissions</a>
+        </li>
+</ul>
+
+
+
+        </div>
+      
+      
+          
+    </div>
+</aside>
+
+                        <div class="section section--collapsible uptodate-recommendations gtm-recommendations">
+    <h2 class="uptodate-recommendations__title section__heading gtm-recommendations__title" id="uptodaterecommendations">Personalised recommendations</h2>
+    <div class="section__content">
+        <div class="uptodate-recommendations__container">
+             <link rel="uptodate-inline" href="/springerlink-static/1895273086/css/recommendations.css"/>
+        </div>
+    </div>
+</div>
+                                <div id="doubleclick-native-ad" data-google-ad="native"></div>
+
+                        
+
+
+
+    <div class="sticky-banner sticky-banner--buybox u-interface u-hide" data-component="SpringerLink.StickyBanner" data-namespace="hasLink">
+        <div class="sticky-banner__container">
+                <div class="citations" data-component="SV.Dropdown" data-namespace="citationsSticky">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">paper</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" data-track="click" data-track-action="Cite as link" data-track-label="Cite dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58529-7_34?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .RIS file" data-track="click" data-track-action="Export citation" data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58529-7_34?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .ENW file" data-track="click" data-track-action="Export citation" data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58529-7_34?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .BIB file" data-track="click" data-track-action="Export citation" data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                
+
+
+
+                <div class="sticky-banner__buybox-link sticky-banner__buybox-link--sticky">
+        <a href="#buy" class="gtm-buybox-anchor">
+            Buy options
+        </a>
+    </div>
+
+        </div>
+    </div>
+
+
+                    </div>
+                    <aside class="main-sidebar-right u-interface">
+                        <div data-role="sticky-wrapper">
+                            <div class="main-sidebar-right__content u-composite-layer" data-component="SpringerLink.StickySidebar">
+                                <div class="article-actions" id="article-actions">
+                                    <h2 class="u-screenreader-only" aria-hidden="true">Actions</h2>
+
+                                        <div id="buy">
+                                            
+    
+    <div class="sprcom-buybox buybox" id="sprcom-buybox">
+        <div>
+            <div class="c-box" style="padding: 0">
+                <h2 class="c-box__heading visually-hidden">Buying options</h2>
+                <div class="buying-options">
+                    
+                        <div class="buying-option expanded">
+                            <dl class="buying-option-price">
+                                <dt><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                    <path
+                                    d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                    fill="#666" fill-rule="evenodd"></path>
+                                </svg>
+                                    Chapter
+                                </dt>
+
+                                <dd class="price-amount">
+                                    <div data-test-id="test-chapter-price" class="buybox__price">
+                                        EUR &nbsp;
+                                        24.95
+                                    </div>
+                                </dd>
+
+                                <dd class="price-info">Price excludes VAT (Russian Federation)</dd>
+                            </dl>
+
+                            <form class="buying-option-form" action="https://order.springer.com/public/cart" method="post">
+                                <input type="hidden" name="type" value="chapter">
+                                <input type="hidden" name="doi" value="10.1007/978-3-030-58529-7_34">
+                                <input type="hidden" name="isxn" value="978-3-030-58529-7">
+                                <input type="hidden" name="contenttitle" value="Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion">
+                                <input type="hidden" name="copyrightyear" value="2020">
+                                <input type="hidden" name="year" value="2020">
+                                <input type="hidden" name="authors" value="Chang Shu, et al.">
+                                <input type="hidden" name="title" value="Computer Vision – ECCV 2020">
+                                <input type="hidden" name="mac" value="27dcdb4d66a4f5c23b3a2a1d2963c5bf">
+                                <ul class="buying-option-usps">
+                                
+                                    <li>DOI: 10.1007/978-3-030-58529-7_34</li>
+                                
+                                    <li>Chapter length: 17 pages</li>
+                                
+                                    <li>Instant PDF download</li>
+                                
+                                    <li>Readable on all devices</li>
+                                
+                                    <li>Own it forever</li>
+                                
+                                    <li>Exclusive offer for individuals only</li>
+                                
+                                    <li>Tax calculation will be finalised during checkout</li>
+                                
+                                </ul>
+
+                                <button
+                                type="submit"
+                                class="buybox__buy-button c-button c-button--blue"
+                                value="Submit"
+                                data-track="click"
+                                data-track-action="buy pdf"
+                                data-track-label="buy chapter action"
+                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Feature-Metric Loss for Self-supervised Learning of Depth and Egomotion&quot;,&quot;id&quot;:&quot;10.1007/978-3-030-58529-7_34&quot;,&quot;price&quot;:24.95,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ppv-chapter&quot;,&quot;quantity&quot;:1}]}}});"
+                                >Buy Chapter</button>
+                            </form>
+                        </div>
+                    
+                    
+                        <div class="buying-option expanded">
+                            <dl class="buying-option-price">
+                                <dt><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                    <path
+                                    d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                    fill="#666" fill-rule="evenodd"></path>
+                                </svg>
+                                    eBook
+                                </dt>
+                                <dd class="price-amount">EUR &nbsp;
+                                    82.38</dd>
+                                <dd class="price-info">Price includes VAT (Russian Federation)</dd>
+                            </dl>
+                            <form class="buying-option-form" action="https://order.springer.com/public/cart" method="post">
+                                <input type="hidden" name="type" value="ebook">
+                                <input type="hidden" name="doi" value="10.1007/978-3-030-58529-7">
+                                <input type="hidden" name="isxn" value="978-3-030-58529-7">
+                                <input type="hidden" name="contenttitle" value="Computer Vision – ECCV 2020">
+                                <ul class="buying-option-usps">
+                                
+                                    <li>ISBN: 978-3-030-58529-7</li>
+                                
+                                    <li>Instant PDF download</li>
+                                
+                                    <li>Readable on all devices</li>
+                                
+                                    <li>Own it forever</li>
+                                
+                                    <li>Exclusive offer for individuals only</li>
+                                
+                                    <li>Tax calculation will be finalised during checkout</li>
+                                
+                                </ul>
+                                <button
+                                type="submit"
+                                class="buybox__buy-button c-button c-button--blue"
+                                value="Submit"
+                                data-track="click"
+                                data-track-label="buy ebook"
+                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Computer Vision – ECCV 2020&quot;,&quot;id&quot;:&quot;978-3-030-58529-7&quot;,&quot;price&quot;:76.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ebo&quot;,&quot;quantity&quot;:1}]}}});"
+                                >Buy eBook</button>
+                            </form>
+                        </div>
+                    
+                        <div class="buying-option expanded">
+                            <dl class="buying-option-price">
+                                <dt><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                    <path
+                                    d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                    fill="#666" fill-rule="evenodd"></path>
+                                </svg>
+                                    Softcover Book
+                                </dt>
+                                <dd class="price-amount">EUR &nbsp;
+                                    97.99</dd>
+                                <dd class="price-info">Price excludes VAT (Russian Federation)</dd>
+                            </dl>
+                            <form class="buying-option-form" action="https://order.springer.com/public/cart" method="post">
+                                <input type="hidden" name="type" value="book">
+                                <input type="hidden" name="doi" value="10.1007/978-3-030-58529-7">
+                                <input type="hidden" name="isxn" value="978-3-030-58528-0">
+                                <input type="hidden" name="contenttitle" value="Computer Vision – ECCV 2020">
+                                <ul class="buying-option-usps">
+                                
+                                    <li>ISBN: 978-3-030-58528-0</li>
+                                
+                                    <li>Dispatched in 3 to 5 business days</li>
+                                
+                                    <li>Exclusive offer for individuals only</li>
+                                
+                                    <li>Free shipping worldwide<br><a href='https://support.springernature.com/en/support/solutions/articles/6000233448-coronavirus-disease-covid-19-delivery-information' target='_blank'>Shipping restrictions may apply, check to see if you are impacted</a>.</li>
+                                
+                                    <li>Tax calculation will be finalised during checkout</li>
+                                
+                                </ul>
+                                <button
+                                type="submit"
+                                class="buybox__buy-button c-button c-button--blue"
+                                value="Submit"
+                                data-track="click"
+                                data-track-label="buy softcover"
+                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Computer Vision – ECCV 2020&quot;,&quot;id&quot;:&quot;978-3-030-58528-0&quot;,&quot;price&quot;:97.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;print&quot;,&quot;quantity&quot;:1}]}}});"
+                                >Buy Softcover Book</button>
+                            </form>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="c-box buybox-additional-info">
+                <a class="c-box__item"
+                href="https://www.springernature.com/gp/librarians/licensing/license-options">Learn about institutional subscriptions</a>
+            </div>
+        </div>
+        <style>
+                .sprcom-buybox {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .sprcom-buybox > div {
+                    flex-grow: 1;
+                    width: 100%;
+                }
+
+                .sprcom-buybox * {
+                    font-size: 13px !important;
+                }
+
+                .sprcom-buybox > div > * + * {
+                    margin-top: 24px;
+                }
+
+                .sprcom-buybox .c-box__heading {
+                    margin-bottom: 0;
+                }
+
+
+                .sprcom-buybox .buying-options {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .sprcom-buybox .buying-options > * {
+                    background-color: #ddd;
+                    box-shadow: 0 0 0 1px #bbb;
+                    flex-grow: 1;
+                    flex-basis: auto;
+                    width: 240px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+
+                .sprcom-buybox dt {
+                    align-items: center;
+                    display: flex;
+                    font-weight: 400;
+                    margin-left: -10px;
+                }
+
+                .sprcom-buybox .buying-option-form {
+                    padding: 12px;
+                }
+
+                .sprcom-buybox .buying-option-price {
+                    align-items: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 1.6rem;
+                    line-height: 1.4;
+                    user-select: none;
+                    padding: 6px 12px;
+                }
+
+                .sprcom-buybox .buying-option-price dt,
+                .sprcom-buybox .buying-option-price dt svg path,
+                .sprcom-buybox .buying-option-price dd {
+                    color: #004aa7;
+                    fill: #004aa7;
+                }
+
+                .sprcom-buybox .buying-option-price dt,
+                .sprcom-buybox .buying-option-price dd {
+                    flex-grow: 1;
+                }
+
+                .sprcom-buybox .buying-option-price .price-info {
+                    color: #666;
+                    font-size: 80%;
+                    text-align: right;
+                    width: 100%;
+                }
+
+                .sprcom-buybox .buying-option-price .price-amount {
+                    font-size: 140%;
+                    text-align: right;
+                    font-weight: 600;
+                }
+
+                .sprcom-buybox .buying-option-price .price-amount-without-discount {
+                    color: #c40606;
+                    font-size: 140%;
+                    text-decoration: line-through;
+                    width: 100%;
+                }
+
+                .sprcom-buybox .buying-option-price .price-type {
+                    font-size: 40%;
+                    margin-left: 8px;
+                }
+
+                .sprcom-buybox .buying-option-usps {
+                    color: #666;
+                    font-size: 1.4rem;
+                    line-height: 1.4;
+                    margin: 0 0 0 13px;
+                    padding-left: 16px;
+
+                    list-style: disc;
+                }
+
+                .sprcom-buybox .buying-option-usps > li {
+                    position: relative;
+                }
+
+                .sprcom-buybox .buying-option-usps > li:not(:first-child) {
+                    margin-top: 4px;
+                }
+
+                .sprcom-buybox .c-button {
+                    margin-top: 18px;
+                    text-align: center;
+                }
+
+                .sprcom-buybox .buying-options > .expanded {
+                    background-color: #fff;
+                }
+
+                .sprcom-buybox .buying-options > .expanded dt,
+                .sprcom-buybox .buying-options > .expanded dt svg path,
+                .sprcom-buybox .buying-options > .expanded .price-amount {
+                    color: #333;
+                    fill: #666;
+                }
+
+
+                .sprcom-buybox .buybox-additional-info {
+                    padding-top: 6px;
+                    padding-bottom: 8px;
+                }
+
+                .sprcom-buybox .buybox-additional-info .c-box__item {
+                    font-size: 13px !important;
+                    margin-bottom: 0;
+                }
+
+                .sprcom-buybox a:visited {
+                    color: #004b83;
+                }
+
+
+                .sprcom-buybox [role=button] {
+                    cursor: pointer;
+                }
+
+                .sprcom-buybox button:focus,
+                .sprcom-buybox [role=button]:focus {
+                    outline: 4px solid #fc0;
+                    position: relative;
+                }
+
+                .sprcom-buybox [aria-expanded=false] svg {
+                    transform: rotate(0deg);
+                }
+
+                .sprcom-buybox [aria-expanded=true] svg {
+                    transform: rotate(90deg);
+                }
+
+                .sprcom-buybox dt {
+                    align-items: center;
+                    display: flex;
+                }
+
+
+                .sprcom-buybox .visually-hidden {
+                    clip: rect(1px, 1px, 1px, 1px);
+                    height: 1px;
+                    overflow: hidden;
+                    position: absolute;
+                    width: 1px;
+                }
+
+                .sprcom-buybox style {
+                    display: none;
+                }
+            </style>
+            <script>
+                ;(function () {
+                    var timestamp = Date.now()
+                    document.write('<div data-id="id_'+ timestamp +'"></div>')
+
+                    var head = document.getElementsByTagName("head")[0]
+                    var script = document.createElement("script")
+                    script.type = "text/javascript"
+                    script.src = "https://buy.springer.com/assets/js/buybox-bundle-52d08dec1e.js"
+                    script.id = "ecommerce-scripts-" + timestamp
+                    head.appendChild(script)
+
+                    var buybox = document.querySelector("[data-id=id_"+ timestamp +"]").parentNode
+
+                    ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(initCollapsibles)
+
+                    function initCollapsibles(subscription, index) {
+                        var toggle = subscription.querySelector(".buying-option-price")
+                        subscription.classList.remove("expanded")
+                        var form = subscription.querySelector(".buying-option-form")
+
+                        if (form) {
+                            var formAction = form.getAttribute("action")
+                            document.querySelector("#ecommerce-scripts-" + timestamp).addEventListener("load", bindModal(form, formAction, timestamp, index), false)
+                        }
+
+                        var priceInfo = subscription.querySelector(".price-info")
+                        var buyingOption = toggle.parentElement
+
+                        if (toggle && form && priceInfo) {
+                            toggle.setAttribute("role", "button")
+                            toggle.setAttribute("tabindex", "0")
+
+                            toggle.addEventListener("click", function (event) {
+                                var expanded = toggle.getAttribute("aria-expanded") === "true" || false
+                                toggle.setAttribute("aria-expanded", !expanded)
+                                form.hidden = expanded
+                                if (!expanded) {
+                                    buyingOption.classList.add("expanded")
+                                } else {
+                                    buyingOption.classList.remove("expanded")
+                                }
+                                priceInfo.hidden = expanded
+                            }, false)
+                        }
+                    }
+
+                    function bindModal(form, formAction, timestamp, index) {
+                        var weHasBrowserSupport = window.fetch && Array.from
+
+                        return function() {
+                            var Buybox = EcommScripts ? EcommScripts.Buybox : null
+                            var Modal = EcommScripts ? EcommScripts.Modal : null
+
+                            if (weHasBrowserSupport && Buybox && Modal) {
+                                var modalID = "ecomm-modal_" + timestamp + "_" + index
+
+                                var modal = new Modal(modalID)
+                                modal.domEl.addEventListener("close", close)
+                                function close() {
+                                    form.querySelector("button[type=submit]").focus()
+                                }
+
+                                var cartURL = "/cart"
+                                var cartModalURL = "/cart?messageOnly=1"
+
+                                form.setAttribute(
+                                    "action",
+                                    formAction.replace(cartURL, cartModalURL)
+                                )
+
+                                var formSubmit = Buybox.interceptFormSubmit(
+                                    Buybox.fetchFormAction(window.fetch),
+                                    Buybox.triggerModalAfterAddToCartSuccess(modal),
+                                    function() {
+                                        form.removeEventListener("submit", formSubmit, false)
+                                        form.setAttribute(
+                                            "action",
+                                            formAction.replace(cartModalURL, cartURL)
+                                        )
+                                        form.submit()
+                                    }
+                                )
+                                
+                                form.addEventListener("submit", formSubmit, false)
+
+                                document.body.appendChild(modal.domEl)
+                            }
+                        }
+                    }
+
+                    function initKeyControls() {
+                        document.addEventListener("keydown", function (event) {
+                            if (document.activeElement.classList.contains("buying-option-price") && (event.code === "Space" || event.code === "Enter")) {
+                                if (document.activeElement) {
+                                    event.preventDefault()
+                                    document.activeElement.click()
+                                }
+                            }
+                        }, false)
+                    }
+
+                    function initialStateOpen() {
+                        var buyboxWidth = buybox.offsetWidth
+                        ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(function (option, index) {
+                            var toggle = option.querySelector(".buying-option-price")
+                            var form = option.querySelector(".buying-option-form")
+                            var priceInfo = option.querySelector(".price-info")
+                            if (buyboxWidth > 480) {
+                                toggle.click()
+                            } else {
+                                if (index === 0) {
+                                    toggle.click()
+                                } else {
+                                    toggle.setAttribute("aria-expanded", "false")
+                                    form.hidden = "hidden"
+                                    priceInfo.hidden = "hidden"
+                                }
+                            }
+                        })
+                    }
+
+                    initialStateOpen()
+
+                    if (window.buyboxInitialised) return
+                    window.buyboxInitialised = true
+
+                    initKeyControls()
+                })()
+            </script>
+    </div>
+    
+
+                                        </div>
+
+                                    <div class="u-js-hide u-js-show-two-col">
+                                        
+        
+
+
+
+
+                                            <div class="citations" data-component="SV.Dropdown" data-namespace="citations">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">paper</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" data-track="click" data-track-action="Cite as link" data-track-label="Cite dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58529-7_34?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .RIS file" data-track="click" data-track-action="Export citation" data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58529-7_34?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .ENW file" data-track="click" data-track-action="Export citation" data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58529-7_34?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .BIB file" data-track="click" data-track-action="Export citation" data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                                            
+
+
+
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                                <div class="skyscraper-ad u-hide" data-google-ad="skyscraper" data-gpt-hide-ad>
+        <div class="skyscraper-ad__wrapper">
+            <p class="skyscraper-ad__label">Advertisement</p>
+            <button class="skyscraper-ad__hide" title="Hide this advertisement" data-gpt-hide-ad-button data-track="click" data-track-action="Hide advertisement" data-track-label="">Hide</button>
+            <div id="doubleclick-ad" class="skyscraper-ad__ad" data-gpt></div>
+        </div>
+    </div>
+
+                        </div>
+                    </aside>
+                </div>
+            </main>
+                <footer class="footer u-interface">
+        <div class="footer__aside-wrapper">
+            <div class="footer__content">
+                <div class="footer__aside">
+                    <p class="footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                                <div class="footer__edition" data-component="SV.EditionSwitcher">
+                                    <h3 class="u-hide" data-role="button-dropdown__title" data-btn-text="Switch between Academic &#38; Corporate Edition">Switch Edition</h3>
+                                    <ul data-role="button-dropdown__content">
+                                        <li  class="selected"><a href="/siteEdition/link?previousUrl=/chapter/10.1007/978-3-030-58529-7_34&id=siteedition-academic-link" id="siteedition-academic-link">Academic Edition</a></li>
+                                        <li ><a href="/siteEdition/rd?previousUrl=/chapter/10.1007/978-3-030-58529-7_34&id=siteedition-corporate-link" id="siteedition-corporate-link">Corporate Edition</a></li>
+                                    </ul>
+                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <ul class="footer__nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/impressum">Impressum</a>
+                </li>
+                <li>
+                    <a href="/termsandconditions">Legal information</a>
+                </li>
+                <li>
+                    <a href="/privacystatement">Privacy statement</a>
+                </li>
+                <li>
+                    <a href="https://www.springernature.com/ccpa">California privacy statement</a>
+                </li>
+                <li>
+                    <a href="/cookiepolicy">How we use cookies</a>
+                </li>
+                <li>
+                    <a class="optanon-toggle-display" href="javascript:void(0);" data-cc-action="preferences">Manage cookies/Do not sell my data</a>
+                </li>
+                <li>
+                    <a href="/accessibility">Accessibility</a>
+                </li>
+                <li>
+                    <a href="https://support.springer.com/en/support/home">FAQ</a>
+                </li>
+                <li>
+                    <a id="contactus-footer-link" href="https://support.springer.com/en/support/solutions/articles/6000206179-contacting-us">Contact us</a>
+                </li>
+                <li>
+                    <a href="https://www.springer.com/gp/shop/promo/affiliate/springer-nature">Affiliate program</a>
+                </li>
+            </ul>
+            <a class="parent-logo"
+               target="_blank" rel="noopener"
+               href="//www.springernature.com"
+               title="Go to Springer Nature">
+                <span class="u-screenreader-only">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12"
+                           src="/springerlink-static/1895273086/images/png/springernature.png"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href="/springerlink-static/1895273086/images/svg/springernature.svg">
+                    </image>
+                </svg>
+            </a>
+
+            <p class="footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+                <p class="footer__user-access-info">
+                    <span>Not logged in</span>
+                    <span>Not affiliated</span>
+                    <span>91.245.42.171</span>
+                </p>
+        </div>
+    </footer>
+
+        </div>
+        <script type="text/javascript">
+    (function() {
+        var linkEl = document.querySelector('.js-ctm');
+        var scriptsList = [];
+        var polyfillFeatures = '';
+
+        window.SpringerLink = window.SpringerLink || {};
+        window.SpringerLink.staticLocation = '/springerlink-static/1895273086';
+        window.eventTrackerInstance = null;
+
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            (function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement);
+
+            polyfillFeatures = 'default,fetch,Promise,Object.setPrototypeOf,Object.entries,Number.isInteger,MutationObserver,startsWith,Array.prototype.includes,Array.from,IntersectionObserver';
+
+            scriptsList = [
+                'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + polyfillFeatures + '&flags=gated',
+                window.SpringerLink.staticLocation + '/js/main.js'
+            ];
+
+            scriptsList.forEach(function(script) {
+                var tag = document.createElement('script');
+                tag.async = false;
+                tag.src = script;
+
+                document.body.appendChild(tag);
+            });
+        }
+    })();
+</script>
+
+    <script>
+    (function() {
+        var linkEl = document.querySelector('.js-ctm');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var scriptMathJax = document.createElement('script');
+            scriptMathJax.async = false;
+            scriptMathJax.src = '/springerlink-static/1895273086/js/mathJax.js';
+            var s0 = document.getElementsByTagName('script')[0];
+            s0.parentNode.insertBefore(scriptMathJax, s0);
+        }
+    })();
+</script>
+
+
+    <script type="text/javascript" id="googletag-push">
+        
+            var adSlot = '270604982/springerlink/book/chapter';
+        
+
+        var definedSlots = [
+                {slot: [728, 90], containerName: 'doubleclick-leaderboard-ad'},
+                {slot: [160, 600], containerName: 'doubleclick-ad'},
+            {slot: [2, 2], containerName: 'doubleclick-native-ad'}
+        ];
+    </script>
+
+
+        
+        <span id="chat-widget" class="u-hide"></span>
+        
+        
+    </body>
+</html>
