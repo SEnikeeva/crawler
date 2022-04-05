@@ -1,10 +1,9 @@
 import re
 
 import nltk
+from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import stopwords
-from tqdm import tqdm
 
 
 def get_tokens(data):
@@ -14,7 +13,7 @@ def get_tokens(data):
     tokens_ = nltk.word_tokenize(data)
     tokens_ = list(set(tokens_))
     tokens = []
-    for token in tqdm(tokens_):
+    for token in tokens_:
         if len(wordnet.synsets(token)) != 0:
             tokens.append(token)
 
