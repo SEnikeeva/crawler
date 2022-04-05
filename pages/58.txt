@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CVPR 2020 Open Access Repository</title>
+<link rel="stylesheet" type="text/css" href="../../static/conf.css">
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<meta name="citation_title" content="Self-Supervised Learning of Video-Induced Visual Invariances">
+<meta name="citation_author" content="Tschannen, Michael">
+<meta name="citation_author" content="Djolonga, Josip">
+<meta name="citation_author" content="Ritter, Marvin">
+<meta name="citation_author" content="Mahendran, Aravindh">
+<meta name="citation_author" content="Houlsby, Neil">
+<meta name="citation_author" content="Gelly, Sylvain">
+<meta name="citation_author" content="Lucic, Mario">
+<meta name="citation_publication_date" content="2020">
+<meta name="citation_conference_title" content="Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition">
+<meta name="citation_firstpage" content="13806">
+<meta name="citation_lastpage" content="13815">
+<meta name="citation_pdf_url" content="http://openaccess.thecvf.com/content_CVPR_2020/papers/Tschannen_Self-Supervised_Learning_of_Video-Induced_Visual_Invariances_CVPR_2020_paper.pdf">
+</head>
+<body>
+<div id="header">
+<div id="header_left">
+<a href="http://cvpr2020.thecvf.com"><img src="../../img/cvpr2020_logo.png" width="175" border="0" alt="CVPR 2020"></a>
+<a href="http://www.cv-foundation.org/"><img src="../../img/cropped-cvf-s.jpg" width="175" height="112" border="0" alt="CVF"></a>
+</div>
+<div id="header_right">
+<div id="header_title">
+<a href="http://cvpr2020.thecvf.com">CVPR 2020</a> <a href="/" class="a_monochrome">open access</a>
+</div>
+<div id="help" >
+These CVPR 2020 papers are the Open Access versions, provided by the <a href="http://www.cv-foundation.org/">Computer Vision Foundation.</a><br> Except for the watermark, they are identical to the accepted versions; the final published version of the proceedings is available on IEEE Xplore.</div>
+<div id="disclaimer" >
+This material is presented to ensure timely dissemination of scholarly and technical work.
+Copyright and all rights therein are retained by authors or by other copyright holders.
+All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright.<br><br>
+<form action="../../CVPR2020_search.py" method="post">
+<input type="text" name="query">
+<input type="submit" value="Search">
+</form>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+<div id="content">
+<dl>
+<dd>
+<div id="papertitle">
+Self-Supervised Learning of Video-Induced Visual Invariances</div>
+<div id="authors">
+<br><b><i>Michael Tschannen,  Josip Djolonga,  Marvin Ritter,  Aravindh Mahendran,  Neil Houlsby,  Sylvain Gelly,  Mario Lucic</i></b>; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020, pp. 13806-13815
+</div><font size="5">
+<br><b>Abstract</b>
+</font>
+<br><br><div id="abstract" >
+We propose a general framework for self-supervised learning of transferable visual representations based on Video-Induced Visual Invariances (VIVI). We consider the implicit hierarchy present in the videos and make use of (i) frame-level invariances (e.g. stability to color and contrast perturbations), (ii) shot/clip-level invariances (e.g. robustness to changes in object orientation and lighting conditions), and (iii) video-level invariances (semantic relationships of scenes across shots/clips), to define a holistic self-supervised loss. Training models using different variants of the proposed framework on videos from the YouTube-8M (YT8M) data set, we obtain state-of-the-art self-supervised transfer learning results on the 19 diverse downstream tasks of the Visual Task Adaptation Benchmark (VTAB), using only 1000 labels per task. We then show how to co-train our models jointly with labeled images, outperforming an ImageNet-pretrained ResNet-50 by 0.8 points with 10x fewer labeled images, as well as the previous best supervised model by 3.7 points using the full ImageNet data set.</div>
+<font size="5">
+<br><b>Related Material</b>
+</font>
+<br><br>
+[<a href="../../content_CVPR_2020/papers/Tschannen_Self-Supervised_Learning_of_Video-Induced_Visual_Invariances_CVPR_2020_paper.pdf">pdf</a>]
+[<a href="../../content_CVPR_2020/supplemental/Tschannen_Self-Supervised_Learning_of_CVPR_2020_supplemental.pdf">supp</a>]
+[<a href="http://arxiv.org/abs/1912.02783">arXiv</a>]
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+<div class="bibref">
+@InProceedings{Tschannen_2020_CVPR,<br>
+author = {Tschannen, Michael and Djolonga, Josip and Ritter, Marvin and Mahendran, Aravindh and Houlsby, Neil and Gelly, Sylvain and Lucic, Mario},<br>
+title = {Self-Supervised Learning of Video-Induced Visual Invariances},<br>
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
+month = {June},<br>
+year = {2020}<br>
+}
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</body>
+</html>

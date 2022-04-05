@@ -1,0 +1,1297 @@
+<!DOCTYPE HTML>
+<html lang="en-gb" class="no-js">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+    <meta name="citation_publisher" content="Springer, Cham"/>
+    <meta name="citation_title" content="Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction"/>
+    <meta name="citation_doi" content="10.1007/978-3-030-32245-8_60"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_abstract_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-32245-8_60"/>
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-32245-8_60"/>
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007%2F978-3-030-32245-8_60.pdf"/>
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/978-3-030-32245-8_60&amp;api_key="/>
+    <meta name="citation_firstpage" content="541"/>
+    <meta name="citation_lastpage" content="549"/>
+    <meta name="citation_author" content="Bai, Wenjia"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author_email" content="w.bai@imperial.ac.uk"/>
+    <meta name="citation_author" content="Chen, Chen"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author" content="Tarroni, Giacomo"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author" content="Duan, Jinming"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author_institution" content="University of Birmingham"/>
+    <meta name="citation_author" content="Guitton, Florian"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author" content="Petersen, Steffen E."/>
+    <meta name="citation_author_institution" content="Queen Mary University of London"/>
+    <meta name="citation_author" content="Guo, Yike"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author" content="Matthews, Paul M."/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="citation_author" content="Rueckert, Daniel"/>
+    <meta name="citation_author_institution" content="Imperial College London"/>
+    <meta name="dc.identifier" content="10.1007/978-3-030-32245-8_60"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="In the recent years, convolutional neural networks have transformed the field of medical image analysis due to their capacity to learn discriminative image features for a variety of classification..."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomic"/>
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/book/978-3-030-32245-8.jpg"/>
+    <meta name="twitter:image:alt" content="Content cover image"/>
+    <meta name="twitter:site" content="SpringerLink"/>
+    <meta name="twitter:description" content="In the recent years, convolutional neural networks have transformed the field of medical image analysis due to their capacity to learn discriminative image features for a variety of classification..."/>
+    <meta name="citation_inbook_title" content="Medical Image Computing and Computer Assisted Intervention – MICCAI 2019"/>
+    <meta name="citation_publication_date" content="2019/10/13"/>
+    <meta name="citation_conference_series_id" content="springer/miccai"/>
+    <meta name="citation_conference_title" content="International Conference on Medical Image Computing and Computer-Assisted Intervention"/>
+    <meta name="citation_conference_sequence_num" content="22"/>
+    <meta name="citation_conference_abbrev" content="MICCAI"/>
+    <meta property="og:title" content="Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction"/>
+    <meta property="og:type" content="Paper"/>
+    <meta property="og:url" content="https://link.springer.com/chapter/10.1007/978-3-030-32245-8_60"/>
+    <meta property="og:image" content="https://static-content.springer.com/cover/book/978-3-030-32245-8.jpg"/>
+    <meta property="og:site_name" content="SpringerLink"/>
+    <meta property="og:description" content="In the recent years, convolutional neural networks have transformed the field of medical image analysis due to their capacity to learn discriminative image features for a variety of classification..."/>
+
+        <title>Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction | SpringerLink</title>
+        <link rel="canonical" href="https://link.springer.com/chapter/10.1007/978-3-030-32245-8_60"/>
+        <link rel="shortcut icon" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 48x48" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+<link rel="icon" sizes="16x16" type="image/png" href="/springerlink-static/1895273086/images/favicon/favicon-16x16.png">
+<link rel="icon" sizes="32x32" type="image/png" href="/springerlink-static/1895273086/images/favicon/favicon-32x32.png">
+<link rel="icon" sizes="48x48" type="image/png" href="/springerlink-static/1895273086/images/favicon/favicon-48x48.png">
+<link rel="apple-touch-icon" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/springerlink-static/1895273086/images/favicon/ic_launcher_hdpi.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/springerlink-static/1895273086/images/favicon/app-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/springerlink-static/1895273086/images/favicon/app-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@2x.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/springerlink-static/1895273086/images/favicon/app-icon-ipad@2x.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//google-analytics.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.googletagservices.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//static-content.springer.com">
+        <link rel="stylesheet" href="/springerlink-static/1895273086/css/basic.css" media="screen">
+<link rel="stylesheet" href="/springerlink-static/1895273086/css/styles.css" class="js-ctm" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+<link rel="stylesheet" href="/springerlink-static/1895273086/css/print.css" media="print">
+
+
+        <script>
+    (function () {
+        if ( typeof window.CustomEvent === "function" ) return;
+        window.CustomEvent = function ( event, params ) {
+            params = params || { bubbles: false, cancelable: false, detail: null };
+            var evt = document.createEvent( 'CustomEvent' );
+            evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+            return evt;
+        }
+    })();
+</script>
+
+<script>
+    (function() {
+        if (!!document.documentElement.dataset) return;
+
+        Object.defineProperty(Element.prototype, 'dataset', {
+            get: function() {
+                var element = this;
+                var attributes = this.attributes;
+                var map = {};
+
+                for (var i = 0; i < attributes.length; i++) {
+                    var attribute = attributes[i];
+
+                    if (attribute && attribute.name && (/^data-\w[\w-]*$/).test(attribute.name)) {
+                        var name = attribute.name;
+                        var value = attribute.value;
+
+                        var propName = name.substr(5).replace(/-./g, function (prop) {
+                            return prop.charAt(1).toUpperCase();
+                        });
+
+                        Object.defineProperty(map, propName, {
+                            enumerable: true,
+                            get: function() {
+                                return this.value;
+                            }.bind({value: value || ''}),
+                            set: function setter(name, value) {
+                                if (typeof value !== 'undefined') {
+                                    this.setAttribute(name, value);
+                                } else {
+                                    this.removeAttribute(name);
+                                }
+                            }.bind(element, name)
+                        });
+                    }
+                }
+
+                return map;
+            }
+        });
+    })();
+</script>
+
+
+
+    <script type="text/javascript">
+        window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+        var dataLayer = [{
+                'GA Key':"UA-26408784-1",
+                'Features':["leaderboardadverts","eventtracker"],
+                'Event Category':"Conference Paper",
+                'Open Access':"N",
+                'Labs':"Y",
+                'DOI':"10.1007/978-3-030-32245-8_60",
+                'productId':"9783030322458",
+                'hasAccess':"N",
+                'Full HTML':"N",
+                'Has Body':"Y",
+                'Static Hash':"1895273086",
+                'Has Preview':"N",
+                'user':{"license":{"businessPartnerID":[],"businessPartnerIDString":""}},
+                'content':{"serial":{"eissn":"1611-3349","pissn":"0302-9743"},"book":{"seriesTitle":"Lecture Notes in Computer Science","eisbn":"978-3-030-32245-8","pisbn":"978-3-030-32244-1","bookProductType":"Proceedings","seriesId":"558","title":"Medical Image Computing and Computer Assisted Intervention – MICCAI 2019","doi":"10.1007/978-3-030-32245-8"},"attributes":{"deliveryPlatform":"bunsen"},"chapter":{"doi":"10.1007/978-3-030-32245-8_60"},"category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Image Processing and Computer Vision","2":"Pattern Recognition","3":"Artificial Intelligence","4":"Health Informatics"},"secondarySubjectCodes":{"1":"I22021","2":"I2203X","3":"I21000","4":"I23060"}},"sucode":"SUCO11645"},"type":"ConferencePaper"},
+                'Access Type':"noaccess",
+                'Page':"chapter",
+                'Bpids':"",
+                'Bpnames':"",
+                'SubjectCodes':"SCI, SCI22021, SCI2203X, SCI21000, SCI23060",
+                'session':{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},
+                'eventTrackerBaseUrl':"https://event-tracker.springernature.com",
+                'Country':"RU",
+                'ConferenceSeriesId':"miccai",
+                'VG Wort Identifier':"pw-vgzm.415900-10.1007-978-3-030-32245-8",
+
+                    'doi': "10.1007-978-3-030-32245-8_60",
+                    'pmc': ["I","I22021","I2203X","I21000","I23060"],
+                    'BPID': ["1"],
+                    'ksg': Krux.segments,
+                    'kuid': Krux.uid,
+
+        }];
+    </script>
+    <script>
+        window.dataLayer.push({
+            content: {
+                attributes: {
+                    deliveryPlatform: "bunsen"
+                }
+            }
+        });
+    </script>
+    <script>
+        window.dataLayer.push({
+            ga4MeasurementId: 'G-B3E4QL2TPR',
+            ga360TrackingId: 'UA-26408784-1',
+            twitterId: 'o47a7',
+            ga4ServerUrl: 'https://collect.springer.com'
+        });
+    </script>
+
+<script type="text/javascript" src="/springerlink-static/1895273086/js/jquery-3.3.1.min.js"></script>
+
+<script data-test="gtm-head">
+    window.initGTM = function() {
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://collect.springer.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MRVXSHQ');
+    }
+</script>
+
+
+<script>
+    (function(w,d,t) {
+        function cc() {
+            var h = w.location.hostname;
+            var e = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+
+            if (h.indexOf('springer.com') > -1) {
+                e.src = 'https://push-content.springernature.io/pcf_sb_5_1617714720898560639/production_live/consent-bundle-17-8.js';
+                e.setAttribute('onload', "initGTM(window,document,'script','dataLayer','GTM-MRVXSHQ')");
+            } else {
+                e.src = '/static/js/lib/cookie-consent.min.js';
+                e.setAttribute('data-consent', h);
+            }
+            s.insertAdjacentElement('afterend', e);
+        }
+
+        cc();
+    })(window,document,'script');
+</script>
+
+    </head>
+    <body>
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MRVXSHQ"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="skip-to">
+    <a class="skip-to__link pseudo-focus" href="#main-content">Skip to main content</a>
+</div>
+        <div class="page-wrapper">
+            <noscript>
+    <div class="nojs-banner u-interface">
+        <p>This service is more advanced with JavaScript available</p>
+    </div>
+</noscript>
+                        <div id="leaderboard" class="leaderboard u-hide" data-google-ad="leaderboard" data-gpt-hide-ad>
+            <div class="leaderboard__wrapper">
+                <p class="leaderboard__label">Advertisement</p>
+                <button class="leaderboard__hide" title="Hide this advertisement" data-gpt-hide-ad-button data-track="click" data-track-action="Hide advertisement" data-track-label="">Hide</button>
+                <div id="doubleclick-leaderboard-ad" class="leaderboard__ad u-pt-24" data-gpt></div>
+            </div>
+        </div>
+
+
+                <header id="header" class="header">
+        <div class="header__content">
+            <div class="header__menu-container">
+                    <a id="logo" class="site-logo" href="/" title="Go to homepage">
+            <picture>
+    <source type="image/svg+xml" srcset="/springerlink-static/1895273086/images/svg/springerlink.svg">
+    <img class="site-logo__springer" src="/springerlink-static/1895273086/images/png/springerlink.png" alt="SpringerLink" width="148" height="30" data-test="springer-logo">
+</picture>
+
+    </a>
+
+
+                    <nav id="search-container" class="u-inline-block">
+                        <div class="search">
+                            <div class="search__content">
+                                <form class="u-form-single-input u-system" action="/search" method="get" role="search">
+    <label for="search-springerlink">Search SpringerLink</label>
+    <div class="u-relative">
+        <input id="search-springerlink" name="query" type="text" autocomplete="off" value="">
+        <input class="u-hide-text" type="submit" value="Submit" title="Submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" class="u-vertical-align-absolute" focusable="false" aria-hidden="true" role="presentation">
+            <path d="M12.82 11.972a.607.607 0 01.007.856.611.611 0 01-.856-.006L9.45 10.3A5.798 5.797 0 010 5.798 5.798 5.797 0 1110.3 9.45zm-7.022-1.205A4.97 4.97 0 105.797.83a4.97 4.97 0 000 9.939z" fill-rule="evenodd"/>
+        </svg>
+    </div>
+</form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="nav-container">
+    <div class="global-nav__wrapper">
+        <div class="search-button">
+            <a class="search-button__label" href="#search-container">
+                <span class="search-button__title">Search</span>
+                <svg class="u-vertical-align-absolute" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 22 22" focusable="false" aria-hidden="true" role="presentation">
+                   <path d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z" fill-rule="evenodd" fill="#666"/>
+                </svg>
+            </a>
+        </div>
+
+            <div id="ecommerce-header-cart-icon-link" class="c-header__item ecommerce-cart" style="display: inline-block; margin-right: 10px;">
+  <form action="https://order.springer.com/public/precheckout" method="post">
+    <button class="c-header__link" type="submit" style="
+        appearance: none;
+        border: none;
+        background: none;
+        color: inherit;
+    "><svg aria-hidden="true" focusable="false" height="18" viewBox="0 0 18 18" width="18"
+        style="vertical-align: text-bottom;" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m5 14c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm10 0c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm-10 1c-.55228475 0-1 .4477153-1 1s.44771525 1 1 1 1-.4477153 1-1-.44771525-1-1-1zm10 0c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1 1-.4477153 1-1-.4477153-1-1-1zm-12.82032249-15c.47691417 0 .88746157.33678127.98070211.80449199l.23823144 1.19501025 13.36277974.00045554c.5522847.00001882.9999659.44774934.9999659 1.00004222 0 .07084994-.0075361.14150708-.022474.2107727l-1.2908094 5.98534344c-.1007861.46742419-.5432548.80388386-1.0571651.80388386h-10.24805106c-.59173366 0-1.07142857.4477153-1.07142857 1 0 .5128358.41361449.9355072.94647737.9932723l.1249512.0067277h10.35933776c.2749512 0 .4979349.2228539.4979349.4978051 0 .2749417-.2227336.4978951-.4976753.4980063l-10.35959736.0041886c-1.18346732 0-2.14285714-.8954305-2.14285714-2 0-.6625717.34520317-1.24989198.87690425-1.61383592l-1.63768102-8.19004794c-.01312273-.06561364-.01950005-.131011-.0196107-.19547395l-1.71961253-.00064219c-.27614237 0-.5-.22385762-.5-.5 0-.27614237.22385763-.5.5-.5zm14.53193359 2.99950224h-13.11300004l1.20580469 6.02530174c.11024034-.0163252.22327998-.02480398.33844139-.02480398h10.27064786z"
+          fill="#333" />
+      </svg><span class="u-screenreader-only visually-hidden">Go to cart</span></button>
+  </form>
+</div>
+
+        <ul class="global-nav" data-component="SV.Menu" data-title="Navigation menu" data-text="Menu">
+                <li class="global-nav__logged-out">
+                    <a class="test-login-link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-32245-8_60">
+                        <span class="u-overflow-ellipsis">Log in</span>
+                    </a>
+                </li>
+
+        </ul>
+    </div> 
+</nav> 
+
+            </div>
+
+        </div>
+    </header>
+
+            
+            <main id="main-content" class="main-wrapper main-wrapper--no-gradient" tabindex="-1">
+                <div class="main-container uptodate-recommendations-off">
+                    <aside class="main-sidebar-left">
+                        <div class="main-sidebar-left__content">
+                            <div class="cover-image test-cover" itemscope>
+                                    <a class="test-cover-link" href="/book/10.1007/978-3-030-32245-8">
+        <span class="u-screenreader-only">Medical Image Computing and Computer Assisted Intervention – MICCAI 2019</span>
+        <img class="test-cover-image" src="https://media.springernature.com/w306/springer-static/cover/book/978-3-030-32245-8.jpg" itemprop="image" alt=""/>
+    </a>
+
+
+
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="main-body" data-role="NavigationContainer">
+                        
+
+
+
+                        <article class="main-body__content">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="FulltextWrapper"><div class="ArticleHeader main-context"><div id="enumeration" class="enumeration">    <div>
+        <a data-test="ConfSeriesLink" href="/conference/miccai">
+            <span data-test="ConfSeriesName"> International Conference on Medical Image Computing and Computer-Assisted Intervention</span>
+        </a>
+    </div>
+<p class="test-LocationInConferenceProceeding icon--meta-keyline"><span data-test="ConferenceAcronym">MICCAI 2019</span>: <span class="BookTitle"><a href="/book/10.1007/978-3-030-32245-8" data-track="click" data-track-action="Book title" data-track-label="">Medical Image Computing and Computer Assisted Intervention – MICCAI 2019</a></span><span class="page-numbers-info">
+                pp 541-549</span><span class="u-inline-block u-ml-4"> |
+                <a href="#citeas" data-track="click" data-track-action="Cite as link" data-track-label="Enumeration section">Cite as</a></span></p></div><div class="MainTitleSection"><h1 class="ChapterTitle" lang="en">Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction</h1></div><div class="authors u-clearfix" data-component="SpringerLink.Authors"><ul class="u-interface u-inline-list authors__title" data-role="AuthorsNavigation"><li><span>Authors</span></li><li><a href="#authorsandaffiliations" data-track="click" data-track-action="Authors and affiliations tab" data-track-label="">Authors and affiliations</a></li></ul><div class="authors__list" data-role="AuthorsList"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Wenjia Bai</span><span class="author-information"><span class="authors__contact"><a href="mailto:w.bai@imperial.ac.uk" title="w.bai@imperial.ac.uk" itemprop="email" data-track="click" data-track-action="Email author" data-track-label=""><img src="/springerlink-static/images/svg/email.svg" height="24" width="24" alt="Email author" /></a></span></span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Chen Chen</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Giacomo Tarroni</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Jinming Duan</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Florian Guitton</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Steffen E. Petersen</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Yike Guo</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Paul M. Matthews</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors__name">Daniel Rueckert</span></li></ul></div></div><div class="main-context__container" data-component="SpringerLink.ArticleMetrics"><div class="main-context__column"><span><span class="test-render-category">Conference paper</span></span><div class="article-dates"><span class="article-dates__label">First Online: </span><span class="article-dates__first-online"><time datetime="2019-10-10">10 October 2019</time></span></div></div><div class="main-context__column">    <ul id="book-metrics" class="article-metrics u-sansSerif">
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-chaptercitations-count" href="https://citations.springer.com/item?doi&#x3D;10.1007/978-3-030-32245-8_60" target="_blank" rel="noopener"
+                       title="Visit Springer Citations for full citation details" id="chaptercitations-link">
+                            <span id="chaptercitations-count-number" class="test-metric-count c-button-circle gtm-chaptercitations-count">23</span>
+                       <span class="test-metric-name article-metrics__label gtm-chaptercitations-count">Citations</span>
+                    </a>
+            </li>
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-chaptermentions-count" href="https://www.altmetric.com/details.php?citation_id&#x3D;68209869" target="_blank" rel="noopener"
+                       title="Visit Altmetric for full social mention details" id="chaptermentions-link">
+                            <span id="chaptermentions-count-number" class="test-metric-count c-button-circle gtm-chaptermentions-count">1</span>
+                       <span class="test-metric-name article-metrics__label gtm-chaptermentions-count">Mentions</span>
+                    </a>
+            </li>
+            <li class="article-metrics__item">
+                     <span class="test-metric-count article-metrics__views">9.3k</span>
+                     <span class="test-metric-name article-metrics__label">Downloads</span>
+            </li>
+    </ul>
+</div></div><span id="test-SeriesTitle" class="vol-info">
+                Part of the
+                <a class="gtm-book-series-link" href="/bookseries/558">Lecture Notes in Computer Science</a>
+                book series (LNCS, volume 11765)</span></div><section class="Abstract" id="Abs1" tabindex="-1" lang="en"><h2 class="Heading">Abstract</h2><p id="Par1" class="Para">In the recent years, convolutional neural networks have transformed the field of medical image analysis due to their capacity to learn discriminative image features for a variety of classification and regression tasks. However, successfully learning these features requires a large amount of manually annotated data, which is expensive to acquire and limited by the available resources of expert image analysts. Therefore, unsupervised, weakly-supervised and self-supervised feature learning techniques receive a lot of attention, which aim to utilise the vast amount of available data, while at the same time avoid or substantially reduce the effort of manual annotation. In this paper, we propose a novel way for training a cardiac MR image segmentation network, in which features are learnt in a self-supervised manner by predicting anatomical positions. The anatomical positions serve as a supervisory signal and do not require extra manual annotation. We demonstrate that this seemingly simple task provides a strong signal for feature learning and with self-supervised learning, we achieve a high segmentation accuracy that is better than or comparable to a U-net trained from scratch, especially at a small data setting. When only five annotated subjects are available, the proposed method improves the mean Dice metric from 0.811 to 0.852 for short-axis image segmentation, compared to the baseline U-net.</p></section><div class="note test-pdf-link" id="cobranding-and-download-availability-text"><div id="chapter_no_access_banner">This is a preview of subscription content, <a id="test-login-banner-link" href="/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-32245-8_60" data-track="click" data-track-action="Preview banner - Log in" data-track-label="">log in</a> to check access.</div></div><div class="article-actions--inline" id="article-actions--inline" data-component="article-actions--inline"></div><section id="Notes" class="Section1 RenderAsSection1"><h2 class="Heading">Notes</h2><div class="content"><section><h3 class="Heading">Acknowledgements</h3><p class="SimplePara">This research has been conducted using the UK Biobank Resource under Application Numbers 2964 and 18545 and supported by the SmartHeart EPSRC Programme Grant (EP/P001009/1). We would like to thank NVIDIA Corporation for donating a Titan Xp for this research.</p></section></div></section><section class="Section1 RenderAsSection1" id="Bib1" tabindex="-1"><h2 class="Heading">References</h2><div class="content"><ol class="BibliographyWrapper"><li class="Citation"><div class="CitationNumber">1.</div><div class="CitationContent" id="CR1">Bernard, O., et al.: Deep learning techniques for automatic MRI cardiac multi-structures segmentation and diagnosis. IEEE Trans. Med. Imaging <strong class="EmphasisTypeBold ">37</strong>(11), 2514–2525 (2018)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1109/TMI.2018.2837502"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Deep%20learning%20techniques%20for%20automatic%20MRI%20cardiac%20multi-structures%20segmentation%20and%20diagnosis&amp;author=O.%20Bernard&amp;journal=IEEE%20Trans.%20Med.%20Imaging&amp;volume=37&amp;issue=11&amp;pages=2514-2525&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">2.</div><div class="CitationContent" id="CR2">Bai, W., et al.: Automated cardiovascular magnetic resonance image analysis with fully convolutional networks. J. Cardiovasc. Magn. Reson. <strong class="EmphasisTypeBold ">20</strong>(1), 65 (2018)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1186/s12968-018-0471-x"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Automated%20cardiovascular%20magnetic%20resonance%20image%20analysis%20with%20fully%20convolutional%20networks&amp;author=W.%20Bai&amp;journal=J.%20Cardiovasc.%20Magn.%20Reson.&amp;volume=20&amp;issue=1&amp;pages=65&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">3.</div><div class="CitationContent" id="CR3">Tao, Q., et al.: Deep learning-based method for fully automatic quantification of left ventricle function from cine MR images. Radiology <strong class="EmphasisTypeBold ">290</strong>(1), 81–88 (2019)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1148/radiol.2018180513"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Deep%20learning-based%20method%20for%20fully%20automatic%20quantification%20of%20left%20ventricle%20function%20from%20cine%20MR%20images&amp;author=Q.%20Tao&amp;journal=Radiology&amp;volume=290&amp;issue=1&amp;pages=81-88&amp;publication_year=2019"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">4.</div><div class="CitationContent" id="CR4">Doersch, C., et al.: Multi-task self-supervised visual learning. In: ICCV (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Doersch%2C%20C.%2C%20et%20al.%3A%20Multi-task%20self-supervised%20visual%20learning.%20In%3A%20ICCV%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">5.</div><div class="CitationContent" id="CR5">Gidaris, S., et al.: Unsupervised representation learning by predicting image rotations. In: ICLR (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Gidaris%2C%20S.%2C%20et%20al.%3A%20Unsupervised%20representation%20learning%20by%20predicting%20image%20rotations.%20In%3A%20ICLR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">6.</div><div class="CitationContent" id="CR6">Doersch, C., et al.: Unsupervised visual representation learning by context prediction. In: ICCV (2015)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Doersch%2C%20C.%2C%20et%20al.%3A%20Unsupervised%20visual%20representation%20learning%20by%20context%20prediction.%20In%3A%20ICCV%20%282015%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">7.</div><div class="CitationContent" id="CR7">Zhang, R., et al.: Colorful image colorization. In: ECCV (2016)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Zhang%2C%20R.%2C%20et%20al.%3A%20Colorful%20image%20colorization.%20In%3A%20ECCV%20%282016%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">8.</div><div class="CitationContent" id="CR8">Pathak, D., et al.: Context encoders: feature learning by inpainting. In: CVPR (2016)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Pathak%2C%20D.%2C%20et%20al.%3A%20Context%20encoders%3A%20feature%20learning%20by%20inpainting.%20In%3A%20CVPR%20%282016%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">9.</div><div class="CitationContent" id="CR9">Jamaludin, A., et al.: Self-supervised learning for spinal MRIs. In: MICCAI DLMIA Workshop (2017)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Jamaludin%2C%20A.%2C%20et%20al.%3A%20Self-supervised%20learning%20for%20spinal%20MRIs.%20In%3A%20MICCAI%20DLMIA%20Workshop%20%282017%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">10.</div><div class="CitationContent" id="CR10">Ross, T., et al.: Exploiting the potential of unlabeled endoscopic video data with self-supervised learning. Int. J. Comput. Assist. Radiol. Surg. <strong class="EmphasisTypeBold ">13</strong>(6), 925–933 (2018)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/s11548-018-1772-0"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Exploiting%20the%20potential%20of%20unlabeled%20endoscopic%20video%20data%20with%20self-supervised%20learning&amp;author=T.%20Ross&amp;journal=Int.%20J.%20Comput.%20Assist.%20Radiol.%20Surg.&amp;volume=13&amp;issue=6&amp;pages=925-933&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">11.</div><div class="CitationContent" id="CR11">Tajbakhsh, N., et al.: Surrogate supervision for medical image analysis: effective deep learning from limited quantities of labeled data. In: ISBI (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Tajbakhsh%2C%20N.%2C%20et%20al.%3A%20Surrogate%20supervision%20for%20medical%20image%20analysis%3A%20effective%20deep%20learning%20from%20limited%20quantities%20of%20labeled%20data.%20In%3A%20ISBI%20%282019%29"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">12.</div><div class="CitationContent" id="CR12">Ronneberger, O., et al.: U-Net: convolutional networks for biomedical image segmentation. In: MICCAI (2015)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Ronneberger%2C%20O.%2C%20et%20al.%3A%20U-Net%3A%20convolutional%20networks%20for%20biomedical%20image%20segmentation.%20In%3A%20MICCAI%20%282015%29"><span><span>Google Scholar</span></span></a></span></span></div></li></ol></div></section><section class="Section1 RenderAsSection1"><h2 class="Heading" id="copyrightInformation">Copyright information</h2><div class="ArticleCopyright content"><div class="ChapterCopyright">© Springer Nature Switzerland AG 2019</div></div></section><section id="authorsandaffiliations" class="Section1 RenderAsSection1"><h2 class="Heading">Authors and Affiliations</h2><div class="content authors-affiliations u-interface"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Wenjia Bai</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li><li data-affiliation="affiliation-2">2</li></ul><span class="author-information"><span class="author-information__contact u-icon-before"><a href="mailto:w.bai@imperial.ac.uk" title="w.bai@imperial.ac.uk" itemprop="email" data-track="click" data-track-action="Email author" data-track-label="">Email author</a></span></span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Chen Chen</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-3">3</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Giacomo Tarroni</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-3">3</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Jinming Duan</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-3">3</li><li data-affiliation="affiliation-4">4</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Florian Guitton</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Steffen E. Petersen</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-5">5</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Yike Guo</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Paul M. Matthews</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-2">2</li><li data-affiliation="affiliation-6">6</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name" class="authors-affiliations__name">Daniel Rueckert</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-3">3</li></ul></li></ul><ol class="test-affiliations"><li class="affiliation" data-test="affiliation-1" data-affiliation-highlight="affiliation-1" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">1.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">Data Science Institute</span><span itemprop="name" class="affiliation__name">Imperial College London</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">London</span><span itemprop="addressCountry" class="affiliation__country">UK</span></span></span></li><li class="affiliation" data-test="affiliation-2" data-affiliation-highlight="affiliation-2" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">2.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">Department of Medicine</span><span itemprop="name" class="affiliation__name">Imperial College London</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">London</span><span itemprop="addressCountry" class="affiliation__country">UK</span></span></span></li><li class="affiliation" data-test="affiliation-3" data-affiliation-highlight="affiliation-3" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">3.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">BioMedIA, Department of Computing</span><span itemprop="name" class="affiliation__name">Imperial College London</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">London</span><span itemprop="addressCountry" class="affiliation__country">UK</span></span></span></li><li class="affiliation" data-test="affiliation-4" data-affiliation-highlight="affiliation-4" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">4.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">School of Computer Science</span><span itemprop="name" class="affiliation__name">University of Birmingham</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">Birmingham</span><span itemprop="addressCountry" class="affiliation__country">UK</span></span></span></li><li class="affiliation" data-test="affiliation-5" data-affiliation-highlight="affiliation-5" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">5.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">NIHR Barts BRC</span><span itemprop="name" class="affiliation__name">Queen Mary University of London</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">London</span><span itemprop="addressCountry" class="affiliation__country">UK</span></span></span></li><li class="affiliation" data-test="affiliation-6" data-affiliation-highlight="affiliation-6" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">6.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">UK Dementia Research Institute</span><span itemprop="name" class="affiliation__name">Imperial College London</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="affiliation__address"><span itemprop="addressRegion" class="affiliation__city">London</span><span itemprop="addressCountry" class="affiliation__country">UK</span></span></span></li></ol></div></section></div>
+                        </article>
+                        <aside class="section section--collapsible" id="AboutThisContent">
+    <h2 class="section__heading" id="aboutcontent">About this paper</h2>
+    <div class="section__content bibliographic-information">
+                <div id="crossMark" class="crossmark">
+            <a data-crossmark="10.1007%2F978-3-030-32245-8_60" target="_blank" rel="noopener" href="https://crossmark.crossref.org/dialog/?doi=10.1007%2F978-3-030-32245-8_60" title="Verify currency and authenticity via CrossMark" data-track="click" data-track-action="Crossmark" data-track-label="">
+                <span class="u-screenreader-only">CrossMark</span>
+                <svg class="CrossMark" id="crossmark-icon" width="57" height="81">
+                    <image width="57" height="81" alt="Verify currency and authenticity via CrossMark" src="/springerlink-static/1895273086/images/png/crossmark.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/springerlink-static/1895273086/images/svg/crossmark.svg"></image>
+                </svg>
+            </a>
+        </div>
+
+        <div class="crossmark__adjacent">
+            <dl class="citation-info u-highlight-target u-mb-16" id="citeas" tabindex="-1">
+    <dt class="test-cite-heading">
+        Cite this paper as:
+    </dt>
+    <dd id="citethis-text">Bai W. et al. (2019) Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction. In: Shen D. et al. (eds) Medical Image Computing and Computer Assisted Intervention – MICCAI 2019. MICCAI 2019. Lecture Notes in Computer Science, vol 11765. Springer, Cham. https://doi.org/10.1007/978-3-030-32245-8_60</dd>
+</dl>
+                <ul class="bibliographic-information__list bibliographic-information__list--inline">
+        <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title">First Online</span>
+            <span class="bibliographic-information__value u-overflow-wrap">10 October 2019</span>
+        </li>
+        <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title">DOI</span>
+            <span class="bibliographic-information__value u-overflow-wrap" id="doi-url">https://doi.org/10.1007/978-3-030-32245-8_60</span>
+        </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Publisher Name</span>
+                <span class="bibliographic-information__value" id="publisher-name">Springer, Cham</span>
+            </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Print ISBN</span>
+                <span class="bibliographic-information__value" id="print-isbn">978-3-030-32244-1</span>
+            </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Online ISBN</span>
+                <span class="bibliographic-information__value" id="electronic-isbn">978-3-030-32245-8</span>
+            </li>
+
+                <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title">eBook Packages</span>
+                <span class="bibliographic-information__value" itemprop="genre"><a id="ebook-package" href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;11645&amp;facet-start-year&#x3D;2019&amp;facet-end-year&#x3D;2019">Computer Science</a></span>
+                <span class="bibliographic-information__value" itemprop="genre"><a id="ebook-package" href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;43710&amp;facet-start-year&#x3D;2019&amp;facet-end-year&#x3D;2019">Computer Science (R0)</a></span>
+        </li>
+
+    </ul>
+
+            <ul class="bibliographic-information__list">
+        <li class="bibliographic-information__item">
+            <a id="reprintsandpermissions-link" target="_blank" rel="noopener" href="https://s100.copyright.com/AppDispatchServlet?publisherName&#x3D;SpringerNature&amp;orderBeanReset&#x3D;true&amp;orderSource&#x3D;SpringerLink&amp;copyright&#x3D;Springer+Nature+Switzerland+AG&amp;author&#x3D;Wenjia+Bai%2C+Chen+Chen%2C+Giacomo+Tarroni+et+al&amp;contentID&#x3D;10.1007%2F978-3-030-32245-8_60&amp;endPage&#x3D;549&amp;publicationDate&#x3D;2019&amp;startPage&#x3D;541&amp;publication&#x3D;eBook&amp;title&#x3D;Self-Supervised+Learning+for+Cardiac+MR+Image+Segmentation+by+Anatomical+Position+Prediction&amp;imprint&#x3D;Springer+Nature+Switzerland+AG" title="Visit RightsLink for information about reusing this paper" data-track="click" data-track-action="Reprints and Permissions" data-track-label="">Reprints and Permissions</a>
+        </li>
+</ul>
+
+
+
+        </div>
+      
+      
+          <div class="partner-public"><ul>
+<li>
+  <div class="partner-logos__logo">
+    <img style="display:block"
+      src="//published-with.public.springernature.app/MICCAI_Logo_RGB.jpg"
+      alt="The Medical Image Computing and Computer Assisted Intervention Society">
+  </div>
+  <div class="partner-logos__caption">
+    <p>Published in cooperation with</p>
+    <a class="external" href="http://miccai.org/"
+      title="Visit this website" target="_blank"
+      rel="noopener noreferrer" data-track="click" data-track-action="Co-publisher" data-track-label="">The Medical Image Computing and Computer Assisted Intervention Society</a>
+  </div>
+</li>
+    
+</ul></div>
+    </div>
+</aside>
+
+                        <div class="section section--collapsible uptodate-recommendations gtm-recommendations">
+    <h2 class="uptodate-recommendations__title section__heading gtm-recommendations__title" id="uptodaterecommendations">Personalised recommendations</h2>
+    <div class="section__content">
+        <div class="uptodate-recommendations__container">
+             <link rel="uptodate-inline" href="/springerlink-static/1895273086/css/recommendations.css"/>
+        </div>
+    </div>
+</div>
+                                <div id="doubleclick-native-ad" data-google-ad="native"></div>
+
+                        
+
+
+
+    <div class="sticky-banner sticky-banner--buybox u-interface u-hide" data-component="SpringerLink.StickyBanner" data-namespace="hasLink">
+        <div class="sticky-banner__container">
+                <div class="citations" data-component="SV.Dropdown" data-namespace="citationsSticky">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">paper</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" data-track="click" data-track-action="Cite as link" data-track-label="Cite dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-32245-8_60?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .RIS file" data-track="click" data-track-action="Export citation" data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-32245-8_60?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .ENW file" data-track="click" data-track-action="Export citation" data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-32245-8_60?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .BIB file" data-track="click" data-track-action="Export citation" data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                
+
+
+
+                <div class="sticky-banner__buybox-link sticky-banner__buybox-link--sticky">
+        <a href="#buy" class="gtm-buybox-anchor">
+            Buy options
+        </a>
+    </div>
+
+        </div>
+    </div>
+
+
+                    </div>
+                    <aside class="main-sidebar-right u-interface">
+                        <div data-role="sticky-wrapper">
+                            <div class="main-sidebar-right__content u-composite-layer" data-component="SpringerLink.StickySidebar">
+                                <div class="article-actions" id="article-actions">
+                                    <h2 class="u-screenreader-only" aria-hidden="true">Actions</h2>
+
+                                        <div id="buy">
+                                            
+    
+    <div class="sprcom-buybox buybox" id="sprcom-buybox">
+        <div>
+            <div class="c-box" style="padding: 0">
+                <h2 class="c-box__heading visually-hidden">Buying options</h2>
+                <div class="buying-options">
+                    
+                        <div class="buying-option expanded">
+                            <dl class="buying-option-price">
+                                <dt><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                    <path
+                                    d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                    fill="#666" fill-rule="evenodd"></path>
+                                </svg>
+                                    Chapter
+                                </dt>
+
+                                <dd class="price-amount">
+                                    <div data-test-id="test-chapter-price" class="buybox__price">
+                                        EUR &nbsp;
+                                        24.95
+                                    </div>
+                                </dd>
+
+                                <dd class="price-info">Price excludes VAT (Russian Federation)</dd>
+                            </dl>
+
+                            <form class="buying-option-form" action="https://order.springer.com/public/cart" method="post">
+                                <input type="hidden" name="type" value="chapter">
+                                <input type="hidden" name="doi" value="10.1007/978-3-030-32245-8_60">
+                                <input type="hidden" name="isxn" value="978-3-030-32245-8">
+                                <input type="hidden" name="contenttitle" value="Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction">
+                                <input type="hidden" name="copyrightyear" value="2019">
+                                <input type="hidden" name="year" value="2019">
+                                <input type="hidden" name="authors" value="Wenjia Bai, et al.">
+                                <input type="hidden" name="title" value="Medical Image Computing and Computer Assisted Intervention – MICCAI 2019">
+                                <input type="hidden" name="mac" value="bf91fd04f0934701b69493ae08392c13">
+                                <ul class="buying-option-usps">
+                                
+                                    <li>DOI: 10.1007/978-3-030-32245-8_60</li>
+                                
+                                    <li>Chapter length: 9 pages</li>
+                                
+                                    <li>Instant PDF download</li>
+                                
+                                    <li>Readable on all devices</li>
+                                
+                                    <li>Own it forever</li>
+                                
+                                    <li>Exclusive offer for individuals only</li>
+                                
+                                    <li>Tax calculation will be finalised during checkout</li>
+                                
+                                </ul>
+
+                                <button
+                                type="submit"
+                                class="buybox__buy-button c-button c-button--blue"
+                                value="Submit"
+                                data-track="click"
+                                data-track-action="buy pdf"
+                                data-track-label="buy chapter action"
+                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Self-Supervised Learning for Cardiac MR Image Segmentation by Anatomical Position Prediction&quot;,&quot;id&quot;:&quot;10.1007/978-3-030-32245-8_60&quot;,&quot;price&quot;:24.95,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ppv-chapter&quot;,&quot;quantity&quot;:1}]}}});"
+                                >Buy Chapter</button>
+                            </form>
+                        </div>
+                    
+                    
+                        <div class="buying-option expanded">
+                            <dl class="buying-option-price">
+                                <dt><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                    <path
+                                    d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                    fill="#666" fill-rule="evenodd"></path>
+                                </svg>
+                                    eBook
+                                </dt>
+                                <dd class="price-amount">EUR &nbsp;
+                                    88.80</dd>
+                                <dd class="price-info">Price includes VAT (Russian Federation)</dd>
+                            </dl>
+                            <form class="buying-option-form" action="https://order.springer.com/public/cart" method="post">
+                                <input type="hidden" name="type" value="ebook">
+                                <input type="hidden" name="doi" value="10.1007/978-3-030-32245-8">
+                                <input type="hidden" name="isxn" value="978-3-030-32245-8">
+                                <input type="hidden" name="contenttitle" value="Medical Image Computing and Computer Assisted Intervention – MICCAI 2019">
+                                <ul class="buying-option-usps">
+                                
+                                    <li>ISBN: 978-3-030-32245-8</li>
+                                
+                                    <li>Instant PDF download</li>
+                                
+                                    <li>Readable on all devices</li>
+                                
+                                    <li>Own it forever</li>
+                                
+                                    <li>Exclusive offer for individuals only</li>
+                                
+                                    <li>Tax calculation will be finalised during checkout</li>
+                                
+                                </ul>
+                                <button
+                                type="submit"
+                                class="buybox__buy-button c-button c-button--blue"
+                                value="Submit"
+                                data-track="click"
+                                data-track-label="buy ebook"
+                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Medical Image Computing and Computer Assisted Intervention – MICCAI 2019&quot;,&quot;id&quot;:&quot;978-3-030-32245-8&quot;,&quot;price&quot;:82.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ebo&quot;,&quot;quantity&quot;:1}]}}});"
+                                >Buy eBook</button>
+                            </form>
+                        </div>
+                    
+                        <div class="buying-option expanded">
+                            <dl class="buying-option-price">
+                                <dt><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                    <path
+                                    d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                    fill="#666" fill-rule="evenodd"></path>
+                                </svg>
+                                    Softcover Book
+                                </dt>
+                                <dd class="price-amount">EUR &nbsp;
+                                    105.99</dd>
+                                <dd class="price-info">Price excludes VAT (Russian Federation)</dd>
+                            </dl>
+                            <form class="buying-option-form" action="https://order.springer.com/public/cart" method="post">
+                                <input type="hidden" name="type" value="book">
+                                <input type="hidden" name="doi" value="10.1007/978-3-030-32245-8">
+                                <input type="hidden" name="isxn" value="978-3-030-32244-1">
+                                <input type="hidden" name="contenttitle" value="Medical Image Computing and Computer Assisted Intervention – MICCAI 2019">
+                                <ul class="buying-option-usps">
+                                
+                                    <li>ISBN: 978-3-030-32244-1</li>
+                                
+                                    <li>Dispatched in 3 to 5 business days</li>
+                                
+                                    <li>Exclusive offer for individuals only</li>
+                                
+                                    <li>Free shipping worldwide<br><a href='https://support.springernature.com/en/support/solutions/articles/6000233448-coronavirus-disease-covid-19-delivery-information' target='_blank'>Shipping restrictions may apply, check to see if you are impacted</a>.</li>
+                                
+                                    <li>Tax calculation will be finalised during checkout</li>
+                                
+                                </ul>
+                                <button
+                                type="submit"
+                                class="buybox__buy-button c-button c-button--blue"
+                                value="Submit"
+                                data-track="click"
+                                data-track-label="buy softcover"
+                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Medical Image Computing and Computer Assisted Intervention – MICCAI 2019&quot;,&quot;id&quot;:&quot;978-3-030-32244-1&quot;,&quot;price&quot;:105.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;print&quot;,&quot;quantity&quot;:1}]}}});"
+                                >Buy Softcover Book</button>
+                            </form>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="c-box buybox-additional-info">
+                <a class="c-box__item"
+                href="https://www.springernature.com/gp/librarians/licensing/license-options">Learn about institutional subscriptions</a>
+            </div>
+        </div>
+        <style>
+                .sprcom-buybox {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .sprcom-buybox > div {
+                    flex-grow: 1;
+                    width: 100%;
+                }
+
+                .sprcom-buybox * {
+                    font-size: 13px !important;
+                }
+
+                .sprcom-buybox > div > * + * {
+                    margin-top: 24px;
+                }
+
+                .sprcom-buybox .c-box__heading {
+                    margin-bottom: 0;
+                }
+
+
+                .sprcom-buybox .buying-options {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .sprcom-buybox .buying-options > * {
+                    background-color: #ddd;
+                    box-shadow: 0 0 0 1px #bbb;
+                    flex-grow: 1;
+                    flex-basis: auto;
+                    width: 240px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+
+                .sprcom-buybox dt {
+                    align-items: center;
+                    display: flex;
+                    font-weight: 400;
+                    margin-left: -10px;
+                }
+
+                .sprcom-buybox .buying-option-form {
+                    padding: 12px;
+                }
+
+                .sprcom-buybox .buying-option-price {
+                    align-items: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 1.6rem;
+                    line-height: 1.4;
+                    user-select: none;
+                    padding: 6px 12px;
+                }
+
+                .sprcom-buybox .buying-option-price dt,
+                .sprcom-buybox .buying-option-price dt svg path,
+                .sprcom-buybox .buying-option-price dd {
+                    color: #004aa7;
+                    fill: #004aa7;
+                }
+
+                .sprcom-buybox .buying-option-price dt,
+                .sprcom-buybox .buying-option-price dd {
+                    flex-grow: 1;
+                }
+
+                .sprcom-buybox .buying-option-price .price-info {
+                    color: #666;
+                    font-size: 80%;
+                    text-align: right;
+                    width: 100%;
+                }
+
+                .sprcom-buybox .buying-option-price .price-amount {
+                    font-size: 140%;
+                    text-align: right;
+                    font-weight: 600;
+                }
+
+                .sprcom-buybox .buying-option-price .price-amount-without-discount {
+                    color: #c40606;
+                    font-size: 140%;
+                    text-decoration: line-through;
+                    width: 100%;
+                }
+
+                .sprcom-buybox .buying-option-price .price-type {
+                    font-size: 40%;
+                    margin-left: 8px;
+                }
+
+                .sprcom-buybox .buying-option-usps {
+                    color: #666;
+                    font-size: 1.4rem;
+                    line-height: 1.4;
+                    margin: 0 0 0 13px;
+                    padding-left: 16px;
+
+                    list-style: disc;
+                }
+
+                .sprcom-buybox .buying-option-usps > li {
+                    position: relative;
+                }
+
+                .sprcom-buybox .buying-option-usps > li:not(:first-child) {
+                    margin-top: 4px;
+                }
+
+                .sprcom-buybox .c-button {
+                    margin-top: 18px;
+                    text-align: center;
+                }
+
+                .sprcom-buybox .buying-options > .expanded {
+                    background-color: #fff;
+                }
+
+                .sprcom-buybox .buying-options > .expanded dt,
+                .sprcom-buybox .buying-options > .expanded dt svg path,
+                .sprcom-buybox .buying-options > .expanded .price-amount {
+                    color: #333;
+                    fill: #666;
+                }
+
+
+                .sprcom-buybox .buybox-additional-info {
+                    padding-top: 6px;
+                    padding-bottom: 8px;
+                }
+
+                .sprcom-buybox .buybox-additional-info .c-box__item {
+                    font-size: 13px !important;
+                    margin-bottom: 0;
+                }
+
+                .sprcom-buybox a:visited {
+                    color: #004b83;
+                }
+
+
+                .sprcom-buybox [role=button] {
+                    cursor: pointer;
+                }
+
+                .sprcom-buybox button:focus,
+                .sprcom-buybox [role=button]:focus {
+                    outline: 4px solid #fc0;
+                    position: relative;
+                }
+
+                .sprcom-buybox [aria-expanded=false] svg {
+                    transform: rotate(0deg);
+                }
+
+                .sprcom-buybox [aria-expanded=true] svg {
+                    transform: rotate(90deg);
+                }
+
+                .sprcom-buybox dt {
+                    align-items: center;
+                    display: flex;
+                }
+
+
+                .sprcom-buybox .visually-hidden {
+                    clip: rect(1px, 1px, 1px, 1px);
+                    height: 1px;
+                    overflow: hidden;
+                    position: absolute;
+                    width: 1px;
+                }
+
+                .sprcom-buybox style {
+                    display: none;
+                }
+            </style>
+            <script>
+                ;(function () {
+                    var timestamp = Date.now()
+                    document.write('<div data-id="id_'+ timestamp +'"></div>')
+
+                    var head = document.getElementsByTagName("head")[0]
+                    var script = document.createElement("script")
+                    script.type = "text/javascript"
+                    script.src = "https://buy.springer.com/assets/js/buybox-bundle-52d08dec1e.js"
+                    script.id = "ecommerce-scripts-" + timestamp
+                    head.appendChild(script)
+
+                    var buybox = document.querySelector("[data-id=id_"+ timestamp +"]").parentNode
+
+                    ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(initCollapsibles)
+
+                    function initCollapsibles(subscription, index) {
+                        var toggle = subscription.querySelector(".buying-option-price")
+                        subscription.classList.remove("expanded")
+                        var form = subscription.querySelector(".buying-option-form")
+
+                        if (form) {
+                            var formAction = form.getAttribute("action")
+                            document.querySelector("#ecommerce-scripts-" + timestamp).addEventListener("load", bindModal(form, formAction, timestamp, index), false)
+                        }
+
+                        var priceInfo = subscription.querySelector(".price-info")
+                        var buyingOption = toggle.parentElement
+
+                        if (toggle && form && priceInfo) {
+                            toggle.setAttribute("role", "button")
+                            toggle.setAttribute("tabindex", "0")
+
+                            toggle.addEventListener("click", function (event) {
+                                var expanded = toggle.getAttribute("aria-expanded") === "true" || false
+                                toggle.setAttribute("aria-expanded", !expanded)
+                                form.hidden = expanded
+                                if (!expanded) {
+                                    buyingOption.classList.add("expanded")
+                                } else {
+                                    buyingOption.classList.remove("expanded")
+                                }
+                                priceInfo.hidden = expanded
+                            }, false)
+                        }
+                    }
+
+                    function bindModal(form, formAction, timestamp, index) {
+                        var weHasBrowserSupport = window.fetch && Array.from
+
+                        return function() {
+                            var Buybox = EcommScripts ? EcommScripts.Buybox : null
+                            var Modal = EcommScripts ? EcommScripts.Modal : null
+
+                            if (weHasBrowserSupport && Buybox && Modal) {
+                                var modalID = "ecomm-modal_" + timestamp + "_" + index
+
+                                var modal = new Modal(modalID)
+                                modal.domEl.addEventListener("close", close)
+                                function close() {
+                                    form.querySelector("button[type=submit]").focus()
+                                }
+
+                                var cartURL = "/cart"
+                                var cartModalURL = "/cart?messageOnly=1"
+
+                                form.setAttribute(
+                                    "action",
+                                    formAction.replace(cartURL, cartModalURL)
+                                )
+
+                                var formSubmit = Buybox.interceptFormSubmit(
+                                    Buybox.fetchFormAction(window.fetch),
+                                    Buybox.triggerModalAfterAddToCartSuccess(modal),
+                                    function() {
+                                        form.removeEventListener("submit", formSubmit, false)
+                                        form.setAttribute(
+                                            "action",
+                                            formAction.replace(cartModalURL, cartURL)
+                                        )
+                                        form.submit()
+                                    }
+                                )
+                                
+                                form.addEventListener("submit", formSubmit, false)
+
+                                document.body.appendChild(modal.domEl)
+                            }
+                        }
+                    }
+
+                    function initKeyControls() {
+                        document.addEventListener("keydown", function (event) {
+                            if (document.activeElement.classList.contains("buying-option-price") && (event.code === "Space" || event.code === "Enter")) {
+                                if (document.activeElement) {
+                                    event.preventDefault()
+                                    document.activeElement.click()
+                                }
+                            }
+                        }, false)
+                    }
+
+                    function initialStateOpen() {
+                        var buyboxWidth = buybox.offsetWidth
+                        ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(function (option, index) {
+                            var toggle = option.querySelector(".buying-option-price")
+                            var form = option.querySelector(".buying-option-form")
+                            var priceInfo = option.querySelector(".price-info")
+                            if (buyboxWidth > 480) {
+                                toggle.click()
+                            } else {
+                                if (index === 0) {
+                                    toggle.click()
+                                } else {
+                                    toggle.setAttribute("aria-expanded", "false")
+                                    form.hidden = "hidden"
+                                    priceInfo.hidden = "hidden"
+                                }
+                            }
+                        })
+                    }
+
+                    initialStateOpen()
+
+                    if (window.buyboxInitialised) return
+                    window.buyboxInitialised = true
+
+                    initKeyControls()
+                })()
+            </script>
+    </div>
+    
+
+                                        </div>
+
+                                    <div class="u-js-hide u-js-show-two-col">
+                                        
+        
+
+
+
+
+                                            <div class="citations" data-component="SV.Dropdown" data-namespace="citations">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">paper</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" data-track="click" data-track-action="Cite as link" data-track-label="Cite dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-32245-8_60?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .RIS file" data-track="click" data-track-action="Export citation" data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-32245-8_60?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .ENW file" data-track="click" data-track-action="Export citation" data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-32245-8_60?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this paper&#39;s citation as a .BIB file" data-track="click" data-track-action="Export citation" data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                                            
+
+
+
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                                <div class="skyscraper-ad u-hide" data-google-ad="skyscraper" data-gpt-hide-ad>
+        <div class="skyscraper-ad__wrapper">
+            <p class="skyscraper-ad__label">Advertisement</p>
+            <button class="skyscraper-ad__hide" title="Hide this advertisement" data-gpt-hide-ad-button data-track="click" data-track-action="Hide advertisement" data-track-label="">Hide</button>
+            <div id="doubleclick-ad" class="skyscraper-ad__ad" data-gpt></div>
+        </div>
+    </div>
+
+                        </div>
+                    </aside>
+                </div>
+            </main>
+                <footer class="footer u-interface">
+        <div class="footer__aside-wrapper">
+            <div class="footer__content">
+                <div class="footer__aside">
+                    <p class="footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                                <div class="footer__edition" data-component="SV.EditionSwitcher">
+                                    <h3 class="u-hide" data-role="button-dropdown__title" data-btn-text="Switch between Academic &#38; Corporate Edition">Switch Edition</h3>
+                                    <ul data-role="button-dropdown__content">
+                                        <li  class="selected"><a href="/siteEdition/link?previousUrl=/chapter/10.1007/978-3-030-32245-8_60&id=siteedition-academic-link" id="siteedition-academic-link">Academic Edition</a></li>
+                                        <li ><a href="/siteEdition/rd?previousUrl=/chapter/10.1007/978-3-030-32245-8_60&id=siteedition-corporate-link" id="siteedition-corporate-link">Corporate Edition</a></li>
+                                    </ul>
+                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <ul class="footer__nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/impressum">Impressum</a>
+                </li>
+                <li>
+                    <a href="/termsandconditions">Legal information</a>
+                </li>
+                <li>
+                    <a href="/privacystatement">Privacy statement</a>
+                </li>
+                <li>
+                    <a href="https://www.springernature.com/ccpa">California privacy statement</a>
+                </li>
+                <li>
+                    <a href="/cookiepolicy">How we use cookies</a>
+                </li>
+                <li>
+                    <a class="optanon-toggle-display" href="javascript:void(0);" data-cc-action="preferences">Manage cookies/Do not sell my data</a>
+                </li>
+                <li>
+                    <a href="/accessibility">Accessibility</a>
+                </li>
+                <li>
+                    <a href="https://support.springer.com/en/support/home">FAQ</a>
+                </li>
+                <li>
+                    <a id="contactus-footer-link" href="https://support.springer.com/en/support/solutions/articles/6000206179-contacting-us">Contact us</a>
+                </li>
+                <li>
+                    <a href="https://www.springer.com/gp/shop/promo/affiliate/springer-nature">Affiliate program</a>
+                </li>
+            </ul>
+            <a class="parent-logo"
+               target="_blank" rel="noopener"
+               href="//www.springernature.com"
+               title="Go to Springer Nature">
+                <span class="u-screenreader-only">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12"
+                           src="/springerlink-static/1895273086/images/png/springernature.png"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href="/springerlink-static/1895273086/images/svg/springernature.svg">
+                    </image>
+                </svg>
+            </a>
+
+            <p class="footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+                <p class="footer__user-access-info">
+                    <span>Not logged in</span>
+                    <span>Not affiliated</span>
+                    <span>91.245.42.171</span>
+                </p>
+        </div>
+    </footer>
+
+        </div>
+        <script type="text/javascript">
+    (function() {
+        var linkEl = document.querySelector('.js-ctm');
+        var scriptsList = [];
+        var polyfillFeatures = '';
+
+        window.SpringerLink = window.SpringerLink || {};
+        window.SpringerLink.staticLocation = '/springerlink-static/1895273086';
+        window.eventTrackerInstance = null;
+
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            (function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement);
+
+            polyfillFeatures = 'default,fetch,Promise,Object.setPrototypeOf,Object.entries,Number.isInteger,MutationObserver,startsWith,Array.prototype.includes,Array.from,IntersectionObserver';
+
+            scriptsList = [
+                'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + polyfillFeatures + '&flags=gated',
+                window.SpringerLink.staticLocation + '/js/main.js'
+            ];
+
+            scriptsList.forEach(function(script) {
+                var tag = document.createElement('script');
+                tag.async = false;
+                tag.src = script;
+
+                document.body.appendChild(tag);
+            });
+        }
+    })();
+</script>
+
+    <script>
+    (function() {
+        var linkEl = document.querySelector('.js-ctm');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var scriptMathJax = document.createElement('script');
+            scriptMathJax.async = false;
+            scriptMathJax.src = '/springerlink-static/1895273086/js/mathJax.js';
+            var s0 = document.getElementsByTagName('script')[0];
+            s0.parentNode.insertBefore(scriptMathJax, s0);
+        }
+    })();
+</script>
+
+
+    <script type="text/javascript" id="googletag-push">
+        
+            var adSlot = '270604982/springerlink/book/chapter';
+        
+
+        var definedSlots = [
+                {slot: [728, 90], containerName: 'doubleclick-leaderboard-ad'},
+                {slot: [160, 600], containerName: 'doubleclick-ad'},
+            {slot: [2, 2], containerName: 'doubleclick-native-ad'}
+        ];
+    </script>
+
+
+        
+        <span id="chat-widget" class="u-hide"></span>
+        
+        
+    </body>
+</html>

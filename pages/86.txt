@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en"     class="pb-page"  data-request-id="9c025a72-51f7-4786-9a00-99fbad341518"  
+><head data-pb-dropzone="head"><meta name="pbContext" content=";wgroup:string:ACM Publication Websites;groupTopic:topic:acm-pubtype&gt;journal;issue:issue:doi\:10.1145/3341982;csubtype:string:Journal;article:article:doi\:10.1145/3328932;serialTopic:topic:acm-pubtype&gt;journal;page:string:Article/Chapter View;ctype:string:Journal Content;subPage:string:Abstract;journal:journal:imwut;requestedJournal:journal:imwut;website:website:dl-site;taxonomy:taxonomy:acm-pubtype;pageGroup:string:Publication Pages"/>
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link><meta name="citation_journal_title" content="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"></meta><meta name="dc.Title" content="Multi-task Self-Supervised Learning for Human Activity Detection"></meta><meta name="dc.Creator" content="SaeedAaqib "></meta><meta name="dc.Creator" content="OzcelebiTanir "></meta><meta name="dc.Creator" content="LukkienJohan "></meta><meta name="dc.Subject" content="Self-supervised learning; deep learning; human activity recognition; multi-task learning; representation learning; semi-supervised learning; temporal convolutional neural networks; transfer learning"></meta><meta name="dc.Description" content="Deep learning methods are successfully used in applications pertaining to ubiquitous computing, pervasive intelligence, health, and well-being. Specifically, the area of human activity recognition ..."></meta><meta name="Description" content="Deep learning methods are successfully used in applications pertaining to ubiquitous computing, pervasive intelligence, health, and well-being. Specifically, the area of human activity recognition ..."></meta><meta name="dc.Publisher" content="&#xA;&#x9;&#x9;ACM&#xA;&#x9;&#x9;PUB27&#xA;&#x9;&#x9;New York, NY, USA&#xA;&#x9;"></meta><meta name="dc.Date" scheme="WTN8601" content="2019-06-21"></meta><meta name="dc.Type" content="research-article"></meta><meta name="dc.Format" content="text/HTML"></meta><meta name="dc.Identifier" scheme="acm-id" content="3328932"></meta><meta name="dc.Identifier" scheme="doi" content="10.1145/3328932"></meta><meta name="dc.Identifier" scheme="manuscript_tracking_id" content="feb199619"></meta><meta name="dc.Identifier" scheme="article-no" content="61"></meta><meta name="dc.Language" content="EN"></meta><meta name="dc.Coverage" content="New York, NY, USA"></meta><meta name="keywords" content="Self-supervised learning,deep learning,human activity recognition,multi-task learning,representation learning,semi-supervised learning,temporal convolutional neural networks,transfer learning"></meta><!-- ${citation_fulltext_world_readable:10.1145/3328932} -->
+
+
+
+
+<link rel="meta" type="application/atom+xml" href="https://doi.org/10.1145%2F3328932"></link>
+<link rel="meta" type="application/rdf+json" href="https://doi.org/10.1145%2F3328932"></link>
+<link rel="meta" type="application/unixref+xml" href="https://doi.org/10.1145%2F3328932"></link>
+
+
+
+<title>Multi-task Self-Supervised Learning for Human Activity Detection | Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</title>
+
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="robots" content="noarchive"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <meta property="og:title" content="Multi-task Self-Supervised Learning for Human Activity Detection | Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"/>
+    
+
+
+        <meta property="og:type" content="Article"/>
+    
+
+
+        <meta property="og:url" content="https://dl.acm.org/doi/abs/10.1145/3328932"/>
+    
+
+        <meta property="og:image" content="https://dl.acm.org/cms/asset/2f0334a5-b117-496f-800d-484b316b7d37/3341982.cover.gif" />
+        <meta property="og:image:width" content="116" />
+        <meta property="og:image:height" content="150" />
+    
+
+
+        <meta property="og:site_name" content="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"/>
+    
+
+
+        <meta property="og:description" content="Deep learning methods are successfully used in applications pertaining to ubiquitous
+computing, pervasive intelligence, health, and well-being. Specifically, the area
+of human activity recognition (HAR) is primarily transformed by the convolutional
+and ..."/>
+    
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+
+
+    <!--link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|Merriweather:300,400,700,900')--><link rel="stylesheet" href="/products/acm/releasedAssets/css/build-84316ef87de76f1304c6.css"/><link rel="stylesheet" href="/products/acm/releasedAssets/css/print-84316ef87de76f1304c6.css" media="print"/>
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/pb-assets/styles/acm-custom-1545046041420.css">
+<script defer src="https://scholar.google.com/scholar_js/casa.js" async></script>
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1083010732");
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/pb-assets/head-metadata/apple-touch-icon-1574252172393.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/pb-assets/head-metadata/favicon-32x32-1574252172003.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/pb-assets/head-metadata/favicon-16x16-1574252172937.png">
+<link rel="manifest" href="/pb-assets/head-metadata/site-1574252171130.webmanifest" crossorigin="use-credentials">
+<link rel="mask-icon" href="/pb-assets/head-metadata/safari-pinned-tab-1574252171193.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00a300">
+<meta name="theme-color" content="#ffffff">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6e539318ac0a38db","token":"b7f168b3cd354a55a4dd51b513830799","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NFGCMX');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+</head>
+<body class="pb-ui">
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFGCMX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    if(false) {
+        document.getElementById("skipNavigationLink").onclick =function skipElement () {
+            var element = document.getElementById('');
+            if(element == null || element == undefined) {
+                element = document.getElementsByClassName('').item(0);
+            }
+            element.setAttribute('tabindex','0');
+            element.focus();
+
+        }
+
+    }
+
+</script>
+
+
+
+
+
+    <div id="pb-page-content" data-ng-non-bindable>
+        <div data-pb-dropzone="main" data-pb-dropzone-name="Main">
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <header data-widget-def="ux3-layout-widget" data-widget-id="88f434fd-b4d9-4f0e-b7b6-cde0fadcc9ef" class="header base imwut">
+        
+
+
+
+        
+        <div class="header__fixed-items fixed fixed-element">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="c844bab8-b1d5-4df4-8bea-71f6156459e4" class="container header--first-row">
+        
+
+
+
+        
+        <div class="pull-left">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="83eada61-9003-4cb3-99a8-a38fa7692761" class="header__logo1">
+        
+
+
+
+        
+        <a href="/" title="ACM Digital Library home"><img id="" alt="ACM Digital Library home" src="/specs/products/acm/releasedAssets/images/acm-dl-logo-white.png"/></a>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="5517ee17-e847-46ff-b42e-c5a6754e032d" class="header__logo2">
+        
+
+
+
+        
+        <a href="https://www.acm.org" title="ACM home"><img id="" alt="ACM home" src="specs/products/acm/releasedAssets/images/acm-logo-1.png"/></a>
+
+        </div>
+    
+</div><div class="pull-right">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="ab4ba9a1-6e57-4b90-b9c2-fc7914d9a3a1" class="header__quick-menu text-onDark">
+        
+
+
+
+        
+        <ul class="rlist--inline"><li class="advanced-search-link hidden-lg hidden-md hidden-sm">
+
+
+
+        
+        <a href="/search/advanced" >Advanced Search</a>
+</li><li class="show-on-mobile">
+
+
+
+        
+        <a href="/browse/" title="browse by title or publisher">Browse</a>
+</li><li class="show-on-mobile">
+
+
+
+        
+        <a href="/about" title="About the ACM Digital Library">About</a>
+</li><li class="login-list">
+
+
+
+        
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropBlock loginBar login-open">
+    <ul class="rlist--inline">
+        <li class="login-link">
+            <a href="/action/showLogin?redirectUri=%2Fdoi%2Fabs%2F10.1145%2F3328932">
+                Sign in
+            </a>
+        </li>
+        <li class="register-link">
+            
+                    <a href="https://accounts.acm.org?redirectUri=%2Fdoi%2Fabs%2F10.1145%2F3328932" class="btn" title="Register">
+                        Register
+                    </a>
+                
+        </li>
+    </ul>
+</div>
+
+
+
+    
+
+</li></ul>
+
+        </div>
+    
+</div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="menuWidget" data-widget-id="13da1316-80a7-4370-a291-8968cd9cb35e" class="container header--second-row">
+        
+
+
+
+        
+        <div class="responsive-menu-container clearfix"><div class="left-section pull-left"></div><div class="menu-section"><div class="main-nav responsive-menu-nav"><a href="#global-menu" data-target="global-menu" data-toggle="nav" title="menu drawer"><span class="drawer__icons-box"><span class="drawer__icons-controls"></span></span></a><nav role="navigation" id="global-menu" data-ctrl-res="screen-sm" class="drawer__nav container gutterless hidden-sm hidden-xs"><ul id="menubar" role="menubar" class="menubar rlist--inline"><li class="hidden-lg hidden-md"><div data-toggle="transplant" data-target-class="hidden-xs hidden-sm" data-target=".header--second-row .quick-search--form" data-direction="from" data-transplant="self" class="quick-search-mobile"></div></li><li role="menuitem" aria-label="Advanced Search" id="menu-item-global-menu-0" class="menu-item mobile-menu-item"><a href="/search/advanced"><span>Advanced Search</span></a></li><li role="menuitem" aria-label="Journals" id="menu-item-global-menu-1" class="menu-item"><a href="/journals"><span>Journals</span></a></li><li role="menuitem" aria-label="Magazines" id="menu-item-global-menu-2" class="menu-item"><a href="/magazines"><span>Magazines</span></a></li><li role="menuitem" aria-label="Proceedings" id="menu-item-global-menu-3" class="menu-item"><a href="/proceedings"><span>Proceedings</span></a></li><li role="menuitem" aria-label="Books" id="menu-item-global-menu-4" class="menu-item"><a href="/acmbooks"><span>Books</span></a></li><li role="menuitem" aria-label="SIGs" id="menu-item-global-menu-5" class="menu-item"><a href="/sigs"><span>SIGs</span></a></li><li role="menuitem" aria-label="Conferences" id="menu-item-global-menu-6" class="menu-item"><a href="/conferences"><span>Conferences</span></a></li><li role="menuitem" aria-label="People" id="menu-item-global-menu-7" class="menu-item"><a href="/people"><span>People</span></a></li><li class="hidden-lg hidden-md"><div data-toggle="transplant" data-target-class="hidden-xs hidden-sm" data-target=".header__quick-menu .show-on-mobile" data-direction="from" data-transplant="self"></div></li><li role="menuitem" aria-haspopup="true" aria-label="More" class="dropdown-more hidden dropdown menu-parent"><a href="#" title="More" data-toggle="dropdown" class="dropdown__toggle"><span>More</span><i aria-hidden="true" class="icon-section_arrow_d pull-right hidden-sm hidden-xs"></i></a><ul aria-labelledby="main0-1" aria-hidden="true" role="menu" class="rlist dropdown__menu"></ul></li><li class="menubar__extra-mob-links"></li></ul></nav></div></div><div class="right-section pull-right">
+
+
+
+        
+        <div class="quickSearchFormContainer"><div class="quick-search"><div class="clearfix quick-search__clearfix"><form action="/action/doSearch" name="defaultQuickSearch" method="get" title="Quick Search" class="quick-search--form"><div class="quick-search--input"><div class="input-group option-0"><label for="AllFieldf73847c0-d936-48ec-9bf9-139b3828507f" class="sr-only">Search ACM Digital Library</label><input id="AllFieldf73847c0-d936-48ec-9bf9-139b3828507f" type="search" name="AllField" placeholder="Search ACM Digital Library" data-auto-complete-max-words="7" data-auto-complete-max-chars="32" data-contributors-conf="3" data-topics-conf="3" data-publication-titles-conf="3" data-history-items-conf="3" data-group-titles-conf="3" value="" class="autocomplete quick-search__input"/></div></div><div class="quick-search--button"><button type="submit" title="Search" aria-label="Search" class="btn quick-search__button icon-Icon_Search"><span class="sr-only">Search</span><span>Search</span></button></div></form></div>
+
+
+
+        
+        <a class="quick-search__advancedHeader" title="link to Advanced Search form" href="/search/advanced">Advanced Search</a>
+</div></div>
+</div></div><div class="header__dropzone"></div>
+
+        </div>
+    
+
+
+
+
+        
+        <div class="sub-nav fixed-element"><a href="#" data-db-target-for="sub-nav__items" class="sub-nav__toggle hidden-lg"><span>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</span></a><div class="sub-nav__container"><div class="container"><div data-ctrl-res="screen-md" class="responsive-menu-container"><div class="left-section pull-left"></div><div class="menu-section"><div style="display: block" class="responsive-menu-nav"><nav id="sub-nav__items" data-db-target-of="sub-nav__items" class="sub-nav__holder drawer__nav"><ul role="menu" class="rlist--inline menubar"><li role="menuitem"><a title="Journal Home" href="/journal/imwut" class="sub-nav__item">Journal Home</a></li><li role="menuitem" title="Coming soon"><a title="Coming soon" class="sub-nav__item disabled">Just Accepted</a></li><li role="menuitem" title="Latest Issue"><a title="Latest Issue" href="/toc/imwut/current" class="sub-nav__item">Latest Issue</a></li>
+
+
+
+        
+        <li role="menuitem" style="display: none; visibility: hidden;"></li>
+<li role="menuitem" title="Archive"><a title="Archive" href="/loi/imwut" class="sub-nav__item">Archive</a></li><li role="menuitem" class="dropdown menu-parent"><div class="base dropBlock"><a title="Authors" href="/journal/imwut#" data-db-target-for="subItemsList-0" data-db-switch="none" class="inline-icon sub-nav__item dropdown__toggle">Authors<i aria-hidden="true" class="icon-section_arrow_d"></i></a></div><div data-db-target-of="subItemsList-0" class="dropBlock__holder sub-items-list"><ul role="menu" class="rlist dropdown__menu"><li role="menuitem"><a title="Author List" href="/journal/imwut/authors" class="sub-nav__item">Author List</a></li><li role="menuitem"><a title="Author Guidelines" href="/journal/imwut/author-guidelines" class="sub-nav__item">Author Guidelines</a></li><li role="menuitem"><a title="Submission Site" href="https://new.precisionconference.com/submissions" class="sub-nav__item external_link">Submission Site</a></li><li role="menuitem"><a title="ACM Author Policies" href="https://authors.acm.org/journals/rights-policies" class="sub-nav__item external_link">ACM Author Policies</a></li></ul></div></li><li role="menuitem"><a title="Affiliations" href="/journal/imwut/affiliations" class="sub-nav__item">Affiliations</a></li><li role="menuitem"><a title="Award Winners" href="/journal/imwut/award-winners" class="sub-nav__item">Award Winners</a></li><li role="menuitem" class="dropdown menu-parent"><div class="base dropBlock"><a title="Editors" href="/journal/imwut#" data-db-target-for="subItemsList-3" data-db-switch="none" class="inline-icon sub-nav__item dropdown__toggle">Editors<i aria-hidden="true" class="icon-section_arrow_d"></i></a></div><div data-db-target-of="subItemsList-3" class="dropBlock__holder sub-items-list"><ul role="menu" class="rlist dropdown__menu"><li role="menuitem"><a title="Editorial Board" href="/journal/imwut/editorial-board" class="sub-nav__item">Editorial Board</a></li><li role="menuitem"><a title="Associate Editors Welcome Video" href="https://youtu.be/_svVVsJeCS0" class="sub-nav__item external_link">Associate Editors Welcome Video</a></li></ul></div></li><li role="menuitem" class="dropdown menu-parent"><div class="base dropBlock"><a title="Reviewers" href="/journal/imwut#" data-db-target-for="subItemsList-4" data-db-switch="none" class="inline-icon sub-nav__item dropdown__toggle">Reviewers<i aria-hidden="true" class="icon-section_arrow_d"></i></a></div><div data-db-target-of="subItemsList-4" class="dropBlock__holder sub-items-list"><ul role="menu" class="rlist dropdown__menu"><li role="menuitem"><a title="Information and Guidelines" href="/journal/imwut/reviewers" class="sub-nav__item">Information and Guidelines</a></li><li role="menuitem"><a title="Submission Site" href="https://new.precisionconference.com/submissions" class="sub-nav__item external_link">Submission Site</a></li></ul></div></li><li role="menuitem" class="dropdown menu-parent"><div class="base dropBlock"><a title="Policies" href="/journal/imwut#" data-db-target-for="subItemsList-5" data-db-switch="none" class="inline-icon sub-nav__item dropdown__toggle">Policies<i aria-hidden="true" class="icon-section_arrow_d"></i></a></div><div data-db-target-of="subItemsList-5" class="dropBlock__holder sub-items-list"><ul role="menu" class="rlist dropdown__menu"><li role="menuitem"><a title="IMWUT Policies" href="/journal/imwut/author-policies" class="sub-nav__item">IMWUT Policies</a></li><li role="menuitem"><a title="ACM Author Policies" href="https://authors.acm.org/journals/rights-policies" class="sub-nav__item external_link">ACM Author Policies</a></li></ul></div></li><li role="menuitem" class="dropdown menu-parent"><div class="base dropBlock"><a title="About" href="/journal/imwut#" data-db-target-for="subItemsList-6" data-db-switch="none" class="inline-icon sub-nav__item dropdown__toggle">About<i aria-hidden="true" class="icon-section_arrow_d"></i></a></div><div data-db-target-of="subItemsList-6" class="dropBlock__holder sub-items-list"><ul role="menu" class="rlist dropdown__menu"><li role="menuitem"><a title="About IMWUT" href="/journal/imwut/about" class="sub-nav__item">About IMWUT</a></li><li role="menuitem"><a title="Abstracting/Indexing" href="/journal/imwut/indexing" class="sub-nav__item">Abstracting/Indexing</a></li></ul></div></li><li role="menuitem"><a title="Contact Us" href="/journal/imwut/author-guidelines#contact-us" class="sub-nav__item">Contact Us</a></li><li role="menuitem" aria-haspopup="true" aria-label="More" class="dropdown-more hidden dropdown menu-parent"><a href="#" title="More" class="dropdown__toggle hidden-md hidden-sm hidden-xs"><span>More</span><i aria-hidden="true" class="icon-section_arrow_d"></i></a><ul aria-labelledby="main0-1" aria-hidden="true" role="menu" class="rlist dropdown__menu visible-md visible-sm visible-xs"></ul></li></ul></nav></div></div><div class="right-section hidden-md hidden-sm hidden-xs"></div></div></div>
+
+
+
+        
+        <div id="temp-prog" class="hidden-xs hidden-sm">
+    <div class="progress-bar--wrapper">
+        <div style="width: 0.116818%;" class="progress-bar"></div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener("load", function() {
+        document.getElementsByClassName('sub-nav__container')[0].appendChild(document.getElementById('temp-prog'));
+    });        
+</script>
+</div></div>
+</div><div></div><div class="banner"></div><div class="header-breadcrumb">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="f5f275c5-a862-48bf-8119-8528d04615da" class="container">
+        
+
+
+
+        
+        <div>
+
+
+
+        
+        <nav class="article__breadcrumbs separator"><a href="https://dl.acm.org/" class="article__tocHeading">Home</a><a href="/journals" class="article__tocHeading">ACM Journals</a><a href="/journal/imwut" class="article__tocHeading">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</a><a href="/toc/imwut/2019/3/2" class="article__tocHeading">Vol. 3, No. 2</a><a href="/doi/abs/10.1145/3328932" class="article__tocHeading">Multi-task Self-Supervised Learning for Human Activity Detection</a></nav>
+</div>
+
+        </div>
+    
+</div>
+
+        </header>
+    
+
+
+
+
+
+
+        
+        <main class="content imwut loi-page no-margin">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3combinedRecommendationsWidget" data-widget-id="bf2b14e9-d9dc-4518-8bb0-d9b157f47c7e" class="recommendations" data-show-id="sec-ref">
+        
+
+
+
+        
+        <div data-ajaxurl="/pb/widgets/lazyLoadRecommended?widgetId=bf2b14e9-d9dc-4518-8bb0-d9b157f47c7e&amp;doi=10.1145%2F3328932&amp;pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages" class="recommended--lazyLoad"></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-publicationContent-widget" data-widget-id="f69d88a8-b404-4aae-83a9-9acea4426d78" class="container">
+        
+
+
+
+        
+        <article data-enable-mathjax="true" data-citationInfo="/action/acmCitationInfo?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&ajax=true&doi=10.1145%2F3328932&pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages" data-proceedingInfo="/action/proceedingArticleMeta?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&ajax=true&doi=10.1145%2F3328932&pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages"><div class="row"><div class="col-md-2 col-sm-3"></div><div class="col-md-8 col-sm-7"><div class="article-citations"><div class="citation"><div class="issue-item__citation"><span class="issue-heading">research-article </span><span class="article__access"><span></span></span></div><div class="border-bottom clearfix"><h1 class="citation__title">Multi-task Self-Supervised Learning for Human Activity Detection</h1>
+
+
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7"></script><div class="share__block share__inline-links"><div class="pb-dropzone" data-pb-dropzone="shareBlock" title="shareBlock"></div><span class="sr-only">Share on</span><div class="rlist--inline addthis addthis_toolbox addthis_default_style addthis_32x32_style"><a role="link" class="addthis_button_twitter"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_Twitter"></i></a><a role="link" class="addthis_button_linkedin"><i aria-hidden="true" class="at-icon-wrapper icon-linkedin"></i></a><a role="link" class="addthis_button_reddit"><i aria-hidden="true" class="at-icon-wrapper icon-riddit-filled"></i></a><a role="link" class="addthis_button_facebook"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_Facebook"></i></a><a role="link" class="addthis_button_email"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_mail"></i></a><div class="pb-dropzone" data-pb-dropzone="share-additional-links" title="share-additional-links"></div></div></div>
+</div><div class="border-bottom clearfix"> <div id="sb-1"> <ul data-lines="2" ariaa-label="authors" class="rlist--inline loa truncate-list"> <li class="label"><b>Authors: </b></li> <li class="loa__item"><a id="arnd_39089286936062655_Ctrl" href="javascript:void(0);" aria-controls="arnd_39089286936062655" aria-haspopup="true" class="author-name" title="Aaqib Saeed"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" width="24" height="24" alt="" aria-hidden="true"/>Aaqib Saeed</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_39089286936062655" data-doi="10.1145/contrib-99659441589">Eindhoven University of Technology, Eindhoven, The Netherlands</p></span></span></a><div id="arnd_39089286936062655" aria-labelledby="arnd_39089286936062655_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d41233693e14"></div> <div class="author-info__body"> <p data-pill-inst="d41233693e14" data-doi="10.1145/contrib-99659441589">Eindhoven University of Technology, Eindhoven, The Netherlands</p><a href="/profile/99659441589" class="btn blue stretched">View Profile</a></div> </div><span>,</span></li> <li class="loa__item"><a id="arnd_39089286936498738_Ctrl" href="javascript:void(0);" aria-controls="arnd_39089286936498738" aria-haspopup="true" class="author-name" title="Tanir Ozcelebi"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" width="24" height="24" alt="" aria-hidden="true"/>Tanir Ozcelebi</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_39089286936498738" data-doi="10.1145/contrib-81339520961">Eindhoven University of Technology, Eindhoven, The Netherlands</p></span></span></a><div id="arnd_39089286936498738" aria-labelledby="arnd_39089286936498738_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d41233693e30"></div> <div class="author-info__body"> <p data-pill-inst="d41233693e30" data-doi="10.1145/contrib-81339520961">Eindhoven University of Technology, Eindhoven, The Netherlands</p><a href="/profile/81339520961" class="btn blue stretched">View Profile</a></div> </div><span>,</span></li> <li class="loa__item"><a id="arnd_39089286936935602_Ctrl" href="javascript:void(0);" aria-controls="arnd_39089286936935602" aria-haspopup="true" class="author-name" title="Johan Lukkien"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" width="24" height="24" alt="" aria-hidden="true"/>Johan Lukkien</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_39089286936935602" data-doi="10.1145/contrib-81331498603">Eindhoven University of Technology, Eindhoven, The Netherlands</p></span></span></a><div id="arnd_39089286936935602" aria-labelledby="arnd_39089286936935602_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d41233693e46"></div> <div class="author-info__body"> <p data-pill-inst="d41233693e46" data-doi="10.1145/contrib-81331498603">Eindhoven University of Technology, Eindhoven, The Netherlands</p><a href="/profile/81331498603" class="btn blue stretched">View Profile</a></div> </div> </li> </ul><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-full-screen="false" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-label="<i class='icon-Icon_Information'&gt;</i&gt; Information &amp; Authors" class="loa__link w-slide__btn tab-link slide-active">Authors Info &amp; Claims </a></div> </div> <div class="border-bottom clearfix"><div class="issue-item__detail"><a href="/toc/imwut/2019/3/2" title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"><span class="epub-section__title">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</span></a><a href="/toc/imwut/2019/3/2"><span class="comma-separator"><span>Volume 3</span></span></a><a href="/toc/imwut/2019/3/2"><span class="comma-separator"><span>Issue 2</span></span></a><span class="dot-separator"><span class="epub-section__date">June 2019  </span></span><span class="dot-separator"><span class="epub-section__ids">Article No.: 61</span></span><span class="comma-separator"><span class="epub-section__pagerange">pp   1–30</span></span><span class="dot-separator"><a href="https://doi.org/10.1145/3328932" class="issue-item__doi">https://doi.org/10.1145/3328932</a></span></div></div><div class="border-bottom clearfix"><span class="bold label">Online:</span><span class="CitationCoverDate">21 June 2019</span><a href="#" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-full-screen="false" data-tab="pill-information__content" class="publication-history-link w-slide__btn tab-link">Publication History</a></div>
+
+
+
+        
+        
+<div class="border-bottom clearfix"><div class="issue-item__footer"><div class="issue-item__footer-info pull-left"><div tabindex="0" class="tooltip"><ul title="Click to stay open" class="rlist--inline"><li><span class="citation"><i class="icon-quote"></i><span>41</span><span class="sr-only">citation</span></span></li><li><span class="metric"><i class="icon-metric"></i><span>1,609</span></span></li><span class="sr-only">Downloads</span></ul><div class="tooltip__body"><span class="arrow"></span><div class="left-bordered-title">Metrics</div><a href="javascript:void(0);" data-slide-target="#pill-metric" data-ctrl-res="screen-xlg" data-full-screen="false" data-tab="pill-citations__content" title="See Bibliometrics &amp; Citations section" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" class="w-slide__btn tab-link"><div class="citation">Total Citations<span class="bold">41</span></div></a><a href="javascript:void(0);" data-slide-target="#pill-metric" data-ctrl-res="screen-xlg" data-full-screen="false" data-tab="pill-bibliometrics__content" title="See Bibliometrics &amp; Citations section" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" class="w-slide__btn tab-link"><div class="metric">Total Downloads<span class="bold">1,609</span></div></a><div class="info">Last 12 Months<span class="bold">576</span></div><div class="info">Last 6 weeks<span class="bold">70</span></div></div></div></div><div class="issue-item__footer-links pull-right"><ul class="rlist--inline">
+
+
+
+        
+        <li role="presentation" class="article-tool"><a id="manageAlert__crtl" href="/action/addCitationAlert?doi=10.1145/3328932" role="menuitem" data-title="Get Citation Alerts" data-target="#manageAlert" class="btn--icon simple-tooltip__block--b"><i aria-hidden="true" class="icon-Icon_Alerts"></i><span class="visibility-hidden">Get Citation Alerts</span></a><div class="ux-modal-container"><div id="manageAlert" class="modal"><div class="modal__dialog"><div class="modal__dialog--success"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><a id="id-hatemile-navigation-6073290063892647-7" name="id-hatemile-navigation-6073290063892647-7" data-headinganchorfor="id-hatemile-navigation-6073290063892647-6" class="heading-anchor"></a><h2 id="id-hatemile-navigation-6073290063892647-6">New Citation Alert added!</h2></div><div class="modal__body"><p>This alert has been successfully added and will be sent to:<span class="email"></span></p><p>You will be notified whenever a record that you have chosen has been cited.</p></div><div class="modal__footer"><p>To manage your alert preferences, click on the button below.</p><a href="/action/showPreferences?menuTab=Alerts" title="Manage my Alerts" id="id-hatemile-display-1019331959102511-5" class="btn blue big stretched manageAlert__btn"><span data-attributetitleof="id-hatemile-display-1019331959102511-5" class="force-read-before">Manage my Alerts</span></a></div></div><div class="modal__dialog--error"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><a id="id-hatemile-navigation-6073290063892647-9" name="id-hatemile-navigation-6073290063892647-9" data-headinganchorfor="id-hatemile-navigation-6073290063892647-8" class="heading-anchor"></a><h2 id="id-hatemile-navigation-6073290063892647-8">New Citation Alert!</h2></div><div class="modal__body"><p>Please <a href="/action/showLogin?redirectUri=/doi/abs/10.1145/3328932" title="Sign In" class="link">log in to your account</a></p></div></div></div></div></div></li>
+<li role="presentation" class="article-tool"><a href="javascript:void(0)" role="menuitem" data-title="Save to Binder" data-db-target-for="save-to-binder" data-link="/action/binderList?doi=10.1145/3328932" class="btn--icon simple-tooltip__block--b saveToBinders"><i aria-hidden="true" class="icon-add-folder"></i><span class="visibility-hidden">Save to Binder</span></a><div data-db-target-of="save-to-binder"><div class="saveToBinders-list"><input type="hidden" name="doiVal" value="10.1145/3328932"/><h5>Save to Binder</h5><div class="binder-list-alerts"></div><div class="saveToBinders-list__container"><ul class="rlist saveToBinders-list__items"><div class="loader"><img src="/specs/products/acm/releasedAssets/images/loader.gif"/></div></ul></div><div class="binder__create"><a data-action="show" href="/action/showMyBinders" title="Create a New Binder" class="show-binder-form toggle-binder-form"><i class="icon-plus-light"></i>Create a New Binder</a><div class="binder-create-form binder__create-mini-form"><div class="input-group input-group--gray-bg"><label>Name</label><div class="input-group__field-container--right-icon"><input type="text" placeholder="My new Binder" name="binderName" data-maxChar="256" class="binder-create-form__name charCount__text form-control"/><span class="input-group-addon input-group-addon--right"><span class="charLimit"></span></span></div></div><div><ul class="rlist--inline binder__create-btns-container"><li><button type="reset" value="Cancel" data-action="hide" class="toggle-binder-form btn btn--border-less btn transparent binder__create-cancel">Cancel</button></li><li class="pull-right"><button type="submit" value="Create Binder" disabled="disabled" data-append-newbinder-link="/action/createBinder" class="btn btn--no-margin blue big binder__create-submit binder-create-form__create"><i aria-hidden="true" class="icon-plus-light"></i>Create</button></li></ul></div></div></div></div></div></li><li role="presentation" class="article-tool"><a href="/" role="menuitem" data-title="Export Citation" data-toggle="modal" data-target="#exportCitation" class="btn--icon simple-tooltip__block--b"><i aria-hidden="true" class="icon-quote"></i><span class="visibility-hidden">Export Citation</span><input type="hidden" name="doiVal" value="10.1145/3328932"/></a></li><li class="publisher-site article-tool"><a href="#" class="btn blue"><span>Publisher Site</span><i aria-hidden="true" class="icon-export"></i></a></li></ul><ul class="rlist--inline right"><input type="hidden" id="formatsCount" value="2"/><li><a href="javascript:void(0);" data-slide-target="#pill-access" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-get-access&quot;&gt;&lt;/i&gt;Get Access" title="Get Access" class="get-access w-slide__btn"><i class="icon-get-access"></i><span>Get Access</span></a></li></ul></div></div></div></div></div></div><div class="col-sm-2"></div></div><div class="row"><div class="col-md-2 col-sm-3 sidebar-section article-sidebar-section"><div class="article__sections"><div class="sections-box"><div><div class="sections-box__static-items"><div class="parent-item"><h5 class="parent-item__title"><a href="/journal/imwut" data-lines="2" data-title="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies" class="simple-tooltip__inline--r truncate-text-css">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</a></h5><a href="/toc/imwut/2019/3/2" data-lines="2" data-title="Volume 3, Issue 2" class="vol-issue simple-tooltip__inline--r truncate-text-css"><span>Volume 3, Issue 2</span></a></div>
+
+
+
+        
+        
+
+
+
+
+
+        
+        <div class="content-navigation clearfix"><a href="/doi/10.1145/3328931" title="Previous item in TOC" class="content-navigation__btn--pre "><span><i class="icon-Arrow-Stroke"></i></span><span class="control">Previous</span><span class="type">Article</span></a><a href="/doi/10.1145/3328933" title="Next item in TOC" class="content-navigation__btn--next "><span class="control">Next</span><span class="type">Article</span><span><i class="icon-Arrow-Stroke"></i></span></a></div>
+</div><div class="sections-block scroll-to-target"></div></div><div class="logo"><img src="/specs/products/acm/releasedAssets/images/footer-logo1.png" alt="ACM Digital Library" title="ACM Digital Library"/></div></div></div></div><div class="col-md-8 col-sm-7 sticko__side-content"><div class="stickybar__original__position"></div><nav class="stickybar coolBar trans visible-xs visible-sm"><div class="stickybar__wrapper coolBar__wrapper clearfix"><div class="coolBar__section"><a id="article_Ctrl" href="#" data-db-target-for="article-sec_Pop" role="button" aria-expanded="false" class="coolBar__ctrl"><i class="icon-burger"></i></a><div id="article_Pop" data-db-target-of="article-sec_Pop" aria-hidden="true" class="coolBar__drop fixed rlist"><div data-target=".article__sections" data-remove="false" data-target-class="hidden-xs hidden-sm" data-toggle="transplant" data-direction="from" data-transplant="self" class="transplant showit"></div></div></div><div data-target=".pill-section .pill-list" data-remove="false" data-target-class="hidden-xs hidden-sm" data-toggle="transplant" data-direction="from" data-transplant="self" class="transplant showit"></div></div></nav><div class="article__body"><!-- abstract content --><div class="hlFld-Abstract"><a name="abstract"></a><div class="article__section article__abstract clearfix"><div class="colored-block__title"><h2 id="d41233717e1" class="section__title left-bordered-title">Abstract</h2></div><div class="abstractSection abstractInFull"><div class="abstractSection abstractInFull"><p>Deep learning methods are successfully used in applications pertaining to ubiquitous computing, pervasive intelligence, health, and well-being. Specifically, the area of human activity recognition (HAR) is primarily transformed by the convolutional and recurrent neural networks, thanks to their ability to learn semantic representations directly from raw input. However, in order to extract generalizable features massive amounts of well-curated data are required, which is a notoriously challenging task; hindered by privacy issues and annotation costs. Therefore, unsupervised representation learning (i.e., learning without manually labeling the instances) is of prime importance to leverage the vast amount of unlabeled data produced by smart devices. In this work, we propose a novel self-supervised technique for feature learning from sensory data that does not require access to any form of semantic labels, i.e., activity classes. We learn a multi-task temporal convolutional network to recognize transformations applied on an input signal. By exploiting these transformations, we demonstrate that simple auxiliary tasks of the binary classification result in a strong supervisory signal for extracting useful features for the down-stream task. We extensively evaluate the proposed approach on several publicly available datasets for smartphone-based HAR in unsupervised, semi-supervised and transfer learning settings. Our method achieves performance levels superior to or comparable with fully-supervised networks trained directly with activity labels, and it performs significantly better than unsupervised learning through autoencoders. Notably, for the semi-supervised case, the self-supervised features substantially boost the detection rate by attaining a kappa score between 0.7 - 0.8 with only 10 labeled examples per class. We get similar impressive performance even if the features are transferred from a different data source. Self-supervision drastically reduces the requirement of labeled activity data, effectively narrowing the gap between supervised and unsupervised techniques for learning meaningful representations. While this paper focuses on HAR as the application domain, the proposed approach is general and could be applied to a wide variety of problems in other areas.</p></div></div></div></div><!-- /abstract content --><div class="pb-dropzone" data-pb-dropzone="pubContentAccessDenialDropzone"><!-- Empty dropzone --></div><div data-rel="videos" class="article__section article__supplemental-material"><div class="colored-block__title"><h2 id="sec-supp" class="section__title left-bordered-title">Supplemental Material</h2></div><div class="article-media"><div class="supplemental-material__links"><h6>Available for Download</h6><div class="separated-block--dashed--bottom issue-downloads"><div class="issue-downloads__item"><span class="badge-rounded-edgs blue">zip</span><div data-id="saeed.zip" class="issue-downloads__item__details"><a href="/action/downloadSupplement?doi=10.1145%2F3328932&amp;file=saeed.zip" title="saeed" class="file-name-link"><span><span class="file-name">saeed</span> (236.5 KB) </span><i class="icon-Icon_Download"></i></a><p class="info--text">Supplemental movie, appendix, image and software files for, Multi-task Self-Supervised Learning for Human Activity Detection</p></div></div></div></div></div></div><div class="article__section article__references show-more-items" data-sectionname="References"><p class="explanation__text"></p><div class="colored-block__title"><h2 id="sec-ref" class="section__title left-bordered-title">
+                    References
+                </h2></div><ol class="rlist references__list references__numeric"><li id="ref-00001" class="&#xA;                references__item&#xA;            "><span class="references__note">Pulkit Agrawal, Joao Carreira, and Jitendra Malik. 2015. Learning to see by moving. In Proceedings of the IEEE International Conference on Computer Vision. 37--45.  <span class="references__pub-id doi 10.1109/ICCV.2015.13"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Pulkit+Agrawal%2C+Joao+Carreira%2C+and+Jitendra+Malik.+2015.+Learning+to+see+by+moving.+In+Proceedings+of+the+IEEE+International+Conference+on+Computer+Vision.+37%2D%2D45.+10.1109%2FICCV.2015.13+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1109/ICCV.2015.13" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00002" class="&#xA;                references__item&#xA;            "><span class="references__note">Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra, and Jorge Luis Reyes-Ortiz. 2013. A public domain dataset for human activity recognition using smartphones.. In ESANN.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Davide+Anguita%2C+Alessandro+Ghio%2C+Luca+Oneto%2C+Xavier+Parra%2C+and+Jorge+Luis+Reyes-Ortiz.+2013.+A+public+domain+dataset+for+human+activity+recognition+using+smartphones..+In+ESANN."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00003" class="&#xA;                references__item&#xA;            "><span class="references__note">Relja Arandjelović and Andrew Zisserman. 2017. Objects that sound. arXiv preprint arXiv:1712.06651 (2017).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Relja+Arandjelovi%C4%87+and+Andrew+Zisserman.+2017.+Objects+that+sound.+arXiv+preprint+arXiv%3A1712.06651+%282017%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00004" class="&#xA;                references__item&#xA;            "><span class="references__note">Yusuf Aytar, Carl Vondrick, and Antonio Torralba. 2016. Soundnet: Learning sound representations from unlabeled video. In Advances in Neural Information Processing Systems. 892--900.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yusuf+Aytar%2C+Carl+Vondrick%2C+and+Antonio+Torralba.+2016.+Soundnet%3A+Learning+sound+representations+from+unlabeled+video.+In+Advances+in+Neural+Information+Processing+Systems.+892%2D%2D900."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/3157096.3157196" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00005" class="&#xA;                references__item&#xA;            "><span class="references__note">Shaojie Bai, J Zico Kolter, and Vladlen Koltun. 2018. An empirical evaluation of generic convolutional and recurrent networks for sequence modeling. arXiv preprint arXiv:1803.01271 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Shaojie+Bai%2C+J+Zico+Kolter%2C+and+Vladlen+Koltun.+2018.+An+empirical+evaluation+of+generic+convolutional+and+recurrent+networks+for+sequence+modeling.+arXiv+preprint+arXiv%3A1803.01271+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00006" class="&#xA;                references__item&#xA;            "><span class="references__note">Pierre Baldi. 2012. Autoencoders, unsupervised learning, and deep architectures. In Proceedings of ICML workshop on unsupervised and transfer learning. 37--49. <span class="references__pub-id doi 10.5555/3045796.3045801"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Pierre+Baldi.+2012.+Autoencoders%2C+unsupervised+learning%2C+and+deep+architectures.+In+Proceedings+of+ICML+workshop+on+unsupervised+and+transfer+learning.+37%2D%2D49.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/3045796.3045801" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00007" class="&#xA;                references__item&#xA;            "><span class="references__note">Gustavo EAPA Batista, Xiaoyue Wang, and Eamonn J Keogh. 2011. A complexity-invariant distance measure for time series. In Proceedings of the 2011 SIAM international conference on data mining. SIAM, 699--710.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Gustavo+EAPA+Batista%2C+Xiaoyue+Wang%2C+and+Eamonn+J+Keogh.+2011.+A+complexity-invariant+distance+measure+for+time+series.+In+Proceedings+of+the+2011+SIAM+international+conference+on+data+mining.+SIAM%2C+699%2D%2D710."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_7_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1137%2F1.9781611972818.60" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00008" class="&#xA;                references__item&#xA;            "><span class="references__note">Yoshua Bengio, Aaron Courville, and Pascal Vincent. 2013. Representation learning: A review and new perspectives. IEEE transactions on pattern analysis and machine intelligence 35, 8 (2013), 1798--1828.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yoshua+Bengio%2C+Aaron+Courville%2C+and+Pascal+Vincent.+2013.+Representation+learning%3A+A+review+and+new+perspectives.+IEEE+transactions+on+pattern+analysis+and+machine+intelligence+35%2C+8+%282013%29%2C+1798%2D%2D1828."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00009" class="&#xA;                references__item&#xA;            "><span class="references__note">Sourav Bhattacharya, Petteri Nurmi, Nils Hammerla, and Thomas Plötz. 2014. Using unlabeled data in a sparse-coding framework for human activity recognition. Pervasive and Mobile Computing 15 (2014), 242--262.  <span class="references__pub-id doi 10.1016/j.pmcj.2014.05.006"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Sourav+Bhattacharya%2C+Petteri+Nurmi%2C+Nils+Hammerla%2C+and+Thomas+Pl%C3%B6tz.+2014.+Using+unlabeled+data+in+a+sparse-coding+framework+for+human+activity+recognition.+Pervasive+and+Mobile+Computing+15+%282014%29%2C+242%2D%2D262.+10.1016%2Fj.pmcj.2014.05.006+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1016/j.pmcj.2014.05.006" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00010" class="&#xA;                references__item&#xA;            "><span class="references__note">Rich Caruana. 1997. Multitask learning. Machine learning 28, 1 (1997), 41--75.  <span class="references__pub-id doi 10.1023/A:1007379606734"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Rich+Caruana.+1997.+Multitask+learning.+Machine+learning+28%2C+1+%281997%29%2C+41%2D%2D75.+10.1023%2FA%3A1007379606734+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1023/A%3A1007379606734" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00011" class="&#xA;                references__item&#xA;            "><span class="references__note">Charikleia Chatzaki, Matthew Pediaditis, George Vavoulas, and Manolis Tsiknakis. 2016. Human daily activity and fall recognition using a smartphoneâĂ&amp;Zacute;s acceleration sensor. In International Conference on Information and Communication Technologies for Ageing Well and e-Health. Springer, 100--118.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Charikleia+Chatzaki%2C+Matthew+Pediaditis%2C+George+Vavoulas%2C+and+Manolis+Tsiknakis.+2016.+Human+daily+activity+and+fall+recognition+using+a+smartphone%C3%A2%C4%82%26Zacute%3Bs+acceleration+sensor.+In+International+Conference+on+Information+and+Communication+Technologies+for+Ageing+Well+and+e-Health.+Springer%2C+100%2D%2D118."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00012" class="&#xA;                references__item&#xA;            "><span class="references__note">Zhicheng Cui, Wenlin Chen, and Yixin Chen. 2016. Multi-scale convolutional neural networks for time series classification. arXiv preprint arXiv:1603.06995 (2016).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Zhicheng+Cui%2C+Wenlin+Chen%2C+and+Yixin+Chen.+2016.+Multi-scale+convolutional+neural+networks+for+time+series+classification.+arXiv+preprint+arXiv%3A1603.06995+%282016%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00013" class="&#xA;                references__item&#xA;            "><span class="references__note">Carl Doersch, Abhinav Gupta, and Alexei A Efros. 2015. Unsupervised visual representation learning by context prediction. In Proceedings of the IEEE International Conference on Computer Vision. 1422--1430.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Carl+Doersch%2C+Abhinav+Gupta%2C+and+Alexei+A+Efros.+2015.+Unsupervised+visual+representation+learning+by+context+prediction.+In+Proceedings+of+the+IEEE+International+Conference+on+Computer+Vision.+1422%2D%2D1430."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1109/ICCV.2015.167" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00014" class="&#xA;                references__item&#xA;            "><span class="references__note">Carl Doersch and Andrew Zisserman. 2017. Multi-task self-supervised visual learning. In The IEEE International Conference on Computer Vision (ICCV).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Carl+Doersch+and+Andrew+Zisserman.+2017.+Multi-task+self-supervised+visual+learning.+In+The+IEEE+International+Conference+on+Computer+Vision+%28ICCV%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_14_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1109%2FICCV.2017.226" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00015" class="&#xA;                references__item&#xA;            "><span class="references__note">Basura Fernando, Hakan Bilen, Efstratios Gavves, and Stephen Gould. 2017. Self-supervised video representation learning with odd-one-out networks. In Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on. IEEE, 5729--5738.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Basura+Fernando%2C+Hakan+Bilen%2C+Efstratios+Gavves%2C+and+Stephen+Gould.+2017.+Self-supervised+video+representation+learning+with+odd-one-out+networks.+In+Computer+Vision+and+Pattern+Recognition+%28CVPR%29%2C+2017+IEEE+Conference+on.+IEEE%2C+5729%2D%2D5738."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_15_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1109%2FCVPR.2017.607" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00016" class="&#xA;                references__item&#xA;            "><span class="references__note">Davide Figo, Pedro C Diniz, Diogo R Ferreira, and João M Cardoso. 2010. Preprocessing techniques for context recognition from accelerometer data. Personal and Ubiquitous Computing 14, 7 (2010), 645--662.  <span class="references__pub-id doi 10.1007/s00779-010-0293-9"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Davide+Figo%2C+Pedro+C+Diniz%2C+Diogo+R+Ferreira%2C+and+Jo%C3%A3o+M+Cardoso.+2010.+Preprocessing+techniques+for+context+recognition+from+accelerometer+data.+Personal+and+Ubiquitous+Computing+14%2C+7+%282010%29%2C+645%2D%2D662.+10.1007%2Fs00779-010-0293-9+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1007/s00779-010-0293-9" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00017" class="&#xA;                references__item&#xA;            "><span class="references__note">Petko Georgiev, Sourav Bhattacharya, Nicholas D Lane, and Cecilia Mascolo. 2017. Low-resource multi-task audio sensing for mobile and embedded devices via shared deep neural network representations. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 1, 3 (2017), 50.  <span class="references__pub-id doi 10.1145/3131895"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Petko+Georgiev%2C+Sourav+Bhattacharya%2C+Nicholas+D+Lane%2C+and+Cecilia+Mascolo.+2017.+Low-resource+multi-task+audio+sensing+for+mobile+and+embedded+devices+via+shared+deep+neural+network+representations.+Proceedings+of+the+ACM+on+Interactive%2C+Mobile%2C+Wearable+and+Ubiquitous+Technologies+1%2C+3+%282017%29%2C+50.+10.1145%2F3131895+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/3131895" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00018" class="&#xA;                references__item&#xA;            "><span class="references__note">Spyros Gidaris, Praveer Singh, and Nikos Komodakis. 2018. Unsupervised Representation Learning by Predicting Image Rotations. arXiv preprint arXiv:1803.07728 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Spyros+Gidaris%2C+Praveer+Singh%2C+and+Nikos+Komodakis.+2018.+Unsupervised+Representation+Learning+by+Predicting+Image+Rotations.+arXiv+preprint+arXiv%3A1803.07728+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00019" class="&#xA;                references__item&#xA;            "><span class="references__note">Lluis Gomez, Yash Patel, Marçal Rusiñol, Dimosthenis Karatzas, and CV Jawahar. 2017. Self-supervised learning of visual features through embedding images into text topic spaces. arXiv preprint arXiv:1705.08631 (2017).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Lluis+Gomez%2C+Yash+Patel%2C+Mar%C3%A7al+Rusi%C3%B1ol%2C+Dimosthenis+Karatzas%2C+and+CV+Jawahar.+2017.+Self-supervised+learning+of+visual+features+through+embedding+images+into+text+topic+spaces.+arXiv+preprint+arXiv%3A1705.08631+%282017%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00020" class="&#xA;                references__item&#xA;            "><span class="references__note">Nils Y Hammerla, Shane Halloran, and Thomas Ploetz. 2016. Deep, convolutional, and recurrent models for human activity recognition using wearables. arXiv preprint arXiv:1604.08880 (2016).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Nils+Y+Hammerla%2C+Shane+Halloran%2C+and+Thomas+Ploetz.+2016.+Deep%2C+convolutional%2C+and+recurrent+models+for+human+activity+recognition+using+wearables.+arXiv+preprint+arXiv%3A1604.08880+%282016%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00021" class="&#xA;                references__item&#xA;            "><span class="references__note">Awni Y. Hannun, Pranav Rajpurkar, Masoumeh Haghpanahi, Geoffrey H. Tison, Codie Bourn, Mintu P. Turakhia, and Andrew Y. Ng. 2019. Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network. Nature Medicine 25, 1 (2019), 65--69.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Awni+Y.+Hannun%2C+Pranav+Rajpurkar%2C+Masoumeh+Haghpanahi%2C+Geoffrey+H.+Tison%2C+Codie+Bourn%2C+Mintu+P.+Turakhia%2C+and+Andrew+Y.+Ng.+2019.+Cardiologist-level+arrhythmia+detection+and+classification+in+ambulatory+electrocardiograms+using+a+deep+neural+network.+Nature+Medicine+25%2C+1+%282019%29%2C+65%2D%2D69."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_21_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1038%2Fs41591-018-0268-3" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00022" class="&#xA;                references__item&#xA;            "><span class="references__note">Kazuma Hashimoto, Yoshimasa Tsuruoka, Richard Socher, et al. 2017. A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. 1923--1933.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Kazuma+Hashimoto%2C+Yoshimasa+Tsuruoka%2C+Richard+Socher%2C+et+al.+2017.+A+Joint+Many-Task+Model%3A+Growing+a+Neural+Network+for+Multiple+NLP+Tasks.+In+Proceedings+of+the+2017+Conference+on+Empirical+Methods+in+Natural+Language+Processing.+1923%2D%2D1933."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_22_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.18653%2Fv1%2FD17-1206" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00023" class="&#xA;                references__item&#xA;            "><span class="references__note">Jeremy Howard and Sebastian Ruder. 2018. Universal language model fine-tuning for text classification. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Vol. 1. 328--339.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jeremy+Howard+and+Sebastian+Ruder.+2018.+Universal+language+model+fine-tuning+for+text+classification.+In+Proceedings+of+the+56th+Annual+Meeting+of+the+Association+for+Computational+Linguistics+%28Volume+1%3A+Long+Papers%29%2C+Vol.+1.+328%2D%2D339."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_23_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.18653%2Fv1%2FP18-1031" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00024" class="&#xA;                references__item&#xA;            "><span class="references__note">Simon Jenni and Paolo Favaro. 2018. Self-Supervised Feature Learning by Learning to Spot Artifacts. arXiv preprint arXiv:1806.05024 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Simon+Jenni+and+Paolo+Favaro.+2018.+Self-Supervised+Feature+Learning+by+Learning+to+Spot+Artifacts.+arXiv+preprint+arXiv%3A1806.05024+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00025" class="&#xA;                references__item&#xA;            "><span class="references__note">Alex Kendall, Yarin Gal, and Roberto Cipolla. {n. d.}. Multi-task learning using uncertainty to weigh losses for scene geometry and semantics. ({n. d.}).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Alex+Kendall%2C+Yarin+Gal%2C+and+Roberto+Cipolla.+%7Bn.+d.%7D.+Multi-task+learning+using+uncertainty+to+weigh+losses+for+scene+geometry+and+semantics.+%28%7Bn.+d.%7D%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00026" class="&#xA;                references__item&#xA;            "><span class="references__note">Diederik P Kingma and Jimmy Ba. 2014. Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980 (2014).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Diederik+P+Kingma+and+Jimmy+Ba.+2014.+Adam%3A+A+method+for+stochastic+optimization.+arXiv+preprint+arXiv%3A1412.6980+%282014%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00027" class="&#xA;                references__item&#xA;            "><span class="references__note">Bruno Korbar, Du Tran, and Lorenzo Torresani. 2018. Cooperative Learning of Audio and Video Models from Self-Supervised Synchronization. In Advances in Neural Information Processing Systems. 7774--7785.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Bruno+Korbar%2C+Du+Tran%2C+and+Lorenzo+Torresani.+2018.+Cooperative+Learning+of+Audio+and+Video+Models+from+Self-Supervised+Synchronization.+In+Advances+in+Neural+Information+Processing+Systems.+7774%2D%2D7785."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00028" class="&#xA;                references__item&#xA;            "><span class="references__note">Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton. 2012. Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems. 1097--1105. <span class="references__pub-id doi 10.5555/2999134.2999257"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Alex+Krizhevsky%2C+Ilya+Sutskever%2C+and+Geoffrey+E+Hinton.+2012.+Imagenet+classification+with+deep+convolutional+neural+networks.+In+Advances+in+neural+information+processing+systems.+1097%2D%2D1105.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/2999134.2999257" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00029" class="&#xA;                references__item&#xA;            "><span class="references__note">Jennifer R Kwapisz, Gary M Weiss, and Samuel A Moore. 2011. Activity recognition using cell phone accelerometers. ACM SigKDD Explorations Newsletter 12, 2 (2011), 74--82.  <span class="references__pub-id doi 10.1145/1964897.1964918"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jennifer+R+Kwapisz%2C+Gary+M+Weiss%2C+and+Samuel+A+Moore.+2011.+Activity+recognition+using+cell+phone+accelerometers.+ACM+SigKDD+Explorations+Newsletter+12%2C+2+%282011%29%2C+74%2D%2D82.+10.1145%2F1964897.1964918+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/1964897.1964918" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00030" class="&#xA;                references__item&#xA;            "><span class="references__note">Gustav Larsson, Michael Maire, and Gregory Shakhnarovich. 2017. Colorization as a proxy task for visual understanding. In CVPR, Vol. 2. 7.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Gustav+Larsson%2C+Michael+Maire%2C+and+Gregory+Shakhnarovich.+2017.+Colorization+as+a+proxy+task+for+visual+understanding.+In+CVPR%2C+Vol.+2.+7."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00031" class="&#xA;                references__item&#xA;            "><span class="references__note">Yann LeCun, Yoshua Bengio, and Geoffrey Hinton. 2015. Deep learning. Nature 521 (27 May 2015), 436 EP --.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yann+LeCun%2C+Yoshua+Bengio%2C+and+Geoffrey+Hinton.+2015.+Deep+learning.+Nature+521+%2827+May+2015%29%2C+436+EP+%2D%2D."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00032" class="&#xA;                references__item&#xA;            "><span class="references__note">Yann LeCun, John S Denker, and Sara A Solla. 1990. Optimal brain damage. In Advances in neural information processing systems. 598--605. <span class="references__pub-id doi 10.5555/109230.109298"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yann+LeCun%2C+John+S+Denker%2C+and+Sara+A+Solla.+1990.+Optimal+brain+damage.+In+Advances+in+neural+information+processing+systems.+598%2D%2D605.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/109230.109298" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00033" class="&#xA;                references__item&#xA;            "><span class="references__note">Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew Y Ng. 2009. Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations. In Proceedings of the 26th annual international conference on machine learning. ACM, 609--616.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Honglak+Lee%2C+Roger+Grosse%2C+Rajesh+Ranganath%2C+and+Andrew+Y+Ng.+2009.+Convolutional+deep+belief+networks+for+scalable+unsupervised+learning+of+hierarchical+representations.+In+Proceedings+of+the+26th+annual+international+conference+on+machine+learning.+ACM%2C+609%2D%2D616."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/1553374.1553453" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00034" class="&#xA;                references__item&#xA;            "><span class="references__note">Hsin-Ying Lee, Jia-Bin Huang, Maneesh Singh, and Ming-Hsuan Yang. 2017. Unsupervised representation learning by sorting sequences. In Computer Vision (ICCV), 2017 IEEE International Conference on. IEEE, 667--676.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Hsin-Ying+Lee%2C+Jia-Bin+Huang%2C+Maneesh+Singh%2C+and+Ming-Hsuan+Yang.+2017.+Unsupervised+representation+learning+by+sorting+sequences.+In+Computer+Vision+%28ICCV%29%2C+2017+IEEE+International+Conference+on.+IEEE%2C+667%2D%2D676."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_34_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1109%2FICCV.2017.79" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00035" class="&#xA;                references__item&#xA;            "><span class="references__note">Chunyuan Li, Heerad Farkhoor, Rosanne Liu, and Jason Yosinski. 2018. Measuring the intrinsic dimension of objective landscapes. arXiv preprint arXiv:1804.08838 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Chunyuan+Li%2C+Heerad+Farkhoor%2C+Rosanne+Liu%2C+and+Jason+Yosinski.+2018.+Measuring+the+intrinsic+dimension+of+objective+landscapes.+arXiv+preprint+arXiv%3A1804.08838+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00036" class="&#xA;                references__item&#xA;            "><span class="references__note">Chi Li, M Zeeshan Zia, Quoc-Huy Tran, Xiang Yu, Gregory D Hager, and Manmohan Chandraker. 2016. Deep supervision with shape concepts for occlusion-aware 3d object parsing. arXiv preprint arXiv:1612.02699 (2016).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Chi+Li%2C+M+Zeeshan+Zia%2C+Quoc-Huy+Tran%2C+Xiang+Yu%2C+Gregory+D+Hager%2C+and+Manmohan+Chandraker.+2016.+Deep+supervision+with+shape+concepts+for+occlusion-aware+3d+object+parsing.+arXiv+preprint+arXiv%3A1612.02699+%282016%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00037" class="&#xA;                references__item&#xA;            "><span class="references__note">Yongmou Li, Dianxi Shi, Bo Ding, and Dongbo Liu. 2014. Unsupervised feature learning for human activity recognition using smartphone sensors. In Mining Intelligence and Knowledge Exploration. Springer, 99--107.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yongmou+Li%2C+Dianxi+Shi%2C+Bo+Ding%2C+and+Dongbo+Liu.+2014.+Unsupervised+feature+learning+for+human+activity+recognition+using+smartphone+sensors.+In+Mining+Intelligence+and+Knowledge+Exploration.+Springer%2C+99%2D%2D107."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00038" class="&#xA;                references__item&#xA;            "><span class="references__note">Chang Liu, Yu Cao, Yan Luo, Guanling Chen, Vinod Vokkarane, and Yunsheng Ma. 2016. Deepfood: Deep learning-based food image recognition for computer-aided dietary assessment. In International Conference on Smart Homes and Health Telematics. Springer, 37--48.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Chang+Liu%2C+Yu+Cao%2C+Yan+Luo%2C+Guanling+Chen%2C+Vinod+Vokkarane%2C+and+Yunsheng+Ma.+2016.+Deepfood%3A+Deep+learning-based+food+image+recognition+for+computer-aided+dietary+assessment.+In+International+Conference+on+Smart+Homes+and+Health+Telematics.+Springer%2C+37%2D%2D48."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1007/978-3-319-39601-9_4" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00039" class="&#xA;                references__item&#xA;            "><span class="references__note">Laurens van der Maaten and Geoffrey Hinton. 2008. Visualizing data using t-SNE. Journal of machine learning research 9, Nov (2008), 2579--2605.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Laurens+van+der+Maaten+and+Geoffrey+Hinton.+2008.+Visualizing+data+using+t-SNE.+Journal+of+machine+learning+research+9%2C+Nov+%282008%29%2C+2579%2D%2D2605."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00040" class="&#xA;                references__item&#xA;            "><span class="references__note">Mohammad Malekzadeh, Richard G Clegg, Andrea Cavallaro, and Hamed Haddadi. 2018. Protecting sensory data against sensitive inferences. In Proceedings of the 1st Workshop on Privacy by Design in Distributed Systems. ACM, 2.  <span class="references__pub-id doi 10.1145/3195258.3195260"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mohammad+Malekzadeh%2C+Richard+G+Clegg%2C+Andrea+Cavallaro%2C+and+Hamed+Haddadi.+2018.+Protecting+sensory+data+against+sensitive+inferences.+In+Proceedings+of+the+1st+Workshop+on+Privacy+by+Design+in+Distributed+Systems.+ACM%2C+2.+10.1145%2F3195258.3195260+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/3195258.3195260" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00041" class="&#xA;                references__item&#xA;            "><span class="references__note">Daniela Micucci, Marco Mobilio, and Paolo Napoletano. 2017. UniMiB SHAR: A dataset for human activity recognition using acceleration data from smartphones. Applied Sciences 7, 10 (2017), 1101.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Daniela+Micucci%2C+Marco+Mobilio%2C+and+Paolo+Napoletano.+2017.+UniMiB+SHAR%3A+A+dataset+for+human+activity+recognition+using+acceleration+data+from+smartphones.+Applied+Sciences+7%2C+10+%282017%29%2C+1101."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_41_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.3390%2Fapp7101101" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00042" class="&#xA;                references__item&#xA;            "><span class="references__note">Ishan Misra, C Lawrence Zitnick, and Martial Hebert. 2016. Shuffle and learn: unsupervised learning using temporal order verification. In European Conference on Computer Vision. Springer, 527--544.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ishan+Misra%2C+C+Lawrence+Zitnick%2C+and+Martial+Hebert.+2016.+Shuffle+and+learn%3A+unsupervised+learning+using+temporal+order+verification.+In+European+Conference+on+Computer+Vision.+Springer%2C+527%2D%2D544."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_42_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1007%2F978-3-319-46448-0_32" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00043" class="&#xA;                references__item&#xA;            "><span class="references__note">Abdel-rahman Mohamed, George E Dahl, Geoffrey Hinton, et al. 2012. Acoustic modeling using deep belief networks. IEEE Trans. Audio, Speech &amp; Language Processing 20, 1 (2012), 14--22.  <span class="references__pub-id doi 10.1109/TASL.2011.2109382"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Abdel-rahman+Mohamed%2C+George+E+Dahl%2C+Geoffrey+Hinton%2C+et+al.+2012.+Acoustic+modeling+using+deep+belief+networks.+IEEE+Trans.+Audio%2C+Speech+%26+Language+Processing+20%2C+1+%282012%29%2C+14%2D%2D22.+10.1109%2FTASL.2011.2109382+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1109/TASL.2011.2109382" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00044" class="&#xA;                references__item&#xA;            "><span class="references__note">Francisco Javier Ordóñez Morales and Daniel Roggen. 2016. Deep convolutional feature transfer across mobile activity recognition domains, sensor modalities and locations. In Proceedings of the 2016 ACM International Symposium on Wearable Computers. ACM, 92--99.  <span class="references__pub-id doi 10.1145/2971763.2971764"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Francisco+Javier+Ord%C3%B3%C3%B1ez+Morales+and+Daniel+Roggen.+2016.+Deep+convolutional+feature+transfer+across+mobile+activity+recognition+domains%2C+sensor+modalities+and+locations.+In+Proceedings+of+the+2016+ACM+International+Symposium+on+Wearable+Computers.+ACM%2C+92%2D%2D99.+10.1145%2F2971763.2971764+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/2971763.2971764" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00045" class="&#xA;                references__item&#xA;            "><span class="references__note">Ari S Morcos, David GT Barrett, Neil C Rabinowitz, and Matthew Botvinick. 2018. On the importance of single directions for generalization. arXiv preprint arXiv:1803.06959 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ari+S+Morcos%2C+David+GT+Barrett%2C+Neil+C+Rabinowitz%2C+and+Matthew+Botvinick.+2018.+On+the+importance+of+single+directions+for+generalization.+arXiv+preprint+arXiv%3A1803.06959+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00046" class="&#xA;                references__item&#xA;            "><span class="references__note">Vinod Nair and Geoffrey E Hinton. 2010. Rectified linear units improve restricted boltzmann machines. In Proceedings of the 27th international conference on machine learning (ICML-10). 807--814. <span class="references__pub-id doi 10.5555/3104322.3104425"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Vinod+Nair+and+Geoffrey+E+Hinton.+2010.+Rectified+linear+units+improve+restricted+boltzmann+machines.+In+Proceedings+of+the+27th+international+conference+on+machine+learning+%28ICML-10%29.+807%2D%2D814.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/3104322.3104425" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00047" class="&#xA;                references__item&#xA;            "><span class="references__note">Mehdi Noroozi and Paolo Favaro. 2016. Unsupervised learning of visual representations by solving jigsaw puzzles. In European Conference on Computer Vision. Springer, 69--84.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mehdi+Noroozi+and+Paolo+Favaro.+2016.+Unsupervised+learning+of+visual+representations+by+solving+jigsaw+puzzles.+In+European+Conference+on+Computer+Vision.+Springer%2C+69%2D%2D84."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_47_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1007%2F978-3-319-46466-4_5" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00048" class="&#xA;                references__item&#xA;            "><span class="references__note">Jeeheh Oh, Jiaxuan Wang, and Jenna Wiens. 2018. Learning to Exploit Invariances in Clinical Time-Series Data using Sequence Transformer Networks. arXiv preprint arXiv:1808.06725 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jeeheh+Oh%2C+Jiaxuan+Wang%2C+and+Jenna+Wiens.+2018.+Learning+to+Exploit+Invariances+in+Clinical+Time-Series+Data+using+Sequence+Transformer+Networks.+arXiv+preprint+arXiv%3A1808.06725+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00049" class="&#xA;                references__item&#xA;            "><span class="references__note">Chris Olah, Arvind Satyanarayan, Ian Johnson, Shan Carter, Ludwig Schubert, Katherine Ye, and Alexander Mordvintsev. 2018. The Building Blocks of Interpretability. Distill (2018). https://doi.org/undefined https://distill.pub/2018/building-blocks.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Chris+Olah%2C+Arvind+Satyanarayan%2C+Ian+Johnson%2C+Shan+Carter%2C+Ludwig+Schubert%2C+Katherine+Ye%2C+and+Alexander+Mordvintsev.+2018.+The+Building+Blocks+of+Interpretability.+Distill+%282018%29.+https%3A%2F%2Fdoi.org%2Fundefined+https%3A%2F%2Fdistill.pub%2F2018%2Fbuilding-blocks."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00050" class="&#xA;                references__item&#xA;            "><span class="references__note">Avital Oliver, Augustus Odena, Colin Raffel, Ekin D Cubuk, and Ian J Goodfellow. 2018. Realistic Evaluation of Deep Semi-Supervised Learning Algorithms. (2018). <span class="references__pub-id doi 10.5555/3327144.3327244"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Avital+Oliver%2C+Augustus+Odena%2C+Colin+Raffel%2C+Ekin+D+Cubuk%2C+and+Ian+J+Goodfellow.+2018.+Realistic+Evaluation+of+Deep+Semi-Supervised+Learning+Algorithms.+%282018%29.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/3327144.3327244" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00051" class="&#xA;                references__item&#xA;            "><span class="references__note">Andrew Owens and Alexei A Efros. 2018. Audio-visual scene analysis with self-supervised multisensory features. arXiv preprint arXiv:1804.03641 (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Andrew+Owens+and+Alexei+A+Efros.+2018.+Audio-visual+scene+analysis+with+self-supervised+multisensory+features.+arXiv+preprint+arXiv%3A1804.03641+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00052" class="&#xA;                references__item&#xA;            "><span class="references__note">Andrew Owens, Jiajun Wu, Josh H McDermott, William T Freeman, and Antonio Torralba. 2016. Ambient sound provides supervision for visual learning. In European Conference on Computer Vision. Springer, 801--816.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Andrew+Owens%2C+Jiajun+Wu%2C+Josh+H+McDermott%2C+William+T+Freeman%2C+and+Antonio+Torralba.+2016.+Ambient+sound+provides+supervision+for+visual+learning.+In+European+Conference+on+Computer+Vision.+Springer%2C+801%2D%2D816."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_52_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1007%2F978-3-319-46448-0_48" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00053" class="&#xA;                references__item&#xA;            "><span class="references__note">Sinno Jialin Pan, Qiang Yang, et al. 2010. A survey on transfer learning. IEEE Transactions on knowledge and data engineering 22, 10 (2010), 1345--1359.  <span class="references__pub-id doi 10.1109/TKDE.2009.191"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Sinno+Jialin+Pan%2C+Qiang+Yang%2C+et+al.+2010.+A+survey+on+transfer+learning.+IEEE+Transactions+on+knowledge+and+data+engineering+22%2C+10+%282010%29%2C+1345%2D%2D1359.+10.1109%2FTKDE.2009.191+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1109/TKDE.2009.191" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00054" class="&#xA;                references__item&#xA;            "><span class="references__note">Deepak Pathak, Pulkit Agrawal, Alexei A Efros, and Trevor Darrell. 2017. Curiosity-driven exploration by self-supervised prediction. In International Conference on Machine Learning (ICML), Vol. 2017. <span class="references__pub-id doi 10.5555/3305890.3305968"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Deepak+Pathak%2C+Pulkit+Agrawal%2C+Alexei+A+Efros%2C+and+Trevor+Darrell.+2017.+Curiosity-driven+exploration+by+self-supervised+prediction.+In+International+Conference+on+Machine+Learning+%28ICML%29%2C+Vol.+2017.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/3305890.3305968" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00055" class="&#xA;                references__item&#xA;            "><span class="references__note">Thomas Plötz, Nils Y Hammerla, and Patrick Olivier. 2011. Feature learning for activity recognition in ubiquitous computing. In IJCAI Proceedings-International Joint Conference on Artificial Intelligence, Vol. 22. 1729. <span class="references__pub-id doi 10.5555/2283516.2283683"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Thomas+Pl%C3%B6tz%2C+Nils+Y+Hammerla%2C+and+Patrick+Olivier.+2011.+Feature+learning+for+activity+recognition+in+ubiquitous+computing.+In+IJCAI+Proceedings-International+Joint+Conference+on+Artificial+Intelligence%2C+Vol.+22.+1729.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/2283516.2283683" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00056" class="&#xA;                references__item&#xA;            "><span class="references__note">Valentin Radu, Catherine Tong, Sourav Bhattacharya, Nicholas D Lane, Cecilia Mascolo, Mahesh K Marina, and Fahim Kawsar. 2018. Multimodal deep learning for activity and context recognition. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 1, 4 (2018), 157.  <span class="references__pub-id doi 10.1145/3161174"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Valentin+Radu%2C+Catherine+Tong%2C+Sourav+Bhattacharya%2C+Nicholas+D+Lane%2C+Cecilia+Mascolo%2C+Mahesh+K+Marina%2C+and+Fahim+Kawsar.+2018.+Multimodal+deep+learning+for+activity+and+context+recognition.+Proceedings+of+the+ACM+on+Interactive%2C+Mobile%2C+Wearable+and+Ubiquitous+Technologies+1%2C+4+%282018%29%2C+157.+10.1145%2F3161174+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/3161174" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00057" class="&#xA;                references__item&#xA;            "><span class="references__note">Maithra Raghu, Justin Gilmer, Jason Yosinski, and Jascha Sohl-Dickstein. 2017. Svcca: Singular vector canonical correlation analysis for deep learning dynamics and interpretability. In Advances in Neural Information Processing Systems. 6076--6085.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Maithra+Raghu%2C+Justin+Gilmer%2C+Jason+Yosinski%2C+and+Jascha+Sohl-Dickstein.+2017.+Svcca%3A+Singular+vector+canonical+correlation+analysis+for+deep+learning+dynamics+and+interpretability.+In+Advances+in+Neural+Information+Processing+Systems.+6076%2D%2D6085."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00058" class="&#xA;                references__item&#xA;            "><span class="references__note">Rajat Raina, Alexis Battle, Honglak Lee, Benjamin Packer, and Andrew Y Ng. 2007. Self-taught learning: transfer learning from unlabeled data. In Proceedings of the 24th international conference on Machine learning. ACM, 759--766.  <span class="references__pub-id doi 10.1145/1273496.1273592"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Rajat+Raina%2C+Alexis+Battle%2C+Honglak+Lee%2C+Benjamin+Packer%2C+and+Andrew+Y+Ng.+2007.+Self-taught+learning%3A+transfer+learning+from+unlabeled+data.+In+Proceedings+of+the+24th+international+conference+on+Machine+learning.+ACM%2C+759%2D%2D766.+10.1145%2F1273496.1273592+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/1273496.1273592" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00059" class="&#xA;                references__item&#xA;            "><span class="references__note">Narges Razavian, Jake Marcus, and David Sontag. 2016. Multi-task prediction of disease onsets from longitudinal laboratory tests. In Machine Learning for Healthcare Conference. 73--100.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Narges+Razavian%2C+Jake+Marcus%2C+and+David+Sontag.+2016.+Multi-task+prediction+of+disease+onsets+from+longitudinal+laboratory+tests.+In+Machine+Learning+for+Healthcare+Conference.+73%2D%2D100."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00060" class="&#xA;                references__item&#xA;            "><span class="references__note">Aaqib Saeed, Tanir Ozcelebi, and Johan Lukkien. 2018. Synthesizing and reconstructing missing sensory modalities in behavioral context recognition. Sensors 18, 9 (2018), 2967.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Aaqib+Saeed%2C+Tanir+Ozcelebi%2C+and+Johan+Lukkien.+2018.+Synthesizing+and+reconstructing+missing+sensory+modalities+in+behavioral+context+recognition.+Sensors+18%2C+9+%282018%29%2C+2967."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_60_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.3390%2Fs18092967" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00061" class="&#xA;                references__item&#xA;            "><span class="references__note">Aaqib Saeed and Stojan Trajanovski. 2017. Personalized Driver Stress Detection with Multi-task Neural Networks using Physiological Signals. arXiv preprint arXiv:1711.06116 (2017).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Aaqib+Saeed+and+Stojan+Trajanovski.+2017.+Personalized+Driver+Stress+Detection+with+Multi-task+Neural+Networks+using+Physiological+Signals.+arXiv+preprint+arXiv%3A1711.06116+%282017%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00062" class="&#xA;                references__item&#xA;            "><span class="references__note">Ali Sharif Razavian, Hossein Azizpour, Josephine Sullivan, and Stefan Carlsson. 2014. CNN features off-the-shelf: an astounding baseline for recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition workshops. 806--813.  <span class="references__pub-id doi 10.1109/CVPRW.2014.131"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ali+Sharif+Razavian%2C+Hossein+Azizpour%2C+Josephine+Sullivan%2C+and+Stefan+Carlsson.+2014.+CNN+features+off-the-shelf%3A+an+astounding+baseline+for+recognition.+In+Proceedings+of+the+IEEE+conference+on+computer+vision+and+pattern+recognition+workshops.+806%2D%2D813.+10.1109%2FCVPRW.2014.131+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1109/CVPRW.2014.131" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00063" class="&#xA;                references__item&#xA;            "><span class="references__note">Karen Simonyan, Andrea Vedaldi, and Andrew Zisserman. 2013. Deep inside convolutional networks: Visualising image classification models and saliency maps. arXiv preprint arXiv:1312.6034 (2013).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Karen+Simonyan%2C+Andrea+Vedaldi%2C+and+Andrew+Zisserman.+2013.+Deep+inside+convolutional+networks%3A+Visualising+image+classification+models+and+saliency+maps.+arXiv+preprint+arXiv%3A1312.6034+%282013%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00064" class="&#xA;                references__item&#xA;            "><span class="references__note">Allan Stisen, Henrik Blunck, Sourav Bhattacharya, Thor Siiger Prentow, Mikkel Baun Kjærgaard, Anind Dey, Tobias Sonne, and Mads Møller Jensen. 2015. Smart devices are different: Assessing and mitigating mobile sensing heterogeneities for activity recognition. In Proceedings of the 13th ACM Conference on Embedded Networked Sensor Systems. ACM, 127--140.  <span class="references__pub-id doi 10.1145/2809695.2809718"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Allan+Stisen%2C+Henrik+Blunck%2C+Sourav+Bhattacharya%2C+Thor+Siiger+Prentow%2C+Mikkel+Baun+Kj%C3%A6rgaard%2C+Anind+Dey%2C+Tobias+Sonne%2C+and+Mads+M%C3%B8ller+Jensen.+2015.+Smart+devices+are+different%3A+Assessing+and+mitigating+mobile+sensing+heterogeneities+for+activity+recognition.+In+Proceedings+of+the+13th+ACM+Conference+on+Embedded+Networked+Sensor+Systems.+ACM%2C+127%2D%2D140.+10.1145%2F2809695.2809718+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/2809695.2809718" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00065" class="&#xA;                references__item&#xA;            "><span class="references__note">Ilya Sutskever, Oriol Vinyals, and Quoc V Le. 2014. Sequence to sequence learning with neural networks. In Advances in neural information processing systems. 3104--3112. <span class="references__pub-id doi 10.5555/2969033.2969173"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ilya+Sutskever%2C+Oriol+Vinyals%2C+and+Quoc+V+Le.+2014.+Sequence+to+sequence+learning+with+neural+networks.+In+Advances+in+neural+information+processing+systems.+3104%2D%2D3112.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/2969033.2969173" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00066" class="&#xA;                references__item&#xA;            "><span class="references__note">Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, and Lior Wolf. 2014. Deepface: Closing the gap to human-level performance in face verification. In Proceedings of the IEEE conference on computer vision and pattern recognition. 1701--1708.  <span class="references__pub-id doi 10.1109/CVPR.2014.220"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yaniv+Taigman%2C+Ming+Yang%2C+Marc%27Aurelio+Ranzato%2C+and+Lior+Wolf.+2014.+Deepface%3A+Closing+the+gap+to+human-level+performance+in+face+verification.+In+Proceedings+of+the+IEEE+conference+on+computer+vision+and+pattern+recognition.+1701%2D%2D1708.+10.1109%2FCVPR.2014.220+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1109/CVPR.2014.220" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00067" class="&#xA;                references__item&#xA;            "><span class="references__note">Terry T Um, Franz MJ Pfister, Daniel Pichler, Satoshi Endo, Muriel Lang, Sandra Hirche, Urban Fietzek, and Dana Kulić. 2017. Data augmentation of wearable sensor data for parkinsonâĂ&amp;Zacute;s disease monitoring using convolutional neural networks. In Proceedings of the 19th ACM International Conference on Multimodal Interaction. ACM, 216--220.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Terry+T+Um%2C+Franz+MJ+Pfister%2C+Daniel+Pichler%2C+Satoshi+Endo%2C+Muriel+Lang%2C+Sandra+Hirche%2C+Urban+Fietzek%2C+and+Dana+Kuli%C4%87.+2017.+Data+augmentation+of+wearable+sensor+data+for+parkinson%C3%A2%C4%82%26Zacute%3Bs+disease+monitoring+using+convolutional+neural+networks.+In+Proceedings+of+the+19th+ACM+International+Conference+on+Multimodal+Interaction.+ACM%2C+216%2D%2D220."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/3136755.3136817" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00068" class="&#xA;                references__item&#xA;            "><span class="references__note">Jindong Wang, Yiqiang Chen, Shuji Hao, Xiaohui Peng, and Lisha Hu. 2018. Deep learning for sensor-based activity recognition: A survey. Pattern Recognition Letters (2018).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jindong+Wang%2C+Yiqiang+Chen%2C+Shuji+Hao%2C+Xiaohui+Peng%2C+and+Lisha+Hu.+2018.+Deep+learning+for+sensor-based+activity+recognition%3A+A+survey.+Pattern+Recognition+Letters+%282018%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00069" class="&#xA;                references__item&#xA;            "><span class="references__note">Jindong Wang, Vincent W Zheng, Yiqiang Chen, and Meiyu Huang. 2018. Deep Transfer Learning for Cross-domain Activity Recognition. In Proceedings of the 3rd International Conference on Crowd Science and Engineering. ACM, 16.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jindong+Wang%2C+Vincent+W+Zheng%2C+Yiqiang+Chen%2C+and+Meiyu+Huang.+2018.+Deep+Transfer+Learning+for+Cross-domain+Activity+Recognition.+In+Proceedings+of+the+3rd+International+Conference+on+Crowd+Science+and+Engineering.+ACM%2C+16."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/3265689.3265705" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00070" class="&#xA;                references__item&#xA;            "><span class="references__note">S. Wawrzyniak and W. Niemiro. 2015. Clustering approach to the problem of human activity recognition using motion data. In 2015 Federated Conference on Computer Science and Information Systems (FedCSIS). 411--416.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=S.+Wawrzyniak+and+W.+Niemiro.+2015.+Clustering+approach+to+the+problem+of+human+activity+recognition+using+motion+data.+In+2015+Federated+Conference+on+Computer+Science+and+Information+Systems+%28FedCSIS%29.+411%2D%2D416."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00071" class="&#xA;                references__item&#xA;            "><span class="references__note">Donglai Wei, Joseph Lim, Andrew Zisserman, and William T Freeman. 2018. Learning and using the arrow of time. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 8052--8060.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Donglai+Wei%2C+Joseph+Lim%2C+Andrew+Zisserman%2C+and+William+T+Freeman.+2018.+Learning+and+using+the+arrow+of+time.+In+Proceedings+of+the+IEEE+Conference+on+Computer+Vision+and+Pattern+Recognition.+8052%2D%2D8060."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_2_2_71_1&amp;dbid=16&amp;doi=10.1145%2F3328932&amp;key=10.1109%2FCVPR.2018.00840" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00072" class="&#xA;                references__item&#xA;            "><span class="references__note">Jianbo Yang, Minh Nhut Nguyen, Phyo Phyo San, Xiaoli Li, and Shonali Krishnaswamy. 2015. Deep Convolutional Neural Networks on Multichannel Time Series for Human Activity Recognition.. In Ijcai, Vol. 15. 3995--4001. <span class="references__pub-id doi 10.5555/2832747.2832806"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jianbo+Yang%2C+Minh+Nhut+Nguyen%2C+Phyo+Phyo+San%2C+Xiaoli+Li%2C+and+Shonali+Krishnaswamy.+2015.+Deep+Convolutional+Neural+Networks+on+Multichannel+Time+Series+for+Human+Activity+Recognition..+In+Ijcai%2C+Vol.+15.+3995%2D%2D4001.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.5555/2832747.2832806" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00073" class="&#xA;                references__item&#xA;            "><span class="references__note">Shuochao Yao, Yiran Zhao, Huajie Shao, Chao Zhang, Aston Zhang, Shaohan Hu, Dongxin Liu, Shengzhong Liu, Lu Su, and Tarek Abdelzaher. 2018. Sensegan: Enabling deep learning for internet of things with a semi-supervised framework. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 2, 3 (2018), 144.  <span class="references__pub-id doi 10.1145/3264954"></span><span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Shuochao+Yao%2C+Yiran+Zhao%2C+Huajie+Shao%2C+Chao+Zhang%2C+Aston+Zhang%2C+Shaohan+Hu%2C+Dongxin+Liu%2C+Shengzhong+Liu%2C+Lu+Su%2C+and+Tarek+Abdelzaher.+2018.+Sensegan%3A+Enabling+deep+learning+for+internet+of+things+with+a+semi-supervised+framework.+Proceedings+of+the+ACM+on+Interactive%2C+Mobile%2C+Wearable+and+Ubiquitous+Technologies+2%2C+3+%282018%29%2C+144.+10.1145%2F3264954+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/doi/10.1145/3264954" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00074" class="&#xA;                references__item&#xA;            "><span class="references__note">Richard Zhang, Phillip Isola, and Alexei A Efros. 2017. Split-brain autoencoders: Unsupervised learning by cross-channel prediction. In CVPR, Vol. 1. 5.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Richard+Zhang%2C+Phillip+Isola%2C+and+Alexei+A+Efros.+2017.+Split-brain+autoencoders%3A+Unsupervised+learning+by+cross-channel+prediction.+In+CVPR%2C+Vol.+1.+5."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li></ol></div><div class="response"><div class="sub-article-title"></div></div>
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3TagWidget" data-widget-id="2a75f978-170a-4843-8722-e878a1b77fbc" class="citation article__section article__index-terms">
+        
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="graphQueryWidget" data-widget-id="4ca2ed65-717e-4e67-bbb5-6578b8c6acac" class="colored-block__title">
+        
+
+
+
+        
+        <h2 id="sec-terms" class="section__title left-bordered-title">Index Terms</h2>
+
+        </div>
+    
+
+<ol class="rlist organizational-chart"><li><h6>Multi-task Self-Supervised Learning for Human Activity Detection</h6><ol class="rlist level-1  ch-2 hasNodes"><li><div data-background="#808080" style="background-color:#808080;box-shadow:none"><p><a href="/topic/ccs2012/10010147?SeriesKey=imwut&amp;expand=all">Computing methodologies</a></p></div><ol class="rlist level-2 ch-1 hasNodes"><li><div data-background="#808080" style="background-color:#808080;box-shadow:none"><p><a href="/topic/ccs2012/10010147.10010257?SeriesKey=imwut&amp;expand=all">Machine learning</a></p></div><ol class="rlist level-3 ch-0"></ol></li></ol></li><li><div data-background="#808080" style="background-color:#808080;box-shadow:none"><p><a href="/topic/ccs2012/10003120?SeriesKey=imwut&amp;expand=all">Human-centered computing</a></p></div><ol class="rlist level-2 ch-1 hasNodes"><li><div data-background="#808080" style="background-color:#808080;box-shadow:none"><p><a href="/topic/ccs2012/10003120.10003138?SeriesKey=imwut&amp;expand=all">Ubiquitous and mobile computing</a></p></div><ol class="rlist level-3 ch-1 hasNodes"><li><div data-background="#808080" style="background-color:#808080;box-shadow:none"><p><a href="/topic/ccs2012/10003120.10003138.10003140?SeriesKey=imwut&amp;expand=all">Ubiquitous and mobile computing systems and tools</a></p></div><ol class="rlist level-4 ch-0"></ol></li></ol></li></ol></li></ol></li></ol>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="graphQueryWidget" data-widget-id="91639479-279a-46e3-b7c7-f902a3fd7945" class="toc__section accordion-tabbed__tab">
+        
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3RelatedDigitalObject" data-widget-id="98838540-5c38-436f-9b98-0e292765fbe4" class="accordion-tabbed__content">
+        
+
+
+
+        
+        
+
+        </div>
+    
+
+
+        </div>
+    
+
+
+
+
+        
+        <div class="article__section article__comments">
+
+
+
+        
+        <div class="colored-block__title"> <h2 id="sec-comments" class="section__title left-bordered-title">Comments</h2> </div>
+
+
+
+
+        
+        <div id="disqus_thread"></div><a href="https://dl.acm.org/doi/abs/10.1145/3328932#disqus_thread" class="disqus-count hidden"></a><script>var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = '10.1145/3328932';
+    this.page.remote_auth_s3 = '';
+    this.page.api_key = 'MmWj4FlWmXk20FJsmWMXbTJoZT7TVzTsc9Rw0yrJp3L1ZNXZuvmxF3F5rFIF8RqQ';
+};
+(function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://acm-prod.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();</script><noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><script id="dsq-count-scr" src="//acm-prod.disqus.com/count.js" async=""></script>
+</div>
+</div><div class="pill-content"><div id="pill-access"><div class="pill-access__content">
+
+
+
+        
+        <div class="pill-access__content"><div class="section__separator"><h3 class="left-bordered-title">Login options</h3><div class="section__content"><p class="info--text">Check if you have access through your login credentials or your institution to get full access on this article.</p><a href="/action/showLogin?redirectUri=/doi/abs/10.1145/3328932" title="Sign in" class="btn big btn--inverse">Sign in</a></div></div><div class="section__separator"><h3 class="left-bordered-title">Full Access</h3><div class="section__content"><a href="/action/publisherEcommerceHelper?doi=10.1145/3328932&amp;redirectUri=https://dl.acm.org/doi/abs/10.1145/3328932" title="Get this Article" class="btn blue big">Get this Article</a></div></div></div>
+</div></div><div id="pill-information"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-information__contentcon" href="#pill-information__content" aria-controls="pill-information__content" role="tab" data-toggle="tab" title="Information" aria-selected="true" data-simple-tab-id="" tabindex="0">Information</a></li><li role="presentation"><a id="pill-authors__contentcon" href="#pill-authors__content" aria-controls="pill-authors__content" role="tab" data-toggle="tab" title="Authors" aria-selected="false" data-simple-tab-id="" tabindex="-1">Contributors</a></li></ul><ul class="rlist tab__content"><li id="pill-information__content" aria-labelledby="pill-information__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"><div class="pill-information__content"><div class="section__separator"><h3 class="left-bordered-title">Published in</h3><div class="section__content cover-image-journal">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3CoverImage" data-widget-id="7b8bd09e-8112-4266-b136-2f71ab2b109c" class="left-side-image">
+        
+
+
+
+        
+        <div class="cover-image"><div class="cover-image__image"><img src="/specs/products/acm/releasedAssets/images/Default_image_lazy.svg" data-src="/cms/asset/fdeb02b1-915e-4a07-954f-47f4a8401ebd/3341982.cover.jpg" alt="Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies cover image" class="lazy"/></div><div class="cover-image__details"><div class="journal-meta"><span class="serial-title">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</span>&nbsp;<span class="serial-info"> Volume 3, Issue 2</span></div><div class="cover-date">June 2019</div><div class="cover-pages">802  pages</div><div class="cover-image__details-extra"><div class="flex-container"><span class="bold">EISSN:</span><span class="space">2474-9567</span></div><div class="flex-container"><span class="bold">DOI:</span><span class="space">10.1145/3341982</span></div><a href="/toc/imwut/2019/3/2" class="toc--link">Issue’s Table of Contents</a></div><div class="pb-dropzone" data-pb-dropzone="metadataDisplayExtra" title="metadataDisplayExtra"></div></div></div>
+
+        </div>
+    
+<p class="copyrights small">Copyright © 2019 ACM</p></div></div><div class="section__separator proceedingInfo-sponsors hidden"><h3 class="left-bordered-title">Sponsors</h3><ul class="proceedingInfo-sponsors__list"></ul></div><div class="section__separator proceedingInfo-inCoop hidden"><h3 class="left-bordered-title">In-Cooperation</h3><ul class="proceedingInfo-inCoop__list"></ul></div><div class="section__separator"><h3 class="left-bordered-title">Publisher</h3><div class="section__content publisher"><div class="inlineBlock"></div><div class="inlineBlock"><p class="publisher__name">Association for Computing Machinery</p><p class="publisher__address">New York, NY, United States</p></div></div></div>
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="contentItemHistory" data-widget-id="6eba30da-4023-4f09-bb08-f98cf09d5aa0" class="section__separator">
+        
+
+
+
+        
+            <h3 class="left-bordered-title">
+                Publication History
+            </h3>
+        
+        <div class="section__content"><ul class="rlist article-chapter-history-list"><li><span class="item_label">Online:</span> 21 June 2019</li><li><span class="item_label">Published:</span> 21 June 2019</li><li><span class="item_label">Accepted:</span> 1 April 2019</li><li><span class="item_label">Received:</span> 1 February 2019</li></ul></div>
+
+        </div>
+    
+
+
+
+
+        
+        <!-- rightslink drop zone-->
+
+
+
+        
+        <div class="section__separator"><h3 class="left-bordered-title"> Permissions</h3><div class="section__content"><p class="info--text">Request permissions about this article.</p><a href="/servlet/linkout?type=rightslinkBasic&amp;url=ContentIdType%3Ddoi%26issn%3D2474-9567%26volumeNum%3D3%26issueNum%3D2%26contentID%3D10.1145%252F3328932" rel="noopener" target="_blank" class="btn big stretched blue">Request Permissions</a></div></div>
+
+
+
+<div class="section__separator"><h3 class="left-bordered-title">Author Tags</h3><div class="section__content"><div class="tags-widget"><div class="tags-widget__content"><ul class="rlist--inline"><li><a href="/keyword/transfer learning?expand=all" title="transfer learning" class="badge-type">transfer learning</a></li><li><a href="/keyword/temporal convolutional neural networks?expand=all" title="temporal convolutional neural networks" class="badge-type">temporal convolutional neural networks</a></li><li><a href="/keyword/semi-supervised learning?expand=all" title="semi-supervised learning" class="badge-type">semi-supervised learning</a></li><li><a href="/keyword/representation learning?expand=all" title="representation learning" class="badge-type">representation learning</a></li><li><a href="/keyword/multi-task learning?expand=all" title="multi-task learning" class="badge-type">multi-task learning</a></li><li><a href="/keyword/human activity recognition?expand=all" title="human activity recognition" class="badge-type">human activity recognition</a></li><li><a href="/keyword/deep learning?expand=all" title="deep learning" class="badge-type">deep learning</a></li><li><a href="/keyword/Self-supervised learning?expand=all" title="Self-supervised learning" class="badge-type">Self-supervised learning</a></li></ul></div></div></div></div><div class="section__separator"><h3 class="left-bordered-title">Qualifiers</h3><ul class="qualifiers__list"><li class="capitalized qualifiers__list__item">research-article</li><li class="qualifiers__list__item">Research</li><li class="qualifiers__list__item">Refereed</li></ul></div><div class="section__separator proceedingInfo-conference hidden"><h3 class="left-bordered-title">Conference</h3></div><div class="section__separator funding-sources hidden"><h3 class="left-bordered-title">Funding Sources</h3><ul class="funding-list"></ul></div></div></li><li id="pill-authors__content" aria-labelledby="pill-authors__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><div class="pill-authors__content"><div class="section__separator"><div class="pill-authors-list"><div class="expandable-accordion"><div class="pill-normalized-authors">
+
+
+
+        
+        <div class="publication-contribs-contianer"><input id="ContribsAjax" type="hidden" data-ajax="/pb/widgets/getContribs?widgetId=f6c6c0f3-1b50-42bb-a7bb-1062377c12d4&amp;pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages"/><div class="loader"><img src="/specs/products/acm/releasedAssets/images/loader.gif"/></div></div>
+</div><!--.pill-all-authors.authors-accordion.disable-truncate.hidden(aria-hidden="true")--><!--    if(data.item && data.item.contribsFull)--><!--        | !{data.item.contribsFull}--></div></div></div><div class="section__separator"><h3 class="left-bordered-title">Other Metrics</h3><div class="section__content badges"><a href="#pill-bibliometrics__contentcon" data-slide-target="#pill-metric" data-tab="pill-bibliometrics__content" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" class="btn big stretched btn--inverse w-slide__btn tab-link pill-content">View Article Metrics</a></div></div></div></li></ul></div></div><div id="pill-metric"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-bibliometrics__contentcon" href="#pill-bibliometrics__content" aria-controls="pill-bibliometrics__content" role="tab" data-toggle="tab" title="Bibliometrics" aria-selected="true" data-simple-tab-id="" tabindex="0">Bibliometrics</a></li><li role="presentation"><a id="pill-citations__contentcon" href="#pill-citations__content" data-ajaxurl="/action/ajaxShowCitedBy?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F3328932&amp;pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages" data-component="pubAjaxContent" data-ajaxtarget="#pill-citations__content .citedBy" aria-controls="pill-citations__content" role="tab" data-toggle="tab" title="Citations" aria-selected="false" data-simple-tab-id="" tabindex="-1" class="loadAjax loadLazyAjax">Citations<span class="citation-count count-bubble">41</span></a></li></ul><ul class="rlist tab__content"><li id="pill-bibliometrics__content" aria-labelledby="pill-bibliometrics__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"><div class="pill-bibliometrics__content"><div class="section__separator"><h3 class="left-bordered-title">Article Metrics</h3><div class="section__content"><ul class="rlist--inline article-metrics"><li><div class="article-metric citation"><div class="metric-value"><span>41</span></div>Total Citations</div><a href="#pill-citations__contentcon" data-tab="pill-citations__content" data-slide-target="#pill-metric" data-full-screen="false" data-ctrl-res="screen-xlg" class="primary-blue-color w-slide__btn tab-link slide-active pill-content">View Citations</a></li><li><div class="article-metric download"><div class="metric-value"><span>1,609</span></div>Total Downloads</div></li></ul><ul class="rlist metrics__list"><li><span class="metric-name">Downloads (Last 12 months)</span><span class="metric-value">576</span></li><li><span class="metric-name">Downloads (Last 6 weeks)</span><span class="metric-value">70</span></li></ul></div></div><div class="section__separator"><h3 class="left-bordered-title">Other Metrics</h3><div class="section__content"><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-full-screen="false" data-label="&lt;i class=&quot;icon-Icon_Information &quot;&gt;&lt;/i&gt;Information &amp; Authors" class="btn big stretched btn--inverse w-slide__btn tab-link pill-content">View Author Metrics</a></div></div></div></li><li id="pill-citations__content" aria-labelledby="pill-citations__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><div class="pill-citations__content"><div class="section__separator"><div class="header-container"><h3 class="left-bordered-title citedBy-label">Cited By</h3><a id="downloadAll" href="/action/ajaxShowCitedBy?doi=10.1145/3328932" target="_blank" title="View all cited by in new tab" class="btn btn--rounded ml-0 mt-0 mb-0 pl-2 blue pull-right">View all<i class="icon-export ml-2"></i></a><ol class="rlist references__list citedBy mt-5"></ol></div></div></div></li></ul></div></div><div id="pill-formats"><div class="pill-formats__content"><div class="section__separator"><h3 class="left-bordered-title">PDF Format</h3><div class="section__content"><p class="info--text">View or Download as a PDF file.</p><a href="/doi/pdf/10.1145/3328932" title="View or Download as a PDF file" class="btn big stretched red"><i aria-hidden="true" class="icon-pdf-file"></i>PDF</a></div></div><div class="section__separator"><h3 class="left-bordered-title">eReader</h3><div class="section__content"><p class="info--text">View online with eReader.</p><a href="/doi/epdf/10.1145/3328932" title="View online with eReader" class="btn big stretched blue no-margin-top w-slide__btn pill-content"><i aria-hidden="true" class="icon-eReader"></i>eReader</a></div></div><div class="section__separator de-format hidden"><h3 class="left-bordered-title">Digital Edition</h3><div class="section__content"><p class="info--text">View this article in digital edition.</p><a href="#" title="View Digital Edition" class="btn big stretched blue"><i aria-hidden="true" class="icon-open-book"></i>View Digital Edition</a></div></div></div></div><div id="pill-references"><div class="pill-references__content"></div></div><div id="pill-media"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-fig__contentcon" href="#pill-fig__content" aria-controls="pill-fig__content" role="tab" data-toggle="tab" title="Figures" aria-selected="true" data-simple-tab-id="" tabindex="0">Figures</a></li><li role="presentation"><a id="pill-media__contentcon" href="#pill-media__content" aria-controls="pill-media__content" role="tab" data-toggle="tab" title="Other" aria-selected="false" data-simple-tab-id="" tabindex="-1">Other</a></li></ul><div class="pill-figures__content"><ul class="rlist tab__content"><li id="pill-fig__content" aria-labelledby="pill-fig__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"></li><li id="pill-media__content" aria-labelledby="pill-media__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><ul class="rlist pill-media__content"></ul></li></ul></div></div></div><div id="pill-tables"><div class="pill-tables__content"></div></div><div id="pill-share"><div class="pill-share__content"><div class="section__separator"><h3 class="left-bordered-title">Share this Publication link</h3><div class="section__content copy__text-wrapper"><fieldset><p id="shareable-link__text" class="copy__text">https://dl.acm.org/doi/abs/10.1145/3328932</p><button type="submit" class="btn big btn--inverse copy__btn"><i aria-hidden="true" class="icon-pages"></i>Copy Link</button></fieldset></div></div><div class="section__separator"><h3 class="left-bordered-title">Share on Social Media</h3><div class="section__content"><div class="visible-service-name">
+
+
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7"></script><div class="share__block share__inline-links"><div class="pb-dropzone" data-pb-dropzone="shareBlock" title="shareBlock"></div><span class="sr-only">Share on</span><div class="rlist--inline addthis addthis_toolbox addthis_default_style addthis_32x32_style"><a role="link" class="addthis_button_twitter"></a><a role="link" class="addthis_button_linkedin"></a><a role="link" class="addthis_button_reddit"></a><a role="link" class="addthis_button_facebook"></a><a role="link" class="addthis_button_email"></a><div class="pb-dropzone" data-pb-dropzone="share-additional-links" title="share-additional-links"></div></div></div>
+</div></div></div></div></div></div></div><div class="col-sm-2 pill-section"><div data-stop-on=".more-issue__section" class="pill-icons"><ul class="rlist pill-list"><li title="Information &amp; Authors"><a href="javascript:void(0);" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-full-screen="false" title="Information and Authors" data-label="&lt;i class=&quot;icon-Icon_Information&quot;&gt;&lt;/i&gt;Information &amp; Authors" class="w-slide__btn pill-information"><i aria-hidden="true" class="icon-Icon_Information"></i></a></li><li title="Bibliometrics &amp; Citations"><a href="javascript:void(0);" data-slide-target="#pill-metric" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" title="Bibliometrics and Citations" class="w-slide__btn pill-metric"><i aria-hidden="true" class="icon-metric"></i></a></li><li title="Get Access"><a href="javascript:void(0);" data-slide-target="#pill-access" data-ctrl-res="screen-xlg" data-full-screen="false" title="Get Access" data-label="&lt;i class=&quot;icon-get-access&quot;&gt;&lt;/i&gt;Get Access" class="w-slide__btn pill-access"><i class="icon-get-access"></i></a></li><li title="References"><a href="javascript:void(0);" data-slide-target="#pill-references" data-ctrl-res="screen-xlg" data-full-screen="false" title="References" data-label="&lt;i class=&quot;icon-Icon_Links-References&quot;&gt;&lt;/i&gt;References" class="w-slide__btn pill-references"><i aria-hidden="true" class="icon-Icon_Links-References"></i><span class="refNum count-bubble">0<span class="sr-only">References</span></span></a></li><li title="Media"><a href="javascript:void(0);" data-slide-target="#pill-media" data-ctrl-res="screen-xlg" data-full-screen="false" title="Media" data-label="&lt;i class=&quot;icon-Icon_Images&quot;&gt;&lt;/i&gt;Media" data-ajaxtarget="#pill-fig__content" data-component="pubAjaxContent" data-action="onResponse" data-ajaxurl="/action/ajaxShowFigures?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F3328932&amp;pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages" class="w-slide__btn loadAjax-auto pill-media"><i aria-hidden="true" class="icon-Icon_Images"></i></a></li><li title="Tables"><a href="javascript:void(0);" data-slide-target="#pill-tables" data-ctrl-res="screen-xlg" title="Tables" data-full-screen="false" data-label="&lt;i class=&quot;icon-table&quot;&gt;&lt;/i&gt;Tables" data-ajaxtarget=".pill-tables__content" data-component="pubAjaxContent" data-action="onResponse" data-ajaxurl="/action/ajaxShowTables?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F3328932&amp;pbContext=%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3341982%3Bcsubtype%3Astring%3AJournal%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3328932%3BserialTopic%3Atopic%3Aacm-pubtype%26gt%3Bjournal%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BsubPage%3Astring%3AAbstract%3Bjournal%3Ajournal%3Aimwut%3BrequestedJournal%3Ajournal%3Aimwut%3Bwebsite%3Awebsite%3Adl-site%3Btaxonomy%3Ataxonomy%3Aacm-pubtype%3BpageGroup%3Astring%3APublication+Pages" class="w-slide__btn loadAjax-auto pill-tables"><i aria-hidden="true" class="icon-table"></i></a></li><li title="Share"><a href="javascript:void(0);" data-slide-target="#pill-share" data-ctrl-res="screen-xlg" data-full-screen="false" title="Share" data-label="&lt;i class=&quot;icon-Icon_Share&quot;&gt;&lt;/i&gt;Share" class="w-slide__btn pill-share pill-content"><i aria-hidden="true" class="icon-Icon_Share"></i></a></li></ul></div></div></div></article><div id="figure-viewer" data-ux3-wrapper="figure-viewer" data-ux3-transformed-by="figureInit" data-ux3-role="parent" role="dialog" class="figure-viewer"><div class="figure-viewer__reg__top clearfix"><div class="figure-viewer__top__right"><a title="Zoom In" href="#" class="figure-viewer__ctrl figure-viewer__ctrl__zoom zoomSetting"><div aria-hidden="true" class="icon-zoom-in zoom-in"></div></a><a title="Zoom Out" href="#" class="figure-viewer__ctrl figure-viewer__label__zoom zoomSetting"><div aria-hidden="true" class="icon-zoom-out zoom-out"></div></a><a title="Open Caption" href="#" class="figure-viewer__ctrl figure-viewer__ctrl__caption"><i aria-hidden="true" class="icon-Icon_Information"></i></a><a href="#" data-ux3-role="controller" role="button" title="close" class="figure-viewer__ctrl figure-viewer__ctrl__close"><i aria-hidden="true" class="icon-cancel-bold"><span class="sr-only">Close Figure Viewer</span></i></a></div><h4 class="figure-viewer__top__center"></h4><div class="figure-viewer__top__left"><a href="#" role="button" title="Browse All" class="figure-viewer__ctrl__browse"><i aria-hidden="true" class="icon-grid-3"><span class="sr-only">Browse All</span></i></a><a href="#" role="button" title="Return" class="figure-viewer__ctrl__return is-hidden"><i aria-hidden="true" class="icon-cancel-bold"><span class="sr-only">Return</span></i></a><span class="zoomSlider js__zoom-slider ui-slider zoomSetting"><label for="figure-viewer__zoom-range" class="sr-only">Change zoom level</label><input type="range" id="figure-viewer__zoom-range" class="zoom-range"/></span></div></div><div class="figure-viewer__reg__center"><div class="figure-viewer__cent__left"><div class="figure-viewer__hold__fig"><div class="holder"></div></div><div class="figure-viewer__hold__list"><h3 class="figure-viewer__browse-title"></h3><div class="flex-grid"></div></div></div><div class="figure-viewer__cent__right"><div class="figure-viewer__caption-header"><h3 class="figure-viewer__caption-label">Caption</h3><a title="Close Caption" href="#" class="pull-right figure-viewer__close-caption figure-viewer__ctrl__caption"><i aria-hidden="true" class="icon-cancel-bold"></i></a></div><div class="figure-viewer__caption-wrapper"><div class="figure-viewer__title"><span class="figure-viewer__title__text"></span></div><div class="figure-viewer__hold__figcap"></div></div></div></div></div>
+
+        </div>
+    
+
+
+
+
+        
+        <div class="separated-block--dashed align-center"><a href="/toc/imwut/2019/3/2" class="btn btn--inverse big">View Issue’s Table of Contents</a></div>
+
+
+
+
+        
+        <div class="ux-modal-container"><div id="exportCitation" class="modal"><div class="modal__dialog"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><h2>Export Citations</h2></div><div class="modal__body"><div class="exportCitation__tabs"><div class="tab"><ul role="tablist" class="rlist tab__nav"></ul></div><div class="csl-wrapper copy__text-wrapper"><form action="/action/exportCiteProcCitation" method="post" target="_blank"><input type="hidden" name="content" value=""/><input type="hidden" name="dois" value=""/><input type="hidden" name="format" value=""/><fieldset class="input-group"><label for="citation-format" class="visibility-hidden">Select Citation format</label><select id="citation-format" data-csl-doi="10.1145/3328932"><option value="bibtex" data-format="bibTex">BibTeX</option><option value="endNote" data-format="endNote">EndNote</option><option value="acm" data-format="text">ACM Ref</option></select><span class="select-arrow"><i class="icon-bottom-arrow"></i></span></fieldset><ul class="rlist tab__content"><li id="selectedTab" aria-labelledby="selected" role="tabpanel" class="tab__pane active"><div class="csl-wrapper copy__text-wrapper"><pre class="copy__text csl-response"></pre><div id="export-warning"></div><div class="pull-right"><ul class="rlist--inline separator"><li><a href="javascript:void(0)" role="menuitem" title="Download citation" class="download__btn disabled"><label class="visibility-hidden">Download citation</label><i aria-hidden="true" class="icon-Icon_Download"></i></a></li><li><a href="javascript:void(0)" role="menuitem" title="Copy citation" class="copy__btn disabled"><label class="visibility-hidden">Copy citation</label><i aria-hidden="true" class="icon-pages"></i><input type="hidden" id="doisLimitNumber" value="-1"/></a></li></ul></div></div></li><li id="allResultstab" aria-labelledby="allResults" role="tabpanel" class="tab__pane"><div class="all-results-tab-container"><div class="desc-text"><div class="bold">Preview is not available.</div>By clicking download,<b class="ml-1">a new tab</b> will open to start the export process. The process may take<b class="ml-1">a few minutes</b> but once it finishes a file will be downloaded on your browser so<b class="ml-1">please do not close the new tab.</b></div><a href="#" title="Download" target="_blank" class="btn transparent downloadBtn"><i aria-hidden="true" class="icon-Icon_Download"></i>Download<i aria-hidden="true" class="icon-export"></i></a></div></li></ul></form></div></div></div></div></div></div>
+</main>
+
+
+
+
+        
+        <footer class="footer">
+
+
+
+        
+        <div class="back-to-top clearfix">
+    <i class="icon-arrow_u_p"></i>
+</div>
+
+
+
+
+        
+        <div class="footer-top">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="81a18a14-d709-41fd-9bb6-25a7fc1e13df" class="container">
+        
+
+
+
+        
+        <div class="row sitemap">
+
+
+
+        
+        <div class="col-sm-2 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="5b00ef28-f63b-4518-bd06-da82035f86ca" class="sitemap__data">
+        
+
+
+
+        
+        <div class="bold" style="margin-bottom: 18px;">Categories</div>
+<ul class="rlist">
+    <li><a href="/journals" title="Browse a listing of ACM’s Journals">Journals</a></li>
+    <li><a href="/magazines" title="Browse ACM's Magazines">Magazines</a></li>
+    <li><a href="/acmbooks" title="Browse new Releases of ACM Books">Books</a></li>
+    <li><a href="/proceedings" title="Browse the ACM Proceedings">Proceedings</a></li>
+    <li><a href="/sigs" title="Browse the Special Interest Groups">SIGs</a></li>
+    <li><a href="/conferences" title="Browse the Conferences">Conferences</a></li>
+    <li><a href="/collections" title="Browse the Special Collections">Collections</a></li>
+    <li><a href="/people" title="Discover ACM’s community of authors">People</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-4 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="731f98d3-e996-490d-a071-e9b966b32e2d" class="sitemap__data">
+        
+
+
+
+        
+        <div class="bold" style="margin-bottom: 18px;">About</div>
+<ul class="rlist">
+    <li><a href="/about">About ACM Digital Library</a></li>
+    <li><a href="/about/access" title="Accessing the DL">Subscription Information</a></li>
+    <li><a href="https://www.acm.org/publications/authors/information-for-authors" title="Information for Authors">Author Guidelines</a></li>
+    <li><a href="/about/access" title="Accessing the DL">Using ACM Digital Library</a></li>
+    <li><a href="/about/content#sec2">All Holdings within the ACM Digital Library</a></li>
+    <li><a href="/ccs" title="Classify publications using ACM's Computing Classification System">ACM Computing Classification System</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-3 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="d4ed040d-22e8-481c-a7ef-0cac141f5246" class="sitemap__data">
+        
+
+
+
+        
+        <div class="bold" style="margin-bottom: 18px;">Join</div>
+<ul class="rlist">
+    <li><a href="https://www.acm.org/membership/join">Join ACM</a></li>
+    <li><a href="https://www.acm.org/special-interest-groups/join">Join SIGs</a></li>
+    <li><a href="https://www.acm.org/publications/subscribe">Subscribe to Publications</a></li>
+    <li><a href="https://libraries.acm.org/">Institutions and Libraries</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-3 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="4a649bf1-cf3f-472c-b764-dc3ab0cf4310" class="sitemap__data">
+        
+
+
+
+        
+        <b>Connect</b>
+<ul class="rlist social-media__connect">
+    <li><a href="/cdn-cgi/l/email-protection#284c44055c4d494568405906494b4506475a4f" title="email dl team"><i class="icon-Icon_mail" aria-hidden="true"></i><span>Contact</span></a></li>
+    <li><a href="https://www.facebook.com/AssociationForComputingMachinery/" title="ACM on facebook"><i class="icon-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
+    <li><a href="https://twitter.com/acmdl" title="Tweets from ACM DL"><i class="icon-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+    <li><a href="https://www.linkedin.com/company/association-for-computing-machinery/" title="acm  linkedin"><i class="icon-linkedin" aria-hidden="true"></i><span>Linkedin</span></a></li>
+    <!--li><a href="#" title="icon-Rss"><i class="icon-Rss" aria-hidden="true"></i><span>RSS</span></a></li-->
+</ul>
+
+        </div>
+    
+</div>
+</div>
+
+        </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="6e6da9b7-371e-4ea0-827e-8de5915b8cd5" class="footer-bottom text-onDark">
+        
+
+
+
+        
+        <div class="container"><div class="row"><div class="col-md-8 col-sm-6 footer__copyright-wrapper">
+
+
+
+        
+        <div class="copyright">The ACM Digital Library is published by the Association for Computing Machinery. Copyright © 2022 ACM, Inc.</div>
+<ul class="rlist--inline">
+    <li><a href="https://libraries.acm.org/digital-library/policies#anchor3">Terms of Usage</a></li>
+    <li><a href="https://www.acm.org/about-acm/privacy-policy">Privacy Policy</a></li>
+    <li><a href="https://www.acm.org/code-of-ethics">Code of Ethics</a></li>
+</ul>
+</div><div class="col-md-4 col-sm-6 footer__logos-wrapper">
+
+
+
+        
+        <div class="logos">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="42d543b3-ff9d-4f92-bf03-6d1fa00da8c6" class="footer__logo1">
+        
+
+
+
+        
+        <a href="/" title="ACM Digital Library home"><img id="" alt="ACM Digital Library home" src="/specs/products/acm/releasedAssets/images/acm-logo-dl.png"/></a>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="5a0bc5df-cd95-408f-8ae5-8b1f40746519" class="footer__logo2">
+        
+
+
+
+        
+        <a href="https://www.acm.org" title="ACM home"><img id="" alt="ACM home" src="/specs/products/acm/releasedAssets/images/acm-logo-3.png"/></a>
+
+        </div>
+    
+</div>
+</div></div></div>
+
+        </div>
+    
+
+
+
+
+        
+        <!-- Mopinion Pastea.se  start --><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">(function(){var id="7zt4vp6rxi2bbpxuy9yzabob4fy2enwmumr";var js=document.createElement("script");var pbBtn=document.querySelector('.admin-bar-disclosure');if(!window.PB){js.setAttribute("src","//deploy.mopinion.com/js/pastease.js");document.getElementsByTagName("head")[0].appendChild(js);var t=setInterval(function(){try{new Pastease.load(id);clearInterval(t)}catch(e){}},50)}})();
+    </script><!-- Mopinion Pastea.se end -->
+</footer>
+
+
+
+
+        
+        <script type="text/javascript">
+(function(h,o,t,j,a,r){
+    h.hj=h.hj||function()
+    
+    {(h.hj.q=h.hj.q||[]).push(arguments)}
+    ;
+    h._hjSettings={hjid:1290436,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+
+
+        
+        <script type="text/javascript">
+    (function (w, d) {
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script");
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {elements_selector: ".lazy", "class_loaded": "image-lazy-loaded"};
+    b.appendChild(s);
+}(window, document));
+</script>
+
+
+
+
+        
+        
+
+
+
+
+        
+        <div class="cookiePolicy-popup"><div class="cookiePolicy-popup__header"><i aria-hidden="true" class="icon-cookie"></i><h5 class="cookiePolicy-popup__title">About Cookies On This Site</h5></div><div class="cookiePolicy-popup__body clearfix"><p><p>We use cookies to ensure that we give you the best experience on our website.</p>
+<p><a href="https://www.acm.org/privacy-policy" class="blue link">Learn more</a></p></p><a href="#" class="btn blue cookiePolicy-popup__close pull-right">Got it!</a></div></div>
+
+
+
+
+        
+        
+
+
+
+        
+    
+
+        </div>
+    </div>
+
+
+	
+    <script>if (typeof define !== 'undefined' && define.amd)
+    define.amd = false</script><script src="/products/acm/releasedAssets/js/main.bundle-2fb189a235237e8822f2.js"></script><script>(function (w, d) {
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script");
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {elements_selector: ".lazy", "class_loaded": "image-lazy-loaded"};
+    b.appendChild(s);
+}(window, document));</script>
+<script type="text/javascript" src="/wro/l183~product.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(() => setTimeout(() => {
+            let _bnw=window,_bna=atob("bG9jYXRpb24="),_bnb=atob("b3JpZ2lu"),_hn=_bnw[_bna][_bnb],_bnt=btoa(_hn+new Array(5 - _hn.length % 4).join(" "));
+            $.get("/resource/lodash?t="+_bnt);
+        },4000));
+    </script>
+
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6e539edb6c29fe30","token":"b7f168b3cd354a55a4dd51b513830799","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
