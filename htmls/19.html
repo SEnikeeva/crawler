@@ -1,0 +1,2320 @@
+<!DOCTYPE HTML>
+<html lang="en-gb" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+    <meta name="citation_publisher" content="Springer, Cham"/>
+    <meta name="citation_title" content="Self-supervised Learning of Audio-Visual Objects from Video"/>
+    <meta name="citation_doi" content="10.1007/978-3-030-58523-5_13"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_abstract_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-58523-5_13"/>
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-58523-5_13"/>
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007%2F978-3-030-58523-5_13.pdf"/>
+    <meta name="citation_springer_api_url"
+          content="http://api.springer.com/metadata/pam?q=doi:10.1007/978-3-030-58523-5_13&amp;api_key="/>
+    <meta name="citation_firstpage" content="208"/>
+    <meta name="citation_lastpage" content="224"/>
+    <meta name="citation_author" content="Afouras, Triantafyllos"/>
+    <meta name="citation_author_institution" content="University of Oxford"/>
+    <meta name="citation_author_email" content="afourast@robots.ox.ac.uk"/>
+    <meta name="citation_author" content="Owens, Andrew"/>
+    <meta name="citation_author_institution" content="University of Michigan"/>
+    <meta name="citation_author" content="Chung, Joon Son"/>
+    <meta name="citation_author_institution" content="University of Oxford"/>
+    <meta name="citation_author_institution" content="Naver Corporation"/>
+    <meta name="citation_author" content="Zisserman, Andrew"/>
+    <meta name="citation_author_institution" content="University of Oxford"/>
+    <meta name="dc.identifier" content="10.1007/978-3-030-58523-5_13"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description"
+          content="Our objective is to transform a video into a set of discrete audio-visual objects using self-supervised learning. To this end, we introduce a model that uses attention to localize and group sound..."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Self-supervised Learning of Audio-Visual Objects from Video"/>
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/book/978-3-030-58523-5.jpg"/>
+    <meta name="twitter:image:alt" content="Content cover image"/>
+    <meta name="twitter:site" content="SpringerLink"/>
+    <meta name="twitter:description"
+          content="Our objective is to transform a video into a set of discrete audio-visual objects using self-supervised learning. To this end, we introduce a model that uses attention to localize and group sound..."/>
+    <meta name="citation_inbook_title" content="Computer Vision – ECCV 2020"/>
+    <meta name="citation_publication_date" content="2020/08/23"/>
+    <meta name="citation_conference_series_id" content="springer/eccv"/>
+    <meta name="citation_conference_title" content="European Conference on Computer Vision"/>
+    <meta name="citation_conference_sequence_num" content="16"/>
+    <meta name="citation_conference_abbrev" content="ECCV"/>
+    <meta property="og:title" content="Self-supervised Learning of Audio-Visual Objects from Video"/>
+    <meta property="og:type" content="Paper"/>
+    <meta property="og:url" content="https://link.springer.com/chapter/10.1007/978-3-030-58523-5_13"/>
+    <meta property="og:image" content="https://static-content.springer.com/cover/book/978-3-030-58523-5.jpg"/>
+    <meta property="og:site_name" content="SpringerLink"/>
+    <meta property="og:description"
+          content="Our objective is to transform a video into a set of discrete audio-visual objects using self-supervised learning. To this end, we introduce a model that uses attention to localize and group sound..."/>
+
+    <title>Self-supervised Learning of Audio-Visual Objects from Video | SpringerLink</title>
+    <link rel="canonical" href="https://link.springer.com/chapter/10.1007/978-3-030-58523-5_13"/>
+    <link rel="shortcut icon" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16" type="image/png"
+          href="/springerlink-static/1895273086/images/favicon/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" type="image/png"
+          href="/springerlink-static/1895273086/images/favicon/favicon-32x32.png">
+    <link rel="icon" sizes="48x48" type="image/png"
+          href="/springerlink-static/1895273086/images/favicon/favicon-48x48.png">
+    <link rel="apple-touch-icon" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="/springerlink-static/1895273086/images/favicon/ic_launcher_hdpi.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/springerlink-static/1895273086/images/favicon/app-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@2x.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-ipad@2x.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+          content="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//google-analytics.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagservices.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//static-content.springer.com">
+    <link rel="stylesheet" href="/springerlink-static/1895273086/css/basic.css" media="screen">
+    <link rel="stylesheet" href="/springerlink-static/1895273086/css/styles.css" class="js-ctm"
+          media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    <link rel="stylesheet" href="/springerlink-static/1895273086/css/print.css" media="print">
+
+
+    <script>
+        (function () {
+            if (typeof window.CustomEvent === "function") return;
+            window.CustomEvent = function (event, params) {
+                params = params || {bubbles: false, cancelable: false, detail: null};
+                var evt = document.createEvent('CustomEvent');
+                evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+                return evt;
+            }
+        })();
+    </script>
+
+    <script>
+        (function () {
+            if (!!document.documentElement.dataset) return;
+
+            Object.defineProperty(Element.prototype, 'dataset', {
+                get: function () {
+                    var element = this;
+                    var attributes = this.attributes;
+                    var map = {};
+
+                    for (var i = 0; i < attributes.length; i++) {
+                        var attribute = attributes[i];
+
+                        if (attribute && attribute.name && (/^data-\w[\w-]*$/).test(attribute.name)) {
+                            var name = attribute.name;
+                            var value = attribute.value;
+
+                            var propName = name.substr(5).replace(/-./g, function (prop) {
+                                return prop.charAt(1).toUpperCase();
+                            });
+
+                            Object.defineProperty(map, propName, {
+                                enumerable: true,
+                                get: function () {
+                                    return this.value;
+                                }.bind({value: value || ''}),
+                                set: function setter(name, value) {
+                                    if (typeof value !== 'undefined') {
+                                        this.setAttribute(name, value);
+                                    } else {
+                                        this.removeAttribute(name);
+                                    }
+                                }.bind(element, name)
+                            });
+                        }
+                    }
+
+                    return map;
+                }
+            });
+        })();
+    </script>
+
+
+    <script type="text/javascript">
+        window.Krux || ((Krux = function () {
+            Krux.q.push(arguments);
+        }).q = []);
+        var dataLayer = [{
+            'GA Key': "UA-26408784-1",
+            'Features': ["leaderboardadverts", "eventtracker"],
+            'Event Category': "Conference Paper",
+            'Open Access': "N",
+            'Labs': "Y",
+            'DOI': "10.1007/978-3-030-58523-5_13",
+            'productId': "9783030585235",
+            'hasAccess': "N",
+            'Full HTML': "N",
+            'Has Body': "Y",
+            'Static Hash': "1895273086",
+            'Has Preview': "N",
+            'user': {"license": {"businessPartnerID": [], "businessPartnerIDString": ""}},
+            'content': {
+                "serial": {"eissn": "1611-3349", "pissn": "0302-9743"},
+                "book": {
+                    "seriesTitle": "Lecture Notes in Computer Science",
+                    "eisbn": "978-3-030-58523-5",
+                    "pisbn": "978-3-030-58522-8",
+                    "bookProductType": "Proceedings",
+                    "seriesId": "558",
+                    "title": "Computer Vision – ECCV 2020",
+                    "doi": "10.1007/978-3-030-58523-5"
+                },
+                "attributes": {"deliveryPlatform": "bunsen"},
+                "chapter": {"doi": "10.1007/978-3-030-58523-5_13"},
+                "category": {
+                    "pmc": {
+                        "primarySubject": "Computer Science",
+                        "primarySubjectCode": "I",
+                        "secondarySubjects": {
+                            "4": "Computer Systems Organization and Communication Networks",
+                            "5": "Pattern Recognition",
+                            "1": "Image Processing and Computer Vision",
+                            "2": "Computer Appl. in Social and Behavioral Sciences",
+                            "3": "Machine Learning"
+                        },
+                        "secondarySubjectCodes": {
+                            "4": "I13006",
+                            "5": "I2203X",
+                            "1": "I22021",
+                            "2": "I23028",
+                            "3": "I21010"
+                        }
+                    }, "sucode": "SUCO11645"
+                },
+                "type": "ConferencePaper"
+            },
+            'Access Type': "noaccess",
+            'Page': "chapter",
+            'Bpids': "",
+            'Bpnames': "",
+            'SubjectCodes': "SCI, SCI22021, SCI23028, SCI21010, SCI13006, SCI2203X",
+            'session': {"authentication": {"loginStatus": "N"}, "attributes": {"edition": "academic"}},
+            'eventTrackerBaseUrl': "https://event-tracker.springernature.com",
+            'Country': "RU",
+            'ConferenceSeriesId': "eccv",
+            'VG Wort Identifier': "pw-vgzm.415900-10.1007-978-3-030-58523-5",
+
+            'doi': "10.1007-978-3-030-58523-5_13",
+            'pmc': ["I", "I22021", "I23028", "I21010", "I13006", "I2203X"],
+            'BPID': ["1"],
+            'ksg': Krux.segments,
+            'kuid': Krux.uid,
+
+        }];
+    </script>
+    <script>
+        window.dataLayer.push({
+            content: {
+                attributes: {
+                    deliveryPlatform: "bunsen"
+                }
+            }
+        });
+    </script>
+    <script>
+        window.dataLayer.push({
+            ga4MeasurementId: 'G-B3E4QL2TPR',
+            ga360TrackingId: 'UA-26408784-1',
+            twitterId: 'o47a7',
+            ga4ServerUrl: 'https://collect.springer.com'
+        });
+    </script>
+
+    <script type="text/javascript" src="/springerlink-static/1895273086/js/jquery-3.3.1.min.js"></script>
+
+    <script data-test="gtm-head">
+        window.initGTM = function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://collect.springer.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MRVXSHQ');
+        }
+    </script>
+
+
+    <script>
+        (function (w, d, t) {
+            function cc() {
+                var h = w.location.hostname;
+                var e = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+
+                if (h.indexOf('springer.com') > -1) {
+                    e.src = 'https://push-content.springernature.io/pcf_sb_5_1617714720898560639/production_live/consent-bundle-17-8.js';
+                    e.setAttribute('onload', "initGTM(window,document,'script','dataLayer','GTM-MRVXSHQ')");
+                } else {
+                    e.src = '/static/js/lib/cookie-consent.min.js';
+                    e.setAttribute('data-consent', h);
+                }
+                s.insertAdjacentElement('afterend', e);
+            }
+
+            cc();
+        })(window, document, 'script');
+    </script>
+
+</head>
+<body>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MRVXSHQ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<div class="skip-to">
+    <a class="skip-to__link pseudo-focus" href="#main-content">Skip to main content</a>
+</div>
+<div class="page-wrapper">
+    <noscript>
+        <div class="nojs-banner u-interface">
+            <p>This service is more advanced with JavaScript available</p>
+        </div>
+    </noscript>
+    <div id="leaderboard" class="leaderboard u-hide" data-google-ad="leaderboard" data-gpt-hide-ad>
+        <div class="leaderboard__wrapper">
+            <p class="leaderboard__label">Advertisement</p>
+            <button class="leaderboard__hide" title="Hide this advertisement" data-gpt-hide-ad-button data-track="click"
+                    data-track-action="Hide advertisement" data-track-label="">Hide
+            </button>
+            <div id="doubleclick-leaderboard-ad" class="leaderboard__ad u-pt-24" data-gpt></div>
+        </div>
+    </div>
+
+
+    <header id="header" class="header">
+        <div class="header__content">
+            <div class="header__menu-container">
+                <a id="logo" class="site-logo" href="/" title="Go to homepage">
+                    <picture>
+                        <source type="image/svg+xml"
+                                srcset="/springerlink-static/1895273086/images/svg/springerlink.svg">
+                        <img class="site-logo__springer"
+                             src="/springerlink-static/1895273086/images/png/springerlink.png" alt="SpringerLink"
+                             width="148" height="30" data-test="springer-logo">
+                    </picture>
+
+                </a>
+
+
+                <nav id="search-container" class="u-inline-block">
+                    <div class="search">
+                        <div class="search__content">
+                            <form class="u-form-single-input u-system" action="/search" method="get" role="search">
+                                <label for="search-springerlink">Search SpringerLink</label>
+                                <div class="u-relative">
+                                    <input id="search-springerlink" name="query" type="text" autocomplete="off"
+                                           value="">
+                                    <input class="u-hide-text" type="submit" value="Submit" title="Submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                                         class="u-vertical-align-absolute" focusable="false" aria-hidden="true"
+                                         role="presentation">
+                                        <path d="M12.82 11.972a.607.607 0 01.007.856.611.611 0 01-.856-.006L9.45 10.3A5.798 5.797 0 010 5.798 5.798 5.797 0 1110.3 9.45zm-7.022-1.205A4.97 4.97 0 105.797.83a4.97 4.97 0 000 9.939z"
+                                              fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+
+                <nav class="nav-container">
+                    <div class="global-nav__wrapper">
+                        <div class="search-button">
+                            <a class="search-button__label" href="#search-container">
+                                <span class="search-button__title">Search</span>
+                                <svg class="u-vertical-align-absolute" xmlns="http://www.w3.org/2000/svg" height="18"
+                                     width="18" viewBox="0 0 22 22" focusable="false" aria-hidden="true"
+                                     role="presentation">
+                                    <path d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"
+                                          fill-rule="evenodd" fill="#666"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div id="ecommerce-header-cart-icon-link" class="c-header__item ecommerce-cart"
+                             style="display: inline-block; margin-right: 10px;">
+                            <form action="https://order.springer.com/public/precheckout" method="post">
+                                <button class="c-header__link" type="submit" style="
+        appearance: none;
+        border: none;
+        background: none;
+        color: inherit;
+    ">
+                                    <svg aria-hidden="true" focusable="false" height="18" viewBox="0 0 18 18" width="18"
+                                         style="vertical-align: text-bottom;" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="m5 14c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm10 0c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm-10 1c-.55228475 0-1 .4477153-1 1s.44771525 1 1 1 1-.4477153 1-1-.44771525-1-1-1zm10 0c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1 1-.4477153 1-1-.4477153-1-1-1zm-12.82032249-15c.47691417 0 .88746157.33678127.98070211.80449199l.23823144 1.19501025 13.36277974.00045554c.5522847.00001882.9999659.44774934.9999659 1.00004222 0 .07084994-.0075361.14150708-.022474.2107727l-1.2908094 5.98534344c-.1007861.46742419-.5432548.80388386-1.0571651.80388386h-10.24805106c-.59173366 0-1.07142857.4477153-1.07142857 1 0 .5128358.41361449.9355072.94647737.9932723l.1249512.0067277h10.35933776c.2749512 0 .4979349.2228539.4979349.4978051 0 .2749417-.2227336.4978951-.4976753.4980063l-10.35959736.0041886c-1.18346732 0-2.14285714-.8954305-2.14285714-2 0-.6625717.34520317-1.24989198.87690425-1.61383592l-1.63768102-8.19004794c-.01312273-.06561364-.01950005-.131011-.0196107-.19547395l-1.71961253-.00064219c-.27614237 0-.5-.22385762-.5-.5 0-.27614237.22385763-.5.5-.5zm14.53193359 2.99950224h-13.11300004l1.20580469 6.02530174c.11024034-.0163252.22327998-.02480398.33844139-.02480398h10.27064786z"
+                                                fill="#333"/>
+                                    </svg>
+                                    <span class="u-screenreader-only visually-hidden">Go to cart</span></button>
+                            </form>
+                        </div>
+
+                        <ul class="global-nav" data-component="SV.Menu" data-title="Navigation menu" data-text="Menu">
+                            <li class="global-nav__logged-out">
+                                <a class="test-login-link"
+                                   href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-58523-5_13">
+                                    <span class="u-overflow-ellipsis">Log in</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main id="main-content" class="main-wrapper main-wrapper--no-gradient" tabindex="-1">
+        <div class="main-container uptodate-recommendations-off">
+            <aside class="main-sidebar-left">
+                <div class="main-sidebar-left__content">
+                    <div class="cover-image test-cover" itemscope>
+                        <a class="test-cover-link" href="/book/10.1007/978-3-030-58523-5">
+                            <span class="u-screenreader-only">Computer Vision – ECCV 2020</span>
+                            <img class="test-cover-image"
+                                 src="https://media.springernature.com/w306/springer-static/cover/book/978-3-030-58523-5.jpg"
+                                 itemprop="image" alt=""/>
+                        </a>
+
+
+                    </div>
+                </div>
+            </aside>
+            <div class="main-body" data-role="NavigationContainer">
+
+
+                <article class="main-body__content">
+                    <div xmlns="http://www.w3.org/1999/xhtml" class="FulltextWrapper">
+                        <div class="ArticleHeader main-context">
+                            <div id="enumeration" class="enumeration">
+                                <div>
+                                    <a data-test="ConfSeriesLink" href="/conference/eccv">
+                                        <span data-test="ConfSeriesName"> European Conference on Computer Vision</span>
+                                    </a>
+                                </div>
+                                <p class="test-LocationInConferenceProceeding icon--meta-keyline"><span
+                                        data-test="ConferenceAcronym">ECCV 2020</span>: <span class="BookTitle"><a
+                                        href="/book/10.1007/978-3-030-58523-5" data-track="click"
+                                        data-track-action="Book title"
+                                        data-track-label="">Computer Vision – ECCV 2020</a></span><span
+                                        class="page-numbers-info">
+                pp 208-224</span><span class="u-inline-block u-ml-4"> |
+                <a href="#citeas" data-track="click" data-track-action="Cite as link"
+                   data-track-label="Enumeration section">Cite as</a></span></p></div>
+                            <div class="MainTitleSection"><h1 class="ChapterTitle" lang="en">Self-supervised Learning of
+                                Audio-Visual Objects from Video</h1></div>
+                            <div class="authors u-clearfix" data-component="SpringerLink.Authors">
+                                <ul class="u-interface u-inline-list authors__title" data-role="AuthorsNavigation">
+                                    <li><span>Authors</span></li>
+                                    <li><a href="#authorsandaffiliations" data-track="click"
+                                           data-track-action="Authors and affiliations tab" data-track-label="">Authors
+                                        and affiliations</a></li>
+                                </ul>
+                                <div class="authors__list" data-role="AuthorsList">
+                                    <ul class="test-contributor-names">
+                                        <li itemscope="" itemtype="http://schema.org/Person"
+                                            class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name"
+                                                                                                 class="authors__name">Triantafyllos Afouras</span><span
+                                                class="author-information"><span class="authors__contact"><a
+                                                href="mailto:afourast@robots.ox.ac.uk" title="afourast@robots.ox.ac.uk"
+                                                itemprop="email" data-track="click" data-track-action="Email author"
+                                                data-track-label=""><img src="/springerlink-static/images/svg/email.svg"
+                                                                         height="24" width="24" alt="Email author"/></a></span></span>
+                                        </li>
+                                        <li itemscope="" itemtype="http://schema.org/Person"
+                                            class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name"
+                                                                                                 class="authors__name">Andrew Owens</span>
+                                        </li>
+                                        <li itemscope="" itemtype="http://schema.org/Person"
+                                            class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name"
+                                                                                                 class="authors__name">Joon Son Chung</span>
+                                        </li>
+                                        <li itemscope="" itemtype="http://schema.org/Person"
+                                            class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name"
+                                                                                                 class="authors__name">Andrew Zisserman</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="main-context__container" data-component="SpringerLink.ArticleMetrics">
+                                <div class="main-context__column"><span><span class="test-render-category">Conference paper</span></span>
+                                    <div class="article-dates"><span
+                                            class="article-dates__label">First Online: </span><span
+                                            class="article-dates__first-online"><time datetime="2020-12-04">04 December 2020</time></span>
+                                    </div>
+                                </div>
+                                <div class="main-context__column">
+                                    <ul id="book-metrics" class="article-metrics u-sansSerif">
+                                        <li class="article-metrics__item">
+                                            <a class="article-metrics__link gtm-chaptercitations-count"
+                                               href="https://citations.springer.com/item?doi&#x3D;10.1007/978-3-030-58523-5_13"
+                                               target="_blank" rel="noopener"
+                                               title="Visit Springer Citations for full citation details"
+                                               id="chaptercitations-link">
+                                                <span id="chaptercitations-count-number"
+                                                      class="test-metric-count c-button-circle gtm-chaptercitations-count">3</span>
+                                                <span class="test-metric-name article-metrics__label gtm-chaptercitations-count">Citations</span>
+                                            </a>
+                                        </li>
+                                        <li class="article-metrics__item">
+                                            <span class="test-metric-count article-metrics__views">1.1k</span>
+                                            <span class="test-metric-name article-metrics__label">Downloads</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span id="test-SeriesTitle" class="vol-info">
+                Part of the
+                <a class="gtm-book-series-link" href="/bookseries/558">Lecture Notes in Computer Science</a>
+                book series (LNCS, volume 12363)</span></div>
+                        <section class="Abstract" id="Abs1" tabindex="-1" lang="en"><h2 class="Heading">Abstract</h2>
+                            <p id="Par1" class="Para">Our objective is to transform a video into a set of discrete
+                                audio-visual objects using self-supervised learning. To this end, we introduce a model
+                                that uses attention to localize and group sound sources, and optical flow to aggregate
+                                information over time. We demonstrate the effectiveness of the audio-visual object
+                                embeddings that our model learns by using them for four downstream speech-oriented
+                                tasks: (a) multi-speaker sound source separation, (b) localizing and tracking speakers,
+                                (c) correcting misaligned audio-visual data, and (d) active speaker detection. Using our
+                                representation, these tasks can be solved entirely by training on unlabeled video,
+                                without the aid of object detectors. We also demonstrate the generality of our method by
+                                applying it to non-human speakers, including cartoons and puppets. Our model
+                                significantly outperforms other self-supervised approaches, and obtains performance
+                                competitive with methods that use supervised face detection.</p></section>
+                        <div class="HeaderArticleNotes">
+                            <aside class="ArticleNote ArticleNoteESMHint"><h2 class="Heading">Electronic supplementary
+                                material</h2>
+                                <p class="SimplePara">The online version of this chapter (<span class="ExternalRef"> <a
+                                        target="_blank" rel="noopener"
+                                        href="https://doi.org/10.1007/978-3-030-58523-5_13"><span class="RefSource">https://doi.org/10.1007/978-3-030-58523-5_13</span></a></span>)
+                                    contains supplementary material, which is available to authorized users.</p></aside>
+                        </div>
+                        <div class="note test-pdf-link" id="cobranding-and-download-availability-text">
+                            <div id="chapter_no_access_banner">This is a preview of subscription content, <a
+                                    id="test-login-banner-link"
+                                    href="/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-58523-5_13"
+                                    data-track="click" data-track-action="Preview banner - Log in" data-track-label="">log
+                                in</a> to check access.
+                            </div>
+                        </div>
+                        <div class="article-actions--inline" id="article-actions--inline"
+                             data-component="article-actions--inline"></div>
+                        <section id="Notes" class="Section1 RenderAsSection1"><h2 class="Heading">Notes</h2>
+                            <div class="content">
+                                <section><h3 class="Heading">Acknowledgements</h3>
+                                    <p class="SimplePara"> We thank V. Kalogeiton for generous help with the annotations
+                                        and the <em class="EmphasisTypeItalic ">Friends</em> videos, A. A. Efros for
+                                        helpful discussions, L. Momeni, T. Han and Q. Pleple for proofreading, A. Dutta
+                                        for help with VIA, and A. Thandavan for infrastructure support. This work is
+                                        funded by the UK EPSRC CDT in AIMS, DARPA Medifor, and a Google-DeepMind
+                                        Graduate Scholarship.</p></section>
+                            </div>
+                        </section>
+                        <section id="SupplementaryMaterial" class="Section1"><h2 class="Heading">Supplementary
+                            material</h2>
+                            <div class="content">
+                                <div class="esm-item " id="MOESM1"><a class="filename"
+                                                                      href="https://static-content.springer.com/esm/chp%3A10.1007%2F978-3-030-58523-5_13/MediaObjects/504473_1_En_13_MOESM1_ESM.zip"
+                                                                      title="Download this supplementary material"
+                                                                      data-track="click" data-track-action="ESM link"
+                                                                      data-track-label="504473_1_En_13_MOESM1_ESM.zip">504473_1_En_13_MOESM1_ESM.zip</a><span
+                                        class="filesize"> (38 mb)</span>
+                                    <div class="caption-container"><span class="SimplePara">Supplementary material 1 (zip 38895 KB)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="Section1 RenderAsSection1" id="Bib1" tabindex="-1"><h2 class="Heading">
+                            References</h2>
+                            <div class="content">
+                                <ol class="BibliographyWrapper">
+                                    <li class="Citation">
+                                        <div class="CitationNumber">1.</div>
+                                        <div class="CitationContent" id="CR1">Afouras, T., Chung, J.S., Senior, A.,
+                                            Vinyals, O., Zisserman, A.: Deep audio-visual speech recognition. IEEE PAMI
+                                            (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Afouras%2C%20T.%2C%20Chung%2C%20J.S.%2C%20Senior%2C%20A.%2C%20Vinyals%2C%20O.%2C%20Zisserman%2C%20A.%3A%20Deep%20audio-visual%20speech%20recognition.%20IEEE%20PAMI%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">2.</div>
+                                        <div class="CitationContent" id="CR2">Afouras, T., Chung, J.S., Zisserman, A.:
+                                            The conversation: deep audio-visual speech enhancement. In: INTERSPEECH
+                                            (2018)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Afouras%2C%20T.%2C%20Chung%2C%20J.S.%2C%20Zisserman%2C%20A.%3A%20The%20conversation%3A%20deep%20audio-visual%20speech%20enhancement.%20In%3A%20INTERSPEECH%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">3.</div>
+                                        <div class="CitationContent" id="CR3">Afouras, T., Chung, J.S., Zisserman, A.:
+                                            LRS3-TED: a large-scale dataset for visual speech recognition. In: arXiv
+                                            preprint <span class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                                  href="http://arxiv.org/abs/1809.00496"><span
+                                                    class="RefSource">arXiv:1809.00496</span></a></span> (2018)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">4.</div>
+                                        <div class="CitationContent" id="CR4">Afouras, T., Chung, J.S., Zisserman, A.:
+                                            My lips are concealed: audio-visual speech enhancement through obstructions.
+                                            In: INTERSPEECH (2019)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Afouras%2C%20T.%2C%20Chung%2C%20J.S.%2C%20Zisserman%2C%20A.%3A%20My%20lips%20are%20concealed%3A%20audio-visual%20speech%20enhancement%20through%20obstructions.%20In%3A%20INTERSPEECH%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">5.</div>
+                                        <div class="CitationContent" id="CR5">Arandjelović, R., Zisserman, A.: Look,
+                                            listen and learn. In: Proceedings of ICCV (2017)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Arandjelovi%C4%87%2C%20R.%2C%20Zisserman%2C%20A.%3A%20Look%2C%20listen%20and%20learn.%20In%3A%20Proceedings%20of%20ICCV%20%282017%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">6.</div>
+                                        <div class="CitationContent" id="CR6">Arandjelović, R., Zisserman, A.: Objects
+                                            that sound. In: Ferrari, V., Hebert, M., Sminchisescu, C., Weiss, Y. (eds.)
+                                            ECCV 2018. LNCS, vol. 11205, pp. 451–466. Springer, Cham (2018). <span
+                                                    class="ExternalRef"> <a target="_blank" rel="noopener"
+                                                                            href="https://doi.org/10.1007/978-3-030-01246-5_27"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-030-01246-5_27</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01246-5_27"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Objects%20that%20sound&amp;author=R.%20Arandjelovi%C4%87&amp;author=A.%20Zisserman&amp;pages=451-466&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">7.</div>
+                                        <div class="CitationContent" id="CR7">Barzelay, Z., Schechner, Y.Y.: Harmony in
+                                            motion. In: 2007 IEEE Conference on Computer Vision and Pattern Recognition
+                                            (2007)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Barzelay%2C%20Z.%2C%20Schechner%2C%20Y.Y.%3A%20Harmony%20in%20motion.%20In%3A%202007%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition%20%282007%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">8.</div>
+                                        <div class="CitationContent" id="CR8">Chakravarty, P., Tuytelaars, T.:
+                                            Cross-modal supervision for learning active speaker detection in video. In:
+                                            Leibe, B., Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016. LNCS, vol.
+                                            9909, pp. 285–301. Springer, Cham (2016). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46454-1_18"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-46454-1_18</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46454-1_18"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Cross-modal%20supervision%20for%20learning%20active%20speaker%20detection%20in%20video&amp;author=P.%20Chakravarty&amp;author=T.%20Tuytelaars&amp;pages=285-301&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">9.</div>
+                                        <div class="CitationContent" id="CR9">Chatfield, K., Simonyan, K., Vedaldi, A.,
+                                            Zisserman, A.: Return of the devil in the details: Delving deep into
+                                            convolutional nets. arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1405.3531"><span class="RefSource">arXiv:1405.3531</span></a></span>
+                                            (2014)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">10.</div>
+                                        <div class="CitationContent" id="CR10">Chen, T., Kornblith, S., Norouzi, M.,
+                                            Hinton, G.: A simple framework for contrastive learning of visual
+                                            representations. ICML (2020)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Chen%2C%20T.%2C%20Kornblith%2C%20S.%2C%20Norouzi%2C%20M.%2C%20Hinton%2C%20G.%3A%20A%20simple%20framework%20for%20contrastive%20learning%20of%20visual%20representations.%20ICML%20%282020%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">11.</div>
+                                        <div class="CitationContent" id="CR11">Chung, J.S., Lee, B.J., Han, I.: Who said
+                                            that?: Audio-visual speaker diarisation of real-world meetings. In:
+                                            Interspeech (2019)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Chung%2C%20J.S.%2C%20Lee%2C%20B.J.%2C%20Han%2C%20I.%3A%20Who%20said%20that%3F%3A%20Audio-visual%20speaker%20diarisation%20of%20real-world%20meetings.%20In%3A%20Interspeech%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">12.</div>
+                                        <div class="CitationContent" id="CR12">Chung, J.S., Nagrani, A., Zisserman, A.:
+                                            VoxCeleb2: deep speaker recognition. In: INTERSPEECH (2018)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Chung%2C%20J.S.%2C%20Nagrani%2C%20A.%2C%20Zisserman%2C%20A.%3A%20VoxCeleb2%3A%20deep%20speaker%20recognition.%20In%3A%20INTERSPEECH%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">13.</div>
+                                        <div class="CitationContent" id="CR13">Chung, J.S., Zisserman, A.: Out of time:
+                                            automated lip sync in the wild. In: Chen, C.-S., Lu, J., Ma, K.-K. (eds.)
+                                            ACCV 2016. LNCS, vol. 10117, pp. 251–263. Springer, Cham (2017). <span
+                                                    class="ExternalRef"> <a target="_blank" rel="noopener"
+                                                                            href="https://doi.org/10.1007/978-3-319-54427-4_19"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-54427-4_19</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-54427-4_19"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Out%20of%20time%3A%20automated%20lip%20sync%20in%20the%20wild&amp;author=JS.%20Chung&amp;author=A.%20Zisserman&amp;pages=251-263&amp;publication_year=2017"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">14.</div>
+                                        <div class="CitationContent" id="CR14">Chung, J.S., Zisserman, A.: Signs in
+                                            time: encoding human motion as a temporal image. In: Workshop on Brave New
+                                            Ideas for Motion Representations, ECCV (2016)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Chung%2C%20J.S.%2C%20Zisserman%2C%20A.%3A%20Signs%20in%20time%3A%20encoding%20human%20motion%20as%20a%20temporal%20image.%20In%3A%20Workshop%20on%20Brave%20New%20Ideas%20for%20Motion%20Representations%2C%20ECCV%20%282016%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">15.</div>
+                                        <div class="CitationContent" id="CR15">Chung, S.W., Chung, J.S., Kang, H.G.:
+                                            Perfect match: improved cross-modal embeddings for audio-visual
+                                            synchronisation. In: Proceedings of ICASSP, pp. 3965–3969. IEEE (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Chung%2C%20S.W.%2C%20Chung%2C%20J.S.%2C%20Kang%2C%20H.G.%3A%20Perfect%20match%3A%20improved%20cross-modal%20embeddings%20for%20audio-visual%20synchronisation.%20In%3A%20Proceedings%20of%20ICASSP%2C%20pp.%203965%E2%80%933969.%20IEEE%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">16.</div>
+                                        <div class="CitationContent" id="CR16">Cutler, R., Davis, L.: Look who’s
+                                            talking: speaker detection using video and audio correlation. In: 2000 IEEE
+                                            International Conference on Multimedia and Expo. ICME 2000. Proceedings.
+                                            Latest Advances in the Fast Changing World of Multimedia (Cat. No.
+                                            00TH8532), vol. 3, pp. 1589–1592. IEEE (2000)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Cutler%2C%20R.%2C%20Davis%2C%20L.%3A%20Look%20who%E2%80%99s%20talking%3A%20speaker%20detection%20using%20video%20and%20audio%20correlation.%20In%3A%202000%20IEEE%20International%20Conference%20on%20Multimedia%20and%20Expo.%20ICME%202000.%20Proceedings.%20Latest%20Advances%20in%20the%20Fast%20Changing%20World%20of%20Multimedia%20%28Cat.%20No.%2000TH8532%29%2C%20vol.%203%2C%20pp.%201589%E2%80%931592.%20IEEE%20%282000%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">17.</div>
+                                        <div class="CitationContent" id="CR17">Deng, J., Guo, J., Yuxiang, Z., Yu, J.,
+                                            Kotsia, I., Zafeiriou, S.: Retinaface: Single-stage dense face localisation
+                                            in the wild. In: arxiv (2019)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Deng%2C%20J.%2C%20Guo%2C%20J.%2C%20Yuxiang%2C%20Z.%2C%20Yu%2C%20J.%2C%20Kotsia%2C%20I.%2C%20Zafeiriou%2C%20S.%3A%20Retinaface%3A%20Single-stage%20dense%20face%20localisation%20in%20the%20wild.%20In%3A%20arxiv%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">18.</div>
+                                        <div class="CitationContent" id="CR18">Doersch, C., Gupta, A., Efros, A.A.:
+                                            Unsupervised visual representation learning by context prediction. In:
+                                            Proceedings of ICCV, pp. 1422–1430 (2015)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Doersch%2C%20C.%2C%20Gupta%2C%20A.%2C%20Efros%2C%20A.A.%3A%20Unsupervised%20visual%20representation%20learning%20by%20context%20prediction.%20In%3A%20Proceedings%20of%20ICCV%2C%20pp.%201422%E2%80%931430%20%282015%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">19.</div>
+                                        <div class="CitationContent" id="CR19">Dutta, A., Zisserman, A.: The VIA
+                                            annotation software for images, audio and video. In: Proceedings of the 27th
+                                            ACM International Conference on Multimedia. MM 2019. ACM, New York
+                                            (2019)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Dutta%2C%20A.%2C%20Zisserman%2C%20A.%3A%20The%20VIA%20annotation%20software%20for%20images%2C%20audio%20and%20video.%20In%3A%20Proceedings%20of%20the%2027th%20ACM%20International%20Conference%20on%20Multimedia.%20MM%202019.%20ACM%2C%20New%20York%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">20.</div>
+                                        <div class="CitationContent" id="CR20">Ephrat, A., et al.: Looking to listen at
+                                            the cocktail party: a speaker-independent audio-visual model for speech
+                                            separation. ACM Trans. Graph. (TOG) <strong
+                                                    class="EmphasisTypeBold ">37</strong>(4), 112 (2018)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener" href="https://doi.org/10.1145/3197517.3201357"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Looking%20to%20listen%20at%20the%20cocktail%20party%3A%20a%20speaker-independent%20audio-visual%20model%20for%20speech%20separation&amp;author=A.%20Ephrat&amp;journal=ACM%20Trans.%20Graph.%20%28TOG%29&amp;volume=37&amp;issue=4&amp;pages=112&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">21.</div>
+                                        <div class="CitationContent" id="CR21">Févotte, C., Gribonval, R., Vincent, E.:
+                                            BSS EVAL toolbox user guide. IRISA Technical Report 1706 (2005). <span
+                                                    class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                           href="http://www.irisa.fr/metiss/bsseval/"><span
+                                                    class="RefSource">http://www.irisa.fr/metiss/bsseval/</span></a></span><span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">22.</div>
+                                        <div class="CitationContent" id="CR22">Fisher III, J.W., Darrell, T., Freeman,
+                                            W.T., Viola, P.A.: Learning joint statistical models for audio-visual fusion
+                                            and segregation. In: NeurIPS (2000)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Fisher%20III%2C%20J.W.%2C%20Darrell%2C%20T.%2C%20Freeman%2C%20W.T.%2C%20Viola%2C%20P.A.%3A%20Learning%20joint%20statistical%20models%20for%20audio-visual%20fusion%20and%20segregation.%20In%3A%20NeurIPS%20%282000%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">23.</div>
+                                        <div class="CitationContent" id="CR23">Gabbay, A., Ephrat, A., Halperin, T.,
+                                            Peleg, S.: Seeing through noise: visually driven speaker separation and
+                                            enhancement. In: Proceedings of ICASSP, pp. 3051–3055. IEEE (2018)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Gabbay%2C%20A.%2C%20Ephrat%2C%20A.%2C%20Halperin%2C%20T.%2C%20Peleg%2C%20S.%3A%20Seeing%20through%20noise%3A%20visually%20driven%20speaker%20separation%20and%20enhancement.%20In%3A%20Proceedings%20of%20ICASSP%2C%20pp.%203051%E2%80%933055.%20IEEE%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">24.</div>
+                                        <div class="CitationContent" id="CR24">Gadde, R., Jampani, V., Gehler, P.V.:
+                                            Semantic video CNNs through representation warping. In: Proceedings of ICCV,
+                                            pp. 4463–4472 (2017)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Gadde%2C%20R.%2C%20Jampani%2C%20V.%2C%20Gehler%2C%20P.V.%3A%20Semantic%20video%20CNNs%20through%20representation%20warping.%20In%3A%20Proceedings%20of%20ICCV%2C%20pp.%204463%E2%80%934472%20%282017%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">25.</div>
+                                        <div class="CitationContent" id="CR25">Gan, C., Zhao, H., Chen, P., Cox, D.,
+                                            Torralba, A.: Self-supervised moving vehicle tracking with stereo sound. In:
+                                            Proceedings of the IEEE International Conference on Computer Vision, pp.
+                                            7053–7062 (2019)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Gan%2C%20C.%2C%20Zhao%2C%20H.%2C%20Chen%2C%20P.%2C%20Cox%2C%20D.%2C%20Torralba%2C%20A.%3A%20Self-supervised%20moving%20vehicle%20tracking%20with%20stereo%20sound.%20In%3A%20Proceedings%20of%20the%20IEEE%20International%20Conference%20on%20Computer%20Vision%2C%20pp.%207053%E2%80%937062%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">26.</div>
+                                        <div class="CitationContent" id="CR26">Gao, R., Feris, R., Grauman, K.: Learning
+                                            to separate object sounds by watching unlabeled video. In: Ferrari, V.,
+                                            Hebert, M., Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol. 11207,
+                                            pp. 36–54. Springer, Cham (2018). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01219-9_3"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-030-01219-9_3</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01219-9_3"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Learning%20to%20separate%20object%20sounds%20by%20watching%20unlabeled%20video&amp;author=R.%20Gao&amp;author=R.%20Feris&amp;author=K.%20Grauman&amp;pages=36-54&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">27.</div>
+                                        <div class="CitationContent" id="CR27">Gao, R., Grauman, K.: 2.5D visual sound.
+                                            In: CVPR (2019)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Gao%2C%20R.%2C%20Grauman%2C%20K.%3A%202.5D%20visual%20sound.%20In%3A%20CVPR%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">28.</div>
+                                        <div class="CitationContent" id="CR28">Gao, R., Grauman, K.: Co-separating
+                                            sounds of visual objects. arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1904.07750"><span class="RefSource">arXiv:1904.07750</span></a></span>
+                                            (2019)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">29.</div>
+                                        <div class="CitationContent" id="CR29">Han, T., Xie, W., Zisserman, A.: Video
+                                            representation learning by dense predictive coding. In: Workshop on Large
+                                            Scale Holistic Video Understanding, ICCV (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Han%2C%20T.%2C%20Xie%2C%20W.%2C%20Zisserman%2C%20A.%3A%20Video%20representation%20learning%20by%20dense%20predictive%20coding.%20In%3A%20Workshop%20on%20Large%20Scale%20Holistic%20Video%20Understanding%2C%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">30.</div>
+                                        <div class="CitationContent" id="CR30">Han, T., Xie, W., Zisserman, A.:
+                                            Memory-augmented dense predictive coding for video representation learning.
+                                            In: ECCV (2020)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Han%2C%20T.%2C%20Xie%2C%20W.%2C%20Zisserman%2C%20A.%3A%20Memory-augmented%20dense%20predictive%20coding%20for%20video%20representation%20learning.%20In%3A%20ECCV%20%282020%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">31.</div>
+                                        <div class="CitationContent" id="CR31">Harwath, D., Recasens, A., Surís, D.,
+                                            Chuang, G., Torralba, A., Glass, J.: Jointly discovering visual objects and
+                                            spoken words from raw sensory input. In: Ferrari, V., Hebert, M.,
+                                            Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol. 11210, pp. 659–677.
+                                            Springer, Cham (2018). <span class="ExternalRef"> <a target="_blank"
+                                                                                                 rel="noopener"
+                                                                                                 href="https://doi.org/10.1007/978-3-030-01231-1_40"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-030-01231-1_40</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01231-1_40"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Jointly%20discovering%20visual%20objects%20and%20spoken%20words%20from%20raw%20sensory%20input&amp;author=D.%20Harwath&amp;author=A.%20Recasens&amp;author=D.%20Sur%C3%ADs&amp;author=G.%20Chuang&amp;author=A.%20Torralba&amp;author=J.%20Glass&amp;pages=659-677&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">32.</div>
+                                        <div class="CitationContent" id="CR32">He, K., Fan, H., Wu, Y., Xie, S.,
+                                            Girshick, R.: Momentum contrast for unsupervised visual representation
+                                            learning. In: CVPR (2020)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=He%2C%20K.%2C%20Fan%2C%20H.%2C%20Wu%2C%20Y.%2C%20Xie%2C%20S.%2C%20Girshick%2C%20R.%3A%20Momentum%20contrast%20for%20unsupervised%20visual%20representation%20learning.%20In%3A%20CVPR%20%282020%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">33.</div>
+                                        <div class="CitationContent" id="CR33">Hénaff, O.J., et al.: Data-efficient
+                                            image recognition with contrastive predictive coding. In: ICML (2020)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=H%C3%A9naff%2C%20O.J.%2C%20et%20al.%3A%20Data-efficient%20image%20recognition%20with%20contrastive%20predictive%20coding.%20In%3A%20ICML%20%282020%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">34.</div>
+                                        <div class="CitationContent" id="CR34">Hershey, J., Movellan, J.: Audio-vision:
+                                            locating sounds via audio-visual synchrony. In: NeurIPS, vol. 12 (1999)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Hershey%2C%20J.%2C%20Movellan%2C%20J.%3A%20Audio-vision%3A%20locating%20sounds%20via%20audio-visual%20synchrony.%20In%3A%20NeurIPS%2C%20vol.%2012%20%281999%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">35.</div>
+                                        <div class="CitationContent" id="CR35">Hu, D., Nie, F., Li, X.: Deep multimodal
+                                            clustering for unsupervised audiovisual learning. In: Proceedings of the
+                                            IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), June
+                                            2019<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Hu%2C%20D.%2C%20Nie%2C%20F.%2C%20Li%2C%20X.%3A%20Deep%20multimodal%20clustering%20for%20unsupervised%20audiovisual%20learning.%20In%3A%20Proceedings%20of%20the%20IEEE%2FCVF%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition%20%28CVPR%29%2C%20June%202019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">36.</div>
+                                        <div class="CitationContent" id="CR36">Hu, D., Wang, Z., Xiong, H., Wang, D.,
+                                            Nie, F., Dou, D.: Curriculum audiovisual learning. arXiv preprint <span
+                                                    class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                           href="http://arxiv.org/abs/2001.09414"><span
+                                                    class="RefSource">arXiv:2001.09414</span></a></span> (2020)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">37.</div>
+                                        <div class="CitationContent" id="CR37">Izadinia, H., Saleemi, I., Shah, M.:
+                                            Multimodal analysis for identification and segmentation of moving-sounding
+                                            objects. IEEE Trans. Multimedia <strong
+                                                    class="EmphasisTypeBold ">15</strong>(2), 378–390 (2012)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1109/TMM.2012.2228476"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Multimodal%20analysis%20for%20identification%20and%20segmentation%20of%20moving-sounding%20objects&amp;author=H.%20Izadinia&amp;author=I.%20Saleemi&amp;author=M.%20Shah&amp;journal=IEEE%20Trans.%20Multimedia&amp;volume=15&amp;issue=2&amp;pages=378-390&amp;publication_year=2012"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">38.</div>
+                                        <div class="CitationContent" id="CR38">Khosravan, N., Ardeshir, S., Puri, R.: On
+                                            attention modules for audio-visual synchronization. arXiv preprint <span
+                                                    class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                           href="http://arxiv.org/abs/1812.06071"><span
+                                                    class="RefSource">arXiv:1812.06071</span></a></span> (2018)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">39.</div>
+                                        <div class="CitationContent" id="CR39">Kidron, E., Schechner, Y.Y., Elad, M.:
+                                            Pixels that sound. In: Proceedings of CVPR (2005)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Kidron%2C%20E.%2C%20Schechner%2C%20Y.Y.%2C%20Elad%2C%20M.%3A%20Pixels%20that%20sound.%20In%3A%20Proceedings%20of%20CVPR%20%282005%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">40.</div>
+                                        <div class="CitationContent" id="CR40">Korbar, B., Tran, D., Torresani, L.:
+                                            Co-training of audio and video representations from self-supervised temporal
+                                            synchronization. CoRR (2018)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Korbar%2C%20B.%2C%20Tran%2C%20D.%2C%20Torresani%2C%20L.%3A%20Co-training%20of%20audio%20and%20video%20representations%20from%20self-supervised%20temporal%20synchronization.%20CoRR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">41.</div>
+                                        <div class="CitationContent" id="CR41">Misra, I., van der Maaten, L.:
+                                            Self-supervised learning of pretext-invariant representations. In: CVPR
+                                            (2020)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Misra%2C%20I.%2C%20van%20der%20Maaten%2C%20L.%3A%20Self-supervised%20learning%20of%20pretext-invariant%20representations.%20In%3A%20CVPR%20%282020%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">42.</div>
+                                        <div class="CitationContent" id="CR42">Nagrani, A., Chung, J.S., Albanie, S.,
+                                            Zisserman, A.: Disentangled speech embeddings using cross-modal
+                                            self-supervision. In: Proceedings of ICASSP, pp. 6829–6833. IEEE (2020)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Nagrani%2C%20A.%2C%20Chung%2C%20J.S.%2C%20Albanie%2C%20S.%2C%20Zisserman%2C%20A.%3A%20Disentangled%20speech%20embeddings%20using%20cross-modal%20self-supervision.%20In%3A%20Proceedings%20of%20ICASSP%2C%20pp.%206829%E2%80%936833.%20IEEE%20%282020%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">43.</div>
+                                        <div class="CitationContent" id="CR43">Oord, A.v.d., Li, Y., Vinyals, O.:
+                                            Representation learning with contrastive predictive coding. arXiv preprint
+                                            <span class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                         href="http://arxiv.org/abs/1807.03748"><span
+                                                    class="RefSource">arXiv:1807.03748</span></a></span> (2018)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">44.</div>
+                                        <div class="CitationContent" id="CR44">Owens, A., Efros, A.A.: Audio-visual
+                                            scene analysis with self-supervised multisensory features. In: Ferrari, V.,
+                                            Hebert, M., Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol. 11210,
+                                            pp. 639–658. Springer, Cham (2018). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01231-1_39"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-030-01231-1_39</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01231-1_39"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Audio-visual%20scene%20analysis%20with%20self-supervised%20multisensory%20features&amp;author=A.%20Owens&amp;author=AA.%20Efros&amp;pages=639-658&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">45.</div>
+                                        <div class="CitationContent" id="CR45">Owens, A., Isola, P., McDermott, J.,
+                                            Torralba, A., Adelson, E.H., Freeman, W.T.: Visually indicated sounds. In:
+                                            Computer Vision and Pattern Recognition (CVPR) (2016)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Owens%2C%20A.%2C%20Isola%2C%20P.%2C%20McDermott%2C%20J.%2C%20Torralba%2C%20A.%2C%20Adelson%2C%20E.H.%2C%20Freeman%2C%20W.T.%3A%20Visually%20indicated%20sounds.%20In%3A%20Computer%20Vision%20and%20Pattern%20Recognition%20%28CVPR%29%20%282016%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">46.</div>
+                                        <div class="CitationContent" id="CR46">Owens, A., Wu, J., McDermott, J.H.,
+                                            Freeman, W.T., Torralba, A.: Learning sight from sound: ambient sound
+                                            provides supervision for visual learning. Int. J. Comput. Vis. (2018)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Owens%2C%20A.%2C%20Wu%2C%20J.%2C%20McDermott%2C%20J.H.%2C%20Freeman%2C%20W.T.%2C%20Torralba%2C%20A.%3A%20Learning%20sight%20from%20sound%3A%20ambient%20sound%20provides%20supervision%20for%20visual%20learning.%20Int.%20J.%20Comput.%20Vis.%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">47.</div>
+                                        <div class="CitationContent" id="CR47">Pfister, T., Charles, J., Zisserman, A.:
+                                            Flowing convnets for human pose estimation in videos. In: Proceedings of
+                                            ICCV (2015)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Pfister%2C%20T.%2C%20Charles%2C%20J.%2C%20Zisserman%2C%20A.%3A%20Flowing%20convnets%20for%20human%20pose%20estimation%20in%20videos.%20In%3A%20Proceedings%20of%20ICCV%20%282015%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">48.</div>
+                                        <div class="CitationContent" id="CR48">Ramaswamy, J., Das, S.: See the sound,
+                                            hear the pixels. In: Proceedings of the IEEE/CVF Winter Conference on
+                                            Applications of Computer Vision (WACV), March 2020<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Ramaswamy%2C%20J.%2C%20Das%2C%20S.%3A%20See%20the%20sound%2C%20hear%20the%20pixels.%20In%3A%20Proceedings%20of%20the%20IEEE%2FCVF%20Winter%20Conference%20on%20Applications%20of%20Computer%20Vision%20%28WACV%29%2C%20March%202020"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">49.</div>
+                                        <div class="CitationContent" id="CR49">Rix, A.W., Beerends, J.G., Hollier, M.P.,
+                                            Hekstra, A.P.: Perceptual evaluation of speech quality (PESQ)-a new method
+                                            for speech quality assessment of telephone networks and codecs. In:
+                                            Proceedings of ICASSP, vol. 2, pp. 749–752. IEEE (2001)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Rix%2C%20A.W.%2C%20Beerends%2C%20J.G.%2C%20Hollier%2C%20M.P.%2C%20Hekstra%2C%20A.P.%3A%20Perceptual%20evaluation%20of%20speech%20quality%20%28PESQ%29-a%20new%20method%20for%20speech%20quality%20assessment%20of%20telephone%20networks%20and%20codecs.%20In%3A%20Proceedings%20of%20ICASSP%2C%20vol.%202%2C%20pp.%20749%E2%80%93752.%20IEEE%20%282001%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">50.</div>
+                                        <div class="CitationContent" id="CR50">Roth, J., et al.: AVA-ActiveSpeaker: An
+                                            audio-visual dataset for active speaker detection. arXiv preprint <span
+                                                    class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                           href="http://arxiv.org/abs/1901.01342"><span
+                                                    class="RefSource">arXiv:1901.01342</span></a></span> (2019)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">51.</div>
+                                        <div class="CitationContent" id="CR51">Rouditchenko, A., Zhao, H., Gan, C.,
+                                            McDermott, J., Torralba, A.: Self-supervised audio-visual co-segmentation.
+                                            In: Proceedings of ICASSP, pp. 2357–2361. IEEE (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Rouditchenko%2C%20A.%2C%20Zhao%2C%20H.%2C%20Gan%2C%20C.%2C%20McDermott%2C%20J.%2C%20Torralba%2C%20A.%3A%20Self-supervised%20audio-visual%20co-segmentation.%20In%3A%20Proceedings%20of%20ICASSP%2C%20pp.%202357%E2%80%932361.%20IEEE%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">52.</div>
+                                        <div class="CitationContent" id="CR52">Senocak, A., Oh, T.H., Kim, J., Yang,
+                                            M.H., Kweon, I.S.: Learning to localize sound source in visual scenes. In:
+                                            Proceedings of CVPR (2018)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Senocak%2C%20A.%2C%20Oh%2C%20T.H.%2C%20Kim%2C%20J.%2C%20Yang%2C%20M.H.%2C%20Kweon%2C%20I.S.%3A%20Learning%20to%20localize%20sound%20source%20in%20visual%20scenes.%20In%3A%20Proceedings%20of%20CVPR%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">53.</div>
+                                        <div class="CitationContent" id="CR53">Shahid, M., Beyan, C., Murino, V.: Voice
+                                            activity detection by upper body motion analysis and unsupervised domain
+                                            adaptation. In: The IEEE International Conference on Computer Vision (ICCV)
+                                            Workshops, October 2019<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Shahid%2C%20M.%2C%20Beyan%2C%20C.%2C%20Murino%2C%20V.%3A%20Voice%20activity%20detection%20by%20upper%20body%20motion%20analysis%20and%20unsupervised%20domain%20adaptation.%20In%3A%20The%20IEEE%20International%20Conference%20on%20Computer%20Vision%20%28ICCV%29%20Workshops%2C%20October%202019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">54.</div>
+                                        <div class="CitationContent" id="CR54">Tian, Y., Shi, J., Li, B., Duan, Z., Xu,
+                                            C.: Audio-visual event localization in unconstrained videos. In: Ferrari,
+                                            V., Hebert, M., Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol.
+                                            11206, pp. 252–268. Springer, Cham (2018). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01216-8_16"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-030-01216-8_16</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01216-8_16"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Audio-visual%20event%20localization%20in%20unconstrained%20videos&amp;author=Y.%20Tian&amp;author=J.%20Shi&amp;author=B.%20Li&amp;author=Z.%20Duan&amp;author=C.%20Xu&amp;pages=252-268&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">55.</div>
+                                        <div class="CitationContent" id="CR55">Tian, Y., Krishnan, D., Isola, P.:
+                                            Contrastive multiview coding. arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1906.05849"><span class="RefSource">arXiv:1906.05849</span></a></span>
+                                            (2019)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">56.</div>
+                                        <div class="CitationContent" id="CR56">Wang, X., Gupta, A.: Unsupervised
+                                            learning of visual representations using videos. In: Proceedings of ICCV,
+                                            pp. 2794–2802 (2015)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Wang%2C%20X.%2C%20Gupta%2C%20A.%3A%20Unsupervised%20learning%20of%20visual%20representations%20using%20videos.%20In%3A%20Proceedings%20of%20ICCV%2C%20pp.%202794%E2%80%932802%20%282015%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">57.</div>
+                                        <div class="CitationContent" id="CR57">Zhao, H., Gan, C., Ma, W.C., Torralba,
+                                            A.: The sound of motions. In: Proceedings of ICCV (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Zhao%2C%20H.%2C%20Gan%2C%20C.%2C%20Ma%2C%20W.C.%2C%20Torralba%2C%20A.%3A%20The%20sound%20of%20motions.%20In%3A%20Proceedings%20of%20ICCV%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">58.</div>
+                                        <div class="CitationContent" id="CR58">Zhao, H., Gan, C., Rouditchenko, A.,
+                                            Vondrick, C., McDermott, J., Torralba, A.: The sound of pixels. In: Ferrari,
+                                            V., Hebert, M., Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol.
+                                            11205, pp. 587–604. Springer, Cham (2018). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01246-5_35"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-030-01246-5_35</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-030-01246-5_35"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=The%20sound%20of%20pixels&amp;author=H.%20Zhao&amp;author=C.%20Gan&amp;author=A.%20Rouditchenko&amp;author=C.%20Vondrick&amp;author=J.%20McDermott&amp;author=A.%20Torralba&amp;pages=587-604&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                        <section class="Section1 RenderAsSection1"><h2 class="Heading" id="copyrightInformation">
+                            Copyright information</h2>
+                            <div class="ArticleCopyright content">
+                                <div class="ChapterCopyright">© Springer Nature Switzerland AG 2020</div>
+                            </div>
+                        </section>
+                        <section id="authorsandaffiliations" class="Section1 RenderAsSection1"><h2 class="Heading">
+                            Authors and Affiliations</h2>
+                            <div class="content authors-affiliations u-interface">
+                                <ul class="test-contributor-names">
+                                    <li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"
+                                        itemprop="author"><span itemprop="name" class="authors-affiliations__name">Triantafyllos Afouras</span>
+                                        <ul class="authors-affiliations__indexes u-inline-list"
+                                            data-role="AuthorsIndexes">
+                                            <li data-affiliation="affiliation-1">1</li>
+                                        </ul>
+                                        <span class="author-information"><span
+                                                class="author-information__contact u-icon-before"><a
+                                                href="mailto:afourast@robots.ox.ac.uk" title="afourast@robots.ox.ac.uk"
+                                                itemprop="email" data-track="click" data-track-action="Email author"
+                                                data-track-label="">Email author</a></span></span></li>
+                                    <li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"
+                                        itemprop="author"><span itemprop="name" class="authors-affiliations__name">Andrew Owens</span>
+                                        <ul class="authors-affiliations__indexes u-inline-list"
+                                            data-role="AuthorsIndexes">
+                                            <li data-affiliation="affiliation-2">2</li>
+                                        </ul>
+                                    </li>
+                                    <li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"
+                                        itemprop="author"><span itemprop="name" class="authors-affiliations__name">Joon Son Chung</span>
+                                        <ul class="authors-affiliations__indexes u-inline-list"
+                                            data-role="AuthorsIndexes">
+                                            <li data-affiliation="affiliation-1">1</li>
+                                            <li data-affiliation="affiliation-3">3</li>
+                                        </ul>
+                                    </li>
+                                    <li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"
+                                        itemprop="author"><span itemprop="name" class="authors-affiliations__name">Andrew Zisserman</span>
+                                        <ul class="authors-affiliations__indexes u-inline-list"
+                                            data-role="AuthorsIndexes">
+                                            <li data-affiliation="affiliation-1">1</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ol class="test-affiliations">
+                                    <li class="affiliation" data-test="affiliation-1"
+                                        data-affiliation-highlight="affiliation-1" itemscope=""
+                                        itemtype="http://schema.org/Organization"><span
+                                            class="affiliation__count">1.</span><span class="affiliation__item"><span
+                                            itemprop="name" class="affiliation__name">University of Oxford</span><span
+                                            itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
+                                            class="affiliation__address"><span itemprop="addressRegion"
+                                                                               class="affiliation__city">Oxford</span><span
+                                            itemprop="addressCountry"
+                                            class="affiliation__country">UK</span></span></span></li>
+                                    <li class="affiliation" data-test="affiliation-2"
+                                        data-affiliation-highlight="affiliation-2" itemscope=""
+                                        itemtype="http://schema.org/Organization"><span
+                                            class="affiliation__count">2.</span><span class="affiliation__item"><span
+                                            itemprop="name" class="affiliation__name">University of Michigan</span><span
+                                            itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
+                                            class="affiliation__address"><span itemprop="addressRegion"
+                                                                               class="affiliation__city">Ann Arbor</span><span
+                                            itemprop="addressCountry"
+                                            class="affiliation__country">USA</span></span></span></li>
+                                    <li class="affiliation" data-test="affiliation-3"
+                                        data-affiliation-highlight="affiliation-3" itemscope=""
+                                        itemtype="http://schema.org/Organization"><span
+                                            class="affiliation__count">3.</span><span class="affiliation__item"><span
+                                            itemprop="name" class="affiliation__name">Naver Corporation</span><span
+                                            itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
+                                            class="affiliation__address"><span itemprop="addressRegion"
+                                                                               class="affiliation__city">Seongnam-si</span><span
+                                            itemprop="addressCountry"
+                                            class="affiliation__country">South Korea</span></span></span></li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+                <aside class="section section--collapsible" id="AboutThisContent">
+                    <h2 class="section__heading" id="aboutcontent">About this paper</h2>
+                    <div class="section__content bibliographic-information">
+                        <div id="crossMark" class="crossmark">
+                            <a data-crossmark="10.1007%2F978-3-030-58523-5_13" target="_blank" rel="noopener"
+                               href="https://crossmark.crossref.org/dialog/?doi=10.1007%2F978-3-030-58523-5_13"
+                               title="Verify currency and authenticity via CrossMark" data-track="click"
+                               data-track-action="Crossmark" data-track-label="">
+                                <span class="u-screenreader-only">CrossMark</span>
+                                <svg class="CrossMark" id="crossmark-icon" width="57" height="81">
+                                    <image width="57" height="81" alt="Verify currency and authenticity via CrossMark"
+                                           src="/springerlink-static/1895273086/images/png/crossmark.png"
+                                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                                           xlink:href="/springerlink-static/1895273086/images/svg/crossmark.svg"></image>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="crossmark__adjacent">
+                            <dl class="citation-info u-highlight-target u-mb-16" id="citeas" tabindex="-1">
+                                <dt class="test-cite-heading">
+                                    Cite this paper as:
+                                </dt>
+                                <dd id="citethis-text">Afouras T., Owens A., Chung J.S., Zisserman A. (2020)
+                                    Self-supervised Learning of Audio-Visual Objects from Video. In: Vedaldi A., Bischof
+                                    H., Brox T., Frahm JM. (eds) Computer Vision – ECCV 2020. ECCV 2020. Lecture Notes
+                                    in Computer Science, vol 12363. Springer, Cham.
+                                    https://doi.org/10.1007/978-3-030-58523-5_13
+                                </dd>
+                            </dl>
+                            <ul class="bibliographic-information__list bibliographic-information__list--inline">
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">First Online</span>
+                                    <span class="bibliographic-information__value u-overflow-wrap">04 December 2020</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">DOI</span>
+                                    <span class="bibliographic-information__value u-overflow-wrap" id="doi-url">https://doi.org/10.1007/978-3-030-58523-5_13</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">Publisher Name</span>
+                                    <span class="bibliographic-information__value"
+                                          id="publisher-name">Springer, Cham</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">Print ISBN</span>
+                                    <span class="bibliographic-information__value"
+                                          id="print-isbn">978-3-030-58522-8</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">Online ISBN</span>
+                                    <span class="bibliographic-information__value" id="electronic-isbn">978-3-030-58523-5</span>
+                                </li>
+
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">eBook Packages</span>
+                                    <span class="bibliographic-information__value" itemprop="genre"><a
+                                            id="ebook-package"
+                                            href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;11645&amp;facet-start-year&#x3D;2020&amp;facet-end-year&#x3D;2020">Computer Science</a></span>
+                                    <span class="bibliographic-information__value" itemprop="genre"><a
+                                            id="ebook-package"
+                                            href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;43710&amp;facet-start-year&#x3D;2020&amp;facet-end-year&#x3D;2020">Computer Science (R0)</a></span>
+                                </li>
+
+                            </ul>
+
+                            <ul class="bibliographic-information__list">
+                                <li class="bibliographic-information__item">
+                                    <a id="reprintsandpermissions-link" target="_blank" rel="noopener"
+                                       href="https://s100.copyright.com/AppDispatchServlet?publisherName&#x3D;SpringerNature&amp;orderBeanReset&#x3D;true&amp;orderSource&#x3D;SpringerLink&amp;copyright&#x3D;Springer+Nature+Switzerland+AG&amp;author&#x3D;Triantafyllos+Afouras%2C+Andrew+Owens%2C+Joon+Son+Chung+et+al&amp;contentID&#x3D;10.1007%2F978-3-030-58523-5_13&amp;endPage&#x3D;224&amp;publicationDate&#x3D;2020&amp;startPage&#x3D;208&amp;publication&#x3D;eBook&amp;title&#x3D;Self-supervised+Learning+of+Audio-Visual+Objects+from+Video&amp;imprint&#x3D;Springer+Nature+Switzerland+AG"
+                                       title="Visit RightsLink for information about reusing this paper"
+                                       data-track="click" data-track-action="Reprints and Permissions"
+                                       data-track-label="">Reprints and Permissions</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+                </aside>
+
+                <div class="section section--collapsible uptodate-recommendations gtm-recommendations">
+                    <h2 class="uptodate-recommendations__title section__heading gtm-recommendations__title"
+                        id="uptodaterecommendations">Personalised recommendations</h2>
+                    <div class="section__content">
+                        <div class="uptodate-recommendations__container">
+                            <link rel="uptodate-inline" href="/springerlink-static/1895273086/css/recommendations.css"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="doubleclick-native-ad" data-google-ad="native"></div>
+
+
+                <div class="sticky-banner sticky-banner--buybox u-interface u-hide"
+                     data-component="SpringerLink.StickyBanner" data-namespace="hasLink">
+                    <div class="sticky-banner__container">
+                        <div class="citations" data-component="SV.Dropdown" data-namespace="citationsSticky">
+                            <h3 class="u-h4" data-role="button-dropdown__title">
+                                <span>Cite</span>
+                                <span class="hide-text-small">paper</span>
+                            </h3>
+                            <ul class="citations__content" data-role="button-dropdown__content">
+                                <li>
+                                    <a href="#citeas" data-track="click" data-track-action="Cite as link"
+                                       data-track-label="Cite dropdown">How to cite?</a>
+                                </li>
+                                <li>
+                                    <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58523-5_13?format&#x3D;refman&amp;flavour&#x3D;citation"
+                                       title="Download this paper&#39;s citation as a .RIS file" data-track="click"
+                                       data-track-action="Export citation" data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                                        <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58523-5_13?format&#x3D;endnote&amp;flavour&#x3D;citation"
+                                       title="Download this paper&#39;s citation as a .ENW file" data-track="click"
+                                       data-track-action="Export citation" data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                                        <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58523-5_13?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+                                       title="Download this paper&#39;s citation as a .BIB file" data-track="click"
+                                       data-track-action="Export citation" data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                                        <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="sticky-banner__buybox-link sticky-banner__buybox-link--sticky">
+                            <a href="#buy" class="gtm-buybox-anchor">
+                                Buy options
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <aside class="main-sidebar-right u-interface">
+                <div data-role="sticky-wrapper">
+                    <div class="main-sidebar-right__content u-composite-layer"
+                         data-component="SpringerLink.StickySidebar">
+                        <div class="article-actions" id="article-actions">
+                            <h2 class="u-screenreader-only" aria-hidden="true">Actions</h2>
+
+                            <div id="buy">
+
+
+                                <div class="sprcom-buybox buybox" id="sprcom-buybox">
+                                    <div>
+                                        <div class="c-box" style="padding: 0">
+                                            <h2 class="c-box__heading visually-hidden">Buying options</h2>
+                                            <div class="buying-options">
+
+                                                <div class="buying-option expanded">
+                                                    <dl class="buying-option-price">
+                                                        <dt>
+                                                            <svg width="24" height="24"
+                                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false">
+                                                                <path
+                                                                        d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                                                        fill="#666" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                            Chapter
+                                                        </dt>
+
+                                                        <dd class="price-amount">
+                                                            <div data-test-id="test-chapter-price"
+                                                                 class="buybox__price">
+                                                                EUR &nbsp;
+                                                                24.95
+                                                            </div>
+                                                        </dd>
+
+                                                        <dd class="price-info">Price excludes VAT (Russian Federation)
+                                                        </dd>
+                                                    </dl>
+
+                                                    <form class="buying-option-form"
+                                                          action="https://order.springer.com/public/cart" method="post">
+                                                        <input type="hidden" name="type" value="chapter">
+                                                        <input type="hidden" name="doi"
+                                                               value="10.1007/978-3-030-58523-5_13">
+                                                        <input type="hidden" name="isxn" value="978-3-030-58523-5">
+                                                        <input type="hidden" name="contenttitle"
+                                                               value="Self-supervised Learning of Audio-Visual Objects from Video">
+                                                        <input type="hidden" name="copyrightyear" value="2020">
+                                                        <input type="hidden" name="year" value="2020">
+                                                        <input type="hidden" name="authors"
+                                                               value="Triantafyllos Afouras, et al.">
+                                                        <input type="hidden" name="title"
+                                                               value="Computer Vision – ECCV 2020">
+                                                        <input type="hidden" name="mac"
+                                                               value="9e556d62339850cdbb512d02329b167b">
+                                                        <ul class="buying-option-usps">
+
+                                                            <li>DOI: 10.1007/978-3-030-58523-5_13</li>
+
+                                                            <li>Chapter length: 17 pages</li>
+
+                                                            <li>Instant PDF download</li>
+
+                                                            <li>Readable on all devices</li>
+
+                                                            <li>Own it forever</li>
+
+                                                            <li>Exclusive offer for individuals only</li>
+
+                                                            <li>Tax calculation will be finalised during checkout</li>
+
+                                                        </ul>
+
+                                                        <button
+                                                                type="submit"
+                                                                class="buybox__buy-button c-button c-button--blue"
+                                                                value="Submit"
+                                                                data-track="click"
+                                                                data-track-action="buy pdf"
+                                                                data-track-label="buy chapter action"
+                                                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Self-supervised Learning of Audio-Visual Objects from Video&quot;,&quot;id&quot;:&quot;10.1007/978-3-030-58523-5_13&quot;,&quot;price&quot;:24.95,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ppv-chapter&quot;,&quot;quantity&quot;:1}]}}});"
+                                                        >Buy Chapter
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+
+                                                <div class="buying-option expanded">
+                                                    <dl class="buying-option-price">
+                                                        <dt>
+                                                            <svg width="24" height="24"
+                                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false">
+                                                                <path
+                                                                        d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                                                        fill="#666" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                            eBook
+                                                        </dt>
+                                                        <dd class="price-amount">EUR &nbsp;
+                                                            85.59
+                                                        </dd>
+                                                        <dd class="price-info">Price includes VAT (Russian Federation)
+                                                        </dd>
+                                                    </dl>
+                                                    <form class="buying-option-form"
+                                                          action="https://order.springer.com/public/cart" method="post">
+                                                        <input type="hidden" name="type" value="ebook">
+                                                        <input type="hidden" name="doi"
+                                                               value="10.1007/978-3-030-58523-5">
+                                                        <input type="hidden" name="isxn" value="978-3-030-58523-5">
+                                                        <input type="hidden" name="contenttitle"
+                                                               value="Computer Vision – ECCV 2020">
+                                                        <ul class="buying-option-usps">
+
+                                                            <li>ISBN: 978-3-030-58523-5</li>
+
+                                                            <li>Instant PDF download</li>
+
+                                                            <li>Readable on all devices</li>
+
+                                                            <li>Own it forever</li>
+
+                                                            <li>Exclusive offer for individuals only</li>
+
+                                                            <li>Tax calculation will be finalised during checkout</li>
+
+                                                        </ul>
+                                                        <button
+                                                                type="submit"
+                                                                class="buybox__buy-button c-button c-button--blue"
+                                                                value="Submit"
+                                                                data-track="click"
+                                                                data-track-label="buy ebook"
+                                                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Computer Vision – ECCV 2020&quot;,&quot;id&quot;:&quot;978-3-030-58523-5&quot;,&quot;price&quot;:79.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ebo&quot;,&quot;quantity&quot;:1}]}}});"
+                                                        >Buy eBook
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+                                                <div class="buying-option expanded">
+                                                    <dl class="buying-option-price">
+                                                        <dt>
+                                                            <svg width="24" height="24"
+                                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false">
+                                                                <path
+                                                                        d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                                                        fill="#666" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                            Softcover Book
+                                                        </dt>
+                                                        <dd class="price-amount">EUR &nbsp;
+                                                            99.99
+                                                        </dd>
+                                                        <dd class="price-info">Price excludes VAT (Russian Federation)
+                                                        </dd>
+                                                    </dl>
+                                                    <form class="buying-option-form"
+                                                          action="https://order.springer.com/public/cart" method="post">
+                                                        <input type="hidden" name="type" value="book">
+                                                        <input type="hidden" name="doi"
+                                                               value="10.1007/978-3-030-58523-5">
+                                                        <input type="hidden" name="isxn" value="978-3-030-58522-8">
+                                                        <input type="hidden" name="contenttitle"
+                                                               value="Computer Vision – ECCV 2020">
+                                                        <ul class="buying-option-usps">
+
+                                                            <li>ISBN: 978-3-030-58522-8</li>
+
+                                                            <li>Dispatched in 3 to 5 business days</li>
+
+                                                            <li>Exclusive offer for individuals only</li>
+
+                                                            <li>Free shipping worldwide<br><a
+                                                                    href='https://support.springernature.com/en/support/solutions/articles/6000233448-coronavirus-disease-covid-19-delivery-information'
+                                                                    target='_blank'>Shipping restrictions may apply,
+                                                                check to see if you are impacted</a>.
+                                                            </li>
+
+                                                            <li>Tax calculation will be finalised during checkout</li>
+
+                                                        </ul>
+                                                        <button
+                                                                type="submit"
+                                                                class="buybox__buy-button c-button c-button--blue"
+                                                                value="Submit"
+                                                                data-track="click"
+                                                                data-track-label="buy softcover"
+                                                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Computer Vision – ECCV 2020&quot;,&quot;id&quot;:&quot;978-3-030-58522-8&quot;,&quot;price&quot;:99.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;print&quot;,&quot;quantity&quot;:1}]}}});"
+                                                        >Buy Softcover Book
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="c-box buybox-additional-info">
+                                            <a class="c-box__item"
+                                               href="https://www.springernature.com/gp/librarians/licensing/license-options">Learn
+                                                about institutional subscriptions</a>
+                                        </div>
+                                    </div>
+                                    <style>
+                                        .sprcom-buybox {
+                                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: center;
+                                        }
+
+                                        .sprcom-buybox > div {
+                                            flex-grow: 1;
+                                            width: 100%;
+                                        }
+
+                                        .sprcom-buybox * {
+                                            font-size: 13px !important;
+                                        }
+
+                                        .sprcom-buybox > div > * + * {
+                                            margin-top: 24px;
+                                        }
+
+                                        .sprcom-buybox .c-box__heading {
+                                            margin-bottom: 0;
+                                        }
+
+
+                                        .sprcom-buybox .buying-options {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                        }
+
+                                        .sprcom-buybox .buying-options > * {
+                                            background-color: #ddd;
+                                            box-shadow: 0 0 0 1px #bbb;
+                                            flex-grow: 1;
+                                            flex-basis: auto;
+                                            width: 240px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                        }
+
+
+                                        .sprcom-buybox dt {
+                                            align-items: center;
+                                            display: flex;
+                                            font-weight: 400;
+                                            margin-left: -10px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-form {
+                                            padding: 12px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price {
+                                            align-items: center;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            font-size: 1.6rem;
+                                            line-height: 1.4;
+                                            user-select: none;
+                                            padding: 6px 12px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price dt,
+                                        .sprcom-buybox .buying-option-price dt svg path,
+                                        .sprcom-buybox .buying-option-price dd {
+                                            color: #004aa7;
+                                            fill: #004aa7;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price dt,
+                                        .sprcom-buybox .buying-option-price dd {
+                                            flex-grow: 1;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-info {
+                                            color: #666;
+                                            font-size: 80%;
+                                            text-align: right;
+                                            width: 100%;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-amount {
+                                            font-size: 140%;
+                                            text-align: right;
+                                            font-weight: 600;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-amount-without-discount {
+                                            color: #c40606;
+                                            font-size: 140%;
+                                            text-decoration: line-through;
+                                            width: 100%;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-type {
+                                            font-size: 40%;
+                                            margin-left: 8px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-usps {
+                                            color: #666;
+                                            font-size: 1.4rem;
+                                            line-height: 1.4;
+                                            margin: 0 0 0 13px;
+                                            padding-left: 16px;
+
+                                            list-style: disc;
+                                        }
+
+                                        .sprcom-buybox .buying-option-usps > li {
+                                            position: relative;
+                                        }
+
+                                        .sprcom-buybox .buying-option-usps > li:not(:first-child) {
+                                            margin-top: 4px;
+                                        }
+
+                                        .sprcom-buybox .c-button {
+                                            margin-top: 18px;
+                                            text-align: center;
+                                        }
+
+                                        .sprcom-buybox .buying-options > .expanded {
+                                            background-color: #fff;
+                                        }
+
+                                        .sprcom-buybox .buying-options > .expanded dt,
+                                        .sprcom-buybox .buying-options > .expanded dt svg path,
+                                        .sprcom-buybox .buying-options > .expanded .price-amount {
+                                            color: #333;
+                                            fill: #666;
+                                        }
+
+
+                                        .sprcom-buybox .buybox-additional-info {
+                                            padding-top: 6px;
+                                            padding-bottom: 8px;
+                                        }
+
+                                        .sprcom-buybox .buybox-additional-info .c-box__item {
+                                            font-size: 13px !important;
+                                            margin-bottom: 0;
+                                        }
+
+                                        .sprcom-buybox a:visited {
+                                            color: #004b83;
+                                        }
+
+
+                                        .sprcom-buybox [role=button] {
+                                            cursor: pointer;
+                                        }
+
+                                        .sprcom-buybox button:focus,
+                                        .sprcom-buybox [role=button]:focus {
+                                            outline: 4px solid #fc0;
+                                            position: relative;
+                                        }
+
+                                        .sprcom-buybox [aria-expanded=false] svg {
+                                            transform: rotate(0deg);
+                                        }
+
+                                        .sprcom-buybox [aria-expanded=true] svg {
+                                            transform: rotate(90deg);
+                                        }
+
+                                        .sprcom-buybox dt {
+                                            align-items: center;
+                                            display: flex;
+                                        }
+
+
+                                        .sprcom-buybox .visually-hidden {
+                                            clip: rect(1px, 1px, 1px, 1px);
+                                            height: 1px;
+                                            overflow: hidden;
+                                            position: absolute;
+                                            width: 1px;
+                                        }
+
+                                        .sprcom-buybox style {
+                                            display: none;
+                                        }
+                                    </style>
+                                    <script>
+                                        ;(function () {
+                                            var timestamp = Date.now()
+                                            document.write('<div data-id="id_' + timestamp + '"></div>')
+
+                                            var head = document.getElementsByTagName("head")[0]
+                                            var script = document.createElement("script")
+                                            script.type = "text/javascript"
+                                            script.src = "https://buy.springer.com/assets/js/buybox-bundle-52d08dec1e.js"
+                                            script.id = "ecommerce-scripts-" + timestamp
+                                            head.appendChild(script)
+
+                                            var buybox = document.querySelector("[data-id=id_" + timestamp + "]").parentNode
+
+                                            ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(initCollapsibles)
+
+                                            function initCollapsibles(subscription, index) {
+                                                var toggle = subscription.querySelector(".buying-option-price")
+                                                subscription.classList.remove("expanded")
+                                                var form = subscription.querySelector(".buying-option-form")
+
+                                                if (form) {
+                                                    var formAction = form.getAttribute("action")
+                                                    document.querySelector("#ecommerce-scripts-" + timestamp).addEventListener("load", bindModal(form, formAction, timestamp, index), false)
+                                                }
+
+                                                var priceInfo = subscription.querySelector(".price-info")
+                                                var buyingOption = toggle.parentElement
+
+                                                if (toggle && form && priceInfo) {
+                                                    toggle.setAttribute("role", "button")
+                                                    toggle.setAttribute("tabindex", "0")
+
+                                                    toggle.addEventListener("click", function (event) {
+                                                        var expanded = toggle.getAttribute("aria-expanded") === "true" || false
+                                                        toggle.setAttribute("aria-expanded", !expanded)
+                                                        form.hidden = expanded
+                                                        if (!expanded) {
+                                                            buyingOption.classList.add("expanded")
+                                                        } else {
+                                                            buyingOption.classList.remove("expanded")
+                                                        }
+                                                        priceInfo.hidden = expanded
+                                                    }, false)
+                                                }
+                                            }
+
+                                            function bindModal(form, formAction, timestamp, index) {
+                                                var weHasBrowserSupport = window.fetch && Array.from
+
+                                                return function () {
+                                                    var Buybox = EcommScripts ? EcommScripts.Buybox : null
+                                                    var Modal = EcommScripts ? EcommScripts.Modal : null
+
+                                                    if (weHasBrowserSupport && Buybox && Modal) {
+                                                        var modalID = "ecomm-modal_" + timestamp + "_" + index
+
+                                                        var modal = new Modal(modalID)
+                                                        modal.domEl.addEventListener("close", close)
+
+                                                        function close() {
+                                                            form.querySelector("button[type=submit]").focus()
+                                                        }
+
+                                                        var cartURL = "/cart"
+                                                        var cartModalURL = "/cart?messageOnly=1"
+
+                                                        form.setAttribute(
+                                                            "action",
+                                                            formAction.replace(cartURL, cartModalURL)
+                                                        )
+
+                                                        var formSubmit = Buybox.interceptFormSubmit(
+                                                            Buybox.fetchFormAction(window.fetch),
+                                                            Buybox.triggerModalAfterAddToCartSuccess(modal),
+                                                            function () {
+                                                                form.removeEventListener("submit", formSubmit, false)
+                                                                form.setAttribute(
+                                                                    "action",
+                                                                    formAction.replace(cartModalURL, cartURL)
+                                                                )
+                                                                form.submit()
+                                                            }
+                                                        )
+
+                                                        form.addEventListener("submit", formSubmit, false)
+
+                                                        document.body.appendChild(modal.domEl)
+                                                    }
+                                                }
+                                            }
+
+                                            function initKeyControls() {
+                                                document.addEventListener("keydown", function (event) {
+                                                    if (document.activeElement.classList.contains("buying-option-price") && (event.code === "Space" || event.code === "Enter")) {
+                                                        if (document.activeElement) {
+                                                            event.preventDefault()
+                                                            document.activeElement.click()
+                                                        }
+                                                    }
+                                                }, false)
+                                            }
+
+                                            function initialStateOpen() {
+                                                var buyboxWidth = buybox.offsetWidth
+                                                ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(function (option, index) {
+                                                    var toggle = option.querySelector(".buying-option-price")
+                                                    var form = option.querySelector(".buying-option-form")
+                                                    var priceInfo = option.querySelector(".price-info")
+                                                    if (buyboxWidth > 480) {
+                                                        toggle.click()
+                                                    } else {
+                                                        if (index === 0) {
+                                                            toggle.click()
+                                                        } else {
+                                                            toggle.setAttribute("aria-expanded", "false")
+                                                            form.hidden = "hidden"
+                                                            priceInfo.hidden = "hidden"
+                                                        }
+                                                    }
+                                                })
+                                            }
+
+                                            initialStateOpen()
+
+                                            if (window.buyboxInitialised) return
+                                            window.buyboxInitialised = true
+
+                                            initKeyControls()
+                                        })()
+                                    </script>
+                                </div>
+
+
+                            </div>
+
+                            <div class="u-js-hide u-js-show-two-col">
+
+
+                                <div class="citations" data-component="SV.Dropdown" data-namespace="citations">
+                                    <h3 class="u-h4" data-role="button-dropdown__title">
+                                        <span>Cite</span>
+                                        <span class="hide-text-small">paper</span>
+                                    </h3>
+                                    <ul class="citations__content" data-role="button-dropdown__content">
+                                        <li>
+                                            <a href="#citeas" data-track="click" data-track-action="Cite as link"
+                                               data-track-label="Cite dropdown">How to cite?</a>
+                                        </li>
+                                        <li>
+                                            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58523-5_13?format&#x3D;refman&amp;flavour&#x3D;citation"
+                                               title="Download this paper&#39;s citation as a .RIS file"
+                                               data-track="click" data-track-action="Export citation"
+                                               data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                                                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58523-5_13?format&#x3D;endnote&amp;flavour&#x3D;citation"
+                                               title="Download this paper&#39;s citation as a .ENW file"
+                                               data-track="click" data-track-action="Export citation"
+                                               data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                                                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58523-5_13?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+                                               title="Download this paper&#39;s citation as a .BIB file"
+                                               data-track="click" data-track-action="Export citation"
+                                               data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                                                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="skyscraper-ad u-hide" data-google-ad="skyscraper" data-gpt-hide-ad>
+                        <div class="skyscraper-ad__wrapper">
+                            <p class="skyscraper-ad__label">Advertisement</p>
+                            <button class="skyscraper-ad__hide" title="Hide this advertisement" data-gpt-hide-ad-button
+                                    data-track="click" data-track-action="Hide advertisement" data-track-label="">Hide
+                            </button>
+                            <div id="doubleclick-ad" class="skyscraper-ad__ad" data-gpt></div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer u-interface">
+        <div class="footer__aside-wrapper">
+            <div class="footer__content">
+                <div class="footer__aside">
+                    <p class="footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                    <div class="footer__edition" data-component="SV.EditionSwitcher">
+                        <h3 class="u-hide" data-role="button-dropdown__title"
+                            data-btn-text="Switch between Academic &#38; Corporate Edition">Switch Edition</h3>
+                        <ul data-role="button-dropdown__content">
+                            <li class="selected"><a
+                                    href="/siteEdition/link?previousUrl=/chapter/10.1007/978-3-030-58523-5_13&id=siteedition-academic-link"
+                                    id="siteedition-academic-link">Academic Edition</a></li>
+                            <li>
+                                <a href="/siteEdition/rd?previousUrl=/chapter/10.1007/978-3-030-58523-5_13&id=siteedition-corporate-link"
+                                   id="siteedition-corporate-link">Corporate Edition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <ul class="footer__nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/impressum">Impressum</a>
+                </li>
+                <li>
+                    <a href="/termsandconditions">Legal information</a>
+                </li>
+                <li>
+                    <a href="/privacystatement">Privacy statement</a>
+                </li>
+                <li>
+                    <a href="https://www.springernature.com/ccpa">California privacy statement</a>
+                </li>
+                <li>
+                    <a href="/cookiepolicy">How we use cookies</a>
+                </li>
+                <li>
+                    <a class="optanon-toggle-display" href="javascript:void(0);" data-cc-action="preferences">Manage
+                        cookies/Do not sell my data</a>
+                </li>
+                <li>
+                    <a href="/accessibility">Accessibility</a>
+                </li>
+                <li>
+                    <a href="https://support.springer.com/en/support/home">FAQ</a>
+                </li>
+                <li>
+                    <a id="contactus-footer-link"
+                       href="https://support.springer.com/en/support/solutions/articles/6000206179-contacting-us">Contact
+                        us</a>
+                </li>
+                <li>
+                    <a href="https://www.springer.com/gp/shop/promo/affiliate/springer-nature">Affiliate program</a>
+                </li>
+            </ul>
+            <a class="parent-logo"
+               target="_blank" rel="noopener"
+               href="//www.springernature.com"
+               title="Go to Springer Nature">
+                <span class="u-screenreader-only">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12"
+                           src="/springerlink-static/1895273086/images/png/springernature.png"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href="/springerlink-static/1895273086/images/svg/springernature.svg">
+                    </image>
+                </svg>
+            </a>
+
+            <p class="footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank"
+                                                                                                rel="noopener"
+                                                                                                href="//www.springernature.com">Springer
+                Nature</a>.</p>
+            <p class="footer__user-access-info">
+                <span>Not logged in</span>
+                <span>Not affiliated</span>
+                <span>91.245.42.171</span>
+            </p>
+        </div>
+    </footer>
+
+</div>
+<script type="text/javascript">
+    (function () {
+        var linkEl = document.querySelector('.js-ctm');
+        var scriptsList = [];
+        var polyfillFeatures = '';
+
+        window.SpringerLink = window.SpringerLink || {};
+        window.SpringerLink.staticLocation = '/springerlink-static/1895273086';
+        window.eventTrackerInstance = null;
+
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            (function (h) {
+                h.className = h.className.replace('no-js', 'js')
+            })(document.documentElement);
+
+            polyfillFeatures = 'default,fetch,Promise,Object.setPrototypeOf,Object.entries,Number.isInteger,MutationObserver,startsWith,Array.prototype.includes,Array.from,IntersectionObserver';
+
+            scriptsList = [
+                'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + polyfillFeatures + '&flags=gated',
+                window.SpringerLink.staticLocation + '/js/main.js'
+            ];
+
+            scriptsList.forEach(function (script) {
+                var tag = document.createElement('script');
+                tag.async = false;
+                tag.src = script;
+
+                document.body.appendChild(tag);
+            });
+        }
+    })();
+</script>
+
+<script>
+    (function () {
+        var linkEl = document.querySelector('.js-ctm');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var scriptMathJax = document.createElement('script');
+            scriptMathJax.async = false;
+            scriptMathJax.src = '/springerlink-static/1895273086/js/mathJax.js';
+            var s0 = document.getElementsByTagName('script')[0];
+            s0.parentNode.insertBefore(scriptMathJax, s0);
+        }
+    })();
+</script>
+
+
+<script type="text/javascript" id="googletag-push">
+
+    var adSlot = '270604982/springerlink/book/chapter';
+
+
+    var definedSlots = [
+        {slot: [728, 90], containerName: 'doubleclick-leaderboard-ad'},
+        {slot: [160, 600], containerName: 'doubleclick-ad'},
+        {slot: [2, 2], containerName: 'doubleclick-native-ad'}
+    ];
+</script>
+
+
+<span id="chat-widget" class="u-hide"></span>
+
+
+</body>
+</html>

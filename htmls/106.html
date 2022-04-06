@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tracklet Self-Supervised Learning for Unsupervised Person Re-Identification
+        | Proceedings of the AAAI Conference on Artificial Intelligence
+    </title>
+
+
+    <meta name="generator" content="Open Journal Systems 3.2.1.1">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+    <meta name="DC.Creator.PersonalName" content="Guile Wu"/>
+    <meta name="DC.Creator.PersonalName" content="Xiatian Zhu"/>
+    <meta name="DC.Creator.PersonalName" content="Shaogang Gong"/>
+    <meta name="DC.Date.created" scheme="ISO8601" content="2020-04-03"/>
+    <meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2020-04-20"/>
+    <meta name="DC.Date.issued" scheme="ISO8601" content="2020-06-18"/>
+    <meta name="DC.Date.modified" scheme="ISO8601" content="2020-06-29"/>
+    <meta name="DC.Description" xml:lang="en"
+          content="Existing unsupervised person re-identification (re-id) methods mainly focus on cross-domain adaptation or one-shot learning. Although they are more scalable than the supervised learning counterparts, relying on a relevant labelled source domain or one labelled tracklet per person initialisation still restricts their scalability in real-world deployments. To alleviate these problems, some recent studies develop unsupervised tracklet association and bottom-up image clustering methods, but they still rely on explicit camera annotation or merely utilise suboptimal global clustering. In this work, we formulate a novel tracklet self-supervised learning (TSSL) method, which is capable of capitalising directly from abundant unlabelled tracklet data, to optimise a feature embedding space for both video and image unsupervised re-id. This is achieved by designing a comprehensive unsupervised learning objective that accounts for tracklet frame coherence, tracklet neighbourhood compactness, and tracklet cluster structure in a unified formulation. As a pure unsupervised learning re-id model, TSSL is end-to-end trainable at the absence of source data annotation, person identity labels, and camera prior knowledge. Extensive experiments demonstrate the superiority of TSSL over a wide variety of the state-of-the-art alternative methods on four large-scale person re-id benchmarks, including Market-1501, DukeMTMC-ReID, MARS and DukeMTMC-VideoReID."/>
+    <meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+    <meta name="DC.Identifier" content="6921"/>
+    <meta name="DC.Identifier.pageNumber" content="12362-12369"/>
+    <meta name="DC.Identifier.DOI" content="10.1609/aaai.v34i07.6921"/>
+    <meta name="DC.Identifier.URI" content="https://ojs.aaai.org/index.php/AAAI/article/view/6921"/>
+    <meta name="DC.Language" scheme="ISO639-1" content="en"/>
+    <meta name="DC.Rights" content="Copyright (c) 2020 Association for the Advancement of Artificial Intelligence"/>
+    <meta name="DC.Rights" content=""/>
+    <meta name="DC.Source" content="Proceedings of the AAAI Conference on Artificial Intelligence"/>
+    <meta name="DC.Source.ISSN" content="2374-3468"/>
+    <meta name="DC.Source.Issue" content="07"/>
+    <meta name="DC.Source.Volume" content="34"/>
+    <meta name="DC.Source.URI" content="https://ojs.aaai.org/index.php/AAAI"/>
+    <meta name="DC.Title" content="Tracklet Self-Supervised Learning for Unsupervised Person Re-Identification"/>
+    <meta name="DC.Type" content="Text.Serial.Journal"/>
+    <meta name="DC.Type.articleType" content="AAAI Technical Track: Vision"/>
+    <meta name="gs_meta_revision" content="1.1"/>
+    <meta name="citation_journal_title" content="Proceedings of the AAAI Conference on Artificial Intelligence"/>
+    <meta name="citation_journal_abbrev" content="AAAI"/>
+    <meta name="citation_issn" content="2374-3468"/>
+    <meta name="citation_author" content="Guile Wu"/>
+    <meta name="citation_author_institution" content="Queen Mary University of London"/>
+    <meta name="citation_author" content="Xiatian Zhu"/>
+    <meta name="citation_author_institution" content="Vision Semantics Limited"/>
+    <meta name="citation_author" content="Shaogang Gong"/>
+    <meta name="citation_author_institution" content="Queen Mary University of London"/>
+    <meta name="citation_title" content="Tracklet Self-Supervised Learning for Unsupervised Person Re-Identification"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_date" content="2020/04/03"/>
+    <meta name="citation_volume" content="34"/>
+    <meta name="citation_issue" content="07"/>
+    <meta name="citation_firstpage" content="12362"/>
+    <meta name="citation_lastpage" content="12369"/>
+    <meta name="citation_doi" content="10.1609/aaai.v34i07.6921"/>
+    <meta name="citation_abstract_html_url" content="https://ojs.aaai.org/index.php/AAAI/article/view/6921"/>
+    <meta name="citation_pdf_url" content="https://ojs.aaai.org/index.php/AAAI/article/download/6921/6775"/>
+    <link rel="stylesheet" href="https://ojs.aaai.org/index.php/AAAI/$$$call$$$/page/page/css?name=stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic"
+          type="text/css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css?v=3.2.1.1"
+          type="text/css"/>
+</head>
+<body class="pkp_page_article pkp_op_view" dir="ltr">
+
+<div class="pkp_structure_page">
+
+    <header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+        <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+            <a href="#pkp_content_main">Skip to main content</a>
+            <a href="#siteNav">Skip to main navigation menu</a>
+            <a href="#pkp_content_footer">Skip to site footer</a>
+        </nav>
+
+        <div class="pkp_head_wrapper">
+
+            <div class="pkp_site_name_wrapper">
+                <button class="pkp_site_nav_toggle">
+                    <span>Open Menu</span>
+                </button>
+                <div class="pkp_site_name">
+                    <a href="						https://ojs.aaai.org/index.php/AAAI/index
+					" class="is_text">Proceedings of the AAAI Conference on Artificial Intelligence</a>
+                </div>
+            </div>
+
+
+            <nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+                <a id="siteNav"></a>
+                <div class="pkp_navigation_primary_row">
+                    <div class="pkp_navigation_primary_wrapper">
+                        <ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+                            <li class="">
+                                <a href="https://ojs.aaai.org/index.php/AAAI/issue/current">
+                                    Current
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://ojs.aaai.org/index.php/AAAI/issue/archive">
+                                    Archives
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://ojs.aaai.org/index.php/AAAI/about">
+                                    About
+                                </a>
+                                <ul>
+                                    <li class="">
+                                        <a href="https://ojs.aaai.org/index.php/AAAI/about">
+                                            About the Journal
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://ojs.aaai.org/index.php/AAAI/about/submissions">
+                                            Submissions
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://ojs.aaai.org/index.php/AAAI/about/privacy">
+                                            Privacy Statement
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://ojs.aaai.org/index.php/AAAI/about/contact">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <form class="pkp_search pkp_search_desktop"
+                              action="https://ojs.aaai.org/index.php/AAAI/search/search" method="get" role="search"
+                              aria-label="Article Search">
+                            <input type="hidden" name="csrfToken" value="0512dd016b77b62280f43ef51c759ce4">
+
+                            <input name="query" value="" type="text" aria-label="Search Query">
+
+
+                            <button type="submit">
+                                Search
+                            </button>
+                            <div class="search_controls" aria-hidden="true">
+                                <a href="https://ojs.aaai.org/index.php/AAAI/search/search"
+                                   class="headerSearchPrompt search_prompt" aria-hidden="true">
+                                    Search
+                                </a>
+                                <a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+                                <span class="search_loading" aria-hidden="true"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+                    <ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+                        <li class="profile">
+                            <a href="https://ojs.aaai.org/index.php/AAAI/login">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <form class="pkp_search pkp_search_mobile" action="https://ojs.aaai.org/index.php/AAAI/search/search"
+                      method="get" role="search" aria-label="Article Search">
+                    <input type="hidden" name="csrfToken" value="0512dd016b77b62280f43ef51c759ce4">
+
+                    <input name="query" value="" type="text" aria-label="Search Query">
+
+
+                    <button type="submit">
+                        Search
+                    </button>
+                    <div class="search_controls" aria-hidden="true">
+                        <a href="https://ojs.aaai.org/index.php/AAAI/search/search"
+                           class="headerSearchPrompt search_prompt" aria-hidden="true">
+                            Search
+                        </a>
+                        <a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+                        <span class="search_loading" aria-hidden="true"></span>
+                    </div>
+                </form>
+            </nav>
+        </div><!-- .pkp_head_wrapper -->
+    </header><!-- .pkp_structure_head -->
+
+    <div class="pkp_structure_content has_sidebar">
+        <div class="pkp_structure_main" role="main">
+            <a id="pkp_content_main"></a>
+
+            <div class="page page_article">
+                <nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+                    <ol>
+                        <li>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/index">
+                                Home
+                            </a>
+                            <span class="separator">/</span>
+                        </li>
+                        <li>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/issue/archive">
+                                Archives
+                            </a>
+                            <span class="separator">/</span>
+                        </li>
+                        <li>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/issue/view/255">
+                                Vol. 34 No. 07: AAAI-20 Technical Tracks 7
+                            </a>
+                            <span class="separator">/</span>
+                        </li>
+                        <li class="current" aria-current="page">
+			<span aria-current="page">
+									AAAI Technical Track: Vision
+							</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <article class="obj_article_details">
+
+
+                    <h1 class="page_title">
+                        Tracklet Self-Supervised Learning for Unsupervised Person Re-Identification
+                    </h1>
+
+
+                    <div class="row">
+                        <div class="main_entry">
+
+                            <section class="item authors">
+                                <h2 class="pkp_screen_reader">Authors</h2>
+                                <ul class="authors">
+                                    <li>
+							<span class="name">
+								Guile Wu
+							</span>
+                                        <span class="affiliation">
+									Queen Mary University of London
+								</span>
+                                    </li>
+                                    <li>
+							<span class="name">
+								Xiatian Zhu
+							</span>
+                                        <span class="affiliation">
+									Vision Semantics Limited
+								</span>
+                                    </li>
+                                    <li>
+							<span class="name">
+								Shaogang Gong
+							</span>
+                                        <span class="affiliation">
+									Queen Mary University of London
+								</span>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="item doi">
+                                <h2 class="label">
+                                    DOI:
+                                </h2>
+                                <span class="value">
+							<a href="https://doi.org/10.1609/aaai.v34i07.6921">
+								https://doi.org/10.1609/aaai.v34i07.6921
+							</a>
+						</span>
+                            </section>
+
+
+                            <section class="item abstract">
+                                <h2 class="label">Abstract</h2>
+                                <p>Existing unsupervised person re-identification (re-id) methods mainly focus on
+                                    cross-domain adaptation or one-shot learning. Although they are more scalable than
+                                    the supervised learning counterparts, relying on a relevant labelled source domain
+                                    or one labelled tracklet per person initialisation still restricts their scalability
+                                    in real-world deployments. To alleviate these problems, some recent studies develop
+                                    unsupervised tracklet association and bottom-up image clustering methods, but they
+                                    still rely on explicit camera annotation or merely utilise suboptimal global
+                                    clustering. In this work, we formulate a novel tracklet self-supervised learning
+                                    (TSSL) method, which is capable of capitalising directly from abundant unlabelled
+                                    tracklet data, to optimise a feature embedding space for both video and image
+                                    unsupervised re-id. This is achieved by designing a comprehensive unsupervised
+                                    learning objective that accounts for tracklet frame coherence, tracklet
+                                    neighbourhood compactness, and tracklet cluster structure in a unified formulation.
+                                    As a pure unsupervised learning re-id model, TSSL is end-to-end trainable at the
+                                    absence of source data annotation, person identity labels, and camera prior
+                                    knowledge. Extensive experiments demonstrate the superiority of TSSL over a wide
+                                    variety of the state-of-the-art alternative methods on four large-scale person re-id
+                                    benchmarks, including Market-1501, DukeMTMC-ReID, MARS and DukeMTMC-VideoReID.</p>
+                            </section>
+
+
+                        </div><!-- .main_entry -->
+
+                        <div class="entry_details">
+
+                            <div class="item cover_image">
+                                <div class="sub_item">
+                                    <a href="https://ojs.aaai.org/index.php/AAAI/issue/view/255">
+                                        <img src="https://ojs.aaai.org/public/journals/2/cover_issue_255_en_US.jpg"
+                                             alt="AAAI-20 Proceedings Cover">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item galleys">
+                                <h2 class="pkp_screen_reader">
+                                    Downloads
+                                </h2>
+                                <ul class="value galleys_links">
+                                    <li>
+
+
+                                        <a class="obj_galley_link pdf"
+                                           href="https://ojs.aaai.org/index.php/AAAI/article/view/6921/6775">
+
+
+                                            PDF
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="item published">
+                                <section class="sub_item">
+                                    <h2 class="label">
+                                        Published
+                                    </h2>
+                                    <div class="value">
+                                        <span>2020-04-03</span>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="item citation">
+                                <section class="sub_item citation_display">
+                                    <h2 class="label">
+                                        How to Cite
+                                    </h2>
+                                    <div class="value">
+                                        <div id="citationOutput" role="region" aria-live="polite">
+                                            <div class="csl-bib-body">
+                                                <div class="csl-entry">Wu, G., Zhu, X., &#38; Gong, S. (2020). Tracklet
+                                                    Self-Supervised Learning for Unsupervised Person Re-Identification.
+                                                    <i>Proceedings of the AAAI Conference on Artificial Intelligence</i>,
+                                                    <i>34</i>(07), 12362-12369. https://doi.org/10.1609/aaai.v34i07.6921
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="citation_formats">
+                                            <button class="cmp_button citation_formats_button"
+                                                    aria-controls="cslCitationFormats" aria-expanded="false"
+                                                    data-csl-dropdown="true">
+                                                More Citation Formats
+                                            </button>
+                                            <div id="cslCitationFormats" class="citation_formats_list"
+                                                 aria-hidden="true">
+                                                <ul class="citation_formats_styles">
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/acm-sig-proceedings?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/acm-sig-proceedings?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            ACM
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/acs-nano?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/acs-nano?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            ACS
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/apa?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/apa?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            APA
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            ABNT
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/chicago-author-date?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/chicago-author-date?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            Chicago
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/harvard-cite-them-right?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/harvard-cite-them-right?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            Harvard
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/ieee?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/ieee?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            IEEE
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/modern-language-association?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/modern-language-association?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            MLA
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            Turabian
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                                aria-controls="citationOutput"
+                                                                href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/vancouver?submissionId=6921&amp;publicationId=5284"
+                                                                data-load-citation
+                                                                data-json-href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/get/vancouver?submissionId=6921&amp;publicationId=5284&amp;return=json"
+                                                        >
+                                                            Vancouver
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="label">
+                                                    Download Citation
+                                                </div>
+                                                <ul class="citation_formats_styles">
+                                                    <li>
+                                                        <a href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/download/ris?submissionId=6921&amp;publicationId=5284">
+                                                            <span class="fa fa-download"></span>
+                                                            Endnote/Zotero/Mendeley (RIS)
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/download/bibtex?submissionId=6921&amp;publicationId=5284">
+                                                            <span class="fa fa-download"></span>
+                                                            BibTeX
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="item issue">
+
+                                <section class="sub_item">
+                                    <h2 class="label">
+                                        Issue
+                                    </h2>
+                                    <div class="value">
+                                        <a class="title" href="https://ojs.aaai.org/index.php/AAAI/issue/view/255">
+                                            Vol. 34 No. 07: AAAI-20 Technical Tracks 7
+                                        </a>
+                                    </div>
+                                </section>
+
+                                <section class="sub_item">
+                                    <h2 class="label">
+                                        Section
+                                    </h2>
+                                    <div class="value">
+                                        AAAI Technical Track: Vision
+                                    </div>
+                                </section>
+                            </div>
+
+
+                        </div><!-- .entry_details -->
+                    </div><!-- .row -->
+
+                </article>
+
+
+            </div><!-- .page -->
+
+        </div><!-- pkp_structure_main -->
+
+        <div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+            <div class="pkp_block block_information">
+                <h2 class="title">Information</h2>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/information/readers">
+                                For Readers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/information/authors">
+                                For Authors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/information/librarians">
+                                For Librarians
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pkp_block block_developed_by">
+                <h2 class="pkp_screen_reader">
+                    Developed By
+                </h2>
+
+                <div class="content">
+                    <a href="http://pkp.sfu.ca/ojs/">
+                        Open Journal Systems
+                    </a>
+                </div>
+            </div>
+            <div class="pkp_block block_subscription">
+                <h2 class="title">Subscription</h2>
+                <div class="content">
+                    <p>Login to access subscriber-only resources.</p>
+                </div>
+            </div>
+            <div class="pkp_block block_hosted_by">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="https://pkpservices.sfu.ca/" id="hostedByLogo" target="_blank"><img
+                                    src="https://ojs.aaai.org/plugins/blocks/hostedBy/icons/pkpps.svg"
+                                    style="border: 0; margin-bottom: 8px; width: 80%"/></a>
+                            <p>
+                                Part of the<br/>
+                                <a href="https://pkpservices.sfu.ca/" id="hostedBy" target="_blank">PKP Publishing
+                                    Services Network</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div><!-- pkp_sidebar.left -->
+    </div><!-- pkp_structure_content -->
+
+    <div class="pkp_structure_footer_wrapper" role="contentinfo">
+        <a id="pkp_content_footer"></a>
+
+        <div class="pkp_structure_footer">
+
+            <div class="pkp_footer_content">
+                <p>Copyright © 2019, Association for the Advancement of Artificial Intelligence</p>
+            </div>
+
+            <div class="pkp_brand_footer" role="complementary">
+                <a href="https://ojs.aaai.org/index.php/AAAI/about/aboutThisPublishingSystem">
+                    <img alt="More information about the publishing system, Platform and Workflow by OJS/PKP."
+                         src="https://ojs.aaai.org/templates/images/ojs_brand.png">
+                </a>
+            </div>
+        </div>
+    </div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?v=3.2.1.1" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js?v=3.2.1.1"
+        type="text/javascript"></script>
+<script src="https://ojs.aaai.org/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js?v=3.2.1.1"
+        type="text/javascript"></script>
+<script src="https://ojs.aaai.org/plugins/themes/default/js/lib/popper/popper.js?v=3.2.1.1"
+        type="text/javascript"></script>
+<script src="https://ojs.aaai.org/plugins/themes/default/js/lib/bootstrap/util.js?v=3.2.1.1"
+        type="text/javascript"></script>
+<script src="https://ojs.aaai.org/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.2.1.1"
+        type="text/javascript"></script>
+<script src="https://ojs.aaai.org/plugins/themes/default/js/main.js?v=3.2.1.1" type="text/javascript"></script>
+<script src="https://ojs.aaai.org/plugins/generic/citationStyleLanguage/js/articleCitation.js?v=3.2.1.1"
+        type="text/javascript"></script>
+
+
+</body>
+</html>

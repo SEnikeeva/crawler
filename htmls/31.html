@@ -1,0 +1,2324 @@
+<!DOCTYPE HTML>
+<html lang="en-gb" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+    <meta name="citation_publisher" content="Springer, Cham"/>
+    <meta name="citation_title" content="Extending and Analyzing Self-supervised Learning Across Domains"/>
+    <meta name="citation_doi" content="10.1007/978-3-030-58574-7_43"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_abstract_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-58574-7_43"/>
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/chapter/10.1007/978-3-030-58574-7_43"/>
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007%2F978-3-030-58574-7_43.pdf"/>
+    <meta name="citation_springer_api_url"
+          content="http://api.springer.com/metadata/pam?q=doi:10.1007/978-3-030-58574-7_43&amp;api_key="/>
+    <meta name="citation_firstpage" content="717"/>
+    <meta name="citation_lastpage" content="734"/>
+    <meta name="citation_author" content="Wallace, Bram"/>
+    <meta name="citation_author_institution" content="Cornell University"/>
+    <meta name="citation_author_email" content="bw462@cornell.edu"/>
+    <meta name="citation_author" content="Hariharan, Bharath"/>
+    <meta name="citation_author_institution" content="Cornell University"/>
+    <meta name="dc.identifier" content="10.1007/978-3-030-58574-7_43"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description"
+          content="Self-supervised representation learning has achieved impressive results in recent years, with experiments primarily coming on ImageNet or other similarly large internet imagery datasets. There has..."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Extending and Analyzing Self-supervised Learning Across Domains"/>
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/book/978-3-030-58574-7.jpg"/>
+    <meta name="twitter:image:alt" content="Content cover image"/>
+    <meta name="twitter:site" content="SpringerLink"/>
+    <meta name="twitter:description"
+          content="Self-supervised representation learning has achieved impressive results in recent years, with experiments primarily coming on ImageNet or other similarly large internet imagery datasets. There has..."/>
+    <meta name="citation_inbook_title" content="Computer Vision – ECCV 2020"/>
+    <meta name="citation_publication_date" content="2020/08/23"/>
+    <meta name="citation_conference_series_id" content="springer/eccv"/>
+    <meta name="citation_conference_title" content="European Conference on Computer Vision"/>
+    <meta name="citation_conference_sequence_num" content="16"/>
+    <meta name="citation_conference_abbrev" content="ECCV"/>
+    <meta property="og:title" content="Extending and Analyzing Self-supervised Learning Across Domains"/>
+    <meta property="og:type" content="Paper"/>
+    <meta property="og:url" content="https://link.springer.com/chapter/10.1007/978-3-030-58574-7_43"/>
+    <meta property="og:image" content="https://static-content.springer.com/cover/book/978-3-030-58574-7.jpg"/>
+    <meta property="og:site_name" content="SpringerLink"/>
+    <meta property="og:description"
+          content="Self-supervised representation learning has achieved impressive results in recent years, with experiments primarily coming on ImageNet or other similarly large internet imagery datasets. There has..."/>
+
+    <title>Extending and Analyzing Self-supervised Learning Across Domains | SpringerLink</title>
+    <link rel="canonical" href="https://link.springer.com/chapter/10.1007/978-3-030-58574-7_43"/>
+    <link rel="shortcut icon" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="/springerlink-static/1895273086/images/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16" type="image/png"
+          href="/springerlink-static/1895273086/images/favicon/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" type="image/png"
+          href="/springerlink-static/1895273086/images/favicon/favicon-32x32.png">
+    <link rel="icon" sizes="48x48" type="image/png"
+          href="/springerlink-static/1895273086/images/favicon/favicon-48x48.png">
+    <link rel="apple-touch-icon" href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="/springerlink-static/1895273086/images/favicon/ic_launcher_hdpi.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/springerlink-static/1895273086/images/favicon/app-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@2x.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-ipad@2x.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="/springerlink-static/1895273086/images/favicon/app-icon-iphone@3x.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+          content="/springerlink-static/1895273086/images/favicon/ic_launcher_xxhdpi.png">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//google-analytics.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagservices.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//static-content.springer.com">
+    <link rel="stylesheet" href="/springerlink-static/1895273086/css/basic.css" media="screen">
+    <link rel="stylesheet" href="/springerlink-static/1895273086/css/styles.css" class="js-ctm"
+          media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    <link rel="stylesheet" href="/springerlink-static/1895273086/css/print.css" media="print">
+
+
+    <script>
+        (function () {
+            if (typeof window.CustomEvent === "function") return;
+            window.CustomEvent = function (event, params) {
+                params = params || {bubbles: false, cancelable: false, detail: null};
+                var evt = document.createEvent('CustomEvent');
+                evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+                return evt;
+            }
+        })();
+    </script>
+
+    <script>
+        (function () {
+            if (!!document.documentElement.dataset) return;
+
+            Object.defineProperty(Element.prototype, 'dataset', {
+                get: function () {
+                    var element = this;
+                    var attributes = this.attributes;
+                    var map = {};
+
+                    for (var i = 0; i < attributes.length; i++) {
+                        var attribute = attributes[i];
+
+                        if (attribute && attribute.name && (/^data-\w[\w-]*$/).test(attribute.name)) {
+                            var name = attribute.name;
+                            var value = attribute.value;
+
+                            var propName = name.substr(5).replace(/-./g, function (prop) {
+                                return prop.charAt(1).toUpperCase();
+                            });
+
+                            Object.defineProperty(map, propName, {
+                                enumerable: true,
+                                get: function () {
+                                    return this.value;
+                                }.bind({value: value || ''}),
+                                set: function setter(name, value) {
+                                    if (typeof value !== 'undefined') {
+                                        this.setAttribute(name, value);
+                                    } else {
+                                        this.removeAttribute(name);
+                                    }
+                                }.bind(element, name)
+                            });
+                        }
+                    }
+
+                    return map;
+                }
+            });
+        })();
+    </script>
+
+
+    <script type="text/javascript">
+        window.Krux || ((Krux = function () {
+            Krux.q.push(arguments);
+        }).q = []);
+        var dataLayer = [{
+            'GA Key': "UA-26408784-1",
+            'Features': ["leaderboardadverts", "eventtracker"],
+            'Event Category': "Conference Paper",
+            'Open Access': "N",
+            'Labs': "Y",
+            'DOI': "10.1007/978-3-030-58574-7_43",
+            'productId': "9783030585747",
+            'hasAccess': "N",
+            'Full HTML': "N",
+            'Has Body': "Y",
+            'Static Hash': "1895273086",
+            'Has Preview': "N",
+            'user': {"license": {"businessPartnerID": [], "businessPartnerIDString": ""}},
+            'content': {
+                "serial": {"eissn": "1611-3349", "pissn": "0302-9743"},
+                "book": {
+                    "seriesTitle": "Lecture Notes in Computer Science",
+                    "eisbn": "978-3-030-58574-7",
+                    "pisbn": "978-3-030-58573-0",
+                    "bookProductType": "Proceedings",
+                    "seriesId": "558",
+                    "title": "Computer Vision – ECCV 2020",
+                    "doi": "10.1007/978-3-030-58574-7"
+                },
+                "attributes": {"deliveryPlatform": "bunsen"},
+                "chapter": {"doi": "10.1007/978-3-030-58574-7_43"},
+                "category": {
+                    "pmc": {
+                        "primarySubject": "Computer Science",
+                        "primarySubjectCode": "I",
+                        "secondarySubjects": {
+                            "4": "Computer Communication Networks",
+                            "5": "Pattern Recognition",
+                            "1": "Image Processing and Computer Vision",
+                            "2": "Computer Appl. in Social and Behavioral Sciences",
+                            "3": "Machine Learning"
+                        },
+                        "secondarySubjectCodes": {
+                            "4": "I13022",
+                            "5": "I2203X",
+                            "1": "I22021",
+                            "2": "I23028",
+                            "3": "I21010"
+                        }
+                    }, "sucode": "SUCO11645"
+                },
+                "type": "ConferencePaper"
+            },
+            'Access Type': "noaccess",
+            'Page': "chapter",
+            'Bpids': "",
+            'Bpnames': "",
+            'SubjectCodes': "SCI, SCI22021, SCI23028, SCI21010, SCI13022, SCI2203X",
+            'session': {"authentication": {"loginStatus": "N"}, "attributes": {"edition": "academic"}},
+            'eventTrackerBaseUrl': "https://event-tracker.springernature.com",
+            'Country': "RU",
+            'ConferenceSeriesId': "eccv",
+            'VG Wort Identifier': "pw-vgzm.415900-10.1007-978-3-030-58574-7",
+
+            'doi': "10.1007-978-3-030-58574-7_43",
+            'pmc': ["I", "I22021", "I23028", "I21010", "I13022", "I2203X"],
+            'BPID': ["1"],
+            'ksg': Krux.segments,
+            'kuid': Krux.uid,
+
+        }];
+    </script>
+    <script>
+        window.dataLayer.push({
+            content: {
+                attributes: {
+                    deliveryPlatform: "bunsen"
+                }
+            }
+        });
+    </script>
+    <script>
+        window.dataLayer.push({
+            ga4MeasurementId: 'G-B3E4QL2TPR',
+            ga360TrackingId: 'UA-26408784-1',
+            twitterId: 'o47a7',
+            ga4ServerUrl: 'https://collect.springer.com'
+        });
+    </script>
+
+    <script type="text/javascript" src="/springerlink-static/1895273086/js/jquery-3.3.1.min.js"></script>
+
+    <script data-test="gtm-head">
+        window.initGTM = function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://collect.springer.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MRVXSHQ');
+        }
+    </script>
+
+
+    <script>
+        (function (w, d, t) {
+            function cc() {
+                var h = w.location.hostname;
+                var e = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+
+                if (h.indexOf('springer.com') > -1) {
+                    e.src = 'https://push-content.springernature.io/pcf_sb_5_1617714720898560639/production_live/consent-bundle-17-8.js';
+                    e.setAttribute('onload', "initGTM(window,document,'script','dataLayer','GTM-MRVXSHQ')");
+                } else {
+                    e.src = '/static/js/lib/cookie-consent.min.js';
+                    e.setAttribute('data-consent', h);
+                }
+                s.insertAdjacentElement('afterend', e);
+            }
+
+            cc();
+        })(window, document, 'script');
+    </script>
+
+</head>
+<body>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MRVXSHQ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<div class="skip-to">
+    <a class="skip-to__link pseudo-focus" href="#main-content">Skip to main content</a>
+</div>
+<div class="page-wrapper">
+    <noscript>
+        <div class="nojs-banner u-interface">
+            <p>This service is more advanced with JavaScript available</p>
+        </div>
+    </noscript>
+    <div id="leaderboard" class="leaderboard u-hide" data-google-ad="leaderboard" data-gpt-hide-ad>
+        <div class="leaderboard__wrapper">
+            <p class="leaderboard__label">Advertisement</p>
+            <button class="leaderboard__hide" title="Hide this advertisement" data-gpt-hide-ad-button data-track="click"
+                    data-track-action="Hide advertisement" data-track-label="">Hide
+            </button>
+            <div id="doubleclick-leaderboard-ad" class="leaderboard__ad u-pt-24" data-gpt></div>
+        </div>
+    </div>
+
+
+    <header id="header" class="header">
+        <div class="header__content">
+            <div class="header__menu-container">
+                <a id="logo" class="site-logo" href="/" title="Go to homepage">
+                    <picture>
+                        <source type="image/svg+xml"
+                                srcset="/springerlink-static/1895273086/images/svg/springerlink.svg">
+                        <img class="site-logo__springer"
+                             src="/springerlink-static/1895273086/images/png/springerlink.png" alt="SpringerLink"
+                             width="148" height="30" data-test="springer-logo">
+                    </picture>
+
+                </a>
+
+
+                <nav id="search-container" class="u-inline-block">
+                    <div class="search">
+                        <div class="search__content">
+                            <form class="u-form-single-input u-system" action="/search" method="get" role="search">
+                                <label for="search-springerlink">Search SpringerLink</label>
+                                <div class="u-relative">
+                                    <input id="search-springerlink" name="query" type="text" autocomplete="off"
+                                           value="">
+                                    <input class="u-hide-text" type="submit" value="Submit" title="Submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                                         class="u-vertical-align-absolute" focusable="false" aria-hidden="true"
+                                         role="presentation">
+                                        <path d="M12.82 11.972a.607.607 0 01.007.856.611.611 0 01-.856-.006L9.45 10.3A5.798 5.797 0 010 5.798 5.798 5.797 0 1110.3 9.45zm-7.022-1.205A4.97 4.97 0 105.797.83a4.97 4.97 0 000 9.939z"
+                                              fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+
+                <nav class="nav-container">
+                    <div class="global-nav__wrapper">
+                        <div class="search-button">
+                            <a class="search-button__label" href="#search-container">
+                                <span class="search-button__title">Search</span>
+                                <svg class="u-vertical-align-absolute" xmlns="http://www.w3.org/2000/svg" height="18"
+                                     width="18" viewBox="0 0 22 22" focusable="false" aria-hidden="true"
+                                     role="presentation">
+                                    <path d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"
+                                          fill-rule="evenodd" fill="#666"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div id="ecommerce-header-cart-icon-link" class="c-header__item ecommerce-cart"
+                             style="display: inline-block; margin-right: 10px;">
+                            <form action="https://order.springer.com/public/precheckout" method="post">
+                                <button class="c-header__link" type="submit" style="
+        appearance: none;
+        border: none;
+        background: none;
+        color: inherit;
+    ">
+                                    <svg aria-hidden="true" focusable="false" height="18" viewBox="0 0 18 18" width="18"
+                                         style="vertical-align: text-bottom;" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="m5 14c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm10 0c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm-10 1c-.55228475 0-1 .4477153-1 1s.44771525 1 1 1 1-.4477153 1-1-.44771525-1-1-1zm10 0c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1 1-.4477153 1-1-.4477153-1-1-1zm-12.82032249-15c.47691417 0 .88746157.33678127.98070211.80449199l.23823144 1.19501025 13.36277974.00045554c.5522847.00001882.9999659.44774934.9999659 1.00004222 0 .07084994-.0075361.14150708-.022474.2107727l-1.2908094 5.98534344c-.1007861.46742419-.5432548.80388386-1.0571651.80388386h-10.24805106c-.59173366 0-1.07142857.4477153-1.07142857 1 0 .5128358.41361449.9355072.94647737.9932723l.1249512.0067277h10.35933776c.2749512 0 .4979349.2228539.4979349.4978051 0 .2749417-.2227336.4978951-.4976753.4980063l-10.35959736.0041886c-1.18346732 0-2.14285714-.8954305-2.14285714-2 0-.6625717.34520317-1.24989198.87690425-1.61383592l-1.63768102-8.19004794c-.01312273-.06561364-.01950005-.131011-.0196107-.19547395l-1.71961253-.00064219c-.27614237 0-.5-.22385762-.5-.5 0-.27614237.22385763-.5.5-.5zm14.53193359 2.99950224h-13.11300004l1.20580469 6.02530174c.11024034-.0163252.22327998-.02480398.33844139-.02480398h10.27064786z"
+                                                fill="#333"/>
+                                    </svg>
+                                    <span class="u-screenreader-only visually-hidden">Go to cart</span></button>
+                            </form>
+                        </div>
+
+                        <ul class="global-nav" data-component="SV.Menu" data-title="Navigation menu" data-text="Menu">
+                            <li class="global-nav__logged-out">
+                                <a class="test-login-link"
+                                   href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-58574-7_43">
+                                    <span class="u-overflow-ellipsis">Log in</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main id="main-content" class="main-wrapper main-wrapper--no-gradient" tabindex="-1">
+        <div class="main-container uptodate-recommendations-off">
+            <aside class="main-sidebar-left">
+                <div class="main-sidebar-left__content">
+                    <div class="cover-image test-cover" itemscope>
+                        <a class="test-cover-link" href="/book/10.1007/978-3-030-58574-7">
+                            <span class="u-screenreader-only">Computer Vision – ECCV 2020</span>
+                            <img class="test-cover-image"
+                                 src="https://media.springernature.com/w306/springer-static/cover/book/978-3-030-58574-7.jpg"
+                                 itemprop="image" alt=""/>
+                        </a>
+
+
+                    </div>
+                </div>
+            </aside>
+            <div class="main-body" data-role="NavigationContainer">
+
+
+                <article class="main-body__content">
+                    <div xmlns="http://www.w3.org/1999/xhtml" class="FulltextWrapper">
+                        <div class="ArticleHeader main-context">
+                            <div id="enumeration" class="enumeration">
+                                <div>
+                                    <a data-test="ConfSeriesLink" href="/conference/eccv">
+                                        <span data-test="ConfSeriesName"> European Conference on Computer Vision</span>
+                                    </a>
+                                </div>
+                                <p class="test-LocationInConferenceProceeding icon--meta-keyline"><span
+                                        data-test="ConferenceAcronym">ECCV 2020</span>: <span class="BookTitle"><a
+                                        href="/book/10.1007/978-3-030-58574-7" data-track="click"
+                                        data-track-action="Book title"
+                                        data-track-label="">Computer Vision – ECCV 2020</a></span><span
+                                        class="page-numbers-info">
+                pp 717-734</span><span class="u-inline-block u-ml-4"> |
+                <a href="#citeas" data-track="click" data-track-action="Cite as link"
+                   data-track-label="Enumeration section">Cite as</a></span></p></div>
+                            <div class="MainTitleSection"><h1 class="ChapterTitle" lang="en">Extending and Analyzing
+                                Self-supervised Learning Across Domains</h1></div>
+                            <div class="authors u-clearfix" data-component="SpringerLink.Authors">
+                                <ul class="u-interface u-inline-list authors__title" data-role="AuthorsNavigation">
+                                    <li><span>Authors</span></li>
+                                    <li><a href="#authorsandaffiliations" data-track="click"
+                                           data-track-action="Authors and affiliations tab" data-track-label="">Authors
+                                        and affiliations</a></li>
+                                </ul>
+                                <div class="authors__list" data-role="AuthorsList">
+                                    <ul class="test-contributor-names">
+                                        <li itemscope="" itemtype="http://schema.org/Person"
+                                            class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name"
+                                                                                                 class="authors__name">Bram Wallace</span><span
+                                                class="author-information"><span class="authors__contact"><a
+                                                href="mailto:bw462@cornell.edu" title="bw462@cornell.edu"
+                                                itemprop="email" data-track="click" data-track-action="Email author"
+                                                data-track-label=""><img src="/springerlink-static/images/svg/email.svg"
+                                                                         height="24" width="24" alt="Email author"/></a></span></span>
+                                        </li>
+                                        <li itemscope="" itemtype="http://schema.org/Person"
+                                            class="u-mb-2 u-pt-4 u-pb-4" itemprop="author"><span itemprop="name"
+                                                                                                 class="authors__name">Bharath Hariharan</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="main-context__container" data-component="SpringerLink.ArticleMetrics">
+                                <div class="main-context__column"><span><span class="test-render-category">Conference paper</span></span>
+                                    <div class="article-dates"><span
+                                            class="article-dates__label">First Online: </span><span
+                                            class="article-dates__first-online"><time datetime="2020-11-13">13 November 2020</time></span>
+                                    </div>
+                                </div>
+                                <div class="main-context__column">
+                                    <ul id="book-metrics" class="article-metrics u-sansSerif">
+                                        <li class="article-metrics__item">
+                                            <a class="article-metrics__link gtm-chaptercitations-count"
+                                               href="https://citations.springer.com/item?doi&#x3D;10.1007/978-3-030-58574-7_43"
+                                               target="_blank" rel="noopener"
+                                               title="Visit Springer Citations for full citation details"
+                                               id="chaptercitations-link">
+                                                <span id="chaptercitations-count-number"
+                                                      class="test-metric-count c-button-circle gtm-chaptercitations-count">4</span>
+                                                <span class="test-metric-name article-metrics__label gtm-chaptercitations-count">Citations</span>
+                                            </a>
+                                        </li>
+                                        <li class="article-metrics__item">
+                                            <span class="test-metric-count article-metrics__views">1.3k</span>
+                                            <span class="test-metric-name article-metrics__label">Downloads</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span id="test-SeriesTitle" class="vol-info">
+                Part of the
+                <a class="gtm-book-series-link" href="/bookseries/558">Lecture Notes in Computer Science</a>
+                book series (LNCS, volume 12371)</span></div>
+                        <section class="Abstract" id="Abs1" tabindex="-1" lang="en"><h2 class="Heading">Abstract</h2>
+                            <p id="Par1" class="Para"> Self-supervised representation learning has achieved impressive
+                                results in recent years, with experiments primarily coming on ImageNet or other
+                                similarly large internet imagery datasets. There has been little to no work with these
+                                methods on other smaller domains, such as satellite, textural, or biological imagery. We
+                                experiment with several popular methods on an unprecedented variety of domains. We
+                                discover, among other findings, that Rotation is the most semantically meaningful task,
+                                while much of the performance of Jigsaw is attributable to the nature of its induced
+                                distribution rather than semantic understanding. Additionally, there are several areas,
+                                such as fine-grain classification, where all tasks underperform. We quantitatively and
+                                qualitatively diagnose the reasons for these failures and successes via novel
+                                experiments studying pretext generalization, random labelings, and implicit
+                                dimensionality. Code and models are available at <span class="ExternalRef"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://github.com/BramSW/Extending_SSRL_Across_Domains/"><span
+                                        class="RefSource">https://github.com/BramSW/Extending_SSRL_Across_Domains/</span></a></span>.
+                            </p></section>
+                        <div class="HeaderArticleNotes">
+                            <aside class="ArticleNote ArticleNoteESMHint"><h2 class="Heading">Electronic supplementary
+                                material</h2>
+                                <p class="SimplePara">The online version of this chapter (<span class="ExternalRef"> <a
+                                        target="_blank" rel="noopener"
+                                        href="https://doi.org/10.1007/978-3-030-58574-7_43"><span class="RefSource">https://doi.org/10.1007/978-3-030-58574-7_43</span></a></span>)
+                                    contains supplementary material, which is available to authorized users.</p></aside>
+                        </div>
+                        <div class="note test-pdf-link" id="cobranding-and-download-availability-text">
+                            <div id="chapter_no_access_banner">This is a preview of subscription content, <a
+                                    id="test-login-banner-link"
+                                    href="/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-3-030-58574-7_43"
+                                    data-track="click" data-track-action="Preview banner - Log in" data-track-label="">log
+                                in</a> to check access.
+                            </div>
+                        </div>
+                        <div class="article-actions--inline" id="article-actions--inline"
+                             data-component="article-actions--inline"></div>
+                        <section id="Notes" class="Section1 RenderAsSection1"><h2 class="Heading">Notes</h2>
+                            <div class="content">
+                                <section><h3 class="Heading">Acknowledgements</h3>
+                                    <p class="SimplePara">This work was funded by a DARPA LwLL grant.</p></section>
+                            </div>
+                        </section>
+                        <section id="SupplementaryMaterial" class="Section1"><h2 class="Heading">Supplementary
+                            material</h2>
+                            <div class="content">
+                                <div class="esm-item " id="MOESM1"><a class="filename"
+                                                                      href="https://static-content.springer.com/esm/chp%3A10.1007%2F978-3-030-58574-7_43/MediaObjects/504491_1_En_43_MOESM1_ESM.pdf"
+                                                                      title="Download this supplementary material"
+                                                                      data-track="click" data-track-action="ESM link"
+                                                                      data-track-label="504491_1_En_43_MOESM1_ESM.pdf">504491_1_En_43_MOESM1_ESM.pdf</a><span
+                                        class="filesize"> (803 kb)</span>
+                                    <div class="caption-container"><span class="SimplePara">Supplementary material 1 (pdf 802 KB)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="Section1 RenderAsSection1" id="Bib1" tabindex="-1"><h2 class="Heading">
+                            References</h2>
+                            <div class="content">
+                                <ol class="BibliographyWrapper">
+                                    <li class="Citation">
+                                        <div class="CitationNumber">1.</div>
+                                        <div class="CitationContent" id="CR1">Aresta, G., et al.: Bach: grand challenge
+                                            on breast cancer histology images. Med. Image Anal. <strong
+                                                    class="EmphasisTypeBold ">56</strong>, 122–139 (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1016/j.media.2019.05.010"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Bach%3A%20grand%20challenge%20on%20breast%20cancer%20histology%20images&amp;author=G.%20Aresta&amp;journal=Med.%20Image%20Anal.&amp;volume=56&amp;pages=122-139&amp;publication_year=2019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">2.</div>
+                                        <div class="CitationContent" id="CR2">Bengio, Y.: Learning deep architectures
+                                            for AI. Found. Trends Mach. Learn. <strong
+                                                    class="EmphasisTypeBold ">2</strong>(1), 1–127 (2009)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1561/2200000006"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Learning%20deep%20architectures%20for%20AI&amp;author=Y.%20Bengio&amp;journal=Found.%20Trends%20Mach.%20Learn.&amp;volume=2&amp;issue=1&amp;pages=1-127&amp;publication_year=2009"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">3.</div>
+                                        <div class="CitationContent" id="CR3">Bilen, H., Fernando, B., Gavves, E.,
+                                            Vedaldi, A., Gould, S.: Dynamic image networks for action recognition. In:
+                                            Proceedings of the IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 3034–3042 (2016)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Bilen%2C%20H.%2C%20Fernando%2C%20B.%2C%20Gavves%2C%20E.%2C%20Vedaldi%2C%20A.%2C%20Gould%2C%20S.%3A%20Dynamic%20image%20networks%20for%20action%20recognition.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%203034%E2%80%933042%20%282016%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">4.</div>
+                                        <div class="CitationContent" id="CR4">Bojanowski, P., Joulin, A.: Unsupervised
+                                            learning by predicting noise. In: Proceedings of the 34th International
+                                            Conference on Machine Learning-Volume 70. pp. 517–526. JMLR. org (2017)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Bojanowski%2C%20P.%2C%20Joulin%2C%20A.%3A%20Unsupervised%20learning%20by%20predicting%20noise.%20In%3A%20Proceedings%20of%20the%2034th%20International%20Conference%20on%20Machine%20Learning-Volume%2070.%20pp.%20517%E2%80%93526.%20JMLR.%20org%20%282017%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">5.</div>
+                                        <div class="CitationContent" id="CR5">Bromley, J., Guyon, I., LeCun, Y.,
+                                            Säckinger, E., Shah, R.: Signature verification using a “siamese” time delay
+                                            neural network. In: Advances in Neural Information Processing Systems. pp.
+                                            737–744 (1994)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Bromley%2C%20J.%2C%20Guyon%2C%20I.%2C%20LeCun%2C%20Y.%2C%20S%C3%A4ckinger%2C%20E.%2C%20Shah%2C%20R.%3A%20Signature%20verification%20using%20a%20%E2%80%9Csiamese%E2%80%9D%20time%20delay%20neural%20network.%20In%3A%20Advances%20in%20Neural%20Information%20Processing%20Systems.%20pp.%20737%E2%80%93744%20%281994%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">6.</div>
+                                        <div class="CitationContent" id="CR6">Caron, M., Bojanowski, P., Joulin, A.,
+                                            Douze, M.: Deep clustering for unsupervised learning of visual features. In:
+                                            European Conference on Computer Vision (2018)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Caron%2C%20M.%2C%20Bojanowski%2C%20P.%2C%20Joulin%2C%20A.%2C%20Douze%2C%20M.%3A%20Deep%20clustering%20for%20unsupervised%20learning%20of%20visual%20features.%20In%3A%20European%20Conference%20on%20Computer%20Vision%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">7.</div>
+                                        <div class="CitationContent" id="CR7">Chen, L., Bentley, P., Mori, K., Misawa,
+                                            K., Fujiwara, M., Rueckert, D.: Self-supervised learning for medical image
+                                            analysis using image context restoration. Med. Image Anal. <strong
+                                                    class="EmphasisTypeBold ">58</strong>, 101539 (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1016/j.media.2019.101539"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Self-supervised%20learning%20for%20medical%20image%20analysis%20using%20image%20context%20restoration&amp;author=L.%20Chen&amp;author=P.%20Bentley&amp;author=K.%20Mori&amp;author=K.%20Misawa&amp;author=M.%20Fujiwara&amp;author=D.%20Rueckert&amp;journal=Med.%20Image%20Anal.&amp;volume=58&amp;pages=101539&amp;publication_year=2019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">8.</div>
+                                        <div class="CitationContent" id="CR8">Chen, T., Kornblith, S., Norouzi, M.,
+                                            Hinton, G.: A simple framework for contrastive learning of visual
+                                            representations. arXiv preprint <span class="ExternalRef"><a target="_blank"
+                                                                                                         rel="noopener"
+                                                                                                         href="http://arxiv.org/abs/2002.05709"><span
+                                                    class="RefSource">arXiv:2002.05709</span></a></span> (2020)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">9.</div>
+                                        <div class="CitationContent" id="CR9">Cimpoi, M., Maji, S., Kokkinos, I.,
+                                            Mohamed, S., Vedaldi, A.: Describing textures in the wild. In: Proceedings
+                                            of the IEEE Conference on Computer Vision and Pattern Recognition. pp.
+                                            3606–3613 (2014)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Cimpoi%2C%20M.%2C%20Maji%2C%20S.%2C%20Kokkinos%2C%20I.%2C%20Mohamed%2C%20S.%2C%20Vedaldi%2C%20A.%3A%20Describing%20textures%20in%20the%20wild.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%203606%E2%80%933613%20%282014%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">10.</div>
+                                        <div class="CitationContent" id="CR10">Codella, N., et al.: Skin lesion analysis
+                                            toward melanoma detection 2018: A challenge hosted by the international skin
+                                            imaging collaboration (isic). arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1902.03368"><span class="RefSource">arXiv:1902.03368</span></a></span>
+                                            (2019)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">11.</div>
+                                        <div class="CitationContent" id="CR11">Doersch, C., Zisserman, A.: Multi-task
+                                            self-supervised visual learning. In: The IEEE International Conference on
+                                            Computer Vision (ICCV) October 2017<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Doersch%2C%20C.%2C%20Zisserman%2C%20A.%3A%20Multi-task%20self-supervised%20visual%20learning.%20In%3A%20The%20IEEE%20International%20Conference%20on%20Computer%20Vision%20%28ICCV%29%20October%202017"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">12.</div>
+                                        <div class="CitationContent" id="CR12">Donahue, J., Krähenbühl, P., Darrell, T.:
+                                            Adversarial feature learning. arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1605.09782"><span class="RefSource">arXiv:1605.09782</span></a></span>
+                                            (2016)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">13.</div>
+                                        <div class="CitationContent" id="CR13">Dumoulin, V., et al.: Adversarially
+                                            learned inference. arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1606.00704"><span class="RefSource">arXiv:1606.00704</span></a></span>
+                                            (2016)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">14.</div>
+                                        <div class="CitationContent" id="CR14">Esser, P., Sutter, E., Ommer, B.: A
+                                            variational u-net for conditional appearance and shape generation. In:
+                                            Proceedings of the IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 8857–8866 (2018)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Esser%2C%20P.%2C%20Sutter%2C%20E.%2C%20Ommer%2C%20B.%3A%20A%20variational%20u-net%20for%20conditional%20appearance%20and%20shape%20generation.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%208857%E2%80%938866%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">15.</div>
+                                        <div class="CitationContent" id="CR15">Gidaris, S., Singh, P., Komodakis, N.:
+                                            Unsupervised representation learning by predicting image rotations. In:
+                                            International Conference on Learning Representations (2018), <span
+                                                    class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                           href="https://openreview.net/forum?id=S1v4N2l0-"><span
+                                                    class="RefSource">https://openreview.net/forum?id=S1v4N2l0-</span></a></span><span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">16.</div>
+                                        <div class="CitationContent" id="CR16">Goodfellow, I., et al.: Generative
+                                            adversarial nets. In: Advances in Neural Information Processing Systems. pp.
+                                            2672–2680 (2014)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Goodfellow%2C%20I.%2C%20et%20al.%3A%20Generative%20adversarial%20nets.%20In%3A%20Advances%20in%20Neural%20Information%20Processing%20Systems.%20pp.%202672%E2%80%932680%20%282014%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">17.</div>
+                                        <div class="CitationContent" id="CR17">Goroshin, R., Mathieu, M.F., LeCun, Y.:
+                                            Learning to linearize under uncertainty. In: Advances in Neural Information
+                                            Processing Systems. pp. 1234–1242 (2015)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Goroshin%2C%20R.%2C%20Mathieu%2C%20M.F.%2C%20LeCun%2C%20Y.%3A%20Learning%20to%20linearize%20under%20uncertainty.%20In%3A%20Advances%20in%20Neural%20Information%20Processing%20Systems.%20pp.%201234%E2%80%931242%20%282015%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">18.</div>
+                                        <div class="CitationContent" id="CR18">Goyal, P., Mahajan, D., Gupta, A., Misra,
+                                            I.: Scaling and benchmarking self-supervised visual representation learning.
+                                            In: The IEEE International Conference on Computer Vision (ICCV) October 2019<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Goyal%2C%20P.%2C%20Mahajan%2C%20D.%2C%20Gupta%2C%20A.%2C%20Misra%2C%20I.%3A%20Scaling%20and%20benchmarking%20self-supervised%20visual%20representation%20learning.%20In%3A%20The%20IEEE%20International%20Conference%20on%20Computer%20Vision%20%28ICCV%29%20October%202019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">19.</div>
+                                        <div class="CitationContent" id="CR19">He, K., Fan, H., Wu, Y., Xie, S.,
+                                            Girshick, R.: Momentum contrast for unsupervised visual representation
+                                            learning. arXiv preprint <span class="ExternalRef"><a target="_blank"
+                                                                                                  rel="noopener"
+                                                                                                  href="http://arxiv.org/abs/1911.05722"><span
+                                                    class="RefSource">arXiv:1911.05722</span></a></span> (2019)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">20.</div>
+                                        <div class="CitationContent" id="CR20">Hinton, G.E., Salakhutdinov, R.R.:
+                                            Reducing the dimensionality of data with neural networks. Science <strong
+                                                    class="EmphasisTypeBold ">313</strong>(5786), 504–507 (2006)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceAMSID"><a
+                                                    class="gtm-reference" data-reference-type="MathSciNet"
+                                                    target="_blank" rel="noopener"
+                                                    href="http://www.ams.org/mathscinet-getitem?mr=2242509"><span><span>MathSciNet</span></span></a></span><span
+                                                    class="Occurrence OccurrenceDOI"><a class="gtm-reference"
+                                                                                        data-reference-type="CrossRef"
+                                                                                        target="_blank" rel="noopener"
+                                                                                        href="https://doi.org/10.1126/science.1127647"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Reducing%20the%20dimensionality%20of%20data%20with%20neural%20networks&amp;author=GE.%20Hinton&amp;author=RR.%20Salakhutdinov&amp;journal=Science&amp;volume=313&amp;issue=5786&amp;pages=504-507&amp;publication_year=2006"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">21.</div>
+                                        <div class="CitationContent" id="CR21">Kallenberg, M., et al.: Unsupervised deep
+                                            learning applied to breast density segmentation and mammographic risk
+                                            scoring. IEEE Trans. Med. Imaging <strong
+                                                    class="EmphasisTypeBold ">35</strong>(5), 1322–1331 (2016)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1109/TMI.2016.2532122"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Unsupervised%20deep%20learning%20applied%20to%20breast%20density%20segmentation%20and%20mammographic%20risk%20scoring&amp;author=M.%20Kallenberg&amp;journal=IEEE%20Trans.%20Med.%20Imaging&amp;volume=35&amp;issue=5&amp;pages=1322-1331&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">22.</div>
+                                        <div class="CitationContent" id="CR22">Kather, J.N., et al.: Multi-class texture
+                                            analysis in colorectal cancer histology. Scientific Reports <strong
+                                                    class="EmphasisTypeBold ">6</strong>, 27988 (2016)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener" href="https://doi.org/10.1038/srep27988"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Multi-class%20texture%20analysis%20in%20colorectal%20cancer%20histology&amp;author=JN.%20Kather&amp;journal=Scientific%20Reports&amp;volume=6&amp;pages=27988&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">23.</div>
+                                        <div class="CitationContent" id="CR23">Kolesnikov, A., Zhai, X., Beyer, L.:
+                                            Revisiting self-supervised visual representation learning. In: The IEEE
+                                            Conference on Computer Vision and Pattern Recognition (CVPR) June 2019<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Kolesnikov%2C%20A.%2C%20Zhai%2C%20X.%2C%20Beyer%2C%20L.%3A%20Revisiting%20self-supervised%20visual%20representation%20learning.%20In%3A%20The%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition%20%28CVPR%29%20June%202019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">24.</div>
+                                        <div class="CitationContent" id="CR24">Krizhevsky, A., et al.: Learning multiple
+                                            layers of features from tiny images. Technical Report, Citeseer (2009)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="http://scholar.google.com/scholar_lookup?title=Learning%20multiple%20layers%20of%20features%20from%20tiny%20images&amp;author=A.%20Krizhevsky&amp;publication_year=2009"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">25.</div>
+                                        <div class="CitationContent" id="CR25">Lake, B.M., Salakhutdinov, R., Tenenbaum,
+                                            J.B.: Human-level concept learning through probabilistic program induction.
+                                            Science <strong class="EmphasisTypeBold ">350</strong>(6266), 1332–1338
+                                            (2015)<span class="Occurrences"><span class="Occurrence OccurrenceAMSID"><a
+                                                    class="gtm-reference" data-reference-type="MathSciNet"
+                                                    target="_blank" rel="noopener"
+                                                    href="http://www.ams.org/mathscinet-getitem?mr=3445697"><span><span>MathSciNet</span></span></a></span><span
+                                                    class="Occurrence OccurrenceDOI"><a class="gtm-reference"
+                                                                                        data-reference-type="CrossRef"
+                                                                                        target="_blank" rel="noopener"
+                                                                                        href="https://doi.org/10.1126/science.aab3050"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Human-level%20concept%20learning%20through%20probabilistic%20program%20induction&amp;author=BM.%20Lake&amp;author=R.%20Salakhutdinov&amp;author=JB.%20Tenenbaum&amp;journal=Science&amp;volume=350&amp;issue=6266&amp;pages=1332-1338&amp;publication_year=2015"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">26.</div>
+                                        <div class="CitationContent" id="CR26">Larsson, G., Maire, M., Shakhnarovich,
+                                            G.: Learning representations for automatic colorization. In: Leibe, B.,
+                                            Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016. LNCS, vol. 9908, pp.
+                                            577–593. Springer, Cham (2016). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46493-0_35"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-46493-0_35</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46493-0_35"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Learning%20representations%20for%20automatic%20colorization&amp;author=G.%20Larsson&amp;author=M.%20Maire&amp;author=G.%20Shakhnarovich&amp;pages=577-593&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">27.</div>
+                                        <div class="CitationContent" id="CR27">Lu, A.X., Kraus, O.Z., Cooper, S., Moses,
+                                            A.M.: Learning unsupervised feature representations for single cell
+                                            microscopy images with paired cell inpainting. PLoS Comput. Biol. <strong
+                                                    class="EmphasisTypeBold ">15</strong>(9), e1007348 (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1371/journal.pcbi.1007348"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Learning%20unsupervised%20feature%20representations%20for%20single%20cell%20microscopy%20images%20with%20paired%20cell%20inpainting&amp;author=AX.%20Lu&amp;author=OZ.%20Kraus&amp;author=S.%20Cooper&amp;author=AM.%20Moses&amp;journal=PLoS%20Comput.%20Biol.&amp;volume=15&amp;issue=9&amp;pages=e1007348&amp;publication_year=2019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">28.</div>
+                                        <div class="CitationContent" id="CR28">Maji, S., Rahtu, E., Kannala, J.,
+                                            Blaschko, M., Vedaldi, A.: Fine-grained visual classification of aircraft.
+                                            arXiv preprint <span class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                                        href="http://arxiv.org/abs/1306.5151"><span
+                                                    class="RefSource">arXiv:1306.5151</span></a></span> (2013)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">29.</div>
+                                        <div class="CitationContent" id="CR29">Misra, I., van der Maaten, L.:
+                                            Self-supervised learning of pretext-invariant representations. arXiv
+                                            preprint <span class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                                  href="http://arxiv.org/abs/1912.01991"><span
+                                                    class="RefSource">arXiv:1912.01991</span></a></span> (2019)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">30.</div>
+                                        <div class="CitationContent" id="CR30">Misra, I., Zitnick, C.L., Hebert, M.:
+                                            Shuffle and learn: unsupervised learning using temporal order verification.
+                                            In: Leibe, B., Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016. LNCS, vol.
+                                            9905, pp. 527–544. Springer, Cham (2016). <span class="ExternalRef"> <a
+                                                    target="_blank" rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46448-0_32"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-46448-0_32</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46448-0_32"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Shuffle%20and%20learn%3A%20unsupervised%20learning%20using%20temporal%20order%20verification&amp;author=I.%20Misra&amp;author=CL.%20Zitnick&amp;author=M.%20Hebert&amp;pages=527-544&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">31.</div>
+                                        <div class="CitationContent" id="CR31">Munder, S., Gavrila, D.M.: An
+                                            experimental study on pedestrian classification. IEEE Trans. Pattern Anal.
+                                            Mach. Intell. <strong class="EmphasisTypeBold ">28</strong>(11), 1863–1868
+                                            (2006)<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1109/TPAMI.2006.217"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=An%20experimental%20study%20on%20pedestrian%20classification&amp;author=S.%20Munder&amp;author=DM.%20Gavrila&amp;journal=IEEE%20Trans.%20Pattern%20Anal.%20Mach.%20Intell.&amp;volume=28&amp;issue=11&amp;pages=1863-1868&amp;publication_year=2006"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">32.</div>
+                                        <div class="CitationContent" id="CR32">Netzer, Y., Wang, T., Coates, A.,
+                                            Bissacco, A., Wu, B., Ng, A.Y.: Reading digits in natural images with
+                                            unsupervised feature learning (2011)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Netzer%2C%20Y.%2C%20Wang%2C%20T.%2C%20Coates%2C%20A.%2C%20Bissacco%2C%20A.%2C%20Wu%2C%20B.%2C%20Ng%2C%20A.Y.%3A%20Reading%20digits%20in%20natural%20images%20with%20unsupervised%20feature%20learning%20%282011%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">33.</div>
+                                        <div class="CitationContent" id="CR33">Nilsback, M.E., Zisserman, A.: Automated
+                                            flower classification over a large number of classes. In: 2008 Sixth Indian
+                                            Conference on Computer Vision, Graphics &amp; Image Processing. pp. 722–729.
+                                            IEEE (2008)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Nilsback%2C%20M.E.%2C%20Zisserman%2C%20A.%3A%20Automated%20flower%20classification%20over%20a%20large%20number%20of%20classes.%20In%3A%202008%20Sixth%20Indian%20Conference%20on%20Computer%20Vision%2C%20Graphics%20%26%20Image%20Processing.%20pp.%20722%E2%80%93729.%20IEEE%20%282008%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">34.</div>
+                                        <div class="CitationContent" id="CR34">Noroozi, M., Favaro, P.: Unsupervised
+                                            learning of visual representions by solving jigsaw puzzles. In: ECCV
+                                            (2016)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Noroozi%2C%20M.%2C%20Favaro%2C%20P.%3A%20Unsupervised%20learning%20of%20visual%20representions%20by%20solving%20jigsaw%20puzzles.%20In%3A%20ECCV%20%282016%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">35.</div>
+                                        <div class="CitationContent" id="CR35">Ouyang, W., et al.: Analysis of the human
+                                            protein atlas image classification competition. Nat. Methods <strong
+                                                    class="EmphasisTypeBold ">16</strong>, 1254–1261 (2019). <span
+                                                    class="ExternalRef"> <a target="_blank" rel="noopener"
+                                                                            href="https://doi.org/10.1038/s41592-019-0658-6"><span
+                                                    class="RefSource">https://doi.org/10.1038/s41592-019-0658-6</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1038/s41592-019-0658-6"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Analysis%20of%20the%20human%20protein%20atlas%20image%20classification%20competition&amp;author=W.%20Ouyang&amp;journal=Nat.%20Methods&amp;volume=16&amp;pages=1254-1261&amp;publication_year=2019&amp;doi=10.1038%2Fs41592-019-0658-6"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">36.</div>
+                                        <div class="CitationContent" id="CR36">Owens, A., Wu, J., McDermott, J.H.,
+                                            Freeman, W.T., Torralba, A.: Ambient sound provides supervision for visual
+                                            learning. In: Leibe, B., Matas, J., Sebe, N., Welling, M. (eds.) ECCV 2016.
+                                            LNCS, vol. 9905, pp. 801–816. Springer, Cham (2016). <span
+                                                    class="ExternalRef"> <a target="_blank" rel="noopener"
+                                                                            href="https://doi.org/10.1007/978-3-319-46448-0_48"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-46448-0_48</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46448-0_48"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Ambient%20sound%20provides%20supervision%20for%20visual%20learning&amp;author=A.%20Owens&amp;author=J.%20Wu&amp;author=JH.%20McDermott&amp;author=WT.%20Freeman&amp;author=A.%20Torralba&amp;pages=801-816&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">37.</div>
+                                        <div class="CitationContent" id="CR37">Pathak, D., Girshick, R., Dollár, P.,
+                                            Darrell, T., Hariharan, B.: Learning features by watching objects move. In:
+                                            Proceedings of the IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 2701–2710 (2017)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Pathak%2C%20D.%2C%20Girshick%2C%20R.%2C%20Doll%C3%A1r%2C%20P.%2C%20Darrell%2C%20T.%2C%20Hariharan%2C%20B.%3A%20Learning%20features%20by%20watching%20objects%20move.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%202701%E2%80%932710%20%282017%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">38.</div>
+                                        <div class="CitationContent" id="CR38">Pathak, D., Krahenbuhl, P., Donahue, J.,
+                                            Darrell, T., Efros, A.A.: Context encoders: Feature learning by inpainting.
+                                            In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 2536–2544 (2016)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Pathak%2C%20D.%2C%20Krahenbuhl%2C%20P.%2C%20Donahue%2C%20J.%2C%20Darrell%2C%20T.%2C%20Efros%2C%20A.A.%3A%20Context%20encoders%3A%20Feature%20learning%20by%20inpainting.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%202536%E2%80%932544%20%282016%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">39.</div>
+                                        <div class="CitationContent" id="CR39">Quattoni, A., Torralba, A.: Recognizing
+                                            indoor scenes. In: 2009 IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 413–420. IEEE (2009)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Quattoni%2C%20A.%2C%20Torralba%2C%20A.%3A%20Recognizing%20indoor%20scenes.%20In%3A%202009%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%20413%E2%80%93420.%20IEEE%20%282009%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">40.</div>
+                                        <div class="CitationContent" id="CR40">Rebuffi, S.A., Bilen, H., Vedaldi, A.:
+                                            Learning multiple visual domains with residual adapters. In: Advances in
+                                            Neural Information Processing Systems (2017)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Rebuffi%2C%20S.A.%2C%20Bilen%2C%20H.%2C%20Vedaldi%2C%20A.%3A%20Learning%20multiple%20visual%20domains%20with%20residual%20adapters.%20In%3A%20Advances%20in%20Neural%20Information%20Processing%20Systems%20%282017%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">41.</div>
+                                        <div class="CitationContent" id="CR41">Rebuffi, S.A., Bilen, H., Vedaldi, A.:
+                                            Efficient parametrization of multi-domain deep neural networks. In: The IEEE
+                                            Conference on Computer Vision and Pattern Recognition (CVPR) June 2018<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Rebuffi%2C%20S.A.%2C%20Bilen%2C%20H.%2C%20Vedaldi%2C%20A.%3A%20Efficient%20parametrization%20of%20multi-domain%20deep%20neural%20networks.%20In%3A%20The%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition%20%28CVPR%29%20June%202018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">42.</div>
+                                        <div class="CitationContent" id="CR42">Russakovsky, O., et al.: Imagenet large
+                                            scale visual recognition challenge. Int. J. Comput. Vis. <strong
+                                                    class="EmphasisTypeBold ">115</strong>(3), 211–252 (2015)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceAMSID"><a
+                                                    class="gtm-reference" data-reference-type="MathSciNet"
+                                                    target="_blank" rel="noopener"
+                                                    href="http://www.ams.org/mathscinet-getitem?mr=3422482"><span><span>MathSciNet</span></span></a></span><span
+                                                    class="Occurrence OccurrenceDOI"><a class="gtm-reference"
+                                                                                        data-reference-type="CrossRef"
+                                                                                        target="_blank" rel="noopener"
+                                                                                        href="https://doi.org/10.1007/s11263-015-0816-y"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Imagenet%20large%20scale%20visual%20recognition%20challenge&amp;author=O.%20Russakovsky&amp;journal=Int.%20J.%20Comput.%20Vis.&amp;volume=115&amp;issue=3&amp;pages=211-252&amp;publication_year=2015"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">43.</div>
+                                        <div class="CitationContent" id="CR43">de Sa, V.R.: Learning classification with
+                                            unlabeled data. In: Advances in Neural Information Processing Systems. pp.
+                                            112–119 (1994)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=de%20Sa%2C%20V.R.%3A%20Learning%20classification%20with%20unlabeled%20data.%20In%3A%20Advances%20in%20Neural%20Information%20Processing%20Systems.%20pp.%20112%E2%80%93119%20%281994%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">44.</div>
+                                        <div class="CitationContent" id="CR44">Saha, S., Bandyopadhyay, S.: Unsupervised
+                                            pixel classification in satellite imagery using a new multiobjective
+                                            symmetry based clustering approach. In: TENCON 2008–2008 IEEE Region 10
+                                            Conference. pp. 1–6 (2008)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Saha%2C%20S.%2C%20Bandyopadhyay%2C%20S.%3A%20Unsupervised%20pixel%20classification%20in%20satellite%20imagery%20using%20a%20new%20multiobjective%20symmetry%20based%20clustering%20approach.%20In%3A%20TENCON%202008%E2%80%932008%20IEEE%20Region%2010%20Conference.%20pp.%201%E2%80%936%20%282008%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">45.</div>
+                                        <div class="CitationContent" id="CR45">Soomro, K., Zamir, A.R., Shah, M.:
+                                            Ucf101: A dataset of 101 human actions classes from videos in the wild.
+                                            arXiv preprint <span class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                                        href="http://arxiv.org/abs/1212.0402"><span
+                                                    class="RefSource">arXiv:1212.0402</span></a></span> (2012)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">46.</div>
+                                        <div class="CitationContent" id="CR46">Stallkamp, J., Schlipsing, M., Salmen,
+                                            J., Igel, C.: Man vs computer: benchmarking machine learning algorithms for
+                                            traffic sign recognition. Neural Networks <strong class="EmphasisTypeBold ">32</strong>,
+                                            323–332 (2012)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceDOI"><a class="gtm-reference"
+                                                                                        data-reference-type="CrossRef"
+                                                                                        target="_blank" rel="noopener"
+                                                                                        href="https://doi.org/10.1016/j.neunet.2012.02.016"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Man%20vs%20computer%3A%20benchmarking%20machine%20learning%20algorithms%20for%20traffic%20sign%20recognition&amp;author=J.%20Stallkamp&amp;author=M.%20Schlipsing&amp;author=J.%20Salmen&amp;author=C.%20Igel&amp;journal=Neural%20Networks&amp;volume=32&amp;pages=323-332&amp;publication_year=2012"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">47.</div>
+                                        <div class="CitationContent" id="CR47">Su, J.C., Maji, S., Hariharan, B.: When
+                                            does self-supervision improve few-shot learning? arXiv preprint <span
+                                                    class="ExternalRef"><a target="_blank" rel="noopener"
+                                                                           href="http://arxiv.org/abs/1910.03560"><span
+                                                    class="RefSource">arXiv:1910.03560</span></a></span> (2019)<span
+                                                    class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">48.</div>
+                                        <div class="CitationContent" id="CR48">Thomee, B., et al.: Yfcc100m: the new
+                                            data in multimedia research. Commun. ACM <strong class="EmphasisTypeBold ">59</strong>(2),
+                                            64–73 (2016)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceDOI"><a class="gtm-reference"
+                                                                                        data-reference-type="CrossRef"
+                                                                                        target="_blank" rel="noopener"
+                                                                                        href="https://doi.org/10.1145/2812802"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Yfcc100m%3A%20the%20new%20data%20in%20multimedia%20research&amp;author=B.%20Thomee&amp;journal=Commun.%20ACM&amp;volume=59&amp;issue=2&amp;pages=64-73&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">49.</div>
+                                        <div class="CitationContent" id="CR49">Tschandl, P., Rosendahl, C., Kittler, H.:
+                                            The ham10000 dataset, a large collection of multi-source dermatoscopic
+                                            images of common pigmented skin lesions. Scientific Data <strong
+                                                    class="EmphasisTypeBold ">5</strong>, 180161 (2018)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1038/sdata.2018.161"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=The%20ham10000%20dataset%2C%20a%20large%20collection%20of%20multi-source%20dermatoscopic%20images%20of%20common%20pigmented%20skin%20lesions&amp;author=P.%20Tschandl&amp;author=C.%20Rosendahl&amp;author=H.%20Kittler&amp;journal=Scientific%20Data&amp;volume=5&amp;pages=180161&amp;publication_year=2018"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">50.</div>
+                                        <div class="CitationContent" id="CR50">Vincent, P., Larochelle, H., Bengio, Y.,
+                                            Manzagol, P.A.: Extracting and composing robust features with denoising
+                                            autoencoders. In: Proceedings of the 25th International Conference on
+                                            Machine learning. pp. 1096–1103. ACM (2008)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Vincent%2C%20P.%2C%20Larochelle%2C%20H.%2C%20Bengio%2C%20Y.%2C%20Manzagol%2C%20P.A.%3A%20Extracting%20and%20composing%20robust%20features%20with%20denoising%20autoencoders.%20In%3A%20Proceedings%20of%20the%2025th%20International%20Conference%20on%20Machine%20learning.%20pp.%201096%E2%80%931103.%20ACM%20%282008%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">51.</div>
+                                        <div class="CitationContent" id="CR51">Walker, J., Doersch, C., Gupta, A.,
+                                            Hebert, M.: An uncertain future: forecasting from static images using
+                                            variational autoencoders. In: Leibe, B., Matas, J., Sebe, N., Welling, M.
+                                            (eds.) ECCV 2016. LNCS, vol. 9911, pp. 835–851. Springer, Cham (2016). <span
+                                                    class="ExternalRef"> <a target="_blank" rel="noopener"
+                                                                            href="https://doi.org/10.1007/978-3-319-46478-7_51"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-46478-7_51</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46478-7_51"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=An%20uncertain%20future%3A%20forecasting%20from%20static%20images%20using%20variational%20autoencoders&amp;author=J.%20Walker&amp;author=C.%20Doersch&amp;author=A.%20Gupta&amp;author=M.%20Hebert&amp;pages=835-851&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">52.</div>
+                                        <div class="CitationContent" id="CR52">Wang, X., Cai, Z., Gao, D., Vasconcelos,
+                                            N.: Towards universal object detection by domain attention. In: The IEEE
+                                            Conference on Computer Vision and Pattern Recognition (CVPR) June 2019<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Wang%2C%20X.%2C%20Cai%2C%20Z.%2C%20Gao%2C%20D.%2C%20Vasconcelos%2C%20N.%3A%20Towards%20universal%20object%20detection%20by%20domain%20attention.%20In%3A%20The%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition%20%28CVPR%29%20June%202019"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">53.</div>
+                                        <div class="CitationContent" id="CR53">Welinder, P., et al.: Caltech-ucsd birds
+                                            200 (2010)<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Welinder%2C%20P.%2C%20et%20al.%3A%20Caltech-ucsd%20birds%20200%20%282010%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">54.</div>
+                                        <div class="CitationContent" id="CR54">Wu, Z., Xiong, Y., Yu, S.X., Lin, D.:
+                                            Unsupervised feature learning via non-parametric instance discrimination.
+                                            In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 3733–3742 (2018)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Wu%2C%20Z.%2C%20Xiong%2C%20Y.%2C%20Yu%2C%20S.X.%2C%20Lin%2C%20D.%3A%20Unsupervised%20feature%20learning%20via%20non-parametric%20instance%20discrimination.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%203733%E2%80%933742%20%282018%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">55.</div>
+                                        <div class="CitationContent" id="CR55">Yang, Y., Newsam, S.: Bag-of-visual-words
+                                            and spatial extensions for land-use classification. In: Proceedings of the
+                                            18th SIGSPATIAL International Conference on Advances in Geographic
+                                            Information Systems. pp. 270–279. ACM (2010)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Yang%2C%20Y.%2C%20Newsam%2C%20S.%3A%20Bag-of-visual-words%20and%20spatial%20extensions%20for%20land-use%20classification.%20In%3A%20Proceedings%20of%20the%2018th%20SIGSPATIAL%20International%20Conference%20on%20Advances%20in%20Geographic%20Information%20Systems.%20pp.%20270%E2%80%93279.%20ACM%20%282010%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">56.</div>
+                                        <div class="CitationContent" id="CR56">Zhai, X., Oliver, A., Kolesnikov, A.,
+                                            Beyer, L.: S4l: Self-supervised semi-supervised learning. In: Proceedings of
+                                            the IEEE International Conference Computer Vision. pp. 1476–1485 (2019)<span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceGS"><a
+                                                    target="_blank" rel="noopener"
+                                                    class="google-scholar-link gtm-reference"
+                                                    data-reference-type="Google Scholar"
+                                                    href="https://scholar.google.com/scholar?q=Zhai%2C%20X.%2C%20Oliver%2C%20A.%2C%20Kolesnikov%2C%20A.%2C%20Beyer%2C%20L.%3A%20S4l%3A%20Self-supervised%20semi-supervised%20learning.%20In%3A%20Proceedings%20of%20the%20IEEE%20International%20Conference%20Computer%20Vision.%20pp.%201476%E2%80%931485%20%282019%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">57.</div>
+                                        <div class="CitationContent" id="CR57">Zhai, X., et al.: The visual task
+                                            adaptation benchmark. arXiv preprint <span class="ExternalRef"><a
+                                                    target="_blank" rel="noopener"
+                                                    href="http://arxiv.org/abs/1910.04867"><span class="RefSource">arXiv:1910.04867</span></a></span>
+                                            (2019)<span class="Occurrences"></span></div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">58.</div>
+                                        <div class="CitationContent" id="CR58">Zhang, R., Isola, P., Efros, A.A.:
+                                            Colorful image colorization. In: Leibe, B., Matas, J., Sebe, N., Welling, M.
+                                            (eds.) ECCV 2016. LNCS, vol. 9907, pp. 649–666. Springer, Cham (2016). <span
+                                                    class="ExternalRef"> <a target="_blank" rel="noopener"
+                                                                            href="https://doi.org/10.1007/978-3-319-46487-9_40"><span
+                                                    class="RefSource">https://doi.org/10.1007/978-3-319-46487-9_40</span></a></span><span
+                                                    class="Occurrences"><span class="Occurrence OccurrenceDOI"><a
+                                                    class="gtm-reference" data-reference-type="CrossRef" target="_blank"
+                                                    rel="noopener"
+                                                    href="https://doi.org/10.1007/978-3-319-46487-9_40"><span><span>CrossRef</span></span></a></span><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="http://scholar.google.com/scholar_lookup?title=Colorful%20image%20colorization&amp;author=R.%20Zhang&amp;author=P.%20Isola&amp;author=AA.%20Efros&amp;pages=649-666&amp;publication_year=2016"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                    <li class="Citation">
+                                        <div class="CitationNumber">59.</div>
+                                        <div class="CitationContent" id="CR59">Zhang, R., Isola, P., Efros, A.A.:
+                                            Split-brain autoencoders: Unsupervised learning by cross-channel prediction.
+                                            In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+                                            Recognition. pp. 1058–1067 (2017)<span class="Occurrences"><span
+                                                    class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener"
+                                                                                       class="google-scholar-link gtm-reference"
+                                                                                       data-reference-type="Google Scholar"
+                                                                                       href="https://scholar.google.com/scholar?q=Zhang%2C%20R.%2C%20Isola%2C%20P.%2C%20Efros%2C%20A.A.%3A%20Split-brain%20autoencoders%3A%20Unsupervised%20learning%20by%20cross-channel%20prediction.%20In%3A%20Proceedings%20of%20the%20IEEE%20Conference%20on%20Computer%20Vision%20and%20Pattern%20Recognition.%20pp.%201058%E2%80%931067%20%282017%29"><span><span>Google Scholar</span></span></a></span></span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                        <section class="Section1 RenderAsSection1"><h2 class="Heading" id="copyrightInformation">
+                            Copyright information</h2>
+                            <div class="ArticleCopyright content">
+                                <div class="ChapterCopyright">© Springer Nature Switzerland AG 2020</div>
+                            </div>
+                        </section>
+                        <section id="authorsandaffiliations" class="Section1 RenderAsSection1"><h2 class="Heading">
+                            Authors and Affiliations</h2>
+                            <div class="content authors-affiliations u-interface">
+                                <ul class="test-contributor-names">
+                                    <li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"
+                                        itemprop="author"><span itemprop="name" class="authors-affiliations__name">Bram Wallace</span>
+                                        <ul class="authors-affiliations__indexes u-inline-list"
+                                            data-role="AuthorsIndexes">
+                                            <li data-affiliation="affiliation-1">1</li>
+                                        </ul>
+                                        <span class="author-information"><span
+                                                class="author-information__contact u-icon-before"><a
+                                                href="mailto:bw462@cornell.edu" title="bw462@cornell.edu"
+                                                itemprop="email" data-track="click" data-track-action="Email author"
+                                                data-track-label="">Email author</a></span></span></li>
+                                    <li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"
+                                        itemprop="author"><span itemprop="name" class="authors-affiliations__name">Bharath Hariharan</span>
+                                        <ul class="authors-affiliations__indexes u-inline-list"
+                                            data-role="AuthorsIndexes">
+                                            <li data-affiliation="affiliation-1">1</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ol class="test-affiliations">
+                                    <li class="affiliation" data-test="affiliation-1"
+                                        data-affiliation-highlight="affiliation-1" itemscope=""
+                                        itemtype="http://schema.org/Organization"><span
+                                            class="affiliation__count">1.</span><span class="affiliation__item"><span
+                                            itemprop="name" class="affiliation__name">Cornell University</span><span
+                                            itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
+                                            class="affiliation__address"><span itemprop="addressRegion"
+                                                                               class="affiliation__city">Ithaca</span><span
+                                            itemprop="addressCountry"
+                                            class="affiliation__country">USA</span></span></span></li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+                <aside class="section section--collapsible" id="AboutThisContent">
+                    <h2 class="section__heading" id="aboutcontent">About this paper</h2>
+                    <div class="section__content bibliographic-information">
+                        <div id="crossMark" class="crossmark">
+                            <a data-crossmark="10.1007%2F978-3-030-58574-7_43" target="_blank" rel="noopener"
+                               href="https://crossmark.crossref.org/dialog/?doi=10.1007%2F978-3-030-58574-7_43"
+                               title="Verify currency and authenticity via CrossMark" data-track="click"
+                               data-track-action="Crossmark" data-track-label="">
+                                <span class="u-screenreader-only">CrossMark</span>
+                                <svg class="CrossMark" id="crossmark-icon" width="57" height="81">
+                                    <image width="57" height="81" alt="Verify currency and authenticity via CrossMark"
+                                           src="/springerlink-static/1895273086/images/png/crossmark.png"
+                                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                                           xlink:href="/springerlink-static/1895273086/images/svg/crossmark.svg"></image>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="crossmark__adjacent">
+                            <dl class="citation-info u-highlight-target u-mb-16" id="citeas" tabindex="-1">
+                                <dt class="test-cite-heading">
+                                    Cite this paper as:
+                                </dt>
+                                <dd id="citethis-text">Wallace B., Hariharan B. (2020) Extending and Analyzing
+                                    Self-supervised Learning Across Domains. In: Vedaldi A., Bischof H., Brox T., Frahm
+                                    JM. (eds) Computer Vision – ECCV 2020. ECCV 2020. Lecture Notes in Computer Science,
+                                    vol 12371. Springer, Cham. https://doi.org/10.1007/978-3-030-58574-7_43
+                                </dd>
+                            </dl>
+                            <ul class="bibliographic-information__list bibliographic-information__list--inline">
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">First Online</span>
+                                    <span class="bibliographic-information__value u-overflow-wrap">13 November 2020</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">DOI</span>
+                                    <span class="bibliographic-information__value u-overflow-wrap" id="doi-url">https://doi.org/10.1007/978-3-030-58574-7_43</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">Publisher Name</span>
+                                    <span class="bibliographic-information__value"
+                                          id="publisher-name">Springer, Cham</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">Print ISBN</span>
+                                    <span class="bibliographic-information__value"
+                                          id="print-isbn">978-3-030-58573-0</span>
+                                </li>
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">Online ISBN</span>
+                                    <span class="bibliographic-information__value" id="electronic-isbn">978-3-030-58574-7</span>
+                                </li>
+
+                                <li class="bibliographic-information__item">
+                                    <span class="bibliographic-information__title">eBook Packages</span>
+                                    <span class="bibliographic-information__value" itemprop="genre"><a
+                                            id="ebook-package"
+                                            href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;11645&amp;facet-start-year&#x3D;2020&amp;facet-end-year&#x3D;2020">Computer Science</a></span>
+                                    <span class="bibliographic-information__value" itemprop="genre"><a
+                                            id="ebook-package"
+                                            href="/search?facet-content-type&#x3D;%22Book%22&amp;package&#x3D;43710&amp;facet-start-year&#x3D;2020&amp;facet-end-year&#x3D;2020">Computer Science (R0)</a></span>
+                                </li>
+
+                            </ul>
+
+                            <ul class="bibliographic-information__list">
+                                <li class="bibliographic-information__item">
+                                    <a id="reprintsandpermissions-link" target="_blank" rel="noopener"
+                                       href="https://s100.copyright.com/AppDispatchServlet?publisherName&#x3D;SpringerNature&amp;orderBeanReset&#x3D;true&amp;orderSource&#x3D;SpringerLink&amp;copyright&#x3D;Springer+Nature+Switzerland+AG&amp;author&#x3D;Bram+Wallace%2C+Bharath+Hariharan&amp;contentID&#x3D;10.1007%2F978-3-030-58574-7_43&amp;endPage&#x3D;734&amp;publicationDate&#x3D;2020&amp;startPage&#x3D;717&amp;publication&#x3D;eBook&amp;title&#x3D;Extending+and+Analyzing+Self-supervised+Learning+Across+Domains&amp;imprint&#x3D;Springer+Nature+Switzerland+AG"
+                                       title="Visit RightsLink for information about reusing this paper"
+                                       data-track="click" data-track-action="Reprints and Permissions"
+                                       data-track-label="">Reprints and Permissions</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+                </aside>
+
+                <div class="section section--collapsible uptodate-recommendations gtm-recommendations">
+                    <h2 class="uptodate-recommendations__title section__heading gtm-recommendations__title"
+                        id="uptodaterecommendations">Personalised recommendations</h2>
+                    <div class="section__content">
+                        <div class="uptodate-recommendations__container">
+                            <link rel="uptodate-inline" href="/springerlink-static/1895273086/css/recommendations.css"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="doubleclick-native-ad" data-google-ad="native"></div>
+
+
+                <div class="sticky-banner sticky-banner--buybox u-interface u-hide"
+                     data-component="SpringerLink.StickyBanner" data-namespace="hasLink">
+                    <div class="sticky-banner__container">
+                        <div class="citations" data-component="SV.Dropdown" data-namespace="citationsSticky">
+                            <h3 class="u-h4" data-role="button-dropdown__title">
+                                <span>Cite</span>
+                                <span class="hide-text-small">paper</span>
+                            </h3>
+                            <ul class="citations__content" data-role="button-dropdown__content">
+                                <li>
+                                    <a href="#citeas" data-track="click" data-track-action="Cite as link"
+                                       data-track-label="Cite dropdown">How to cite?</a>
+                                </li>
+                                <li>
+                                    <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58574-7_43?format&#x3D;refman&amp;flavour&#x3D;citation"
+                                       title="Download this paper&#39;s citation as a .RIS file" data-track="click"
+                                       data-track-action="Export citation" data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                                        <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58574-7_43?format&#x3D;endnote&amp;flavour&#x3D;citation"
+                                       title="Download this paper&#39;s citation as a .ENW file" data-track="click"
+                                       data-track-action="Export citation" data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                                        <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58574-7_43?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+                                       title="Download this paper&#39;s citation as a .BIB file" data-track="click"
+                                       data-track-action="Export citation" data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                                        <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="sticky-banner__buybox-link sticky-banner__buybox-link--sticky">
+                            <a href="#buy" class="gtm-buybox-anchor">
+                                Buy options
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <aside class="main-sidebar-right u-interface">
+                <div data-role="sticky-wrapper">
+                    <div class="main-sidebar-right__content u-composite-layer"
+                         data-component="SpringerLink.StickySidebar">
+                        <div class="article-actions" id="article-actions">
+                            <h2 class="u-screenreader-only" aria-hidden="true">Actions</h2>
+
+                            <div id="buy">
+
+
+                                <div class="sprcom-buybox buybox" id="sprcom-buybox">
+                                    <div>
+                                        <div class="c-box" style="padding: 0">
+                                            <h2 class="c-box__heading visually-hidden">Buying options</h2>
+                                            <div class="buying-options">
+
+                                                <div class="buying-option expanded">
+                                                    <dl class="buying-option-price">
+                                                        <dt>
+                                                            <svg width="24" height="24"
+                                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false">
+                                                                <path
+                                                                        d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                                                        fill="#666" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                            Chapter
+                                                        </dt>
+
+                                                        <dd class="price-amount">
+                                                            <div data-test-id="test-chapter-price"
+                                                                 class="buybox__price">
+                                                                EUR &nbsp;
+                                                                24.95
+                                                            </div>
+                                                        </dd>
+
+                                                        <dd class="price-info">Price excludes VAT (Russian Federation)
+                                                        </dd>
+                                                    </dl>
+
+                                                    <form class="buying-option-form"
+                                                          action="https://order.springer.com/public/cart" method="post">
+                                                        <input type="hidden" name="type" value="chapter">
+                                                        <input type="hidden" name="doi"
+                                                               value="10.1007/978-3-030-58574-7_43">
+                                                        <input type="hidden" name="isxn" value="978-3-030-58574-7">
+                                                        <input type="hidden" name="contenttitle"
+                                                               value="Extending and Analyzing Self-supervised Learning Across Domains">
+                                                        <input type="hidden" name="copyrightyear" value="2020">
+                                                        <input type="hidden" name="year" value="2020">
+                                                        <input type="hidden" name="authors"
+                                                               value="Bram Wallace, Bharath Hariharan">
+                                                        <input type="hidden" name="title"
+                                                               value="Computer Vision – ECCV 2020">
+                                                        <input type="hidden" name="mac"
+                                                               value="16b4a29f9bc1671393c6e2c73d397cc2">
+                                                        <ul class="buying-option-usps">
+
+                                                            <li>DOI: 10.1007/978-3-030-58574-7_43</li>
+
+                                                            <li>Chapter length: 18 pages</li>
+
+                                                            <li>Instant PDF download</li>
+
+                                                            <li>Readable on all devices</li>
+
+                                                            <li>Own it forever</li>
+
+                                                            <li>Exclusive offer for individuals only</li>
+
+                                                            <li>Tax calculation will be finalised during checkout</li>
+
+                                                        </ul>
+
+                                                        <button
+                                                                type="submit"
+                                                                class="buybox__buy-button c-button c-button--blue"
+                                                                value="Submit"
+                                                                data-track="click"
+                                                                data-track-action="buy pdf"
+                                                                data-track-label="buy chapter action"
+                                                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Extending and Analyzing Self-supervised Learning Across Domains&quot;,&quot;id&quot;:&quot;10.1007/978-3-030-58574-7_43&quot;,&quot;price&quot;:24.95,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ppv-chapter&quot;,&quot;quantity&quot;:1}]}}});"
+                                                        >Buy Chapter
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+
+                                                <div class="buying-option expanded">
+                                                    <dl class="buying-option-price">
+                                                        <dt>
+                                                            <svg width="24" height="24"
+                                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false">
+                                                                <path
+                                                                        d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                                                        fill="#666" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                            eBook
+                                                        </dt>
+                                                        <dd class="price-amount">EUR &nbsp;
+                                                            82.38
+                                                        </dd>
+                                                        <dd class="price-info">Price includes VAT (Russian Federation)
+                                                        </dd>
+                                                    </dl>
+                                                    <form class="buying-option-form"
+                                                          action="https://order.springer.com/public/cart" method="post">
+                                                        <input type="hidden" name="type" value="ebook">
+                                                        <input type="hidden" name="doi"
+                                                               value="10.1007/978-3-030-58574-7">
+                                                        <input type="hidden" name="isxn" value="978-3-030-58574-7">
+                                                        <input type="hidden" name="contenttitle"
+                                                               value="Computer Vision – ECCV 2020">
+                                                        <ul class="buying-option-usps">
+
+                                                            <li>ISBN: 978-3-030-58574-7</li>
+
+                                                            <li>Instant PDF download</li>
+
+                                                            <li>Readable on all devices</li>
+
+                                                            <li>Own it forever</li>
+
+                                                            <li>Exclusive offer for individuals only</li>
+
+                                                            <li>Tax calculation will be finalised during checkout</li>
+
+                                                        </ul>
+                                                        <button
+                                                                type="submit"
+                                                                class="buybox__buy-button c-button c-button--blue"
+                                                                value="Submit"
+                                                                data-track="click"
+                                                                data-track-label="buy ebook"
+                                                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Computer Vision – ECCV 2020&quot;,&quot;id&quot;:&quot;978-3-030-58574-7&quot;,&quot;price&quot;:76.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;ebo&quot;,&quot;quantity&quot;:1}]}}});"
+                                                        >Buy eBook
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+                                                <div class="buying-option expanded">
+                                                    <dl class="buying-option-price">
+                                                        <dt>
+                                                            <svg width="24" height="24"
+                                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false">
+                                                                <path
+                                                                        d="M11.782 11L9.3 8.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L11.782 13l1.013-.998L11.782 11z"
+                                                                        fill="#666" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                            Softcover Book
+                                                        </dt>
+                                                        <dd class="price-amount">EUR &nbsp;
+                                                            97.99
+                                                        </dd>
+                                                        <dd class="price-info">Price excludes VAT (Russian Federation)
+                                                        </dd>
+                                                    </dl>
+                                                    <form class="buying-option-form"
+                                                          action="https://order.springer.com/public/cart" method="post">
+                                                        <input type="hidden" name="type" value="book">
+                                                        <input type="hidden" name="doi"
+                                                               value="10.1007/978-3-030-58574-7">
+                                                        <input type="hidden" name="isxn" value="978-3-030-58573-0">
+                                                        <input type="hidden" name="contenttitle"
+                                                               value="Computer Vision – ECCV 2020">
+                                                        <ul class="buying-option-usps">
+
+                                                            <li>ISBN: 978-3-030-58573-0</li>
+
+                                                            <li>Dispatched in 3 to 5 business days</li>
+
+                                                            <li>Exclusive offer for individuals only</li>
+
+                                                            <li>Free shipping worldwide<br><a
+                                                                    href='https://support.springernature.com/en/support/solutions/articles/6000233448-coronavirus-disease-covid-19-delivery-information'
+                                                                    target='_blank'>Shipping restrictions may apply,
+                                                                check to see if you are impacted</a>.
+                                                            </li>
+
+                                                            <li>Tax calculation will be finalised during checkout</li>
+
+                                                        </ul>
+                                                        <button
+                                                                type="submit"
+                                                                class="buybox__buy-button c-button c-button--blue"
+                                                                value="Submit"
+                                                                data-track="click"
+                                                                data-track-label="buy softcover"
+                                                                onclick="dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;EUR&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Computer Vision – ECCV 2020&quot;,&quot;id&quot;:&quot;978-3-030-58573-0&quot;,&quot;price&quot;:97.99,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Image Processing and Computer Vision&quot;,&quot;variant&quot;:&quot;print&quot;,&quot;quantity&quot;:1}]}}});"
+                                                        >Buy Softcover Book
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="c-box buybox-additional-info">
+                                            <a class="c-box__item"
+                                               href="https://www.springernature.com/gp/librarians/licensing/license-options">Learn
+                                                about institutional subscriptions</a>
+                                        </div>
+                                    </div>
+                                    <style>
+                                        .sprcom-buybox {
+                                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: center;
+                                        }
+
+                                        .sprcom-buybox > div {
+                                            flex-grow: 1;
+                                            width: 100%;
+                                        }
+
+                                        .sprcom-buybox * {
+                                            font-size: 13px !important;
+                                        }
+
+                                        .sprcom-buybox > div > * + * {
+                                            margin-top: 24px;
+                                        }
+
+                                        .sprcom-buybox .c-box__heading {
+                                            margin-bottom: 0;
+                                        }
+
+
+                                        .sprcom-buybox .buying-options {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                        }
+
+                                        .sprcom-buybox .buying-options > * {
+                                            background-color: #ddd;
+                                            box-shadow: 0 0 0 1px #bbb;
+                                            flex-grow: 1;
+                                            flex-basis: auto;
+                                            width: 240px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                        }
+
+
+                                        .sprcom-buybox dt {
+                                            align-items: center;
+                                            display: flex;
+                                            font-weight: 400;
+                                            margin-left: -10px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-form {
+                                            padding: 12px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price {
+                                            align-items: center;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            font-size: 1.6rem;
+                                            line-height: 1.4;
+                                            user-select: none;
+                                            padding: 6px 12px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price dt,
+                                        .sprcom-buybox .buying-option-price dt svg path,
+                                        .sprcom-buybox .buying-option-price dd {
+                                            color: #004aa7;
+                                            fill: #004aa7;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price dt,
+                                        .sprcom-buybox .buying-option-price dd {
+                                            flex-grow: 1;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-info {
+                                            color: #666;
+                                            font-size: 80%;
+                                            text-align: right;
+                                            width: 100%;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-amount {
+                                            font-size: 140%;
+                                            text-align: right;
+                                            font-weight: 600;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-amount-without-discount {
+                                            color: #c40606;
+                                            font-size: 140%;
+                                            text-decoration: line-through;
+                                            width: 100%;
+                                        }
+
+                                        .sprcom-buybox .buying-option-price .price-type {
+                                            font-size: 40%;
+                                            margin-left: 8px;
+                                        }
+
+                                        .sprcom-buybox .buying-option-usps {
+                                            color: #666;
+                                            font-size: 1.4rem;
+                                            line-height: 1.4;
+                                            margin: 0 0 0 13px;
+                                            padding-left: 16px;
+
+                                            list-style: disc;
+                                        }
+
+                                        .sprcom-buybox .buying-option-usps > li {
+                                            position: relative;
+                                        }
+
+                                        .sprcom-buybox .buying-option-usps > li:not(:first-child) {
+                                            margin-top: 4px;
+                                        }
+
+                                        .sprcom-buybox .c-button {
+                                            margin-top: 18px;
+                                            text-align: center;
+                                        }
+
+                                        .sprcom-buybox .buying-options > .expanded {
+                                            background-color: #fff;
+                                        }
+
+                                        .sprcom-buybox .buying-options > .expanded dt,
+                                        .sprcom-buybox .buying-options > .expanded dt svg path,
+                                        .sprcom-buybox .buying-options > .expanded .price-amount {
+                                            color: #333;
+                                            fill: #666;
+                                        }
+
+
+                                        .sprcom-buybox .buybox-additional-info {
+                                            padding-top: 6px;
+                                            padding-bottom: 8px;
+                                        }
+
+                                        .sprcom-buybox .buybox-additional-info .c-box__item {
+                                            font-size: 13px !important;
+                                            margin-bottom: 0;
+                                        }
+
+                                        .sprcom-buybox a:visited {
+                                            color: #004b83;
+                                        }
+
+
+                                        .sprcom-buybox [role=button] {
+                                            cursor: pointer;
+                                        }
+
+                                        .sprcom-buybox button:focus,
+                                        .sprcom-buybox [role=button]:focus {
+                                            outline: 4px solid #fc0;
+                                            position: relative;
+                                        }
+
+                                        .sprcom-buybox [aria-expanded=false] svg {
+                                            transform: rotate(0deg);
+                                        }
+
+                                        .sprcom-buybox [aria-expanded=true] svg {
+                                            transform: rotate(90deg);
+                                        }
+
+                                        .sprcom-buybox dt {
+                                            align-items: center;
+                                            display: flex;
+                                        }
+
+
+                                        .sprcom-buybox .visually-hidden {
+                                            clip: rect(1px, 1px, 1px, 1px);
+                                            height: 1px;
+                                            overflow: hidden;
+                                            position: absolute;
+                                            width: 1px;
+                                        }
+
+                                        .sprcom-buybox style {
+                                            display: none;
+                                        }
+                                    </style>
+                                    <script>
+                                        ;(function () {
+                                            var timestamp = Date.now()
+                                            document.write('<div data-id="id_' + timestamp + '"></div>')
+
+                                            var head = document.getElementsByTagName("head")[0]
+                                            var script = document.createElement("script")
+                                            script.type = "text/javascript"
+                                            script.src = "https://buy.springer.com/assets/js/buybox-bundle-52d08dec1e.js"
+                                            script.id = "ecommerce-scripts-" + timestamp
+                                            head.appendChild(script)
+
+                                            var buybox = document.querySelector("[data-id=id_" + timestamp + "]").parentNode
+
+                                            ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(initCollapsibles)
+
+                                            function initCollapsibles(subscription, index) {
+                                                var toggle = subscription.querySelector(".buying-option-price")
+                                                subscription.classList.remove("expanded")
+                                                var form = subscription.querySelector(".buying-option-form")
+
+                                                if (form) {
+                                                    var formAction = form.getAttribute("action")
+                                                    document.querySelector("#ecommerce-scripts-" + timestamp).addEventListener("load", bindModal(form, formAction, timestamp, index), false)
+                                                }
+
+                                                var priceInfo = subscription.querySelector(".price-info")
+                                                var buyingOption = toggle.parentElement
+
+                                                if (toggle && form && priceInfo) {
+                                                    toggle.setAttribute("role", "button")
+                                                    toggle.setAttribute("tabindex", "0")
+
+                                                    toggle.addEventListener("click", function (event) {
+                                                        var expanded = toggle.getAttribute("aria-expanded") === "true" || false
+                                                        toggle.setAttribute("aria-expanded", !expanded)
+                                                        form.hidden = expanded
+                                                        if (!expanded) {
+                                                            buyingOption.classList.add("expanded")
+                                                        } else {
+                                                            buyingOption.classList.remove("expanded")
+                                                        }
+                                                        priceInfo.hidden = expanded
+                                                    }, false)
+                                                }
+                                            }
+
+                                            function bindModal(form, formAction, timestamp, index) {
+                                                var weHasBrowserSupport = window.fetch && Array.from
+
+                                                return function () {
+                                                    var Buybox = EcommScripts ? EcommScripts.Buybox : null
+                                                    var Modal = EcommScripts ? EcommScripts.Modal : null
+
+                                                    if (weHasBrowserSupport && Buybox && Modal) {
+                                                        var modalID = "ecomm-modal_" + timestamp + "_" + index
+
+                                                        var modal = new Modal(modalID)
+                                                        modal.domEl.addEventListener("close", close)
+
+                                                        function close() {
+                                                            form.querySelector("button[type=submit]").focus()
+                                                        }
+
+                                                        var cartURL = "/cart"
+                                                        var cartModalURL = "/cart?messageOnly=1"
+
+                                                        form.setAttribute(
+                                                            "action",
+                                                            formAction.replace(cartURL, cartModalURL)
+                                                        )
+
+                                                        var formSubmit = Buybox.interceptFormSubmit(
+                                                            Buybox.fetchFormAction(window.fetch),
+                                                            Buybox.triggerModalAfterAddToCartSuccess(modal),
+                                                            function () {
+                                                                form.removeEventListener("submit", formSubmit, false)
+                                                                form.setAttribute(
+                                                                    "action",
+                                                                    formAction.replace(cartModalURL, cartURL)
+                                                                )
+                                                                form.submit()
+                                                            }
+                                                        )
+
+                                                        form.addEventListener("submit", formSubmit, false)
+
+                                                        document.body.appendChild(modal.domEl)
+                                                    }
+                                                }
+                                            }
+
+                                            function initKeyControls() {
+                                                document.addEventListener("keydown", function (event) {
+                                                    if (document.activeElement.classList.contains("buying-option-price") && (event.code === "Space" || event.code === "Enter")) {
+                                                        if (document.activeElement) {
+                                                            event.preventDefault()
+                                                            document.activeElement.click()
+                                                        }
+                                                    }
+                                                }, false)
+                                            }
+
+                                            function initialStateOpen() {
+                                                var buyboxWidth = buybox.offsetWidth
+                                                ;[].slice.call(buybox.querySelectorAll(".buying-option")).forEach(function (option, index) {
+                                                    var toggle = option.querySelector(".buying-option-price")
+                                                    var form = option.querySelector(".buying-option-form")
+                                                    var priceInfo = option.querySelector(".price-info")
+                                                    if (buyboxWidth > 480) {
+                                                        toggle.click()
+                                                    } else {
+                                                        if (index === 0) {
+                                                            toggle.click()
+                                                        } else {
+                                                            toggle.setAttribute("aria-expanded", "false")
+                                                            form.hidden = "hidden"
+                                                            priceInfo.hidden = "hidden"
+                                                        }
+                                                    }
+                                                })
+                                            }
+
+                                            initialStateOpen()
+
+                                            if (window.buyboxInitialised) return
+                                            window.buyboxInitialised = true
+
+                                            initKeyControls()
+                                        })()
+                                    </script>
+                                </div>
+
+
+                            </div>
+
+                            <div class="u-js-hide u-js-show-two-col">
+
+
+                                <div class="citations" data-component="SV.Dropdown" data-namespace="citations">
+                                    <h3 class="u-h4" data-role="button-dropdown__title">
+                                        <span>Cite</span>
+                                        <span class="hide-text-small">paper</span>
+                                    </h3>
+                                    <ul class="citations__content" data-role="button-dropdown__content">
+                                        <li>
+                                            <a href="#citeas" data-track="click" data-track-action="Cite as link"
+                                               data-track-label="Cite dropdown">How to cite?</a>
+                                        </li>
+                                        <li>
+                                            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58574-7_43?format&#x3D;refman&amp;flavour&#x3D;citation"
+                                               title="Download this paper&#39;s citation as a .RIS file"
+                                               data-track="click" data-track-action="Export citation"
+                                               data-track-label="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .RIS
+                </span>
+                                                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58574-7_43?format&#x3D;endnote&amp;flavour&#x3D;citation"
+                                               title="Download this paper&#39;s citation as a .ENW file"
+                                               data-track="click" data-track-action="Export citation"
+                                               data-track-label="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .ENW
+                </span>
+                                                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="//citation-needed.springer.com/v2/references/10.1007/978-3-030-58574-7_43?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+                                               title="Download this paper&#39;s citation as a .BIB file"
+                                               data-track="click" data-track-action="Export citation"
+                                               data-track-label="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                            d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z"
+                            fill="#004aa7"/></svg>
+                    .BIB
+                </span>
+                                                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="skyscraper-ad u-hide" data-google-ad="skyscraper" data-gpt-hide-ad>
+                        <div class="skyscraper-ad__wrapper">
+                            <p class="skyscraper-ad__label">Advertisement</p>
+                            <button class="skyscraper-ad__hide" title="Hide this advertisement" data-gpt-hide-ad-button
+                                    data-track="click" data-track-action="Hide advertisement" data-track-label="">Hide
+                            </button>
+                            <div id="doubleclick-ad" class="skyscraper-ad__ad" data-gpt></div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer u-interface">
+        <div class="footer__aside-wrapper">
+            <div class="footer__content">
+                <div class="footer__aside">
+                    <p class="footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                    <div class="footer__edition" data-component="SV.EditionSwitcher">
+                        <h3 class="u-hide" data-role="button-dropdown__title"
+                            data-btn-text="Switch between Academic &#38; Corporate Edition">Switch Edition</h3>
+                        <ul data-role="button-dropdown__content">
+                            <li class="selected"><a
+                                    href="/siteEdition/link?previousUrl=/chapter/10.1007/978-3-030-58574-7_43&id=siteedition-academic-link"
+                                    id="siteedition-academic-link">Academic Edition</a></li>
+                            <li>
+                                <a href="/siteEdition/rd?previousUrl=/chapter/10.1007/978-3-030-58574-7_43&id=siteedition-corporate-link"
+                                   id="siteedition-corporate-link">Corporate Edition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <ul class="footer__nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/impressum">Impressum</a>
+                </li>
+                <li>
+                    <a href="/termsandconditions">Legal information</a>
+                </li>
+                <li>
+                    <a href="/privacystatement">Privacy statement</a>
+                </li>
+                <li>
+                    <a href="https://www.springernature.com/ccpa">California privacy statement</a>
+                </li>
+                <li>
+                    <a href="/cookiepolicy">How we use cookies</a>
+                </li>
+                <li>
+                    <a class="optanon-toggle-display" href="javascript:void(0);" data-cc-action="preferences">Manage
+                        cookies/Do not sell my data</a>
+                </li>
+                <li>
+                    <a href="/accessibility">Accessibility</a>
+                </li>
+                <li>
+                    <a href="https://support.springer.com/en/support/home">FAQ</a>
+                </li>
+                <li>
+                    <a id="contactus-footer-link"
+                       href="https://support.springer.com/en/support/solutions/articles/6000206179-contacting-us">Contact
+                        us</a>
+                </li>
+                <li>
+                    <a href="https://www.springer.com/gp/shop/promo/affiliate/springer-nature">Affiliate program</a>
+                </li>
+            </ul>
+            <a class="parent-logo"
+               target="_blank" rel="noopener"
+               href="//www.springernature.com"
+               title="Go to Springer Nature">
+                <span class="u-screenreader-only">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12"
+                           src="/springerlink-static/1895273086/images/png/springernature.png"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href="/springerlink-static/1895273086/images/svg/springernature.svg">
+                    </image>
+                </svg>
+            </a>
+
+            <p class="footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank"
+                                                                                                rel="noopener"
+                                                                                                href="//www.springernature.com">Springer
+                Nature</a>.</p>
+            <p class="footer__user-access-info">
+                <span>Not logged in</span>
+                <span>Not affiliated</span>
+                <span>91.245.42.171</span>
+            </p>
+        </div>
+    </footer>
+
+</div>
+<script type="text/javascript">
+    (function () {
+        var linkEl = document.querySelector('.js-ctm');
+        var scriptsList = [];
+        var polyfillFeatures = '';
+
+        window.SpringerLink = window.SpringerLink || {};
+        window.SpringerLink.staticLocation = '/springerlink-static/1895273086';
+        window.eventTrackerInstance = null;
+
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            (function (h) {
+                h.className = h.className.replace('no-js', 'js')
+            })(document.documentElement);
+
+            polyfillFeatures = 'default,fetch,Promise,Object.setPrototypeOf,Object.entries,Number.isInteger,MutationObserver,startsWith,Array.prototype.includes,Array.from,IntersectionObserver';
+
+            scriptsList = [
+                'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + polyfillFeatures + '&flags=gated',
+                window.SpringerLink.staticLocation + '/js/main.js'
+            ];
+
+            scriptsList.forEach(function (script) {
+                var tag = document.createElement('script');
+                tag.async = false;
+                tag.src = script;
+
+                document.body.appendChild(tag);
+            });
+        }
+    })();
+</script>
+
+<script>
+    (function () {
+        var linkEl = document.querySelector('.js-ctm');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var scriptMathJax = document.createElement('script');
+            scriptMathJax.async = false;
+            scriptMathJax.src = '/springerlink-static/1895273086/js/mathJax.js';
+            var s0 = document.getElementsByTagName('script')[0];
+            s0.parentNode.insertBefore(scriptMathJax, s0);
+        }
+    })();
+</script>
+
+
+<script type="text/javascript" id="googletag-push">
+
+    var adSlot = '270604982/springerlink/book/chapter';
+
+
+    var definedSlots = [
+        {slot: [728, 90], containerName: 'doubleclick-leaderboard-ad'},
+        {slot: [160, 600], containerName: 'doubleclick-ad'},
+        {slot: [2, 2], containerName: 'doubleclick-native-ad'}
+    ];
+</script>
+
+
+<span id="chat-widget" class="u-hide"></span>
+
+
+</body>
+</html>
