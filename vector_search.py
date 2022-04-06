@@ -14,16 +14,16 @@ def make_comparator(weights):
 
 
 def calculate_page_weight(page_dict, search_dict):
-	sum = 0
-	suma = 0
-	sumb = 0
+	sum_ = 0
+	sum_a = 0
+	sum_b = 0
 	for token in search_dict.keys():
-		sum = sum + page_dict[token] * search_dict[token]
-		suma = suma + page_dict[token] * page_dict[token]
-		sumb = sumb + search_dict[token] * search_dict[token]
-	if sum == 0 or suma == 0 or sumb == 0:
+		sum_ += page_dict[token] * search_dict[token]
+		sum_a += page_dict[token] * page_dict[token]
+		sum_b += search_dict[token] * search_dict[token]
+	if sum_ == 0 or sum_a == 0 or sum_b == 0:
 		return 0
-	return sum / (math.sqrt(suma) * math.sqrt(sumb))
+	return sum_ / (math.sqrt(sum_a) * math.sqrt(sum_b))
 
 
 def search(query):

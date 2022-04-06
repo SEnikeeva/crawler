@@ -21,3 +21,12 @@ def lemmas_reader(lemmas_path='lemmas.txt'):
                 token_lemma[token] = words[0]
 
     return lemma_tokens, token_lemma
+
+
+def index_reader(index_path='index.txt'):
+    idx_path = {}
+    with open(index_path, 'r') as f:
+        for line in f.readlines():
+            words = line.split()
+            idx_path[int(words[0].split('.')[0])] = words[1]
+    return idx_path
