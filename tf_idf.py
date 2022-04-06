@@ -1,7 +1,18 @@
-from data_reader import lemmas_reader
-from inverted_index import inverted_index_map
-from collections import Counter
 import math
+from collections import Counter
+
+from data_reader import lemmas_reader
+from embeddings import empty_lemmas_dict
+from inverted_index import inverted_index_map
+
+
+def get_lemmas_tf_idf_map(page):
+    lemmas_dict = empty_lemmas_dict()
+    with open(f'tf_idf_lemmas/{page}.txt', 'r') as f:
+        for line in f.readlines():
+            words = line.split()
+            lemmas_dict[words[0]] = float(words[2])
+    return lemmas_dict
 
 
 def count_tokens(doc_tokens, token_lemma):
